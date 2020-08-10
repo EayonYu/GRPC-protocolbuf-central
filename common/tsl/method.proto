@@ -1,0 +1,24 @@
+syntax = "proto2";
+
+
+package tsl;
+
+
+import "value.proto";
+
+
+enum TSLMethodStatus {
+    TSL_METHOD_STATUS_UNKNOWN = 0;
+    TSL_METHOD_STATUS_DELIVERED = 1;
+    TSL_METHOD_STATUS_UNDELIVERED = 2;
+    TSL_METHOD_STATUS_COMPLETE = 3;
+}
+
+message TSLMethod {
+    required string deviceId = 1;
+    required string invocationId = 2;
+    required TSLMethodStatus status = 3;
+    repeated TSLValueObject inputParams = 4;
+    repeated TSLValueObject outputValues = 5;
+    required string timestamp = 6;
+}

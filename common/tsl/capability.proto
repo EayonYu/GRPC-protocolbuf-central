@@ -1,0 +1,19 @@
+syntax = "proto2";
+
+
+package tsl;
+
+
+import "google/protobuf/any.proto";
+
+import "property.proto";
+import "method.proto";
+import "event.proto";
+
+
+message TSLCapability {
+    required string capabilityId = 1;
+    repeated TSLProperty properties = 2;
+    repeated TSLEvent events = 3;
+    repeated TSLMethod methods = 4;
+}
