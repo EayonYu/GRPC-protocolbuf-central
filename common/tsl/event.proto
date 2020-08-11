@@ -1,14 +1,14 @@
 syntax = "proto2";
 
 
-package tsl;
+package common.tsl;
 
 
-import "value.proto";
+import "common/tsl/value.proto";
 
 
 message TSLEvent {
     required string eventId = 1;
-    repeated TSLValueObject attributes = 2;
+    repeated common.tsl.TSLValueObject attributes = 2;
     required string timestamp = 3;
 }

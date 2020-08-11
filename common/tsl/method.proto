@@ -1,10 +1,10 @@
 syntax = "proto2";
 
 
-package tsl;
+package common.tsl;
 
 
-import "value.proto";
+import "common/tsl/value.proto";
 
 
 enum TSLMethodStatus {
@@ -18,7 +18,7 @@ message TSLMethod {
     required string deviceId = 1;
     required string invocationId = 2;
     required TSLMethodStatus status = 3;
-    repeated TSLValueObject inputParams = 4;
-    repeated TSLValueObject outputValues = 5;
+    repeated common.tsl.TSLValueObject inputParams = 4;
+    repeated common.tsl.TSLValueObject outputValues = 5;
     required string timestamp = 6;
 }

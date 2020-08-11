@@ -1,0 +1,138 @@
+syntax = "proto2";
+
+option java_generic_services = true;
+
+package gaia.proxy;
+
+
+import "google/api/annotations.proto";
+
+import "common/partner/user.proto";
+import "common/partner/device.proto";
+import "common/partner/user_device_binding.proto";
+
+import "gaia/proxy/partner_config.proto";
+import "gaia/proxy/partner_resource.proto";
+
+
+message PingRequest {
+
+}
+
+message PingResponse {
+    required bool pong = 1;
+}
+
+message SetACResponseData {
+    required int32 code = 1;
+    required string message = 2;
+    required string data = 3;
+}
+
+message SetACRequest {
+    required string partner_uuid = 1;
+    required int32 deviceId = 2;
+    required float targetTemperature = 3;
+}
+
+message SetACResponse {
+    required int32 code = 1;
+    required string message = 2;
+    required SetACResponseData data = 3;
+}
+
+message GetUsersRequest {
+    required string partner_uuid = 1;
+    required int32 start = 2;
+    required int32 end = 3;
+}
+
+message GetUsersResponse {
+    required int32 code = 1;
+    required string message = 2;
+    repeated common.partner.User data = 3;
+}
+
+message GetDevicesRequest {
+    required string partner_uuid = 1;
+    required int32 start = 2;
+    required int32 end = 3;
+}
+
+message GetDevicesResponse {
+    required int32 code = 1;
+    required string message = 2;
+    repeated common.partner.Device data = 3;
+}
+
+message GetUserDeviceRequest {
+    required string partner_uuid = 1;
+    required int32 start = 2;
+    required int32 end = 3;
+}
+
+message GetUserDeviceResponse {
+    required int32 code = 1;
+    required string message = 2;
+    repeated common.partner.UserDeviceBinding data = 3;
+}
+
+service GaiaProxyGrpc {
+
+    rpc Ping(PingRequest) returns (PingResponse) {
+        option (google.api.http) = {
+            get: "/api/ping"
+        };
+    };
+
+    rpc ListPartnerConfig(PartnerConfigListRequest) returns(PartnerConfigListResponse){
+        option (google.api.http) = {
+            get: "/api/rest/partners"
+        };
+    }
+
+    rpc GetPartnerConfig(PartnerConfigGetRequest) returns(PartnerConfigGetResponse) {
+        option (google.api.http) = {
+            get: "/api/rest/partners/{partner_id}"
+        };
+    }
+
+    rpc AddPartnerConfig(PartnerConfigAddRequest) returns(PartnerConfigAddResponse) {
+        option (google.api.http) = {
+            post: "/api/rest/partners"
+            body: "*"
+        };
+    }
+
+    rpc SetAC(SetACRequest) returns(SetACResponse) {
+        option (google.api.http) = {
+            post: "/api/rest/proxy/ac/set"
+            body: "*"
+        };
+    }
+
+    // for sync
+    rpc GetPartnerResourceIdRange(GetPartnerResourceIdRangeRequest) returns(GetPartnerResourceIdRangeResponse) {
+        option (google.api.http) = {
+            get: "/api/rest/proxy/partners/{partner_uuid}/resource/{resource_type}/range"
+        };
+    }
+
+    rpc GetUsers(GetUsersRequest) returns(GetUsersResponse) {
+        option (google.api.http) = {
+            get: "/api/rest/proxy/users"
+        };
+    }
+
+    rpc GetDevices(GetDevicesRequest) returns(GetDevicesResponse) {
+        option (google.api.http) = {
+            get: "/api/rest/proxy/devices"
+        };
+    }
+
+    rpc GetUserDevice(GetUserDeviceRequest) returns(GetUserDeviceResponse) {
+        option (google.api.http) = {
+            get: "/api/rest/proxy/user_device"
+        };
+    }
+}

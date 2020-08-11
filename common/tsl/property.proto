@@ -1,7 +1,7 @@
 syntax = "proto2";
 
 
-package tsl;
+package common.tsl;
 
 
 import "google/protobuf/any.proto";
