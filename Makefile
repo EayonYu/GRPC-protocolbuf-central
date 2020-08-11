@@ -1,7 +1,3 @@
-ifndef action
-	action=pull
-endif
-
 ifndef version
 	version=latest
 endif
@@ -30,3 +26,6 @@ clean:
 	mkdir build/java
 	mkdir build/python
 	mkdir build/swagger
+
+push:
+	aws s3 sync --delete ./build s3://protocols/gaia/protocol/$(version) --exclude *.DS_Store*
