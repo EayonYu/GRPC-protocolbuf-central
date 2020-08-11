@@ -12,3 +12,6 @@ for all the compiled files
 
 ##### TODO
 build a gitlab ci runner image
+
+##### TODO
+gaia/protocol/....
