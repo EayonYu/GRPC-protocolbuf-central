@@ -9,6 +9,7 @@ endif
 default:
 	@echo "make prepare"
 	@echo "make protocol"
+	@echo "make clean"
 
 prepare:
 	bash ./scripts/env.sh prepare

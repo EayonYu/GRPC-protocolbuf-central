@@ -17,14 +17,14 @@ function prepare() {
     unzip -o protoc.zip -d _tmp_protoc/
     cp -r _tmp_protoc/include/ /usr/local/include/
     cp -r _tmp_protoc/bin/ /usr/local/bin/
-    rm protoc.zip
+    rm -f protoc.zip
     rm -rf _tmp_protoc/
 
     go install github.com/golang/protobuf/protoc-gen-go
 }
 
 function clean() {
-    rm protoc.zip
+    rm -f protoc.zip
     rm -rf _tmp_protoc/
 }
 
