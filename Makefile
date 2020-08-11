@@ -7,17 +7,26 @@ ifndef version
 endif
 
 default:
-	echo "idle"
+	@echo "make prepare"
+	@echo "make protocol"
 
 prepare:
 	bash ./scripts/env.sh prepare
 
 protocol:
-	protoc --proto_path=. --python_out=./build ./common/tsl/*.proto
-	protoc --proto_path=. --python_out=./build ./common/constant/*.proto
-	protoc --proto_path=. --python_out=./build ./common/partner/*.proto
-	protoc --proto_path=. --python_out=./build ./common/partner/*.proto
-	protoc --proto_path=. --python_out=./build ./gaia/proxy/*.proto
+	protoc --proto_path=. --python_out=./build/python --java_out=./build/java --go_out=./build/go --swagger_out=logtostderr=true:./build/swagger ./common/tsl/*.proto
+	protoc --proto_path=. --python_out=./build/python --java_out=./build/java --go_out=./build/go --swagger_out=logtostderr=true:./build/swagger ./common/constant/*.proto
+	protoc --proto_path=. --python_out=./build/python --java_out=./build/java --go_out=./build/go --swagger_out=logtostderr=true:./build/swagger ./common/partner/*.proto
+	protoc --proto_path=. --python_out=./build/python --java_out=./build/java --go_out=./build/go --swagger_out=logtostderr=true:./build/swagger ./gaia/proxy/*.proto
+
+clean:
+	bash ./scripts/env.sh clean
+	rm -rf ./build
+	mkdir build
+	mkdir build/go
+	mkdir build/java
+	mkdir build/python
+	mkdir build/swagger
 
 proto:
 	[ ! $(action) == "pull" ] || python .grpc.py --pull

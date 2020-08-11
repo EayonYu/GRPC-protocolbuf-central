@@ -1,6 +1,8 @@
 syntax = "proto2";
 
 package gaia.proxy;
+option go_package = "tcl.com/gaia/proxy";
+option java_package = "com.tcl.gaia.proxy";
 
 
 message PartnerConfig {

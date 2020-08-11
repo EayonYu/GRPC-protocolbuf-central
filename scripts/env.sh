@@ -19,11 +19,20 @@ function prepare() {
     cp -r _tmp_protoc/bin/ /usr/local/bin/
     rm protoc.zip
     rm -rf _tmp_protoc/
+
+    go install github.com/golang/protobuf/protoc-gen-go
+}
+
+function clean() {
+    rm protoc.zip
+    rm -rf _tmp_protoc/
 }
 
 
 if [[ "$1" == "prepare" ]]; then
     prepare
+elif [[ "$1" == "clean" ]]; then
+    clean
 else
     echo "todo"
 fi

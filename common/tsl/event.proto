@@ -2,6 +2,8 @@ syntax = "proto2";
 
 
 package common.tsl;
+option go_package = "tcl.com/gaia/tsl";
+option java_package = "com.tcl.gaia.tsl";
 
 
 import "common/tsl/value.proto";

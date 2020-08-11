@@ -2,6 +2,8 @@ syntax = "proto2";
 
 
 package common.partner;
+option go_package = "tcl.com/gaia/partner";
+option java_package = "com.tcl.gaia.partner";
 
 
 import "google/protobuf/any.proto";
