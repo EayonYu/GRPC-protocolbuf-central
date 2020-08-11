@@ -9,3 +9,6 @@ maven library
 pypi library
 go package
 for all the compiled files
+
+##### TODO
+build a gitlab ci runner image
