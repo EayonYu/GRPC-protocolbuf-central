@@ -17,9 +17,3 @@ It defines the language-independent objects required by other projects. Whether 
 ### copy golang gateway proto files to project path google
 now we use github.com/grpc-ecosystem/grpc-gateway v1.14.3
 cp -r ${GOPATH}/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis/google/* ./google
-
-##### TODO
-maven library
-pypi library
-go package
-for all the compiled files
