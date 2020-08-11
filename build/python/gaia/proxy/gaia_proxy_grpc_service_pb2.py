@@ -24,7 +24,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='gaia.proxy',
   syntax='proto2',
   serialized_options=b'\n\022com.tcl.gaia.proxyZ\022tcl.com/gaia/proxy\210\001\001',
-  create_key=_descriptor._internal_create_key,
   serialized_pb=b'\n(gaia/proxy/gaia_proxy_grpc_service.proto\x12\ngaia.proxy\x1a\x1cgoogle/api/annotations.proto\x1a\x19\x63ommon/partner/user.proto\x1a\x1b\x63ommon/partner/device.proto\x1a(common/partner/user_device_binding.proto\x1a\x1fgaia/proxy/partner_config.proto\x1a!gaia/proxy/partner_resource.proto\"\r\n\x0bPingRequest\"\x1c\n\x0cPingResponse\x12\x0c\n\x04pong\x18\x01 \x02(\x08\"@\n\x11SetACResponseData\x12\x0c\n\x04\x63ode\x18\x01 \x02(\x05\x12\x0f\n\x07message\x18\x02 \x02(\t\x12\x0c\n\x04\x64\x61ta\x18\x03 \x02(\t\"Q\n\x0cSetACRequest\x12\x14\n\x0cpartner_uuid\x18\x01 \x02(\t\x12\x10\n\x08\x64\x65viceId\x18\x02 \x02(\x05\x12\x19\n\x11targetTemperature\x18\x03 \x02(\x02\"[\n\rSetACResponse\x12\x0c\n\x04\x63ode\x18\x01 \x02(\x05\x12\x0f\n\x07message\x18\x02 \x02(\t\x12+\n\x04\x64\x61ta\x18\x03 \x02(\x0b\x32\x1d.gaia.proxy.SetACResponseData\"C\n\x0fGetUsersRequest\x12\x14\n\x0cpartner_uuid\x18\x01 \x02(\t\x12\r\n\x05start\x18\x02 \x02(\x05\x12\x0b\n\x03\x65nd\x18\x03 \x02(\x05\"U\n\x10GetUsersResponse\x12\x0c\n\x04\x63ode\x18\x01 \x02(\x05\x12\x0f\n\x07message\x18\x02 \x02(\t\x12\"\n\x04\x64\x61ta\x18\x03 \x03(\x0b\x32\x14.common.partner.User\"E\n\x11GetDevicesRequest\x12\x14\n\x0cpartner_uuid\x18\x01 \x02(\t\x12\r\n\x05start\x18\x02 \x02(\x05\x12\x0b\n\x03\x65nd\x18\x03 \x02(\x05\"Y\n\x12GetDevicesResponse\x12\x0c\n\x04\x63ode\x18\x01 \x02(\x05\x12\x0f\n\x07message\x18\x02 \x02(\t\x12$\n\x04\x64\x61ta\x18\x03 \x03(\x0b\x32\x16.common.partner.Device\"H\n\x14GetUserDeviceRequest\x12\x14\n\x0cpartner_uuid\x18\x01 \x02(\t\x12\r\n\x05start\x18\x02 \x02(\x05\x12\x0b\n\x03\x65nd\x18\x03 \x02(\x05\"g\n\x15GetUserDeviceResponse\x12\x0c\n\x04\x63ode\x18\x01 \x02(\x05\x12\x0f\n\x07message\x18\x02 \x02(\t\x12/\n\x04\x64\x61ta\x18\x03 \x03(\x0b\x32!.common.partner.UserDeviceBinding2\xdd\x08\n\rGaiaProxyGrpc\x12L\n\x04Ping\x12\x17.gaia.proxy.PingRequest\x1a\x18.gaia.proxy.PingResponse\"\x11\x82\xd3\xe4\x93\x02\x0b\x12\t/api/ping\x12|\n\x11ListPartnerConfig\x12$.gaia.proxy.PartnerConfigListRequest\x1a%.gaia.proxy.PartnerConfigListResponse\"\x1a\x82\xd3\xe4\x93\x02\x14\x12\x12/api/rest/partners\x12\x86\x01\n\x10GetPartnerConfig\x12#.gaia.proxy.PartnerConfigGetRequest\x1a$.gaia.proxy.PartnerConfigGetResponse\"\'\x82\xd3\xe4\x93\x02!\x12\x1f/api/rest/partners/{partner_id}\x12|\n\x10\x41\x64\x64PartnerConfig\x12#.gaia.proxy.PartnerConfigAddRequest\x1a$.gaia.proxy.PartnerConfigAddResponse\"\x1d\x82\xd3\xe4\x93\x02\x17\"\x12/api/rest/partners:\x01*\x12_\n\x05SetAC\x12\x18.gaia.proxy.SetACRequest\x1a\x19.gaia.proxy.SetACResponse\"!\x82\xd3\xe4\x93\x02\x1b\"\x16/api/rest/proxy/ac/set:\x01*\x12\xc8\x01\n\x19GetPartnerResourceIdRange\x12,.gaia.proxy.GetPartnerResourceIdRangeRequest\x1a-.gaia.proxy.GetPartnerResourceIdRangeResponse\"N\x82\xd3\xe4\x93\x02H\x12\x46/api/rest/proxy/partners/{partner_uuid}/resource/{resource_type}/range\x12\x64\n\x08GetUsers\x12\x1b.gaia.proxy.GetUsersRequest\x1a\x1c.gaia.proxy.GetUsersResponse\"\x1d\x82\xd3\xe4\x93\x02\x17\x12\x15/api/rest/proxy/users\x12l\n\nGetDevices\x12\x1d.gaia.proxy.GetDevicesRequest\x1a\x1e.gaia.proxy.GetDevicesResponse\"\x1f\x82\xd3\xe4\x93\x02\x19\x12\x17/api/rest/proxy/devices\x12y\n\rGetUserDevice\x12 .gaia.proxy.GetUserDeviceRequest\x1a!.gaia.proxy.GetUserDeviceResponse\"#\x82\xd3\xe4\x93\x02\x1d\x12\x1b/api/rest/proxy/user_deviceB+\n\x12\x63om.tcl.gaia.proxyZ\x12tcl.com/gaia/proxy\x88\x01\x01'
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,common_dot_partner_dot_user__pb2.DESCRIPTOR,common_dot_partner_dot_device__pb2.DESCRIPTOR,common_dot_partner_dot_user__device__binding__pb2.DESCRIPTOR,gaia_dot_proxy_dot_partner__config__pb2.DESCRIPTOR,gaia_dot_proxy_dot_partner__resource__pb2.DESCRIPTOR,])
@@ -38,7 +37,6 @@ _PINGREQUEST = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
-  create_key=_descriptor._internal_create_key,
   fields=[
   ],
   extensions=[
@@ -63,7 +61,6 @@ _PINGRESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
-  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='pong', full_name='gaia.proxy.PingResponse.pong', index=0,
@@ -71,7 +68,7 @@ _PINGRESPONSE = _descriptor.Descriptor(
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -95,7 +92,6 @@ _SETACRESPONSEDATA = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
-  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='code', full_name='gaia.proxy.SetACResponseData.code', index=0,
@@ -103,21 +99,21 @@ _SETACRESPONSEDATA = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='message', full_name='gaia.proxy.SetACResponseData.message', index=1,
       number=2, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='data', full_name='gaia.proxy.SetACResponseData.data', index=2,
       number=3, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -141,7 +137,6 @@ _SETACREQUEST = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
-  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='partner_uuid', full_name='gaia.proxy.SetACRequest.partner_uuid', index=0,
@@ -149,21 +144,21 @@ _SETACREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='deviceId', full_name='gaia.proxy.SetACRequest.deviceId', index=1,
       number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='targetTemperature', full_name='gaia.proxy.SetACRequest.targetTemperature', index=2,
       number=3, type=2, cpp_type=6, label=2,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -187,7 +182,6 @@ _SETACRESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
-  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='code', full_name='gaia.proxy.SetACResponse.code', index=0,
@@ -195,21 +189,21 @@ _SETACRESPONSE = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='message', full_name='gaia.proxy.SetACResponse.message', index=1,
       number=2, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='data', full_name='gaia.proxy.SetACResponse.data', index=2,
       number=3, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -233,7 +227,6 @@ _GETUSERSREQUEST = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
-  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='partner_uuid', full_name='gaia.proxy.GetUsersRequest.partner_uuid', index=0,
@@ -241,21 +234,21 @@ _GETUSERSREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='start', full_name='gaia.proxy.GetUsersRequest.start', index=1,
       number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='end', full_name='gaia.proxy.GetUsersRequest.end', index=2,
       number=3, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -279,7 +272,6 @@ _GETUSERSRESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
-  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='code', full_name='gaia.proxy.GetUsersResponse.code', index=0,
@@ -287,21 +279,21 @@ _GETUSERSRESPONSE = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='message', full_name='gaia.proxy.GetUsersResponse.message', index=1,
       number=2, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='data', full_name='gaia.proxy.GetUsersResponse.data', index=2,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -325,7 +317,6 @@ _GETDEVICESREQUEST = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
-  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='partner_uuid', full_name='gaia.proxy.GetDevicesRequest.partner_uuid', index=0,
@@ -333,21 +324,21 @@ _GETDEVICESREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='start', full_name='gaia.proxy.GetDevicesRequest.start', index=1,
       number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='end', full_name='gaia.proxy.GetDevicesRequest.end', index=2,
       number=3, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -371,7 +362,6 @@ _GETDEVICESRESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
-  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='code', full_name='gaia.proxy.GetDevicesResponse.code', index=0,
@@ -379,21 +369,21 @@ _GETDEVICESRESPONSE = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='message', full_name='gaia.proxy.GetDevicesResponse.message', index=1,
       number=2, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='data', full_name='gaia.proxy.GetDevicesResponse.data', index=2,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -417,7 +407,6 @@ _GETUSERDEVICEREQUEST = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
-  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='partner_uuid', full_name='gaia.proxy.GetUserDeviceRequest.partner_uuid', index=0,
@@ -425,21 +414,21 @@ _GETUSERDEVICEREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='start', full_name='gaia.proxy.GetUserDeviceRequest.start', index=1,
       number=2, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='end', full_name='gaia.proxy.GetUserDeviceRequest.end', index=2,
       number=3, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -463,7 +452,6 @@ _GETUSERDEVICERESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
-  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='code', full_name='gaia.proxy.GetUserDeviceResponse.code', index=0,
@@ -471,21 +459,21 @@ _GETUSERDEVICERESPONSE = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='message', full_name='gaia.proxy.GetUserDeviceResponse.message', index=1,
       number=2, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='data', full_name='gaia.proxy.GetUserDeviceResponse.data', index=2,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -605,7 +593,6 @@ _GAIAPROXYGRPC = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  create_key=_descriptor._internal_create_key,
   serialized_start=1037,
   serialized_end=2154,
   methods=[
@@ -617,7 +604,6 @@ _GAIAPROXYGRPC = _descriptor.ServiceDescriptor(
     input_type=_PINGREQUEST,
     output_type=_PINGRESPONSE,
     serialized_options=b'\202\323\344\223\002\013\022\t/api/ping',
-    create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
     name='ListPartnerConfig',
@@ -627,7 +613,6 @@ _GAIAPROXYGRPC = _descriptor.ServiceDescriptor(
     input_type=gaia_dot_proxy_dot_partner__config__pb2._PARTNERCONFIGLISTREQUEST,
     output_type=gaia_dot_proxy_dot_partner__config__pb2._PARTNERCONFIGLISTRESPONSE,
     serialized_options=b'\202\323\344\223\002\024\022\022/api/rest/partners',
-    create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
     name='GetPartnerConfig',
@@ -637,7 +622,6 @@ _GAIAPROXYGRPC = _descriptor.ServiceDescriptor(
     input_type=gaia_dot_proxy_dot_partner__config__pb2._PARTNERCONFIGGETREQUEST,
     output_type=gaia_dot_proxy_dot_partner__config__pb2._PARTNERCONFIGGETRESPONSE,
     serialized_options=b'\202\323\344\223\002!\022\037/api/rest/partners/{partner_id}',
-    create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
     name='AddPartnerConfig',
@@ -647,7 +631,6 @@ _GAIAPROXYGRPC = _descriptor.ServiceDescriptor(
     input_type=gaia_dot_proxy_dot_partner__config__pb2._PARTNERCONFIGADDREQUEST,
     output_type=gaia_dot_proxy_dot_partner__config__pb2._PARTNERCONFIGADDRESPONSE,
     serialized_options=b'\202\323\344\223\002\027\"\022/api/rest/partners:\001*',
-    create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
     name='SetAC',
@@ -657,7 +640,6 @@ _GAIAPROXYGRPC = _descriptor.ServiceDescriptor(
     input_type=_SETACREQUEST,
     output_type=_SETACRESPONSE,
     serialized_options=b'\202\323\344\223\002\033\"\026/api/rest/proxy/ac/set:\001*',
-    create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
     name='GetPartnerResourceIdRange',
@@ -667,7 +649,6 @@ _GAIAPROXYGRPC = _descriptor.ServiceDescriptor(
     input_type=gaia_dot_proxy_dot_partner__resource__pb2._GETPARTNERRESOURCEIDRANGEREQUEST,
     output_type=gaia_dot_proxy_dot_partner__resource__pb2._GETPARTNERRESOURCEIDRANGERESPONSE,
     serialized_options=b'\202\323\344\223\002H\022F/api/rest/proxy/partners/{partner_uuid}/resource/{resource_type}/range',
-    create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
     name='GetUsers',
@@ -677,7 +658,6 @@ _GAIAPROXYGRPC = _descriptor.ServiceDescriptor(
     input_type=_GETUSERSREQUEST,
     output_type=_GETUSERSRESPONSE,
     serialized_options=b'\202\323\344\223\002\027\022\025/api/rest/proxy/users',
-    create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
     name='GetDevices',
@@ -687,7 +667,6 @@ _GAIAPROXYGRPC = _descriptor.ServiceDescriptor(
     input_type=_GETDEVICESREQUEST,
     output_type=_GETDEVICESRESPONSE,
     serialized_options=b'\202\323\344\223\002\031\022\027/api/rest/proxy/devices',
-    create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
     name='GetUserDevice',
@@ -697,7 +676,6 @@ _GAIAPROXYGRPC = _descriptor.ServiceDescriptor(
     input_type=_GETUSERDEVICEREQUEST,
     output_type=_GETUSERDEVICERESPONSE,
     serialized_options=b'\202\323\344\223\002\035\022\033/api/rest/proxy/user_device',
-    create_key=_descriptor._internal_create_key,
   ),
 ])
 _sym_db.RegisterServiceDescriptor(_GAIAPROXYGRPC)
