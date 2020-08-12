@@ -1,0 +1,64 @@
+syntax = "proto2";
+
+package protocol.gaia.proxy;
+option go_package = "tcl.com/gaia/protocol/proxy";
+option java_package = "com.tcl.gaia.protocol.proxy";
+
+
+message PartnerConfig {
+    required string uuid = 1;
+    required string name = 2;
+    required string type = 3;
+    required string endpoint = 4;
+    required string createTime = 5;
+    required string updateTime = 6;
+}
+
+message PartnerConfigPageData {
+    repeated PartnerConfig content = 1;
+    required bool paged = 2;
+    required int32 page = 3;
+    required int32 totalPages = 4;
+    required int32 elements = 5;
+    required int32 totalElements = 6;
+    required bool first = 7;
+    required bool last = 8;
+}
+
+message PartnerConfigListRequest {
+    repeated string searchBy = 1;
+    repeated string sortBy = 2;
+    repeated int32 page = 3;
+    repeated int32 size = 4;
+}
+
+message PartnerConfigListResponse {
+    required int32 code = 1;
+    required string message = 2;
+    required PartnerConfigPageData data = 3;
+}
+
+message PartnerConfigGetRequest {
+    required string partner_id = 1;
+}
+
+message PartnerConfigGetResponse {
+    required int32 code = 1;
+    required string message = 2;
+    required PartnerConfig data = 3;
+}
+
+message PartnerConfigAddRequest {
+    required string name = 1;
+    required string endpoint = 2;
+    required string type = 3;
+    required string oauth2Endpoint = 4;
+    required string clientId = 5;
+    required string clientSecret = 6;
+}
+
+message PartnerConfigAddResponse {
+    required int32 code = 1;
+    required string message = 2;
+    required PartnerConfig data = 3;
+}

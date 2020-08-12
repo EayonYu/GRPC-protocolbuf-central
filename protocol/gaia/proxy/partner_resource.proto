@@ -1,0 +1,22 @@
+syntax = "proto2";
+
+package protocol.gaia.proxy;
+option go_package = "tcl.com/gaia/protocol/proxy";
+option java_package = "com.tcl.gaia.protocol.proxy";
+
+
+message PartnerResourceIdRangeData {
+    required int32 start = 1;
+    required int32 end = 2;
+}
+
+message GetPartnerResourceIdRangeRequest {
+    required string partner_uuid = 1;
+    required string resource_type = 2;
+}
+
+message GetPartnerResourceIdRangeResponse {
+    required int32 code = 1;
+    required string message = 2;
+    required PartnerResourceIdRangeData data = 3;
+}
