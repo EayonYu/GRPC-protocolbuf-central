@@ -2,6 +2,8 @@ ifndef version
 	version=latest
 endif
 
+.PHONY: protocol
+
 default:
 	@echo "make prepare"
 	@echo "make protocol"
@@ -11,12 +13,12 @@ prepare:
 	bash ./scripts/env.sh prepare
 
 protocol:
-	protoc --proto_path=. --python_out=./build/python --java_out=./build/java --go_out=./build/go --swagger_out=logtostderr=true:./build/swagger ./common/tsl/*.proto
-	protoc --proto_path=. --python_out=./build/python --java_out=./build/java --go_out=./build/go --swagger_out=logtostderr=true:./build/swagger ./common/constant/*.proto
-	protoc --proto_path=. --python_out=./build/python --java_out=./build/java --go_out=./build/go --swagger_out=logtostderr=true:./build/swagger ./common/partner/*.proto
-	protoc --proto_path=. --python_out=./build/python --java_out=./build/java --go_out=./build/go --grpc-gateway_out=logtostderr=true:./build/go --swagger_out=logtostderr=true:./build/swagger ./gaia/proxy/*.proto
+	protoc --proto_path=. --python_out=./build/python --java_out=./build/java --go_out=./build/go --swagger_out=logtostderr=true:./build/swagger ./protocol/common/tsl/*.proto
+	protoc --proto_path=. --python_out=./build/python --java_out=./build/java --go_out=./build/go --swagger_out=logtostderr=true:./build/swagger ./protocol/common/constant/*.proto
+	protoc --proto_path=. --python_out=./build/python --java_out=./build/java --go_out=./build/go --swagger_out=logtostderr=true:./build/swagger ./protocol/common/partner/*.proto
+	protoc --proto_path=. --python_out=./build/python --java_out=./build/java --go_out=./build/go --grpc-gateway_out=logtostderr=true:./build/go --swagger_out=logtostderr=true:./build/swagger ./protocol/gaia/proxy/*.proto
 
-	python -m grpc_tools.protoc --proto_path=. --python_out=./build/python --grpc_python_out=./build/python ./gaia/proxy/gaia_proxy_grpc_service.proto
+	python -m grpc_tools.protoc --proto_path=. --python_out=./build/python --grpc_python_out=./build/python ./protocol/gaia/proxy/gaia_proxy_grpc_service.proto
 
 clean:
 	bash ./scripts/env.sh clean

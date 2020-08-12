@@ -1,0 +1,26 @@
+syntax = "proto2";
+
+
+package protocol.common.tsl;
+option go_package = "tcl.com/gaia/protocol/tsl";
+option java_package = "com.tcl.gaia.protocol.tsl";
+
+
+import "protocol/common/tsl/value.proto";
+
+
+enum TSLMethodStatus {
+    TSL_METHOD_STATUS_UNKNOWN = 0;
+    TSL_METHOD_STATUS_DELIVERED = 1;
+    TSL_METHOD_STATUS_UNDELIVERED = 2;
+    TSL_METHOD_STATUS_COMPLETE = 3;
+}
+
+message TSLMethod {
+    required string deviceId = 1;
+    required string invocationId = 2;
+    required TSLMethodStatus status = 3;
+    repeated protocol.common.tsl.TSLValueObject inputParams = 4;
+    repeated protocol.common.tsl.TSLValueObject outputValues = 5;
+    required string timestamp = 6;
+}

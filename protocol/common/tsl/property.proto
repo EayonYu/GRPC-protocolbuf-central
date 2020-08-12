@@ -1,0 +1,26 @@
+syntax = "proto2";
+
+
+package protocol.common.tsl;
+option go_package = "tcl.com/gaia/protocol/tsl";
+option java_package = "com.tcl.gaia.protocol.tsl";
+
+
+import "lib/google/protobuf/any.proto";
+
+
+message TSLDesiredProperty {
+    required google.protobuf.Any value = 1;
+    required string timestamp = 2;
+}
+
+message TSLReportedProperty {
+    required google.protobuf.Any value = 1;
+    required string timestamp = 2;
+}
+
+message TSLProperty {
+    required string propertyId = 1;
+    repeated TSLDesiredProperty desired = 2;
+    repeated TSLReportedProperty reported = 3;
+}

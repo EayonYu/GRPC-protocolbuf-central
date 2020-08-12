@@ -1,0 +1,15 @@
+syntax = "proto2";
+
+
+package protocol.common.tsl;
+option go_package = "tcl.com/gaia/protocol/tsl";
+option java_package = "com.tcl.gaia.protocol.tsl";
+
+
+import "lib/google/protobuf/any.proto";
+
+
+message TSLValueObject {
+    required string id = 1;
+    required google.protobuf.Any value = 2;
+}

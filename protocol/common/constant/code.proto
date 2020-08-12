@@ -1,0 +1,16 @@
+syntax = "proto2";
+
+
+package protocol.common.constant;
+option go_package = "tcl.com/gaia/protocol/code";
+option java_package = "com.tcl.gaia.protocol.code";
+
+
+enum Code {
+    UNKNOWN = 0;
+    SUCCESS = 200;
+    BAD_REQUEST = 400;
+    RESOURCE_NOT_FOUND = 404;
+    INTERNAL_SERVER_ERROR = 500;
+    ORIGIN_SERVER_ERROR = 501;
+}

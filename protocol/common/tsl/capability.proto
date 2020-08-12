@@ -1,0 +1,19 @@
+syntax = "proto2";
+
+
+package protocol.common.tsl;
+option go_package = "tcl.com/gaia/protocol/tsl";
+option java_package = "com.tcl.gaia.protocol.tsl";
+
+
+import "protocol/common/tsl/property.proto";
+import "protocol/common/tsl/method.proto";
+import "protocol/common/tsl/event.proto";
+
+
+message TSLCapability {
+    required string capabilityId = 1;
+    repeated protocol.common.tsl.TSLProperty properties = 2;
+    repeated protocol.common.tsl.TSLEvent events = 3;
+    repeated protocol.common.tsl.TSLMethod methods = 4;
+}
