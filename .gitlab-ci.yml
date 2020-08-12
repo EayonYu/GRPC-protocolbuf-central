@@ -1,4 +1,4 @@
-image: "10.124.106.121:5000/gaia/protobuf-compiler:0.0.8"
+image: "10.124.106.121:5000/gaia/protobuf-compiler:0.0.9"
 
 stages:
   - pre_build
@@ -15,6 +15,8 @@ pre_build:write_access:
     - echo aws_secret_access_key = ${IOT4_AWS_SECRET_ACCESS_KEY} >> ~/.aws/credentials
   script:
     - cp -r ~/.aws/credentials ~/.aws/config ./
+  only:
+    - tags
   artifacts:
     paths:
       - credentials
