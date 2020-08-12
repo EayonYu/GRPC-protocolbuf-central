@@ -1,4 +1,4 @@
-image: "10.124.106.121:5000/gaia/protobuf-compiler:0.0.2"
+image: "10.124.106.121:5000/gaia/protobuf-compiler:0.0.3"
 
 stages:
   - pre_build
@@ -23,6 +23,7 @@ pre_build:write_access:
 deploy_private:
   stage: deploy
   script:
+    - make clean
     - make protocol
     - make push version=${CI_COMMIT_TAG}
   only:

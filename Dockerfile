@@ -6,8 +6,8 @@ RUN echo 'Asia/Shanghai' >/etc/timezone
 
 CMD ["wget", "-O", "protoc.zip", "https://github.com/protocolbuffers/protobuf/releases/download/v3.12.4/protoc-3.12.4-linux-x86_64.zip"]
 CMD ["unzip", "-o", "protoc.zip", "-d", "_tmp_protoc/"]
-CMD ["cp", "-r", "_tmp_protoc/include/", "/usr/local/include/"]
-CMD ["cp", "-r", "_tmp_protoc/bin/", "/usr/local/bin/"]
+CMD ["cp", "-r", "_tmp_protoc/include/", "/usr/include/"]
+CMD ["cp", "-r", "_tmp_protoc/bin/", "/usr/bin/"]
 CMD ["rm", "-f", "protoc.zip"]
 CMD ["rm", "-rf", "_tmp_protoc/"]
 
