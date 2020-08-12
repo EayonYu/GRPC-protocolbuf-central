@@ -73,7 +73,10 @@ func local_request_GaiaProxyGrpc_ListPartnerConfig_0(ctx context.Context, marsha
 	var protoReq PartnerConfigListRequest
 	var metadata runtime.ServerMetadata
 
-	if err := runtime.PopulateQueryParameters(&protoReq, req.URL.Query(), filter_GaiaProxyGrpc_ListPartnerConfig_0); err != nil {
+	if err := req.ParseForm(); err != nil {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
+	}
+	if err := runtime.PopulateQueryParameters(&protoReq, req.Form, filter_GaiaProxyGrpc_ListPartnerConfig_0); err != nil {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
@@ -304,7 +307,10 @@ func local_request_GaiaProxyGrpc_GetUsers_0(ctx context.Context, marshaler runti
 	var protoReq GetUsersRequest
 	var metadata runtime.ServerMetadata
 
-	if err := runtime.PopulateQueryParameters(&protoReq, req.URL.Query(), filter_GaiaProxyGrpc_GetUsers_0); err != nil {
+	if err := req.ParseForm(); err != nil {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
+	}
+	if err := runtime.PopulateQueryParameters(&protoReq, req.Form, filter_GaiaProxyGrpc_GetUsers_0); err != nil {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
@@ -337,7 +343,10 @@ func local_request_GaiaProxyGrpc_GetDevices_0(ctx context.Context, marshaler run
 	var protoReq GetDevicesRequest
 	var metadata runtime.ServerMetadata
 
-	if err := runtime.PopulateQueryParameters(&protoReq, req.URL.Query(), filter_GaiaProxyGrpc_GetDevices_0); err != nil {
+	if err := req.ParseForm(); err != nil {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
+	}
+	if err := runtime.PopulateQueryParameters(&protoReq, req.Form, filter_GaiaProxyGrpc_GetDevices_0); err != nil {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
@@ -370,7 +379,10 @@ func local_request_GaiaProxyGrpc_GetUserDevice_0(ctx context.Context, marshaler 
 	var protoReq GetUserDeviceRequest
 	var metadata runtime.ServerMetadata
 
-	if err := runtime.PopulateQueryParameters(&protoReq, req.URL.Query(), filter_GaiaProxyGrpc_GetUserDevice_0); err != nil {
+	if err := req.ParseForm(); err != nil {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
+	}
+	if err := runtime.PopulateQueryParameters(&protoReq, req.Form, filter_GaiaProxyGrpc_GetUserDevice_0); err != nil {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
@@ -382,6 +394,7 @@ func local_request_GaiaProxyGrpc_GetUserDevice_0(ctx context.Context, marshaler 
 // RegisterGaiaProxyGrpcHandlerServer registers the http handlers for service GaiaProxyGrpc to "mux".
 // UnaryRPC     :call GaiaProxyGrpcServer directly.
 // StreamingRPC :currently unsupported pending https://github.com/grpc/grpc-go/issues/906.
+// Note that using this registration option will cause many gRPC library features (such as grpc.SendHeader, etc) to stop working. Consider using RegisterGaiaProxyGrpcHandlerFromEndpoint instead.
 func RegisterGaiaProxyGrpcHandlerServer(ctx context.Context, mux *runtime.ServeMux, server GaiaProxyGrpcServer) error {
 
 	mux.Handle("GET", pattern_GaiaProxyGrpc_Ping_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {

@@ -13,7 +13,7 @@
   "paths": {
     "/api/ping": {
       "get": {
-        "operationId": "Ping",
+        "operationId": "GaiaProxyGrpc_Ping",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -35,7 +35,7 @@
     },
     "/api/rest/partners": {
       "get": {
-        "operationId": "ListPartnerConfig",
+        "operationId": "GaiaProxyGrpc_ListPartnerConfig",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -99,7 +99,7 @@
         ]
       },
       "post": {
-        "operationId": "AddPartnerConfig",
+        "operationId": "GaiaProxyGrpc_AddPartnerConfig",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -131,7 +131,7 @@
     },
     "/api/rest/partners/{partner_id}": {
       "get": {
-        "operationId": "GetPartnerConfig",
+        "operationId": "GaiaProxyGrpc_GetPartnerConfig",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -161,7 +161,7 @@
     },
     "/api/rest/proxy/ac/set": {
       "post": {
-        "operationId": "SetAC",
+        "operationId": "GaiaProxyGrpc_SetAC",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -193,7 +193,7 @@
     },
     "/api/rest/proxy/devices": {
       "get": {
-        "operationId": "GetDevices",
+        "operationId": "GaiaProxyGrpc_GetDevices",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -238,7 +238,7 @@
     "/api/rest/proxy/partners/{partner_uuid}/resource/{resource_type}/range": {
       "get": {
         "summary": "for sync",
-        "operationId": "GetPartnerResourceIdRange",
+        "operationId": "GaiaProxyGrpc_GetPartnerResourceIdRange",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -274,7 +274,7 @@
     },
     "/api/rest/proxy/user_device": {
       "get": {
-        "operationId": "GetUserDevice",
+        "operationId": "GaiaProxyGrpc_GetUserDevice",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -318,7 +318,7 @@
     },
     "/api/rest/proxy/users": {
       "get": {
-        "operationId": "GetUsers",
+        "operationId": "GaiaProxyGrpc_GetUsers",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -474,7 +474,7 @@
         "mac": {
           "type": "string"
         },
-        "Connections": {
+        "connections": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/partnerConnection"

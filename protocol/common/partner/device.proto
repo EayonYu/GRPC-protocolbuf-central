@@ -72,7 +72,7 @@ message DeviceInfo {
     optional string parentId = 8;
     optional string serialNo = 9;
     optional string mac = 10;
-    repeated Connection Connections = 11;
+    repeated Connection connections = 11;
     optional Geolocation geolocation = 12;
     optional Location location = 13;
     optional FirmwareVersions firmwareVersions = 14;
