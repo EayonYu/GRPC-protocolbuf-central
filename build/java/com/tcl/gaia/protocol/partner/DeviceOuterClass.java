@@ -4612,25 +4612,25 @@ public final class DeviceOuterClass {
         getMacBytes();
 
     /**
-     * <code>repeated .protocol.common.partner.Connection Connections = 11;</code>
+     * <code>repeated .protocol.common.partner.Connection connections = 11;</code>
      */
     java.util.List<com.tcl.gaia.protocol.partner.DeviceOuterClass.Connection> 
         getConnectionsList();
     /**
-     * <code>repeated .protocol.common.partner.Connection Connections = 11;</code>
+     * <code>repeated .protocol.common.partner.Connection connections = 11;</code>
      */
     com.tcl.gaia.protocol.partner.DeviceOuterClass.Connection getConnections(int index);
     /**
-     * <code>repeated .protocol.common.partner.Connection Connections = 11;</code>
+     * <code>repeated .protocol.common.partner.Connection connections = 11;</code>
      */
     int getConnectionsCount();
     /**
-     * <code>repeated .protocol.common.partner.Connection Connections = 11;</code>
+     * <code>repeated .protocol.common.partner.Connection connections = 11;</code>
      */
     java.util.List<? extends com.tcl.gaia.protocol.partner.DeviceOuterClass.ConnectionOrBuilder> 
         getConnectionsOrBuilderList();
     /**
-     * <code>repeated .protocol.common.partner.Connection Connections = 11;</code>
+     * <code>repeated .protocol.common.partner.Connection connections = 11;</code>
      */
     com.tcl.gaia.protocol.partner.DeviceOuterClass.ConnectionOrBuilder getConnectionsOrBuilder(
         int index);
@@ -5397,14 +5397,14 @@ public final class DeviceOuterClass {
     public static final int CONNECTIONS_FIELD_NUMBER = 11;
     private java.util.List<com.tcl.gaia.protocol.partner.DeviceOuterClass.Connection> connections_;
     /**
-     * <code>repeated .protocol.common.partner.Connection Connections = 11;</code>
+     * <code>repeated .protocol.common.partner.Connection connections = 11;</code>
      */
     @java.lang.Override
     public java.util.List<com.tcl.gaia.protocol.partner.DeviceOuterClass.Connection> getConnectionsList() {
       return connections_;
     }
     /**
-     * <code>repeated .protocol.common.partner.Connection Connections = 11;</code>
+     * <code>repeated .protocol.common.partner.Connection connections = 11;</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.tcl.gaia.protocol.partner.DeviceOuterClass.ConnectionOrBuilder> 
@@ -5412,21 +5412,21 @@ public final class DeviceOuterClass {
       return connections_;
     }
     /**
-     * <code>repeated .protocol.common.partner.Connection Connections = 11;</code>
+     * <code>repeated .protocol.common.partner.Connection connections = 11;</code>
      */
     @java.lang.Override
     public int getConnectionsCount() {
       return connections_.size();
     }
     /**
-     * <code>repeated .protocol.common.partner.Connection Connections = 11;</code>
+     * <code>repeated .protocol.common.partner.Connection connections = 11;</code>
      */
     @java.lang.Override
     public com.tcl.gaia.protocol.partner.DeviceOuterClass.Connection getConnections(int index) {
       return connections_.get(index);
     }
     /**
-     * <code>repeated .protocol.common.partner.Connection Connections = 11;</code>
+     * <code>repeated .protocol.common.partner.Connection connections = 11;</code>
      */
     @java.lang.Override
     public com.tcl.gaia.protocol.partner.DeviceOuterClass.ConnectionOrBuilder getConnectionsOrBuilder(
@@ -7199,7 +7199,7 @@ public final class DeviceOuterClass {
           com.tcl.gaia.protocol.partner.DeviceOuterClass.Connection, com.tcl.gaia.protocol.partner.DeviceOuterClass.Connection.Builder, com.tcl.gaia.protocol.partner.DeviceOuterClass.ConnectionOrBuilder> connectionsBuilder_;
 
       /**
-       * <code>repeated .protocol.common.partner.Connection Connections = 11;</code>
+       * <code>repeated .protocol.common.partner.Connection connections = 11;</code>
        */
       public java.util.List<com.tcl.gaia.protocol.partner.DeviceOuterClass.Connection> getConnectionsList() {
         if (connectionsBuilder_ == null) {
@@ -7209,7 +7209,7 @@ public final class DeviceOuterClass {
         }
       }
       /**
-       * <code>repeated .protocol.common.partner.Connection Connections = 11;</code>
+       * <code>repeated .protocol.common.partner.Connection connections = 11;</code>
        */
       public int getConnectionsCount() {
         if (connectionsBuilder_ == null) {
@@ -7219,7 +7219,7 @@ public final class DeviceOuterClass {
         }
       }
       /**
-       * <code>repeated .protocol.common.partner.Connection Connections = 11;</code>
+       * <code>repeated .protocol.common.partner.Connection connections = 11;</code>
        */
       public com.tcl.gaia.protocol.partner.DeviceOuterClass.Connection getConnections(int index) {
         if (connectionsBuilder_ == null) {
@@ -7229,7 +7229,7 @@ public final class DeviceOuterClass {
         }
       }
       /**
-       * <code>repeated .protocol.common.partner.Connection Connections = 11;</code>
+       * <code>repeated .protocol.common.partner.Connection connections = 11;</code>
        */
       public Builder setConnections(
           int index, com.tcl.gaia.protocol.partner.DeviceOuterClass.Connection value) {
@@ -7246,7 +7246,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .protocol.common.partner.Connection Connections = 11;</code>
+       * <code>repeated .protocol.common.partner.Connection connections = 11;</code>
        */
       public Builder setConnections(
           int index, com.tcl.gaia.protocol.partner.DeviceOuterClass.Connection.Builder builderForValue) {
@@ -7260,7 +7260,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .protocol.common.partner.Connection Connections = 11;</code>
+       * <code>repeated .protocol.common.partner.Connection connections = 11;</code>
        */
       public Builder addConnections(com.tcl.gaia.protocol.partner.DeviceOuterClass.Connection value) {
         if (connectionsBuilder_ == null) {
@@ -7276,7 +7276,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .protocol.common.partner.Connection Connections = 11;</code>
+       * <code>repeated .protocol.common.partner.Connection connections = 11;</code>
        */
       public Builder addConnections(
           int index, com.tcl.gaia.protocol.partner.DeviceOuterClass.Connection value) {
@@ -7293,7 +7293,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .protocol.common.partner.Connection Connections = 11;</code>
+       * <code>repeated .protocol.common.partner.Connection connections = 11;</code>
        */
       public Builder addConnections(
           com.tcl.gaia.protocol.partner.DeviceOuterClass.Connection.Builder builderForValue) {
@@ -7307,7 +7307,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .protocol.common.partner.Connection Connections = 11;</code>
+       * <code>repeated .protocol.common.partner.Connection connections = 11;</code>
        */
       public Builder addConnections(
           int index, com.tcl.gaia.protocol.partner.DeviceOuterClass.Connection.Builder builderForValue) {
@@ -7321,7 +7321,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .protocol.common.partner.Connection Connections = 11;</code>
+       * <code>repeated .protocol.common.partner.Connection connections = 11;</code>
        */
       public Builder addAllConnections(
           java.lang.Iterable<? extends com.tcl.gaia.protocol.partner.DeviceOuterClass.Connection> values) {
@@ -7336,7 +7336,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .protocol.common.partner.Connection Connections = 11;</code>
+       * <code>repeated .protocol.common.partner.Connection connections = 11;</code>
        */
       public Builder clearConnections() {
         if (connectionsBuilder_ == null) {
@@ -7349,7 +7349,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .protocol.common.partner.Connection Connections = 11;</code>
+       * <code>repeated .protocol.common.partner.Connection connections = 11;</code>
        */
       public Builder removeConnections(int index) {
         if (connectionsBuilder_ == null) {
@@ -7362,14 +7362,14 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .protocol.common.partner.Connection Connections = 11;</code>
+       * <code>repeated .protocol.common.partner.Connection connections = 11;</code>
        */
       public com.tcl.gaia.protocol.partner.DeviceOuterClass.Connection.Builder getConnectionsBuilder(
           int index) {
         return getConnectionsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .protocol.common.partner.Connection Connections = 11;</code>
+       * <code>repeated .protocol.common.partner.Connection connections = 11;</code>
        */
       public com.tcl.gaia.protocol.partner.DeviceOuterClass.ConnectionOrBuilder getConnectionsOrBuilder(
           int index) {
@@ -7379,7 +7379,7 @@ public final class DeviceOuterClass {
         }
       }
       /**
-       * <code>repeated .protocol.common.partner.Connection Connections = 11;</code>
+       * <code>repeated .protocol.common.partner.Connection connections = 11;</code>
        */
       public java.util.List<? extends com.tcl.gaia.protocol.partner.DeviceOuterClass.ConnectionOrBuilder> 
            getConnectionsOrBuilderList() {
@@ -7390,14 +7390,14 @@ public final class DeviceOuterClass {
         }
       }
       /**
-       * <code>repeated .protocol.common.partner.Connection Connections = 11;</code>
+       * <code>repeated .protocol.common.partner.Connection connections = 11;</code>
        */
       public com.tcl.gaia.protocol.partner.DeviceOuterClass.Connection.Builder addConnectionsBuilder() {
         return getConnectionsFieldBuilder().addBuilder(
             com.tcl.gaia.protocol.partner.DeviceOuterClass.Connection.getDefaultInstance());
       }
       /**
-       * <code>repeated .protocol.common.partner.Connection Connections = 11;</code>
+       * <code>repeated .protocol.common.partner.Connection connections = 11;</code>
        */
       public com.tcl.gaia.protocol.partner.DeviceOuterClass.Connection.Builder addConnectionsBuilder(
           int index) {
@@ -7405,7 +7405,7 @@ public final class DeviceOuterClass {
             index, com.tcl.gaia.protocol.partner.DeviceOuterClass.Connection.getDefaultInstance());
       }
       /**
-       * <code>repeated .protocol.common.partner.Connection Connections = 11;</code>
+       * <code>repeated .protocol.common.partner.Connection connections = 11;</code>
        */
       public java.util.List<com.tcl.gaia.protocol.partner.DeviceOuterClass.Connection.Builder> 
            getConnectionsBuilderList() {
@@ -10505,7 +10505,7 @@ public final class DeviceOuterClass {
       "protocol.common.partner.DeviceType\022\020\n\010te" +
       "nantId\030\005 \001(\t\022\026\n\016manufacturerId\030\006 \001(\t\022\r\n\005" +
       "model\030\007 \001(\t\022\020\n\010parentId\030\010 \001(\t\022\020\n\010serialN" +
-      "o\030\t \001(\t\022\013\n\003mac\030\n \001(\t\0228\n\013Connections\030\013 \003(" +
+      "o\030\t \001(\t\022\013\n\003mac\030\n \001(\t\0228\n\013connections\030\013 \003(" +
       "\0132#.protocol.common.partner.Connection\0229" +
       "\n\013geolocation\030\014 \001(\0132$.protocol.common.pa" +
       "rtner.Geolocation\0223\n\010location\030\r \001(\0132!.pr" +

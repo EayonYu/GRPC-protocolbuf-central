@@ -474,7 +474,7 @@
         "mac": {
           "type": "string"
         },
-        "Connections": {
+        "connections": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/partnerConnection"
