@@ -1,4 +1,4 @@
-image: "10.124.106.121:5000/gaia/protobuf-compiler:0.0.3"
+image: "10.124.106.121:5000/gaia/protobuf-compiler:0.0.7"
 
 stages:
   - pre_build
