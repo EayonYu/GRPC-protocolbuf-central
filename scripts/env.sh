@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 protoc_release_version="3.12.4"
+GOPATH=$(go env GOPATH)
+protobuf_go_version="v1.4.2"
 
 
 function prepare() {
@@ -20,6 +22,9 @@ function prepare() {
     rm -f protoc.zip
     rm -rf _tmp_protoc/
 
+    rm -rf "${GOPATH}"/src/github.com/golang/protobuf
+    go get -v -d -u github.com/golang/protobuf/protoc-gen-go
+    git -C "${GOPATH}"/src/github.com/golang/protobuf checkout "${protobuf_go_version}"
     go install github.com/golang/protobuf/protoc-gen-go
 }
 
