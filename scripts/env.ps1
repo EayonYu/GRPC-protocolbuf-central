@@ -21,12 +21,6 @@ function goEnvPrepare {
 
 # this is a function. it can download appropriate protoc.zip file and auto config env for you
 function prepareEnv {
-    $protoc_version = $(protoc --version)
-    if(-not [String]::IsNullOrEmpty($protoc_version)){
-        Write-Output "You have already installed protoc"
-        return
-    }
-
     # check OS type
     if ($env:OS -eq 'Windows_NT') {
         # check cpu architectures type
