@@ -8,7 +8,7 @@ option java_package = "com.tcl.gaia.protocol.tsl";
 
 import "protocol/common/tsl/value.proto";
 
-
+// https://confluence.tclking.com/display/IoT4/Partner+API+Common+Objects#PartnerAPICommonObjects-TSLMethod
 enum TSLMethodStatus {
     TSL_METHOD_STATUS_UNKNOWN = 0;
     TSL_METHOD_STATUS_DELIVERED = 1;

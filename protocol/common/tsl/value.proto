@@ -1,15 +1,13 @@
 syntax = "proto2";
 
-
 package protocol.common.tsl;
 option go_package = "tcl.com/gaia/protocol/tsl";
 option java_package = "com.tcl.gaia.protocol.tsl";
 
-
 import "google/protobuf/any.proto";
 
-
+// https://confluence.tclking.com/display/IoT4/Partner+API+Common+Objects#PartnerAPICommonObjects-TSLValueObject
 message TSLValueObject {
-    required string id = 1;
-    required google.protobuf.Any value = 2;
+  required string id = 1;
+  required google.protobuf.Any value = 2;
 }

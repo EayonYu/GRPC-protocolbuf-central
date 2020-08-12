@@ -2,6 +2,22 @@
 
 # set google protoc version = 3.12.4
 $protoc_release_version = "3.12.4"
+$GOPATH = $(go env GOPATH)
+$protobuf_go_version = "v1.4.2"
+$protobuf_swagger_version ="v1.14.6"
+
+function goEnvPrepare {
+    go get -u -d -v github.com/golang/protobuf/protoc-gen-go
+    git -C "$GOPATH/src/github.com/golang/protobuf" checkout "${protobuf_go_version}"
+    go install github.com/golang/protobuf/protoc-gen-go
+
+    go get -u -d -v github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger 
+    go get -u -d -v github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway
+    git -C "$GOPATH/src/github.com/grpc-ecosystem/grpc-gateway" checkout "$protobuf_swagger_version"
+    go install github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger
+    go install github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway
+}
+
 
 # this is a function. it can download appropriate protoc.zip file and auto config env for you
 function prepareEnv {
@@ -46,6 +62,12 @@ function prepareEnv {
         Write-Output  "The PROTOC_HOME is: $PROTOC_HOME"
         [System.Environment]::SetEnvironmentVariable('PATH', "%PATH%;$PROTOC_HOME\bin", [System.EnvironmentVariableTarget]::User)
         Write-Output  "The user environment variable has been set successfully"
+        
+        if (Test-Path "$GOPATH/src/github.com/golang/protobuf") {
+            Remove-Item -Force -Recurse   "$GOPATH/src/github.com/golang/protobuf"
+        }
+        
+        goEnvPrepare
     }
     else {
         # output error log
@@ -71,11 +93,18 @@ function cleanEnv {
     $des = ".\protoc.zip"
     $PROTOC_HOME = "$env:USERPROFILE\protoc"
     # delete protoc.zip and unziped folder
-    Remove-Item -Force $des
-    Remove-Item -Force -Recurse $PROTOC_HOME
+    if(Test-Path $des){
+        Remove-Item -Force $des
+    }
+    if(Test-Path $PROTOC_HOME){
+        Remove-Item -Force -Recurse $PROTOC_HOME
+    }
+
     # reset environment
-    [System.Environment]::('PROTOC_HOME', $null, [System.EnvironmentVariableTarget]::User)
+    [System.Environment]::SetEnvironmentVariable('PROTOC_HOME', $null, [System.EnvironmentVariableTarget]::User)
     [System.Environment]::SetEnvironmentVariable('PATH', $null, [System.EnvironmentVariableTarget]::User)
+
+    Write-Output "Clean finished"
 }
 
 if ("$args" -eq "prepare") {

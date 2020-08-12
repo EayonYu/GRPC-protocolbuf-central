@@ -14,6 +14,10 @@ It defines the language-independent objects required by other projects. Whether 
 - [ ] for all the compiled files
 
 ## MISC
+### about proto version
+we ALL use proto2,NOT proto3,please see : [proto version(IoT4.0)](https://confluence.tclking.com/pages/viewpage.action?pageId=20175491)
+
+
 ### copy golang gateway proto files to project path google
 now we use github.com/grpc-ecosystem/grpc-gateway v1.14.3
 ```
@@ -22,3 +26,4 @@ cp -r ${GOPATH}/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapi
 
 ## development env problem and solution:
 - [IDEA protobuf plguin config](https://confluence.tclking.com/display/IoT4/IDEA+protobuf+plguin+config)
+- [Windows&MacOS&Unix like OS env config](https://confluence.tclking.com/pages/viewpage.action?pageId=20172995)

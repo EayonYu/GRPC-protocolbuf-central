@@ -5,7 +5,7 @@ package protocol.common.constant;
 option go_package = "tcl.com/gaia/protocol/code";
 option java_package = "com.tcl.gaia.protocol.code";
 
-
+// https://confluence.tclking.com/display/IoT4/Error+Codes
 enum Code {
     UNKNOWN = 0;
     SUCCESS = 200;
