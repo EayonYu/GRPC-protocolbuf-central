@@ -28,7 +28,7 @@ deploy:
     - rm -rf ~/.aws/ && mkdir ~/.aws && cp -r credentials config ~/.aws/ && ls -l ~/.aws && cat ~/.aws/credentials
     - make clean
     - make protocol
-    - aws s3 sync --delete ./build s3://protocols/gaia/protocol/${CI_COMMIT_TAG} --exclude *.DS_Store*
-    #- make push version=${CI_COMMIT_TAG}
+    - aws s3 sync --delete s3://protocols/gaia/mirror/0.0.1 ./build
+    - make push version=${CI_COMMIT_TAG}
   only:
     - tags
