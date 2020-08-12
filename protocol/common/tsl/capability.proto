@@ -10,7 +10,7 @@ import "protocol/common/tsl/property.proto";
 import "protocol/common/tsl/method.proto";
 import "protocol/common/tsl/event.proto";
 
-
+// https://confluence.tclking.com/display/IoT4/Partner+API+Common+Objects#PartnerAPICommonObjects-TSLCapability
 message TSLCapability {
     required string capabilityId = 1;
     repeated protocol.common.tsl.TSLProperty properties = 2;

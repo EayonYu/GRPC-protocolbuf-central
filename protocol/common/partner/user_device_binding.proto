@@ -4,17 +4,15 @@ package protocol.common.partner;
 option go_package = "tcl.com/gaia/protocol/partner";
 option java_package = "com.tcl.gaia.protocol.partner";
 
-
 import "google/protobuf/any.proto";
-
 import "protocol/common/partner/device.proto";
 
-
+// https://confluence.tclking.com/display/IoT4/Partner+API+Common+Objects#PartnerAPICommonObjects-UserDeviceBinding
 message UserDeviceBinding {
-    required string deviceId = 1;
-    optional string deviceNickName = 2;
-    optional protocol.common.partner.Device device = 3;
-    required string userId = 4;
-    required string userRole = 5;
-    optional google.protobuf.Any extra = 6;
+  required string deviceId = 1;
+  optional string deviceNickName = 2;
+  optional protocol.common.partner.Device device = 3;
+  required string userId = 4;
+  required string userRole = 5;
+  optional google.protobuf.Any extra = 6;
 }

@@ -8,7 +8,7 @@ option java_package = "com.tcl.gaia.protocol.tsl";
 
 import "protocol/common/tsl/value.proto";
 
-
+// https://confluence.tclking.com/display/IoT4/Partner+API+Common+Objects#PartnerAPICommonObjects-TSLEvent
 message TSLEvent {
     required string eventId = 1;
     repeated protocol.common.tsl.TSLValueObject attributes = 2;
