@@ -25,3 +25,5 @@ RUN ["cp", "-r", "_tmp_protoc/bin/.", "/usr/local/bin"]
 RUN ["rm", "-f", "protoc.zip"]
 RUN ["rm", "-rf", "_tmp_protoc/"]
 
+RUN ["go", "get", "github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway"]
+RUN ["go", "get", "github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger"]
