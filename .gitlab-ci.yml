@@ -38,15 +38,7 @@ deploy_after:
     STAGE: "dev"
     REGION: "$IOT4_AWS_DEFAULT_REGION"
   script:
-    # - rm -rf ~/.aws/ && mkdir ~/.aws && cp -r credentials config ~/.aws/ && ls -l ~/.aws && cat ~/.aws/credentials
-    - rm -rf ~/.aws
-    - mkdir ~/.aws
-    - touch ~/.aws/config
-    - echo "[profile default]" >> ~/.aws/config
-    - echo "region=cn-north-1" >> ~/.aws/config
-    - echo "aws_access_key_id=AKIA4FODK7CC3GMIUZWZ" >> ~/.aws/config
-    - echo "aws_secret_access_key=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" >> ~/.aws/config
-    - aws --version
+    - rm -rf ~/.aws/ && mkdir ~/.aws && cp -r credentials config ~/.aws/ && ls -l ~/.aws && cat ~/.aws/credentials
     - make clean
     - make protocol
     - make push version=${CI_COMMIT_TAG}
