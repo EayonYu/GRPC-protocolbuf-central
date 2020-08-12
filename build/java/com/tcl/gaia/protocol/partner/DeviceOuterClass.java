@@ -10489,57 +10489,56 @@ public final class DeviceOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n$protocol/common/partner/device.proto\022\027" +
-      "protocol.common.partner\032\035lib/google/prot" +
-      "obuf/any.proto\032$protocol/common/tsl/capa" +
-      "bility.proto\"\023\n\021ConnectionAddress\"\200\001\n\nCo" +
-      "nnection\0225\n\004type\030\001 \002(\0162\'.protocol.common" +
-      ".partner.ConnectionType\022;\n\007address\030\002 \001(\013" +
-      "2*.protocol.common.partner.ConnectionAdd" +
-      "ress\"2\n\013Geolocation\022\021\n\tlongitude\030\001 \002(\002\022\020" +
-      "\n\010latitude\030\002 \002(\002\"\'\n\010Location\022\014\n\004room\030\001 \002" +
-      "(\t\022\r\n\005floor\030\002 \002(\005\"3\n\020FirmwareVersions\022\022\n" +
-      "\nwifiModule\030\001 \002(\t\022\013\n\003mcu\030\002 \002(\005\")\n\013Device" +
-      "Icons\022\014\n\004dp32\030\001 \001(\t\022\014\n\004dp64\030\002 \001(\t\"\263\004\n\nDe" +
-      "viceInfo\022\020\n\010deviceId\030\001 \002(\t\022\022\n\ndeviceName" +
-      "\030\002 \001(\t\022\r\n\005tslId\030\003 \001(\t\0227\n\ndeviceType\030\004 \001(" +
-      "\0162#.protocol.common.partner.DeviceType\022\020" +
-      "\n\010tenantId\030\005 \001(\t\022\026\n\016manufacturerId\030\006 \001(\t" +
-      "\022\r\n\005model\030\007 \001(\t\022\020\n\010parentId\030\010 \001(\t\022\020\n\010ser" +
-      "ialNo\030\t \001(\t\022\013\n\003mac\030\n \001(\t\0228\n\013Connections\030" +
-      "\013 \003(\0132#.protocol.common.partner.Connecti" +
-      "on\0229\n\013geolocation\030\014 \001(\0132$.protocol.commo" +
-      "n.partner.Geolocation\0223\n\010location\030\r \001(\0132" +
-      "!.protocol.common.partner.Location\022C\n\020fi" +
-      "rmwareVersions\030\016 \001(\0132).protocol.common.p" +
-      "artner.FirmwareVersions\0229\n\013deviceIcons\030\017" +
-      " \001(\0132$.protocol.common.partner.DeviceIco" +
-      "ns\022#\n\005extra\030\020 \001(\0132\024.google.protobuf.Any\"" +
-      "z\n\022DeviceReachAbility\022\020\n\010deviceId\030\001 \002(\t\022" +
-      "?\n\005value\030\002 \002(\01620.protocol.common.partner" +
-      ".DeviceReachAbilityValue\022\021\n\ttimestamp\030\003 " +
-      "\002(\t\"\316\001\n\006Device\022\020\n\010deviceId\030\001 \002(\t\0227\n\ndevi" +
-      "ceInfo\030\002 \002(\0132#.protocol.common.partner.D" +
-      "eviceInfo\022A\n\014reachAbility\030\003 \001(\0132+.protoc" +
-      "ol.common.partner.DeviceReachAbility\0226\n\n" +
-      "properties\030\004 \003(\0132\".protocol.common.tsl.T" +
-      "SLCapability*\361\001\n\nDeviceType\022\027\n\023DEVICE_TY" +
-      "PE_UNKNOWN\020\000\022\037\n\033DEVICE_TYPE_AIR_CONDITIO" +
-      "NER\020\001\022\033\n\027DEVICE_TYPE_AIR_CLEANER\020\002\022\036\n\032DE" +
-      "VICE_TYPE_WATER_PURIFIER\020\003\022\032\n\026DEVICE_TYP" +
-      "E_TELEVISION\020\004\022\025\n\021DEVICE_TYPE_PHONE\020\005\022!\n" +
-      "\035DEVICE_TYPE_PERSONAL_COMPUTER\020\006\022\026\n\022DEVI" +
-      "CE_TYPE_SOCKET\020\007*\324\001\n\016ConnectionType\022\033\n\027C" +
-      "ONNECTION_TYPE_UNKNOWN\020\000\022\030\n\024CONNECTION_T" +
-      "YPE_WIFI\020\001\022\034\n\030CONNECTION_TYPE_CELLULAR\020\002" +
-      "\022\033\n\027CONNECTION_TYPE_ZIG_BEE\020\003\022\032\n\026CONNECT" +
-      "ION_TYPE_Z_WAVE\020\004\022\030\n\024CONNECTION_TYPE_LOR" +
-      "A\020\005\022\032\n\026CONNECTION_TYPE_NB_IOT\020\006*\220\001\n\027Devi" +
-      "ceReachAbilityValue\022&\n\"DEVICE_REACH_ABIL" +
-      "ITY_VALUE_UNKNOWN\020\000\022%\n!DEVICE_REACH_ABIL" +
-      "ITY_VALUE_ONLINE\020\001\022&\n\"DEVICE_REACH_ABILI" +
-      "TY_VALUE_OFFLINE\020\002B>\n\035com.tcl.gaia.proto" +
-      "col.partnerZ\035tcl.com/gaia/protocol/partn" +
-      "er"
+      "protocol.common.partner\032\031google/protobuf" +
+      "/any.proto\032$protocol/common/tsl/capabili" +
+      "ty.proto\"\023\n\021ConnectionAddress\"\200\001\n\nConnec" +
+      "tion\0225\n\004type\030\001 \002(\0162\'.protocol.common.par" +
+      "tner.ConnectionType\022;\n\007address\030\002 \001(\0132*.p" +
+      "rotocol.common.partner.ConnectionAddress" +
+      "\"2\n\013Geolocation\022\021\n\tlongitude\030\001 \002(\002\022\020\n\010la" +
+      "titude\030\002 \002(\002\"\'\n\010Location\022\014\n\004room\030\001 \002(\t\022\r" +
+      "\n\005floor\030\002 \002(\005\"3\n\020FirmwareVersions\022\022\n\nwif" +
+      "iModule\030\001 \002(\t\022\013\n\003mcu\030\002 \002(\005\")\n\013DeviceIcon" +
+      "s\022\014\n\004dp32\030\001 \001(\t\022\014\n\004dp64\030\002 \001(\t\"\263\004\n\nDevice" +
+      "Info\022\020\n\010deviceId\030\001 \002(\t\022\022\n\ndeviceName\030\002 \001" +
+      "(\t\022\r\n\005tslId\030\003 \001(\t\0227\n\ndeviceType\030\004 \001(\0162#." +
+      "protocol.common.partner.DeviceType\022\020\n\010te" +
+      "nantId\030\005 \001(\t\022\026\n\016manufacturerId\030\006 \001(\t\022\r\n\005" +
+      "model\030\007 \001(\t\022\020\n\010parentId\030\010 \001(\t\022\020\n\010serialN" +
+      "o\030\t \001(\t\022\013\n\003mac\030\n \001(\t\0228\n\013Connections\030\013 \003(" +
+      "\0132#.protocol.common.partner.Connection\0229" +
+      "\n\013geolocation\030\014 \001(\0132$.protocol.common.pa" +
+      "rtner.Geolocation\0223\n\010location\030\r \001(\0132!.pr" +
+      "otocol.common.partner.Location\022C\n\020firmwa" +
+      "reVersions\030\016 \001(\0132).protocol.common.partn" +
+      "er.FirmwareVersions\0229\n\013deviceIcons\030\017 \001(\013" +
+      "2$.protocol.common.partner.DeviceIcons\022#" +
+      "\n\005extra\030\020 \001(\0132\024.google.protobuf.Any\"z\n\022D" +
+      "eviceReachAbility\022\020\n\010deviceId\030\001 \002(\t\022?\n\005v" +
+      "alue\030\002 \002(\01620.protocol.common.partner.Dev" +
+      "iceReachAbilityValue\022\021\n\ttimestamp\030\003 \002(\t\"" +
+      "\316\001\n\006Device\022\020\n\010deviceId\030\001 \002(\t\0227\n\ndeviceIn" +
+      "fo\030\002 \002(\0132#.protocol.common.partner.Devic" +
+      "eInfo\022A\n\014reachAbility\030\003 \001(\0132+.protocol.c" +
+      "ommon.partner.DeviceReachAbility\0226\n\nprop" +
+      "erties\030\004 \003(\0132\".protocol.common.tsl.TSLCa" +
+      "pability*\361\001\n\nDeviceType\022\027\n\023DEVICE_TYPE_U" +
+      "NKNOWN\020\000\022\037\n\033DEVICE_TYPE_AIR_CONDITIONER\020" +
+      "\001\022\033\n\027DEVICE_TYPE_AIR_CLEANER\020\002\022\036\n\032DEVICE" +
+      "_TYPE_WATER_PURIFIER\020\003\022\032\n\026DEVICE_TYPE_TE" +
+      "LEVISION\020\004\022\025\n\021DEVICE_TYPE_PHONE\020\005\022!\n\035DEV" +
+      "ICE_TYPE_PERSONAL_COMPUTER\020\006\022\026\n\022DEVICE_T" +
+      "YPE_SOCKET\020\007*\324\001\n\016ConnectionType\022\033\n\027CONNE" +
+      "CTION_TYPE_UNKNOWN\020\000\022\030\n\024CONNECTION_TYPE_" +
+      "WIFI\020\001\022\034\n\030CONNECTION_TYPE_CELLULAR\020\002\022\033\n\027" +
+      "CONNECTION_TYPE_ZIG_BEE\020\003\022\032\n\026CONNECTION_" +
+      "TYPE_Z_WAVE\020\004\022\030\n\024CONNECTION_TYPE_LORA\020\005\022" +
+      "\032\n\026CONNECTION_TYPE_NB_IOT\020\006*\220\001\n\027DeviceRe" +
+      "achAbilityValue\022&\n\"DEVICE_REACH_ABILITY_" +
+      "VALUE_UNKNOWN\020\000\022%\n!DEVICE_REACH_ABILITY_" +
+      "VALUE_ONLINE\020\001\022&\n\"DEVICE_REACH_ABILITY_V" +
+      "ALUE_OFFLINE\020\002B>\n\035com.tcl.gaia.protocol." +
+      "partnerZ\035tcl.com/gaia/protocol/partner"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

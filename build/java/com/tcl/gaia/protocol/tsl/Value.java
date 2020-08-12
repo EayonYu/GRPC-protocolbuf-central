@@ -857,11 +857,11 @@ public final class Value {
   static {
     java.lang.String[] descriptorData = {
       "\n\037protocol/common/tsl/value.proto\022\023proto" +
-      "col.common.tsl\032\035lib/google/protobuf/any." +
-      "proto\"A\n\016TSLValueObject\022\n\n\002id\030\001 \002(\t\022#\n\005v" +
-      "alue\030\002 \002(\0132\024.google.protobuf.AnyB6\n\031com." +
-      "tcl.gaia.protocol.tslZ\031tcl.com/gaia/prot" +
-      "ocol/tsl"
+      "col.common.tsl\032\031google/protobuf/any.prot" +
+      "o\"A\n\016TSLValueObject\022\n\n\002id\030\001 \002(\t\022#\n\005value" +
+      "\030\002 \002(\0132\024.google.protobuf.AnyB6\n\031com.tcl." +
+      "gaia.protocol.tslZ\031tcl.com/gaia/protocol" +
+      "/tsl"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

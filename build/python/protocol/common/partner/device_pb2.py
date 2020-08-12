@@ -12,7 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from lib.google.protobuf import any_pb2 as lib_dot_google_dot_protobuf_dot_any__pb2
+from google.protobuf import any_pb2 as google_dot_protobuf_dot_any__pb2
 from protocol.common.tsl import capability_pb2 as protocol_dot_common_dot_tsl_dot_capability__pb2
 
 
@@ -22,9 +22,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=b'\n\035com.tcl.gaia.protocol.partnerZ\035tcl.com/gaia/protocol/partner',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n$protocol/common/partner/device.proto\x12\x17protocol.common.partner\x1a\x1dlib/google/protobuf/any.proto\x1a$protocol/common/tsl/capability.proto\"\x13\n\x11\x43onnectionAddress\"\x80\x01\n\nConnection\x12\x35\n\x04type\x18\x01 \x02(\x0e\x32\'.protocol.common.partner.ConnectionType\x12;\n\x07\x61\x64\x64ress\x18\x02 \x01(\x0b\x32*.protocol.common.partner.ConnectionAddress\"2\n\x0bGeolocation\x12\x11\n\tlongitude\x18\x01 \x02(\x02\x12\x10\n\x08latitude\x18\x02 \x02(\x02\"\'\n\x08Location\x12\x0c\n\x04room\x18\x01 \x02(\t\x12\r\n\x05\x66loor\x18\x02 \x02(\x05\"3\n\x10\x46irmwareVersions\x12\x12\n\nwifiModule\x18\x01 \x02(\t\x12\x0b\n\x03mcu\x18\x02 \x02(\x05\")\n\x0b\x44\x65viceIcons\x12\x0c\n\x04\x64p32\x18\x01 \x01(\t\x12\x0c\n\x04\x64p64\x18\x02 \x01(\t\"\xb3\x04\n\nDeviceInfo\x12\x10\n\x08\x64\x65viceId\x18\x01 \x02(\t\x12\x12\n\ndeviceName\x18\x02 \x01(\t\x12\r\n\x05tslId\x18\x03 \x01(\t\x12\x37\n\ndeviceType\x18\x04 \x01(\x0e\x32#.protocol.common.partner.DeviceType\x12\x10\n\x08tenantId\x18\x05 \x01(\t\x12\x16\n\x0emanufacturerId\x18\x06 \x01(\t\x12\r\n\x05model\x18\x07 \x01(\t\x12\x10\n\x08parentId\x18\x08 \x01(\t\x12\x10\n\x08serialNo\x18\t \x01(\t\x12\x0b\n\x03mac\x18\n \x01(\t\x12\x38\n\x0b\x43onnections\x18\x0b \x03(\x0b\x32#.protocol.common.partner.Connection\x12\x39\n\x0bgeolocation\x18\x0c \x01(\x0b\x32$.protocol.common.partner.Geolocation\x12\x33\n\x08location\x18\r \x01(\x0b\x32!.protocol.common.partner.Location\x12\x43\n\x10\x66irmwareVersions\x18\x0e \x01(\x0b\x32).protocol.common.partner.FirmwareVersions\x12\x39\n\x0b\x64\x65viceIcons\x18\x0f \x01(\x0b\x32$.protocol.common.partner.DeviceIcons\x12#\n\x05\x65xtra\x18\x10 \x01(\x0b\x32\x14.google.protobuf.Any\"z\n\x12\x44\x65viceReachAbility\x12\x10\n\x08\x64\x65viceId\x18\x01 \x02(\t\x12?\n\x05value\x18\x02 \x02(\x0e\x32\x30.protocol.common.partner.DeviceReachAbilityValue\x12\x11\n\ttimestamp\x18\x03 \x02(\t\"\xce\x01\n\x06\x44\x65vice\x12\x10\n\x08\x64\x65viceId\x18\x01 \x02(\t\x12\x37\n\ndeviceInfo\x18\x02 \x02(\x0b\x32#.protocol.common.partner.DeviceInfo\x12\x41\n\x0creachAbility\x18\x03 \x01(\x0b\x32+.protocol.common.partner.DeviceReachAbility\x12\x36\n\nproperties\x18\x04 \x03(\x0b\x32\".protocol.common.tsl.TSLCapability*\xf1\x01\n\nDeviceType\x12\x17\n\x13\x44\x45VICE_TYPE_UNKNOWN\x10\x00\x12\x1f\n\x1b\x44\x45VICE_TYPE_AIR_CONDITIONER\x10\x01\x12\x1b\n\x17\x44\x45VICE_TYPE_AIR_CLEANER\x10\x02\x12\x1e\n\x1a\x44\x45VICE_TYPE_WATER_PURIFIER\x10\x03\x12\x1a\n\x16\x44\x45VICE_TYPE_TELEVISION\x10\x04\x12\x15\n\x11\x44\x45VICE_TYPE_PHONE\x10\x05\x12!\n\x1d\x44\x45VICE_TYPE_PERSONAL_COMPUTER\x10\x06\x12\x16\n\x12\x44\x45VICE_TYPE_SOCKET\x10\x07*\xd4\x01\n\x0e\x43onnectionType\x12\x1b\n\x17\x43ONNECTION_TYPE_UNKNOWN\x10\x00\x12\x18\n\x14\x43ONNECTION_TYPE_WIFI\x10\x01\x12\x1c\n\x18\x43ONNECTION_TYPE_CELLULAR\x10\x02\x12\x1b\n\x17\x43ONNECTION_TYPE_ZIG_BEE\x10\x03\x12\x1a\n\x16\x43ONNECTION_TYPE_Z_WAVE\x10\x04\x12\x18\n\x14\x43ONNECTION_TYPE_LORA\x10\x05\x12\x1a\n\x16\x43ONNECTION_TYPE_NB_IOT\x10\x06*\x90\x01\n\x17\x44\x65viceReachAbilityValue\x12&\n\"DEVICE_REACH_ABILITY_VALUE_UNKNOWN\x10\x00\x12%\n!DEVICE_REACH_ABILITY_VALUE_ONLINE\x10\x01\x12&\n\"DEVICE_REACH_ABILITY_VALUE_OFFLINE\x10\x02\x42>\n\x1d\x63om.tcl.gaia.protocol.partnerZ\x1dtcl.com/gaia/protocol/partner'
+  serialized_pb=b'\n$protocol/common/partner/device.proto\x12\x17protocol.common.partner\x1a\x19google/protobuf/any.proto\x1a$protocol/common/tsl/capability.proto\"\x13\n\x11\x43onnectionAddress\"\x80\x01\n\nConnection\x12\x35\n\x04type\x18\x01 \x02(\x0e\x32\'.protocol.common.partner.ConnectionType\x12;\n\x07\x61\x64\x64ress\x18\x02 \x01(\x0b\x32*.protocol.common.partner.ConnectionAddress\"2\n\x0bGeolocation\x12\x11\n\tlongitude\x18\x01 \x02(\x02\x12\x10\n\x08latitude\x18\x02 \x02(\x02\"\'\n\x08Location\x12\x0c\n\x04room\x18\x01 \x02(\t\x12\r\n\x05\x66loor\x18\x02 \x02(\x05\"3\n\x10\x46irmwareVersions\x12\x12\n\nwifiModule\x18\x01 \x02(\t\x12\x0b\n\x03mcu\x18\x02 \x02(\x05\")\n\x0b\x44\x65viceIcons\x12\x0c\n\x04\x64p32\x18\x01 \x01(\t\x12\x0c\n\x04\x64p64\x18\x02 \x01(\t\"\xb3\x04\n\nDeviceInfo\x12\x10\n\x08\x64\x65viceId\x18\x01 \x02(\t\x12\x12\n\ndeviceName\x18\x02 \x01(\t\x12\r\n\x05tslId\x18\x03 \x01(\t\x12\x37\n\ndeviceType\x18\x04 \x01(\x0e\x32#.protocol.common.partner.DeviceType\x12\x10\n\x08tenantId\x18\x05 \x01(\t\x12\x16\n\x0emanufacturerId\x18\x06 \x01(\t\x12\r\n\x05model\x18\x07 \x01(\t\x12\x10\n\x08parentId\x18\x08 \x01(\t\x12\x10\n\x08serialNo\x18\t \x01(\t\x12\x0b\n\x03mac\x18\n \x01(\t\x12\x38\n\x0b\x43onnections\x18\x0b \x03(\x0b\x32#.protocol.common.partner.Connection\x12\x39\n\x0bgeolocation\x18\x0c \x01(\x0b\x32$.protocol.common.partner.Geolocation\x12\x33\n\x08location\x18\r \x01(\x0b\x32!.protocol.common.partner.Location\x12\x43\n\x10\x66irmwareVersions\x18\x0e \x01(\x0b\x32).protocol.common.partner.FirmwareVersions\x12\x39\n\x0b\x64\x65viceIcons\x18\x0f \x01(\x0b\x32$.protocol.common.partner.DeviceIcons\x12#\n\x05\x65xtra\x18\x10 \x01(\x0b\x32\x14.google.protobuf.Any\"z\n\x12\x44\x65viceReachAbility\x12\x10\n\x08\x64\x65viceId\x18\x01 \x02(\t\x12?\n\x05value\x18\x02 \x02(\x0e\x32\x30.protocol.common.partner.DeviceReachAbilityValue\x12\x11\n\ttimestamp\x18\x03 \x02(\t\"\xce\x01\n\x06\x44\x65vice\x12\x10\n\x08\x64\x65viceId\x18\x01 \x02(\t\x12\x37\n\ndeviceInfo\x18\x02 \x02(\x0b\x32#.protocol.common.partner.DeviceInfo\x12\x41\n\x0creachAbility\x18\x03 \x01(\x0b\x32+.protocol.common.partner.DeviceReachAbility\x12\x36\n\nproperties\x18\x04 \x03(\x0b\x32\".protocol.common.tsl.TSLCapability*\xf1\x01\n\nDeviceType\x12\x17\n\x13\x44\x45VICE_TYPE_UNKNOWN\x10\x00\x12\x1f\n\x1b\x44\x45VICE_TYPE_AIR_CONDITIONER\x10\x01\x12\x1b\n\x17\x44\x45VICE_TYPE_AIR_CLEANER\x10\x02\x12\x1e\n\x1a\x44\x45VICE_TYPE_WATER_PURIFIER\x10\x03\x12\x1a\n\x16\x44\x45VICE_TYPE_TELEVISION\x10\x04\x12\x15\n\x11\x44\x45VICE_TYPE_PHONE\x10\x05\x12!\n\x1d\x44\x45VICE_TYPE_PERSONAL_COMPUTER\x10\x06\x12\x16\n\x12\x44\x45VICE_TYPE_SOCKET\x10\x07*\xd4\x01\n\x0e\x43onnectionType\x12\x1b\n\x17\x43ONNECTION_TYPE_UNKNOWN\x10\x00\x12\x18\n\x14\x43ONNECTION_TYPE_WIFI\x10\x01\x12\x1c\n\x18\x43ONNECTION_TYPE_CELLULAR\x10\x02\x12\x1b\n\x17\x43ONNECTION_TYPE_ZIG_BEE\x10\x03\x12\x1a\n\x16\x43ONNECTION_TYPE_Z_WAVE\x10\x04\x12\x18\n\x14\x43ONNECTION_TYPE_LORA\x10\x05\x12\x1a\n\x16\x43ONNECTION_TYPE_NB_IOT\x10\x06*\x90\x01\n\x17\x44\x65viceReachAbilityValue\x12&\n\"DEVICE_REACH_ABILITY_VALUE_UNKNOWN\x10\x00\x12%\n!DEVICE_REACH_ABILITY_VALUE_ONLINE\x10\x01\x12&\n\"DEVICE_REACH_ABILITY_VALUE_OFFLINE\x10\x02\x42>\n\x1d\x63om.tcl.gaia.protocol.partnerZ\x1dtcl.com/gaia/protocol/partner'
   ,
-  dependencies=[lib_dot_google_dot_protobuf_dot_any__pb2.DESCRIPTOR,protocol_dot_common_dot_tsl_dot_capability__pb2.DESCRIPTOR,])
+  dependencies=[google_dot_protobuf_dot_any__pb2.DESCRIPTOR,protocol_dot_common_dot_tsl_dot_capability__pb2.DESCRIPTOR,])
 
 _DEVICETYPE = _descriptor.EnumDescriptor(
   name='DeviceType',
@@ -76,8 +76,8 @@ _DEVICETYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1375,
-  serialized_end=1616,
+  serialized_start=1371,
+  serialized_end=1612,
 )
 _sym_db.RegisterEnumDescriptor(_DEVICETYPE)
 
@@ -127,8 +127,8 @@ _CONNECTIONTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1619,
-  serialized_end=1831,
+  serialized_start=1615,
+  serialized_end=1827,
 )
 _sym_db.RegisterEnumDescriptor(_CONNECTIONTYPE)
 
@@ -158,8 +158,8 @@ _DEVICEREACHABILITYVALUE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1834,
-  serialized_end=1978,
+  serialized_start=1830,
+  serialized_end=1974,
 )
 _sym_db.RegisterEnumDescriptor(_DEVICEREACHABILITYVALUE)
 
@@ -205,8 +205,8 @@ _CONNECTIONADDRESS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=134,
-  serialized_end=153,
+  serialized_start=130,
+  serialized_end=149,
 )
 
 
@@ -244,8 +244,8 @@ _CONNECTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=156,
-  serialized_end=284,
+  serialized_start=152,
+  serialized_end=280,
 )
 
 
@@ -283,8 +283,8 @@ _GEOLOCATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=286,
-  serialized_end=336,
+  serialized_start=282,
+  serialized_end=332,
 )
 
 
@@ -322,8 +322,8 @@ _LOCATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=338,
-  serialized_end=377,
+  serialized_start=334,
+  serialized_end=373,
 )
 
 
@@ -361,8 +361,8 @@ _FIRMWAREVERSIONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=379,
-  serialized_end=430,
+  serialized_start=375,
+  serialized_end=426,
 )
 
 
@@ -400,8 +400,8 @@ _DEVICEICONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=432,
-  serialized_end=473,
+  serialized_start=428,
+  serialized_end=469,
 )
 
 
@@ -537,8 +537,8 @@ _DEVICEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=476,
-  serialized_end=1039,
+  serialized_start=472,
+  serialized_end=1035,
 )
 
 
@@ -583,8 +583,8 @@ _DEVICEREACHABILITY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1041,
-  serialized_end=1163,
+  serialized_start=1037,
+  serialized_end=1159,
 )
 
 
@@ -636,8 +636,8 @@ _DEVICE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1166,
-  serialized_end=1372,
+  serialized_start=1162,
+  serialized_end=1368,
 )
 
 _CONNECTION.fields_by_name['type'].enum_type = _CONNECTIONTYPE
@@ -648,7 +648,7 @@ _DEVICEINFO.fields_by_name['geolocation'].message_type = _GEOLOCATION
 _DEVICEINFO.fields_by_name['location'].message_type = _LOCATION
 _DEVICEINFO.fields_by_name['firmwareVersions'].message_type = _FIRMWAREVERSIONS
 _DEVICEINFO.fields_by_name['deviceIcons'].message_type = _DEVICEICONS
-_DEVICEINFO.fields_by_name['extra'].message_type = lib_dot_google_dot_protobuf_dot_any__pb2._ANY
+_DEVICEINFO.fields_by_name['extra'].message_type = google_dot_protobuf_dot_any__pb2._ANY
 _DEVICEREACHABILITY.fields_by_name['value'].enum_type = _DEVICEREACHABILITYVALUE
 _DEVICE.fields_by_name['deviceInfo'].message_type = _DEVICEINFO
 _DEVICE.fields_by_name['reachAbility'].message_type = _DEVICEREACHABILITY

@@ -12,7 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from lib.google.protobuf import any_pb2 as lib_dot_google_dot_protobuf_dot_any__pb2
+from google.protobuf import any_pb2 as google_dot_protobuf_dot_any__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -21,9 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=b'\n\035com.tcl.gaia.protocol.partnerZ\035tcl.com/gaia/protocol/partner',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\"protocol/common/partner/user.proto\x12\x17protocol.common.partner\x1a\x1dlib/google/protobuf/any.proto\"i\n\x0cLoginDetails\x12\x41\n\x0f\x61\x63\x63ountSystemId\x18\x01 \x02(\x0e\x32(.protocol.common.partner.AccountSystemId\x12\x16\n\x0eloginAccountId\x18\x02 \x02(\t\"\xb7\x01\n\x04User\x12\x0e\n\x06userId\x18\x01 \x02(\t\x12\x10\n\x08tenantId\x18\x02 \x01(\t\x12\x19\n\x11immutableIdentity\x18\x03 \x01(\t\x12\x10\n\x08userName\x18\x04 \x01(\t\x12;\n\x0cloginDetails\x18\x05 \x03(\x0b\x32%.protocol.common.partner.LoginDetails\x12#\n\x05\x65xtra\x18\x06 \x01(\x0b\x32\x14.google.protobuf.Any*E\n\x0f\x41\x63\x63ountSystemId\x12\x0b\n\x07TCL_SSO\x10\x00\x12\x13\n\x0fWE_CHAT_OPEN_ID\x10\x01\x12\x10\n\x0cMOBILE_PHONE\x10\x02\x42>\n\x1d\x63om.tcl.gaia.protocol.partnerZ\x1dtcl.com/gaia/protocol/partner'
+  serialized_pb=b'\n\"protocol/common/partner/user.proto\x12\x17protocol.common.partner\x1a\x19google/protobuf/any.proto\"i\n\x0cLoginDetails\x12\x41\n\x0f\x61\x63\x63ountSystemId\x18\x01 \x02(\x0e\x32(.protocol.common.partner.AccountSystemId\x12\x16\n\x0eloginAccountId\x18\x02 \x02(\t\"\xb7\x01\n\x04User\x12\x0e\n\x06userId\x18\x01 \x02(\t\x12\x10\n\x08tenantId\x18\x02 \x01(\t\x12\x19\n\x11immutableIdentity\x18\x03 \x01(\t\x12\x10\n\x08userName\x18\x04 \x01(\t\x12;\n\x0cloginDetails\x18\x05 \x03(\x0b\x32%.protocol.common.partner.LoginDetails\x12#\n\x05\x65xtra\x18\x06 \x01(\x0b\x32\x14.google.protobuf.Any*E\n\x0f\x41\x63\x63ountSystemId\x12\x0b\n\x07TCL_SSO\x10\x00\x12\x13\n\x0fWE_CHAT_OPEN_ID\x10\x01\x12\x10\n\x0cMOBILE_PHONE\x10\x02\x42>\n\x1d\x63om.tcl.gaia.protocol.partnerZ\x1dtcl.com/gaia/protocol/partner'
   ,
-  dependencies=[lib_dot_google_dot_protobuf_dot_any__pb2.DESCRIPTOR,])
+  dependencies=[google_dot_protobuf_dot_any__pb2.DESCRIPTOR,])
 
 _ACCOUNTSYSTEMID = _descriptor.EnumDescriptor(
   name='AccountSystemId',
@@ -50,8 +50,8 @@ _ACCOUNTSYSTEMID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=387,
-  serialized_end=456,
+  serialized_start=383,
+  serialized_end=452,
 )
 _sym_db.RegisterEnumDescriptor(_ACCOUNTSYSTEMID)
 
@@ -96,8 +96,8 @@ _LOGINDETAILS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=94,
-  serialized_end=199,
+  serialized_start=90,
+  serialized_end=195,
 )
 
 
@@ -163,13 +163,13 @@ _USER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=202,
-  serialized_end=385,
+  serialized_start=198,
+  serialized_end=381,
 )
 
 _LOGINDETAILS.fields_by_name['accountSystemId'].enum_type = _ACCOUNTSYSTEMID
 _USER.fields_by_name['loginDetails'].message_type = _LOGINDETAILS
-_USER.fields_by_name['extra'].message_type = lib_dot_google_dot_protobuf_dot_any__pb2._ANY
+_USER.fields_by_name['extra'].message_type = google_dot_protobuf_dot_any__pb2._ANY
 DESCRIPTOR.message_types_by_name['LoginDetails'] = _LOGINDETAILS
 DESCRIPTOR.message_types_by_name['User'] = _USER
 DESCRIPTOR.enum_types_by_name['AccountSystemId'] = _ACCOUNTSYSTEMID

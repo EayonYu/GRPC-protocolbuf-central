@@ -10293,68 +10293,68 @@ public final class GaiaProxyGrpcService {
   static {
     java.lang.String[] descriptorData = {
       "\n1protocol/gaia/proxy/gaia_proxy_grpc_se" +
-      "rvice.proto\022\023protocol.gaia.proxy\032 lib/go" +
-      "ogle/api/annotations.proto\032\"protocol/com" +
-      "mon/partner/user.proto\032$protocol/common/" +
-      "partner/device.proto\0321protocol/common/pa" +
-      "rtner/user_device_binding.proto\032(protoco" +
-      "l/gaia/proxy/partner_config.proto\032*proto" +
-      "col/gaia/proxy/partner_resource.proto\"\r\n" +
-      "\013PingRequest\"\034\n\014PingResponse\022\014\n\004pong\030\001 \002" +
-      "(\010\"@\n\021SetACResponseData\022\014\n\004code\030\001 \002(\005\022\017\n" +
-      "\007message\030\002 \002(\t\022\014\n\004data\030\003 \002(\t\"Q\n\014SetACReq" +
-      "uest\022\024\n\014partner_uuid\030\001 \002(\t\022\020\n\010deviceId\030\002" +
-      " \002(\005\022\031\n\021targetTemperature\030\003 \002(\002\"d\n\rSetAC" +
-      "Response\022\014\n\004code\030\001 \002(\005\022\017\n\007message\030\002 \002(\t\022" +
-      "4\n\004data\030\003 \002(\0132&.protocol.gaia.proxy.SetA" +
-      "CResponseData\"C\n\017GetUsersRequest\022\024\n\014part" +
-      "ner_uuid\030\001 \002(\t\022\r\n\005start\030\002 \002(\005\022\013\n\003end\030\003 \002" +
-      "(\005\"^\n\020GetUsersResponse\022\014\n\004code\030\001 \002(\005\022\017\n\007" +
-      "message\030\002 \002(\t\022+\n\004data\030\003 \003(\0132\035.protocol.c" +
-      "ommon.partner.User\"E\n\021GetDevicesRequest\022" +
-      "\024\n\014partner_uuid\030\001 \002(\t\022\r\n\005start\030\002 \002(\005\022\013\n\003" +
-      "end\030\003 \002(\005\"b\n\022GetDevicesResponse\022\014\n\004code\030" +
-      "\001 \002(\005\022\017\n\007message\030\002 \002(\t\022-\n\004data\030\003 \003(\0132\037.p" +
-      "rotocol.common.partner.Device\"H\n\024GetUser" +
-      "DeviceRequest\022\024\n\014partner_uuid\030\001 \002(\t\022\r\n\005s" +
-      "tart\030\002 \002(\005\022\013\n\003end\030\003 \002(\005\"p\n\025GetUserDevice" +
-      "Response\022\014\n\004code\030\001 \002(\005\022\017\n\007message\030\002 \002(\t\022" +
-      "8\n\004data\030\003 \003(\0132*.protocol.common.partner." +
-      "UserDeviceBinding2\202\n\n\rGaiaProxyGrpc\022^\n\004P" +
-      "ing\022 .protocol.gaia.proxy.PingRequest\032!." +
-      "protocol.gaia.proxy.PingResponse\"\021\202\323\344\223\002\013" +
-      "\022\t/api/ping\022\216\001\n\021ListPartnerConfig\022-.prot" +
-      "ocol.gaia.proxy.PartnerConfigListRequest" +
-      "\032..protocol.gaia.proxy.PartnerConfigList" +
-      "Response\"\032\202\323\344\223\002\024\022\022/api/rest/partners\022\230\001\n" +
-      "\020GetPartnerConfig\022,.protocol.gaia.proxy." +
-      "PartnerConfigGetRequest\032-.protocol.gaia." +
-      "proxy.PartnerConfigGetResponse\"\'\202\323\344\223\002!\022\037" +
-      "/api/rest/partners/{partner_id}\022\216\001\n\020AddP" +
-      "artnerConfig\022,.protocol.gaia.proxy.Partn" +
-      "erConfigAddRequest\032-.protocol.gaia.proxy" +
-      ".PartnerConfigAddResponse\"\035\202\323\344\223\002\027\"\022/api/" +
-      "rest/partners:\001*\022q\n\005SetAC\022!.protocol.gai" +
-      "a.proxy.SetACRequest\032\".protocol.gaia.pro" +
-      "xy.SetACResponse\"!\202\323\344\223\002\033\"\026/api/rest/prox" +
-      "y/ac/set:\001*\022\332\001\n\031GetPartnerResourceIdRang" +
-      "e\0225.protocol.gaia.proxy.GetPartnerResour" +
-      "ceIdRangeRequest\0326.protocol.gaia.proxy.G" +
-      "etPartnerResourceIdRangeResponse\"N\202\323\344\223\002H" +
-      "\022F/api/rest/proxy/partners/{partner_uuid" +
-      "}/resource/{resource_type}/range\022v\n\010GetU" +
-      "sers\022$.protocol.gaia.proxy.GetUsersReque" +
-      "st\032%.protocol.gaia.proxy.GetUsersRespons" +
-      "e\"\035\202\323\344\223\002\027\022\025/api/rest/proxy/users\022~\n\nGetD" +
-      "evices\022&.protocol.gaia.proxy.GetDevicesR" +
-      "equest\032\'.protocol.gaia.proxy.GetDevicesR" +
-      "esponse\"\037\202\323\344\223\002\031\022\027/api/rest/proxy/devices" +
-      "\022\213\001\n\rGetUserDevice\022).protocol.gaia.proxy" +
-      ".GetUserDeviceRequest\032*.protocol.gaia.pr" +
-      "oxy.GetUserDeviceResponse\"#\202\323\344\223\002\035\022\033/api/" +
-      "rest/proxy/user_deviceB=\n\033com.tcl.gaia.p" +
-      "rotocol.proxyZ\033tcl.com/gaia/protocol/pro" +
-      "xy\210\001\001"
+      "rvice.proto\022\023protocol.gaia.proxy\032\034google" +
+      "/api/annotations.proto\032\"protocol/common/" +
+      "partner/user.proto\032$protocol/common/part" +
+      "ner/device.proto\0321protocol/common/partne" +
+      "r/user_device_binding.proto\032(protocol/ga" +
+      "ia/proxy/partner_config.proto\032*protocol/" +
+      "gaia/proxy/partner_resource.proto\"\r\n\013Pin" +
+      "gRequest\"\034\n\014PingResponse\022\014\n\004pong\030\001 \002(\010\"@" +
+      "\n\021SetACResponseData\022\014\n\004code\030\001 \002(\005\022\017\n\007mes" +
+      "sage\030\002 \002(\t\022\014\n\004data\030\003 \002(\t\"Q\n\014SetACRequest" +
+      "\022\024\n\014partner_uuid\030\001 \002(\t\022\020\n\010deviceId\030\002 \002(\005" +
+      "\022\031\n\021targetTemperature\030\003 \002(\002\"d\n\rSetACResp" +
+      "onse\022\014\n\004code\030\001 \002(\005\022\017\n\007message\030\002 \002(\t\0224\n\004d" +
+      "ata\030\003 \002(\0132&.protocol.gaia.proxy.SetACRes" +
+      "ponseData\"C\n\017GetUsersRequest\022\024\n\014partner_" +
+      "uuid\030\001 \002(\t\022\r\n\005start\030\002 \002(\005\022\013\n\003end\030\003 \002(\005\"^" +
+      "\n\020GetUsersResponse\022\014\n\004code\030\001 \002(\005\022\017\n\007mess" +
+      "age\030\002 \002(\t\022+\n\004data\030\003 \003(\0132\035.protocol.commo" +
+      "n.partner.User\"E\n\021GetDevicesRequest\022\024\n\014p" +
+      "artner_uuid\030\001 \002(\t\022\r\n\005start\030\002 \002(\005\022\013\n\003end\030" +
+      "\003 \002(\005\"b\n\022GetDevicesResponse\022\014\n\004code\030\001 \002(" +
+      "\005\022\017\n\007message\030\002 \002(\t\022-\n\004data\030\003 \003(\0132\037.proto" +
+      "col.common.partner.Device\"H\n\024GetUserDevi" +
+      "ceRequest\022\024\n\014partner_uuid\030\001 \002(\t\022\r\n\005start" +
+      "\030\002 \002(\005\022\013\n\003end\030\003 \002(\005\"p\n\025GetUserDeviceResp" +
+      "onse\022\014\n\004code\030\001 \002(\005\022\017\n\007message\030\002 \002(\t\0228\n\004d" +
+      "ata\030\003 \003(\0132*.protocol.common.partner.User" +
+      "DeviceBinding2\202\n\n\rGaiaProxyGrpc\022^\n\004Ping\022" +
+      " .protocol.gaia.proxy.PingRequest\032!.prot" +
+      "ocol.gaia.proxy.PingResponse\"\021\202\323\344\223\002\013\022\t/a" +
+      "pi/ping\022\216\001\n\021ListPartnerConfig\022-.protocol" +
+      ".gaia.proxy.PartnerConfigListRequest\032..p" +
+      "rotocol.gaia.proxy.PartnerConfigListResp" +
+      "onse\"\032\202\323\344\223\002\024\022\022/api/rest/partners\022\230\001\n\020Get" +
+      "PartnerConfig\022,.protocol.gaia.proxy.Part" +
+      "nerConfigGetRequest\032-.protocol.gaia.prox" +
+      "y.PartnerConfigGetResponse\"\'\202\323\344\223\002!\022\037/api" +
+      "/rest/partners/{partner_id}\022\216\001\n\020AddPartn" +
+      "erConfig\022,.protocol.gaia.proxy.PartnerCo" +
+      "nfigAddRequest\032-.protocol.gaia.proxy.Par" +
+      "tnerConfigAddResponse\"\035\202\323\344\223\002\027\"\022/api/rest" +
+      "/partners:\001*\022q\n\005SetAC\022!.protocol.gaia.pr" +
+      "oxy.SetACRequest\032\".protocol.gaia.proxy.S" +
+      "etACResponse\"!\202\323\344\223\002\033\"\026/api/rest/proxy/ac" +
+      "/set:\001*\022\332\001\n\031GetPartnerResourceIdRange\0225." +
+      "protocol.gaia.proxy.GetPartnerResourceId" +
+      "RangeRequest\0326.protocol.gaia.proxy.GetPa" +
+      "rtnerResourceIdRangeResponse\"N\202\323\344\223\002H\022F/a" +
+      "pi/rest/proxy/partners/{partner_uuid}/re" +
+      "source/{resource_type}/range\022v\n\010GetUsers" +
+      "\022$.protocol.gaia.proxy.GetUsersRequest\032%" +
+      ".protocol.gaia.proxy.GetUsersResponse\"\035\202" +
+      "\323\344\223\002\027\022\025/api/rest/proxy/users\022~\n\nGetDevic" +
+      "es\022&.protocol.gaia.proxy.GetDevicesReque" +
+      "st\032\'.protocol.gaia.proxy.GetDevicesRespo" +
+      "nse\"\037\202\323\344\223\002\031\022\027/api/rest/proxy/devices\022\213\001\n" +
+      "\rGetUserDevice\022).protocol.gaia.proxy.Get" +
+      "UserDeviceRequest\032*.protocol.gaia.proxy." +
+      "GetUserDeviceResponse\"#\202\323\344\223\002\035\022\033/api/rest" +
+      "/proxy/user_deviceB=\n\033com.tcl.gaia.proto" +
+      "col.proxyZ\033tcl.com/gaia/protocol/proxy\210\001" +
+      "\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

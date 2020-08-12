@@ -5,7 +5,7 @@ option go_package = "tcl.com/gaia/protocol/partner";
 option java_package = "com.tcl.gaia.protocol.partner";
 
 
-import "lib/google/protobuf/any.proto";
+import "google/protobuf/any.proto";
 
 import "protocol/common/partner/device.proto";
 

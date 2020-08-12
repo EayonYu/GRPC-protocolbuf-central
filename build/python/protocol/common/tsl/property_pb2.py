@@ -11,7 +11,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from lib.google.protobuf import any_pb2 as lib_dot_google_dot_protobuf_dot_any__pb2
+from google.protobuf import any_pb2 as google_dot_protobuf_dot_any__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -20,9 +20,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=b'\n\031com.tcl.gaia.protocol.tslZ\031tcl.com/gaia/protocol/tsl',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\"protocol/common/tsl/property.proto\x12\x13protocol.common.tsl\x1a\x1dlib/google/protobuf/any.proto\"L\n\x12TSLDesiredProperty\x12#\n\x05value\x18\x01 \x02(\x0b\x32\x14.google.protobuf.Any\x12\x11\n\ttimestamp\x18\x02 \x02(\t\"M\n\x13TSLReportedProperty\x12#\n\x05value\x18\x01 \x02(\x0b\x32\x14.google.protobuf.Any\x12\x11\n\ttimestamp\x18\x02 \x02(\t\"\x97\x01\n\x0bTSLProperty\x12\x12\n\npropertyId\x18\x01 \x02(\t\x12\x38\n\x07\x64\x65sired\x18\x02 \x03(\x0b\x32\'.protocol.common.tsl.TSLDesiredProperty\x12:\n\x08reported\x18\x03 \x03(\x0b\x32(.protocol.common.tsl.TSLReportedPropertyB6\n\x19\x63om.tcl.gaia.protocol.tslZ\x19tcl.com/gaia/protocol/tsl'
+  serialized_pb=b'\n\"protocol/common/tsl/property.proto\x12\x13protocol.common.tsl\x1a\x19google/protobuf/any.proto\"L\n\x12TSLDesiredProperty\x12#\n\x05value\x18\x01 \x02(\x0b\x32\x14.google.protobuf.Any\x12\x11\n\ttimestamp\x18\x02 \x02(\t\"M\n\x13TSLReportedProperty\x12#\n\x05value\x18\x01 \x02(\x0b\x32\x14.google.protobuf.Any\x12\x11\n\ttimestamp\x18\x02 \x02(\t\"\x97\x01\n\x0bTSLProperty\x12\x12\n\npropertyId\x18\x01 \x02(\t\x12\x38\n\x07\x64\x65sired\x18\x02 \x03(\x0b\x32\'.protocol.common.tsl.TSLDesiredProperty\x12:\n\x08reported\x18\x03 \x03(\x0b\x32(.protocol.common.tsl.TSLReportedPropertyB6\n\x19\x63om.tcl.gaia.protocol.tslZ\x19tcl.com/gaia/protocol/tsl'
   ,
-  dependencies=[lib_dot_google_dot_protobuf_dot_any__pb2.DESCRIPTOR,])
+  dependencies=[google_dot_protobuf_dot_any__pb2.DESCRIPTOR,])
 
 
 
@@ -61,8 +61,8 @@ _TSLDESIREDPROPERTY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=90,
-  serialized_end=166,
+  serialized_start=86,
+  serialized_end=162,
 )
 
 
@@ -100,8 +100,8 @@ _TSLREPORTEDPROPERTY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=168,
-  serialized_end=245,
+  serialized_start=164,
+  serialized_end=241,
 )
 
 
@@ -146,12 +146,12 @@ _TSLPROPERTY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=248,
-  serialized_end=399,
+  serialized_start=244,
+  serialized_end=395,
 )
 
-_TSLDESIREDPROPERTY.fields_by_name['value'].message_type = lib_dot_google_dot_protobuf_dot_any__pb2._ANY
-_TSLREPORTEDPROPERTY.fields_by_name['value'].message_type = lib_dot_google_dot_protobuf_dot_any__pb2._ANY
+_TSLDESIREDPROPERTY.fields_by_name['value'].message_type = google_dot_protobuf_dot_any__pb2._ANY
+_TSLREPORTEDPROPERTY.fields_by_name['value'].message_type = google_dot_protobuf_dot_any__pb2._ANY
 _TSLPROPERTY.fields_by_name['desired'].message_type = _TSLDESIREDPROPERTY
 _TSLPROPERTY.fields_by_name['reported'].message_type = _TSLREPORTEDPROPERTY
 DESCRIPTOR.message_types_by_name['TSLDesiredProperty'] = _TSLDESIREDPROPERTY

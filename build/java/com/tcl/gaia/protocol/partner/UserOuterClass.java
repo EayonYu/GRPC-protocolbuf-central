@@ -2619,18 +2619,18 @@ public final class UserOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\"protocol/common/partner/user.proto\022\027pr" +
-      "otocol.common.partner\032\035lib/google/protob" +
-      "uf/any.proto\"i\n\014LoginDetails\022A\n\017accountS" +
-      "ystemId\030\001 \002(\0162(.protocol.common.partner." +
-      "AccountSystemId\022\026\n\016loginAccountId\030\002 \002(\t\"" +
-      "\267\001\n\004User\022\016\n\006userId\030\001 \002(\t\022\020\n\010tenantId\030\002 \001" +
-      "(\t\022\031\n\021immutableIdentity\030\003 \001(\t\022\020\n\010userNam" +
-      "e\030\004 \001(\t\022;\n\014loginDetails\030\005 \003(\0132%.protocol" +
-      ".common.partner.LoginDetails\022#\n\005extra\030\006 " +
-      "\001(\0132\024.google.protobuf.Any*E\n\017AccountSyst" +
-      "emId\022\013\n\007TCL_SSO\020\000\022\023\n\017WE_CHAT_OPEN_ID\020\001\022\020" +
-      "\n\014MOBILE_PHONE\020\002B>\n\035com.tcl.gaia.protoco" +
-      "l.partnerZ\035tcl.com/gaia/protocol/partner"
+      "otocol.common.partner\032\031google/protobuf/a" +
+      "ny.proto\"i\n\014LoginDetails\022A\n\017accountSyste" +
+      "mId\030\001 \002(\0162(.protocol.common.partner.Acco" +
+      "untSystemId\022\026\n\016loginAccountId\030\002 \002(\t\"\267\001\n\004" +
+      "User\022\016\n\006userId\030\001 \002(\t\022\020\n\010tenantId\030\002 \001(\t\022\031" +
+      "\n\021immutableIdentity\030\003 \001(\t\022\020\n\010userName\030\004 " +
+      "\001(\t\022;\n\014loginDetails\030\005 \003(\0132%.protocol.com" +
+      "mon.partner.LoginDetails\022#\n\005extra\030\006 \001(\0132" +
+      "\024.google.protobuf.Any*E\n\017AccountSystemId" +
+      "\022\013\n\007TCL_SSO\020\000\022\023\n\017WE_CHAT_OPEN_ID\020\001\022\020\n\014MO" +
+      "BILE_PHONE\020\002B>\n\035com.tcl.gaia.protocol.pa" +
+      "rtnerZ\035tcl.com/gaia/protocol/partner"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

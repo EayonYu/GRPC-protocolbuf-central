@@ -1,30 +1,23 @@
+FROM golang:1.14.7
+ENV GOPATH /go
+
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 RUN echo 'Asia/Shanghai' >/etc/timezone
 
-RUN mkdir mirror
-RUN mkdir ~/.aws
-RUN touch ~/.aws/config
-RUN echo "[profile default]" >> ~/.aws/config
-RUN echo "region=cn-north-1" >> ~/.aws/config
-RUN echo "aws_access_key_id=AKIA4FODK7CC3GMIUZWZ" >> ~/.aws/config
-RUN echo "aws_secret_access_key=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" >> ~/.aws/config
+CMD ["wget", "-O", "protoc.zip", "https://github.com/protocolbuffers/protobuf/releases/download/v3.12.4/protoc-3.12.4-linux-x86_64.zip"]
+CMD ["unzip", "-o", "protoc.zip", "-d", "_tmp_protoc/"]
+CMD ["cp", "-r", "_tmp_protoc/include/", "/usr/local/include/"]
+CMD ["cp", "-r", "_tmp_protoc/bin/", "/usr/local/bin/"]
+CMD ["rm", "-f", "protoc.zip"]
+CMD ["rm", "-rf", "_tmp_protoc/"]
 
-ADD ./config mirror/config
-ADD ./model mirror/model
-ADD ./protocol mirror/protocol
-ADD ./__init__.py mirror/
-ADD ./app.py mirror/
-ADD ./service.py mirror/
+CMD ["rm", "-rf", "/go/src/github.com/golang/protobuf"]
+CMD ["go", "get", "-v", "-d", "-u", "github.com/golang/protobuf/protoc-gen-go"]
+CMD ["git", "-C", "/go/src/github.com/golang/protobuf", "checkout", "v1.4.2"]
+CMD ["go", "install", "github.com/golang/protobuf/protoc-gen-go"]
 
-ADD ./requirements.txt mirror/
+CMD ["pip", "install", "--force-reinstall", "grpcio-tools==1.31.0"]
 
-ADD ./gateway/gateway /
-ADD ./mirror.py /
-ADD ./run.sh /
-
-RUN ["chmod", "+x", "/run.sh"]
-RUN cd mirror && pip3 install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple
-
-ENTRYPOINT ["/run.sh"]
-
-EXPOSE 10088 8084
+CMD ["curl", "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip", "-o", "awscliv2.zip"]
+CMD ["unzip", "awscliv2.zip"]
+CMD ["sh", "./aws/install"]

@@ -11,7 +11,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from lib.google.protobuf import any_pb2 as lib_dot_google_dot_protobuf_dot_any__pb2
+from google.protobuf import any_pb2 as google_dot_protobuf_dot_any__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -20,9 +20,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=b'\n\031com.tcl.gaia.protocol.tslZ\031tcl.com/gaia/protocol/tsl',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1fprotocol/common/tsl/value.proto\x12\x13protocol.common.tsl\x1a\x1dlib/google/protobuf/any.proto\"A\n\x0eTSLValueObject\x12\n\n\x02id\x18\x01 \x02(\t\x12#\n\x05value\x18\x02 \x02(\x0b\x32\x14.google.protobuf.AnyB6\n\x19\x63om.tcl.gaia.protocol.tslZ\x19tcl.com/gaia/protocol/tsl'
+  serialized_pb=b'\n\x1fprotocol/common/tsl/value.proto\x12\x13protocol.common.tsl\x1a\x19google/protobuf/any.proto\"A\n\x0eTSLValueObject\x12\n\n\x02id\x18\x01 \x02(\t\x12#\n\x05value\x18\x02 \x02(\x0b\x32\x14.google.protobuf.AnyB6\n\x19\x63om.tcl.gaia.protocol.tslZ\x19tcl.com/gaia/protocol/tsl'
   ,
-  dependencies=[lib_dot_google_dot_protobuf_dot_any__pb2.DESCRIPTOR,])
+  dependencies=[google_dot_protobuf_dot_any__pb2.DESCRIPTOR,])
 
 
 
@@ -61,11 +61,11 @@ _TSLVALUEOBJECT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=87,
-  serialized_end=152,
+  serialized_start=83,
+  serialized_end=148,
 )
 
-_TSLVALUEOBJECT.fields_by_name['value'].message_type = lib_dot_google_dot_protobuf_dot_any__pb2._ANY
+_TSLVALUEOBJECT.fields_by_name['value'].message_type = google_dot_protobuf_dot_any__pb2._ANY
 DESCRIPTOR.message_types_by_name['TSLValueObject'] = _TSLVALUEOBJECT
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 

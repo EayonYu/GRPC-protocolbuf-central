@@ -11,7 +11,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from lib.google.api import annotations_pb2 as lib_dot_google_dot_api_dot_annotations__pb2
+from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from protocol.common.partner import user_pb2 as protocol_dot_common_dot_partner_dot_user__pb2
 from protocol.common.partner import device_pb2 as protocol_dot_common_dot_partner_dot_device__pb2
 from protocol.common.partner import user_device_binding_pb2 as protocol_dot_common_dot_partner_dot_user__device__binding__pb2
@@ -24,9 +24,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='protocol.gaia.proxy',
   syntax='proto2',
   serialized_options=b'\n\033com.tcl.gaia.protocol.proxyZ\033tcl.com/gaia/protocol/proxy\210\001\001',
-  serialized_pb=b'\n1protocol/gaia/proxy/gaia_proxy_grpc_service.proto\x12\x13protocol.gaia.proxy\x1a lib/google/api/annotations.proto\x1a\"protocol/common/partner/user.proto\x1a$protocol/common/partner/device.proto\x1a\x31protocol/common/partner/user_device_binding.proto\x1a(protocol/gaia/proxy/partner_config.proto\x1a*protocol/gaia/proxy/partner_resource.proto\"\r\n\x0bPingRequest\"\x1c\n\x0cPingResponse\x12\x0c\n\x04pong\x18\x01 \x02(\x08\"@\n\x11SetACResponseData\x12\x0c\n\x04\x63ode\x18\x01 \x02(\x05\x12\x0f\n\x07message\x18\x02 \x02(\t\x12\x0c\n\x04\x64\x61ta\x18\x03 \x02(\t\"Q\n\x0cSetACRequest\x12\x14\n\x0cpartner_uuid\x18\x01 \x02(\t\x12\x10\n\x08\x64\x65viceId\x18\x02 \x02(\x05\x12\x19\n\x11targetTemperature\x18\x03 \x02(\x02\"d\n\rSetACResponse\x12\x0c\n\x04\x63ode\x18\x01 \x02(\x05\x12\x0f\n\x07message\x18\x02 \x02(\t\x12\x34\n\x04\x64\x61ta\x18\x03 \x02(\x0b\x32&.protocol.gaia.proxy.SetACResponseData\"C\n\x0fGetUsersRequest\x12\x14\n\x0cpartner_uuid\x18\x01 \x02(\t\x12\r\n\x05start\x18\x02 \x02(\x05\x12\x0b\n\x03\x65nd\x18\x03 \x02(\x05\"^\n\x10GetUsersResponse\x12\x0c\n\x04\x63ode\x18\x01 \x02(\x05\x12\x0f\n\x07message\x18\x02 \x02(\t\x12+\n\x04\x64\x61ta\x18\x03 \x03(\x0b\x32\x1d.protocol.common.partner.User\"E\n\x11GetDevicesRequest\x12\x14\n\x0cpartner_uuid\x18\x01 \x02(\t\x12\r\n\x05start\x18\x02 \x02(\x05\x12\x0b\n\x03\x65nd\x18\x03 \x02(\x05\"b\n\x12GetDevicesResponse\x12\x0c\n\x04\x63ode\x18\x01 \x02(\x05\x12\x0f\n\x07message\x18\x02 \x02(\t\x12-\n\x04\x64\x61ta\x18\x03 \x03(\x0b\x32\x1f.protocol.common.partner.Device\"H\n\x14GetUserDeviceRequest\x12\x14\n\x0cpartner_uuid\x18\x01 \x02(\t\x12\r\n\x05start\x18\x02 \x02(\x05\x12\x0b\n\x03\x65nd\x18\x03 \x02(\x05\"p\n\x15GetUserDeviceResponse\x12\x0c\n\x04\x63ode\x18\x01 \x02(\x05\x12\x0f\n\x07message\x18\x02 \x02(\t\x12\x38\n\x04\x64\x61ta\x18\x03 \x03(\x0b\x32*.protocol.common.partner.UserDeviceBinding2\x82\n\n\rGaiaProxyGrpc\x12^\n\x04Ping\x12 .protocol.gaia.proxy.PingRequest\x1a!.protocol.gaia.proxy.PingResponse\"\x11\x82\xd3\xe4\x93\x02\x0b\x12\t/api/ping\x12\x8e\x01\n\x11ListPartnerConfig\x12-.protocol.gaia.proxy.PartnerConfigListRequest\x1a..protocol.gaia.proxy.PartnerConfigListResponse\"\x1a\x82\xd3\xe4\x93\x02\x14\x12\x12/api/rest/partners\x12\x98\x01\n\x10GetPartnerConfig\x12,.protocol.gaia.proxy.PartnerConfigGetRequest\x1a-.protocol.gaia.proxy.PartnerConfigGetResponse\"\'\x82\xd3\xe4\x93\x02!\x12\x1f/api/rest/partners/{partner_id}\x12\x8e\x01\n\x10\x41\x64\x64PartnerConfig\x12,.protocol.gaia.proxy.PartnerConfigAddRequest\x1a-.protocol.gaia.proxy.PartnerConfigAddResponse\"\x1d\x82\xd3\xe4\x93\x02\x17\"\x12/api/rest/partners:\x01*\x12q\n\x05SetAC\x12!.protocol.gaia.proxy.SetACRequest\x1a\".protocol.gaia.proxy.SetACResponse\"!\x82\xd3\xe4\x93\x02\x1b\"\x16/api/rest/proxy/ac/set:\x01*\x12\xda\x01\n\x19GetPartnerResourceIdRange\x12\x35.protocol.gaia.proxy.GetPartnerResourceIdRangeRequest\x1a\x36.protocol.gaia.proxy.GetPartnerResourceIdRangeResponse\"N\x82\xd3\xe4\x93\x02H\x12\x46/api/rest/proxy/partners/{partner_uuid}/resource/{resource_type}/range\x12v\n\x08GetUsers\x12$.protocol.gaia.proxy.GetUsersRequest\x1a%.protocol.gaia.proxy.GetUsersResponse\"\x1d\x82\xd3\xe4\x93\x02\x17\x12\x15/api/rest/proxy/users\x12~\n\nGetDevices\x12&.protocol.gaia.proxy.GetDevicesRequest\x1a\'.protocol.gaia.proxy.GetDevicesResponse\"\x1f\x82\xd3\xe4\x93\x02\x19\x12\x17/api/rest/proxy/devices\x12\x8b\x01\n\rGetUserDevice\x12).protocol.gaia.proxy.GetUserDeviceRequest\x1a*.protocol.gaia.proxy.GetUserDeviceResponse\"#\x82\xd3\xe4\x93\x02\x1d\x12\x1b/api/rest/proxy/user_deviceB=\n\x1b\x63om.tcl.gaia.protocol.proxyZ\x1btcl.com/gaia/protocol/proxy\x88\x01\x01'
+  serialized_pb=b'\n1protocol/gaia/proxy/gaia_proxy_grpc_service.proto\x12\x13protocol.gaia.proxy\x1a\x1cgoogle/api/annotations.proto\x1a\"protocol/common/partner/user.proto\x1a$protocol/common/partner/device.proto\x1a\x31protocol/common/partner/user_device_binding.proto\x1a(protocol/gaia/proxy/partner_config.proto\x1a*protocol/gaia/proxy/partner_resource.proto\"\r\n\x0bPingRequest\"\x1c\n\x0cPingResponse\x12\x0c\n\x04pong\x18\x01 \x02(\x08\"@\n\x11SetACResponseData\x12\x0c\n\x04\x63ode\x18\x01 \x02(\x05\x12\x0f\n\x07message\x18\x02 \x02(\t\x12\x0c\n\x04\x64\x61ta\x18\x03 \x02(\t\"Q\n\x0cSetACRequest\x12\x14\n\x0cpartner_uuid\x18\x01 \x02(\t\x12\x10\n\x08\x64\x65viceId\x18\x02 \x02(\x05\x12\x19\n\x11targetTemperature\x18\x03 \x02(\x02\"d\n\rSetACResponse\x12\x0c\n\x04\x63ode\x18\x01 \x02(\x05\x12\x0f\n\x07message\x18\x02 \x02(\t\x12\x34\n\x04\x64\x61ta\x18\x03 \x02(\x0b\x32&.protocol.gaia.proxy.SetACResponseData\"C\n\x0fGetUsersRequest\x12\x14\n\x0cpartner_uuid\x18\x01 \x02(\t\x12\r\n\x05start\x18\x02 \x02(\x05\x12\x0b\n\x03\x65nd\x18\x03 \x02(\x05\"^\n\x10GetUsersResponse\x12\x0c\n\x04\x63ode\x18\x01 \x02(\x05\x12\x0f\n\x07message\x18\x02 \x02(\t\x12+\n\x04\x64\x61ta\x18\x03 \x03(\x0b\x32\x1d.protocol.common.partner.User\"E\n\x11GetDevicesRequest\x12\x14\n\x0cpartner_uuid\x18\x01 \x02(\t\x12\r\n\x05start\x18\x02 \x02(\x05\x12\x0b\n\x03\x65nd\x18\x03 \x02(\x05\"b\n\x12GetDevicesResponse\x12\x0c\n\x04\x63ode\x18\x01 \x02(\x05\x12\x0f\n\x07message\x18\x02 \x02(\t\x12-\n\x04\x64\x61ta\x18\x03 \x03(\x0b\x32\x1f.protocol.common.partner.Device\"H\n\x14GetUserDeviceRequest\x12\x14\n\x0cpartner_uuid\x18\x01 \x02(\t\x12\r\n\x05start\x18\x02 \x02(\x05\x12\x0b\n\x03\x65nd\x18\x03 \x02(\x05\"p\n\x15GetUserDeviceResponse\x12\x0c\n\x04\x63ode\x18\x01 \x02(\x05\x12\x0f\n\x07message\x18\x02 \x02(\t\x12\x38\n\x04\x64\x61ta\x18\x03 \x03(\x0b\x32*.protocol.common.partner.UserDeviceBinding2\x82\n\n\rGaiaProxyGrpc\x12^\n\x04Ping\x12 .protocol.gaia.proxy.PingRequest\x1a!.protocol.gaia.proxy.PingResponse\"\x11\x82\xd3\xe4\x93\x02\x0b\x12\t/api/ping\x12\x8e\x01\n\x11ListPartnerConfig\x12-.protocol.gaia.proxy.PartnerConfigListRequest\x1a..protocol.gaia.proxy.PartnerConfigListResponse\"\x1a\x82\xd3\xe4\x93\x02\x14\x12\x12/api/rest/partners\x12\x98\x01\n\x10GetPartnerConfig\x12,.protocol.gaia.proxy.PartnerConfigGetRequest\x1a-.protocol.gaia.proxy.PartnerConfigGetResponse\"\'\x82\xd3\xe4\x93\x02!\x12\x1f/api/rest/partners/{partner_id}\x12\x8e\x01\n\x10\x41\x64\x64PartnerConfig\x12,.protocol.gaia.proxy.PartnerConfigAddRequest\x1a-.protocol.gaia.proxy.PartnerConfigAddResponse\"\x1d\x82\xd3\xe4\x93\x02\x17\"\x12/api/rest/partners:\x01*\x12q\n\x05SetAC\x12!.protocol.gaia.proxy.SetACRequest\x1a\".protocol.gaia.proxy.SetACResponse\"!\x82\xd3\xe4\x93\x02\x1b\"\x16/api/rest/proxy/ac/set:\x01*\x12\xda\x01\n\x19GetPartnerResourceIdRange\x12\x35.protocol.gaia.proxy.GetPartnerResourceIdRangeRequest\x1a\x36.protocol.gaia.proxy.GetPartnerResourceIdRangeResponse\"N\x82\xd3\xe4\x93\x02H\x12\x46/api/rest/proxy/partners/{partner_uuid}/resource/{resource_type}/range\x12v\n\x08GetUsers\x12$.protocol.gaia.proxy.GetUsersRequest\x1a%.protocol.gaia.proxy.GetUsersResponse\"\x1d\x82\xd3\xe4\x93\x02\x17\x12\x15/api/rest/proxy/users\x12~\n\nGetDevices\x12&.protocol.gaia.proxy.GetDevicesRequest\x1a\'.protocol.gaia.proxy.GetDevicesResponse\"\x1f\x82\xd3\xe4\x93\x02\x19\x12\x17/api/rest/proxy/devices\x12\x8b\x01\n\rGetUserDevice\x12).protocol.gaia.proxy.GetUserDeviceRequest\x1a*.protocol.gaia.proxy.GetUserDeviceResponse\"#\x82\xd3\xe4\x93\x02\x1d\x12\x1b/api/rest/proxy/user_deviceB=\n\x1b\x63om.tcl.gaia.protocol.proxyZ\x1btcl.com/gaia/protocol/proxy\x88\x01\x01'
   ,
-  dependencies=[lib_dot_google_dot_api_dot_annotations__pb2.DESCRIPTOR,protocol_dot_common_dot_partner_dot_user__pb2.DESCRIPTOR,protocol_dot_common_dot_partner_dot_device__pb2.DESCRIPTOR,protocol_dot_common_dot_partner_dot_user__device__binding__pb2.DESCRIPTOR,protocol_dot_gaia_dot_proxy_dot_partner__config__pb2.DESCRIPTOR,protocol_dot_gaia_dot_proxy_dot_partner__resource__pb2.DESCRIPTOR,])
+  dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,protocol_dot_common_dot_partner_dot_user__pb2.DESCRIPTOR,protocol_dot_common_dot_partner_dot_device__pb2.DESCRIPTOR,protocol_dot_common_dot_partner_dot_user__device__binding__pb2.DESCRIPTOR,protocol_dot_gaia_dot_proxy_dot_partner__config__pb2.DESCRIPTOR,protocol_dot_gaia_dot_proxy_dot_partner__resource__pb2.DESCRIPTOR,])
 
 
 
@@ -50,8 +50,8 @@ _PINGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=319,
-  serialized_end=332,
+  serialized_start=315,
+  serialized_end=328,
 )
 
 
@@ -81,8 +81,8 @@ _PINGRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=334,
-  serialized_end=362,
+  serialized_start=330,
+  serialized_end=358,
 )
 
 
@@ -126,8 +126,8 @@ _SETACRESPONSEDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=364,
-  serialized_end=428,
+  serialized_start=360,
+  serialized_end=424,
 )
 
 
@@ -171,8 +171,8 @@ _SETACREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=430,
-  serialized_end=511,
+  serialized_start=426,
+  serialized_end=507,
 )
 
 
@@ -216,8 +216,8 @@ _SETACRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=513,
-  serialized_end=613,
+  serialized_start=509,
+  serialized_end=609,
 )
 
 
@@ -261,8 +261,8 @@ _GETUSERSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=615,
-  serialized_end=682,
+  serialized_start=611,
+  serialized_end=678,
 )
 
 
@@ -306,8 +306,8 @@ _GETUSERSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=684,
-  serialized_end=778,
+  serialized_start=680,
+  serialized_end=774,
 )
 
 
@@ -351,8 +351,8 @@ _GETDEVICESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=780,
-  serialized_end=849,
+  serialized_start=776,
+  serialized_end=845,
 )
 
 
@@ -396,8 +396,8 @@ _GETDEVICESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=851,
-  serialized_end=949,
+  serialized_start=847,
+  serialized_end=945,
 )
 
 
@@ -441,8 +441,8 @@ _GETUSERDEVICEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=951,
-  serialized_end=1023,
+  serialized_start=947,
+  serialized_end=1019,
 )
 
 
@@ -486,8 +486,8 @@ _GETUSERDEVICERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1025,
-  serialized_end=1137,
+  serialized_start=1021,
+  serialized_end=1133,
 )
 
 _SETACRESPONSE.fields_by_name['data'].message_type = _SETACRESPONSEDATA
@@ -593,8 +593,8 @@ _GAIAPROXYGRPC = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=1140,
-  serialized_end=2422,
+  serialized_start=1136,
+  serialized_end=2418,
   methods=[
   _descriptor.MethodDescriptor(
     name='Ping',

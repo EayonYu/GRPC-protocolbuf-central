@@ -6,7 +6,7 @@ option java_package = "com.tcl.gaia.protocol.proxy";
 option java_generic_services = true;
 
 
-import "lib/google/api/annotations.proto";
+import "google/api/annotations.proto";
 
 import "protocol/common/partner/user.proto";
 import "protocol/common/partner/device.proto";

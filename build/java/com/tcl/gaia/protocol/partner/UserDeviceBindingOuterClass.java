@@ -1629,15 +1629,15 @@ public final class UserDeviceBindingOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n1protocol/common/partner/user_device_bi" +
-      "nding.proto\022\027protocol.common.partner\032\035li" +
-      "b/google/protobuf/any.proto\032$protocol/co" +
-      "mmon/partner/device.proto\"\265\001\n\021UserDevice" +
-      "Binding\022\020\n\010deviceId\030\001 \002(\t\022\026\n\016deviceNickN" +
-      "ame\030\002 \001(\t\022/\n\006device\030\003 \001(\0132\037.protocol.com" +
-      "mon.partner.Device\022\016\n\006userId\030\004 \002(\t\022\020\n\010us" +
-      "erRole\030\005 \002(\t\022#\n\005extra\030\006 \001(\0132\024.google.pro" +
-      "tobuf.AnyB>\n\035com.tcl.gaia.protocol.partn" +
-      "erZ\035tcl.com/gaia/protocol/partner"
+      "nding.proto\022\027protocol.common.partner\032\031go" +
+      "ogle/protobuf/any.proto\032$protocol/common" +
+      "/partner/device.proto\"\265\001\n\021UserDeviceBind" +
+      "ing\022\020\n\010deviceId\030\001 \002(\t\022\026\n\016deviceNickName\030" +
+      "\002 \001(\t\022/\n\006device\030\003 \001(\0132\037.protocol.common." +
+      "partner.Device\022\016\n\006userId\030\004 \002(\t\022\020\n\010userRo" +
+      "le\030\005 \002(\t\022#\n\005extra\030\006 \001(\0132\024.google.protobu" +
+      "f.AnyB>\n\035com.tcl.gaia.protocol.partnerZ\035" +
+      "tcl.com/gaia/protocol/partner"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

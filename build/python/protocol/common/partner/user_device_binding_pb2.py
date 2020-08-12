@@ -11,7 +11,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from lib.google.protobuf import any_pb2 as lib_dot_google_dot_protobuf_dot_any__pb2
+from google.protobuf import any_pb2 as google_dot_protobuf_dot_any__pb2
 from protocol.common.partner import device_pb2 as protocol_dot_common_dot_partner_dot_device__pb2
 
 
@@ -21,9 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=b'\n\035com.tcl.gaia.protocol.partnerZ\035tcl.com/gaia/protocol/partner',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n1protocol/common/partner/user_device_binding.proto\x12\x17protocol.common.partner\x1a\x1dlib/google/protobuf/any.proto\x1a$protocol/common/partner/device.proto\"\xb5\x01\n\x11UserDeviceBinding\x12\x10\n\x08\x64\x65viceId\x18\x01 \x02(\t\x12\x16\n\x0e\x64\x65viceNickName\x18\x02 \x01(\t\x12/\n\x06\x64\x65vice\x18\x03 \x01(\x0b\x32\x1f.protocol.common.partner.Device\x12\x0e\n\x06userId\x18\x04 \x02(\t\x12\x10\n\x08userRole\x18\x05 \x02(\t\x12#\n\x05\x65xtra\x18\x06 \x01(\x0b\x32\x14.google.protobuf.AnyB>\n\x1d\x63om.tcl.gaia.protocol.partnerZ\x1dtcl.com/gaia/protocol/partner'
+  serialized_pb=b'\n1protocol/common/partner/user_device_binding.proto\x12\x17protocol.common.partner\x1a\x19google/protobuf/any.proto\x1a$protocol/common/partner/device.proto\"\xb5\x01\n\x11UserDeviceBinding\x12\x10\n\x08\x64\x65viceId\x18\x01 \x02(\t\x12\x16\n\x0e\x64\x65viceNickName\x18\x02 \x01(\t\x12/\n\x06\x64\x65vice\x18\x03 \x01(\x0b\x32\x1f.protocol.common.partner.Device\x12\x0e\n\x06userId\x18\x04 \x02(\t\x12\x10\n\x08userRole\x18\x05 \x02(\t\x12#\n\x05\x65xtra\x18\x06 \x01(\x0b\x32\x14.google.protobuf.AnyB>\n\x1d\x63om.tcl.gaia.protocol.partnerZ\x1dtcl.com/gaia/protocol/partner'
   ,
-  dependencies=[lib_dot_google_dot_protobuf_dot_any__pb2.DESCRIPTOR,protocol_dot_common_dot_partner_dot_device__pb2.DESCRIPTOR,])
+  dependencies=[google_dot_protobuf_dot_any__pb2.DESCRIPTOR,protocol_dot_common_dot_partner_dot_device__pb2.DESCRIPTOR,])
 
 
 
@@ -90,12 +90,12 @@ _USERDEVICEBINDING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=148,
-  serialized_end=329,
+  serialized_start=144,
+  serialized_end=325,
 )
 
 _USERDEVICEBINDING.fields_by_name['device'].message_type = protocol_dot_common_dot_partner_dot_device__pb2._DEVICE
-_USERDEVICEBINDING.fields_by_name['extra'].message_type = lib_dot_google_dot_protobuf_dot_any__pb2._ANY
+_USERDEVICEBINDING.fields_by_name['extra'].message_type = google_dot_protobuf_dot_any__pb2._ANY
 DESCRIPTOR.message_types_by_name['UserDeviceBinding'] = _USERDEVICEBINDING
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 

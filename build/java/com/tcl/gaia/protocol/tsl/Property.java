@@ -3074,17 +3074,17 @@ public final class Property {
   static {
     java.lang.String[] descriptorData = {
       "\n\"protocol/common/tsl/property.proto\022\023pr" +
-      "otocol.common.tsl\032\035lib/google/protobuf/a" +
-      "ny.proto\"L\n\022TSLDesiredProperty\022#\n\005value\030" +
-      "\001 \002(\0132\024.google.protobuf.Any\022\021\n\ttimestamp" +
-      "\030\002 \002(\t\"M\n\023TSLReportedProperty\022#\n\005value\030\001" +
-      " \002(\0132\024.google.protobuf.Any\022\021\n\ttimestamp\030" +
-      "\002 \002(\t\"\227\001\n\013TSLProperty\022\022\n\npropertyId\030\001 \002(" +
-      "\t\0228\n\007desired\030\002 \003(\0132\'.protocol.common.tsl" +
-      ".TSLDesiredProperty\022:\n\010reported\030\003 \003(\0132(." +
-      "protocol.common.tsl.TSLReportedPropertyB" +
-      "6\n\031com.tcl.gaia.protocol.tslZ\031tcl.com/ga" +
-      "ia/protocol/tsl"
+      "otocol.common.tsl\032\031google/protobuf/any.p" +
+      "roto\"L\n\022TSLDesiredProperty\022#\n\005value\030\001 \002(" +
+      "\0132\024.google.protobuf.Any\022\021\n\ttimestamp\030\002 \002" +
+      "(\t\"M\n\023TSLReportedProperty\022#\n\005value\030\001 \002(\013" +
+      "2\024.google.protobuf.Any\022\021\n\ttimestamp\030\002 \002(" +
+      "\t\"\227\001\n\013TSLProperty\022\022\n\npropertyId\030\001 \002(\t\0228\n" +
+      "\007desired\030\002 \003(\0132\'.protocol.common.tsl.TSL" +
+      "DesiredProperty\022:\n\010reported\030\003 \003(\0132(.prot" +
+      "ocol.common.tsl.TSLReportedPropertyB6\n\031c" +
+      "om.tcl.gaia.protocol.tslZ\031tcl.com/gaia/p" +
+      "rotocol/tsl"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
