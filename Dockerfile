@@ -16,7 +16,7 @@ RUN ["go", "install", "github.com/golang/protobuf/protoc-gen-go"]
 
 RUN ["curl", "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip", "-o", "awscli-bundle.zip"]
 RUN ["unzip", "awscli-bundle.zip"]
-RUN ["./awscli-bundle/install", "-b", "~/bin/aws"]
+RUN ["./awscli-bundle/install", "-i", "/usr/local/aws", "-b", "/usr/local/bin/aws"]
 
 RUN ["wget", "-O", "protoc.zip", "https://github.com/protocolbuffers/protobuf/releases/download/v3.12.4/protoc-3.12.4-linux-x86_64.zip"]
 RUN ["unzip", "-o", "protoc.zip", "-d", "_tmp_protoc/"]
