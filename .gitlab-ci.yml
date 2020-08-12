@@ -3,7 +3,6 @@ image: "10.124.106.121:5000/gaia/protobuf-compiler:0.0.12"
 stages:
   - pre_build
   - deploy
-  - deploy_after
 
 pre_build:write_access:
   stage: pre_build
@@ -23,20 +22,8 @@ pre_build:write_access:
   only:
     - tags
 
-deploy_private:
+deploy:
   stage: deploy
-  before_script:
-    - ls
-  script:
-    - ls
-  only:
-    - tags
-
-deploy_after:
-  stage: deploy_after
-  variables:
-    STAGE: "dev"
-    REGION: "$IOT4_AWS_DEFAULT_REGION"
   script:
     - rm -rf ~/.aws/ && mkdir ~/.aws && cp -r credentials config ~/.aws/ && ls -l ~/.aws && cat ~/.aws/credentials
     - make clean
