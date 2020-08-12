@@ -26,10 +26,10 @@ deploy_private:
   stage: deploy
   variables:
     REGION: "$IOT4_AWS_DEFAULT_REGION"
-  script:
+  before_script:
     - make clean
+  script:
     - make protocol
-    - protoc-gen-swagger --version
     - make push version=${CI_COMMIT_TAG}
   only:
     - tags
