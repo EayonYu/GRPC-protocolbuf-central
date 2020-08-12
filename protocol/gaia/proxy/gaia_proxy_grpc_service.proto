@@ -51,7 +51,7 @@ message GetUsersRequest {
 message GetUsersResponse {
     required int32 code = 1;
     required string message = 2;
-    repeated common.partner.User data = 3;
+    repeated protocol.common.partner.User data = 3;
 }
 
 message GetDevicesRequest {
@@ -63,7 +63,7 @@ message GetDevicesRequest {
 message GetDevicesResponse {
     required int32 code = 1;
     required string message = 2;
-    repeated common.partner.Device data = 3;
+    repeated protocol.common.partner.Device data = 3;
 }
 
 message GetUserDeviceRequest {
@@ -75,7 +75,7 @@ message GetUserDeviceRequest {
 message GetUserDeviceResponse {
     required int32 code = 1;
     required string message = 2;
-    repeated common.partner.UserDeviceBinding data = 3;
+    repeated protocol.common.partner.UserDeviceBinding data = 3;
 }
 
 service GaiaProxyGrpc {
