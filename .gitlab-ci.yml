@@ -24,6 +24,8 @@ pre_build:write_access:
 
 deploy_private:
   stage: deploy
+  variables:
+    REGION: "$IOT4_AWS_DEFAULT_REGION"
   script:
     - make clean
     - make protocol
