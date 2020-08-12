@@ -10,8 +10,8 @@ RUN ["apt-get", "install", "-y", "python-pip"]
 
 RUN ["wget", "-O", "protoc.zip", "https://github.com/protocolbuffers/protobuf/releases/download/v3.12.4/protoc-3.12.4-linux-x86_64.zip"]
 RUN ["unzip", "-o", "protoc.zip", "-d", "_tmp_protoc/"]
-RUN ["cp", "-r", "_tmp_protoc/include/", "/usr/local/include/"]
-RUN ["cp", "-r", "_tmp_protoc/bin/", "/usr/local/bin/"]
+RUN ["cp", "-r", "_tmp_protoc/include/", "/usr/local/include"]
+RUN ["cp", "-r", "_tmp_protoc/bin/", "/usr/local/bin"]
 RUN ["rm", "-f", "protoc.zip"]
 RUN ["rm", "-rf", "_tmp_protoc/"]
 
