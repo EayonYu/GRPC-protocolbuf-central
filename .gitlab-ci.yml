@@ -1,0 +1,29 @@
+image: "10.124.106.121:5000/gaia/protobuf-compiler:0.0.2"
+
+stages:
+  - pre_build
+  - deploy
+
+pre_build:write_access:
+  stage: pre_build
+  before_script:
+    - rm -rf ~/.aws/ && mkdir -p ~/.aws/
+    - echo [profile cn-iot4] >> ~/.aws/config
+    - echo region = $IOT4_AWS_DEFAULT_REGION >> ~/.aws/config
+    - echo [cn-iot4] >> ~/.aws/credentials
+    - echo aws_access_key_id = ${IOT4_AWS_ACCESS_KEY_ID} >> ~/.aws/credentials
+    - echo aws_secret_access_key = ${IOT4_AWS_SECRET_ACCESS_KEY} >> ~/.aws/credentials
+  script:
+    - cp -r ~/.aws/credentials ~/.aws/config ./
+  artifacts:
+    paths:
+      - credentials
+      - config
+
+deploy_private:
+  stage: deploy
+  script:
+    - make protocol
+    - make push version=${CI_COMMIT_TAG}
+  only:
+    - tags
