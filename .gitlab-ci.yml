@@ -2,7 +2,7 @@ image: "10.124.106.121:5000/gaia/protobuf-compiler:0.0.9"
 
 stages:
   - pre_build
-  - deploy
+  - deploy_after
 
 pre_build:write_access:
   stage: pre_build
@@ -22,13 +22,10 @@ pre_build:write_access:
       - credentials
       - config
 
-deploy_private:
-  stage: deploy
-  variables:
-    REGION: "$IOT4_AWS_DEFAULT_REGION"
-  before_script:
-    - make clean
+deploy_after:
+  stage: deploy_after
   script:
+    - make clean
     - make protocol
     - make push version=${CI_COMMIT_TAG}
   only:
