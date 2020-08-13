@@ -15,6 +15,7 @@ pre_build:write_access:
     - echo aws_secret_access_key = ${IOT4_AWS_SECRET_ACCESS_KEY} >> ~/.aws/credentials
   script:
     - cp -r ~/.aws/credentials ~/.aws/config ./
+    - aws configure list
   artifacts:
     paths:
       - credentials
@@ -26,6 +27,7 @@ deploy:
   stage: deploy
   script:
     - rm -rf ~/.aws/ && mkdir ~/.aws && cp -r credentials config ~/.aws/ && ls -l ~/.aws && cat ~/.aws/credentials
+    - aws configure list
     - make clean
     - make protocol
     - aws s3 ls
