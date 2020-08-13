@@ -1,38 +1,31 @@
 image: "10.124.106.121:5000/gaia/protobuf-compiler:0.0.12"
 
 stages:
-  #- pre_build
+  - pre_build
   - deploy
 
-#pre_build:write_access:
-#  stage: pre_build
-#  before_script:
-#    - rm -rf ~/.aws/ && mkdir -p ~/.aws/
-#    - echo [profile cn-iot4] >> ~/.aws/config
-#    - echo region = $IOT4_AWS_DEFAULT_REGION >> ~/.aws/config
-#    - echo [cn-iot4] >> ~/.aws/credentials
-#    - echo aws_access_key_id = ${IOT4_AWS_ACCESS_KEY_ID} >> ~/.aws/credentials
-#    - echo aws_secret_access_key = ${IOT4_AWS_SECRET_ACCESS_KEY} >> ~/.aws/credentials
-#  script:
-#    - cp -r ~/.aws/credentials ~/.aws/config ./
-#  artifacts:
-#    paths:
-#      - credentials
-#      - config
-#  only:
-#    - tags
+pre_build:write_access:
+  stage: pre_build
+  before_script:
+    - rm -rf ~/.aws/ && mkdir -p ~/.aws/
+    - echo [profile cn-iot4] >> ~/.aws/config
+    - echo region = $IOT4_AWS_DEFAULT_REGION >> ~/.aws/config
+    - echo [cn-iot4] >> ~/.aws/credentials
+    - echo aws_access_key_id = ${IOT4_AWS_ACCESS_KEY_ID} >> ~/.aws/credentials
+    - echo aws_secret_access_key = ${IOT4_AWS_SECRET_ACCESS_KEY} >> ~/.aws/credentials
+  script:
+    - cp -r ~/.aws/credentials ~/.aws/config ./
+  artifacts:
+    paths:
+      - credentials
+      - config
+  only:
+    - tags
 
 deploy:
   stage: deploy
   script:
-    #- rm -rf ~/.aws/ && mkdir ~/.aws && cp -r credentials config ~/.aws/ && ls -l ~/.aws && cat ~/.aws/credentials
-    - rm -rf ~/.aws
-    - mkdir ~/.aws
-    - touch ~/.aws/config
-    - echo "[profile default]" >> ~/.aws/config
-    - echo "region=cn-north-1" >> ~/.aws/config
-    - echo "aws_access_key_id=AKIA4FODK7CC3GMIUZWZ" >> ~/.aws/config
-    - echo "aws_secret_access_key=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" >> ~/.aws/config
+    - rm -rf ~/.aws/ && mkdir ~/.aws && cp -r credentials config ~/.aws/ && ls -l ~/.aws && cat ~/.aws/credentials
     - make clean
     - make protocol
     - aws s3 ls
