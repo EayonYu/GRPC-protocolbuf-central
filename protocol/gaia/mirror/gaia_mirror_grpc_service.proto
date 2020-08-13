@@ -1,0 +1,65 @@
+syntax = "proto2";
+
+package protocol.gaia.mirror;
+option go_package = "tcl.com/gaia/protocol/mirror";
+option java_package = "com.tcl.gaia.protocol.mirror";
+option java_generic_services = true;
+
+import "google/api/annotations.proto";
+
+import "protocol/gaia/mirror/user.proto";
+import "protocol/gaia/mirror/device.proto";
+
+
+message PingRequest {
+
+}
+
+message PingResponse {
+    optional bool pong = 1;
+}
+
+service Mirror {
+
+    rpc Ping(PingRequest) returns (PingResponse) {
+        option (google.api.http) = {
+            get: "/mirror/ping"
+        };
+    };
+
+    rpc GetUserList(protocol.gaia.mirror.GetUserListRequest) returns (protocol.gaia.mirror.GetUserListResponse) {
+        option (google.api.http) = {
+            get: "/mirror/users"
+        };
+    };
+
+    rpc GetDevicesByPartnerUser(protocol.gaia.mirror.GetDevicesByPartnerUserRequest) returns (protocol.gaia.mirror.GetDevicesByPartnerUserResponse) {
+        option (google.api.http) = {
+            get: "/mirror/partner/{partner_uuid}/user/{partner_user_id}/devices"
+        };
+    };
+
+    rpc GetPartnerDevicesByIds(protocol.gaia.mirror.GetPartnerDevicesByIdsRequest) returns (protocol.gaia.mirror.GetPartnerDevicesByIdsResponse) {
+        option (google.api.http) = {
+            get: "/mirror/partner/{partner_uuid}/devices_by_ids"
+        };
+    }
+
+    rpc GetUsersRange(protocol.gaia.mirror.GetUsersRangeRequest) returns (protocol.gaia.mirror.GetUsersRangeResponse) {
+        option (google.api.http) = {
+            get: "/mirror/partner/{partner_uuid}/users_range"
+        };
+    }
+
+    rpc GetDevicesRange(protocol.gaia.mirror.GetDevicesRangeRequest) returns (protocol.gaia.mirror.GetDevicesRangeResponse) {
+        option (google.api.http) = {
+            get: "/mirror/partner/{partner_uuid}/devices_range"
+        };
+    }
+
+    rpc GetUserDevicesRange(protocol.gaia.mirror.GetUserDevicesRangeRequest) returns (protocol.gaia.mirror.GetUserDevicesRangeResponse) {
+        option (google.api.http) = {
+            get: "/mirror/partner/{partner_uuid}/user_devices_range"
+        };
+    }
+}

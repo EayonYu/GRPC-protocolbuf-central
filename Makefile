@@ -21,8 +21,10 @@ protocol:
 	protoc --proto_path=. --python_out=./build/python --java_out=./build/java --go_out=./build/go --swagger_out=logtostderr=true:./build/swagger ./protocol/common/constant/*.proto
 	protoc --proto_path=. --python_out=./build/python --java_out=./build/java --go_out=./build/go --swagger_out=logtostderr=true:./build/swagger ./protocol/common/partner/*.proto
 	protoc --proto_path=. --python_out=./build/python --java_out=./build/java --go_out=./build/go --grpc-gateway_out=logtostderr=true:./build/go --swagger_out=logtostderr=true:./build/swagger ./protocol/gaia/proxy/*.proto
+	protoc --proto_path=. --python_out=./build/python --java_out=./build/java --go_out=./build/go --grpc-gateway_out=logtostderr=true:./build/go --swagger_out=logtostderr=true:./build/swagger ./protocol/gaia/mirror/*.proto
 
 	python -m grpc_tools.protoc --proto_path=. --python_out=./build/python --grpc_python_out=./build/python ./protocol/gaia/proxy/gaia_proxy_grpc_service.proto
+	python -m grpc_tools.protoc --proto_path=. --python_out=./build/python --grpc_python_out=./build/python ./protocol/gaia/mirror/gaia_mirror_grpc_service.proto
 
 clean:
 	bash ./scripts/env.sh clean
@@ -35,3 +37,4 @@ clean:
 
 push:
 	aws s3 sync --delete ./build s3://protocols/gaia/protocol/$(version) --exclude *.DS_Store* --region cn-north-1 --profile $(profile)
+	aws s3 sync --delete ./protocol s3://protocols/gaia/protocol/$(version)/proto --exclude *.DS_Store* --region cn-north-1 --profile $(profile)
