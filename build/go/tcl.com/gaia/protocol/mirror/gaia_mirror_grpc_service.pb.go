@@ -7,8 +7,12 @@
 package mirror
 
 import (
+	context "context"
 	proto "github.com/golang/protobuf/proto"
 	_ "google.golang.org/genproto/googleapis/api/annotations"
+	grpc "google.golang.org/grpc"
+	codes "google.golang.org/grpc/codes"
+	status "google.golang.org/grpc/status"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -308,4 +312,300 @@ func file_protocol_gaia_mirror_gaia_mirror_grpc_service_proto_init() {
 	file_protocol_gaia_mirror_gaia_mirror_grpc_service_proto_rawDesc = nil
 	file_protocol_gaia_mirror_gaia_mirror_grpc_service_proto_goTypes = nil
 	file_protocol_gaia_mirror_gaia_mirror_grpc_service_proto_depIdxs = nil
+}
+
+// Reference imports to suppress errors if they are not otherwise used.
+var _ context.Context
+var _ grpc.ClientConnInterface
+
+// This is a compile-time assertion to ensure that this generated file
+// is compatible with the grpc package it is being compiled against.
+const _ = grpc.SupportPackageIsVersion6
+
+// MirrorClient is the client API for Mirror service.
+//
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
+type MirrorClient interface {
+	Ping(ctx context.Context, in *PingRequest, opts ...grpc.CallOption) (*PingResponse, error)
+	GetUserList(ctx context.Context, in *GetUserListRequest, opts ...grpc.CallOption) (*GetUserListResponse, error)
+	GetDevicesByPartnerUser(ctx context.Context, in *GetDevicesByPartnerUserRequest, opts ...grpc.CallOption) (*GetDevicesByPartnerUserResponse, error)
+	GetPartnerDevicesByIds(ctx context.Context, in *GetPartnerDevicesByIdsRequest, opts ...grpc.CallOption) (*GetPartnerDevicesByIdsResponse, error)
+	GetUsersRange(ctx context.Context, in *GetUsersRangeRequest, opts ...grpc.CallOption) (*GetUsersRangeResponse, error)
+	GetDevicesRange(ctx context.Context, in *GetDevicesRangeRequest, opts ...grpc.CallOption) (*GetDevicesRangeResponse, error)
+	GetUserDevicesRange(ctx context.Context, in *GetUserDevicesRangeRequest, opts ...grpc.CallOption) (*GetUserDevicesRangeResponse, error)
+}
+
+type mirrorClient struct {
+	cc grpc.ClientConnInterface
+}
+
+func NewMirrorClient(cc grpc.ClientConnInterface) MirrorClient {
+	return &mirrorClient{cc}
+}
+
+func (c *mirrorClient) Ping(ctx context.Context, in *PingRequest, opts ...grpc.CallOption) (*PingResponse, error) {
+	out := new(PingResponse)
+	err := c.cc.Invoke(ctx, "/protocol.gaia.mirror.Mirror/Ping", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *mirrorClient) GetUserList(ctx context.Context, in *GetUserListRequest, opts ...grpc.CallOption) (*GetUserListResponse, error) {
+	out := new(GetUserListResponse)
+	err := c.cc.Invoke(ctx, "/protocol.gaia.mirror.Mirror/GetUserList", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *mirrorClient) GetDevicesByPartnerUser(ctx context.Context, in *GetDevicesByPartnerUserRequest, opts ...grpc.CallOption) (*GetDevicesByPartnerUserResponse, error) {
+	out := new(GetDevicesByPartnerUserResponse)
+	err := c.cc.Invoke(ctx, "/protocol.gaia.mirror.Mirror/GetDevicesByPartnerUser", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *mirrorClient) GetPartnerDevicesByIds(ctx context.Context, in *GetPartnerDevicesByIdsRequest, opts ...grpc.CallOption) (*GetPartnerDevicesByIdsResponse, error) {
+	out := new(GetPartnerDevicesByIdsResponse)
+	err := c.cc.Invoke(ctx, "/protocol.gaia.mirror.Mirror/GetPartnerDevicesByIds", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *mirrorClient) GetUsersRange(ctx context.Context, in *GetUsersRangeRequest, opts ...grpc.CallOption) (*GetUsersRangeResponse, error) {
+	out := new(GetUsersRangeResponse)
+	err := c.cc.Invoke(ctx, "/protocol.gaia.mirror.Mirror/GetUsersRange", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *mirrorClient) GetDevicesRange(ctx context.Context, in *GetDevicesRangeRequest, opts ...grpc.CallOption) (*GetDevicesRangeResponse, error) {
+	out := new(GetDevicesRangeResponse)
+	err := c.cc.Invoke(ctx, "/protocol.gaia.mirror.Mirror/GetDevicesRange", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *mirrorClient) GetUserDevicesRange(ctx context.Context, in *GetUserDevicesRangeRequest, opts ...grpc.CallOption) (*GetUserDevicesRangeResponse, error) {
+	out := new(GetUserDevicesRangeResponse)
+	err := c.cc.Invoke(ctx, "/protocol.gaia.mirror.Mirror/GetUserDevicesRange", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// MirrorServer is the server API for Mirror service.
+type MirrorServer interface {
+	Ping(context.Context, *PingRequest) (*PingResponse, error)
+	GetUserList(context.Context, *GetUserListRequest) (*GetUserListResponse, error)
+	GetDevicesByPartnerUser(context.Context, *GetDevicesByPartnerUserRequest) (*GetDevicesByPartnerUserResponse, error)
+	GetPartnerDevicesByIds(context.Context, *GetPartnerDevicesByIdsRequest) (*GetPartnerDevicesByIdsResponse, error)
+	GetUsersRange(context.Context, *GetUsersRangeRequest) (*GetUsersRangeResponse, error)
+	GetDevicesRange(context.Context, *GetDevicesRangeRequest) (*GetDevicesRangeResponse, error)
+	GetUserDevicesRange(context.Context, *GetUserDevicesRangeRequest) (*GetUserDevicesRangeResponse, error)
+}
+
+// UnimplementedMirrorServer can be embedded to have forward compatible implementations.
+type UnimplementedMirrorServer struct {
+}
+
+func (*UnimplementedMirrorServer) Ping(context.Context, *PingRequest) (*PingResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Ping not implemented")
+}
+func (*UnimplementedMirrorServer) GetUserList(context.Context, *GetUserListRequest) (*GetUserListResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetUserList not implemented")
+}
+func (*UnimplementedMirrorServer) GetDevicesByPartnerUser(context.Context, *GetDevicesByPartnerUserRequest) (*GetDevicesByPartnerUserResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetDevicesByPartnerUser not implemented")
+}
+func (*UnimplementedMirrorServer) GetPartnerDevicesByIds(context.Context, *GetPartnerDevicesByIdsRequest) (*GetPartnerDevicesByIdsResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetPartnerDevicesByIds not implemented")
+}
+func (*UnimplementedMirrorServer) GetUsersRange(context.Context, *GetUsersRangeRequest) (*GetUsersRangeResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetUsersRange not implemented")
+}
+func (*UnimplementedMirrorServer) GetDevicesRange(context.Context, *GetDevicesRangeRequest) (*GetDevicesRangeResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetDevicesRange not implemented")
+}
+func (*UnimplementedMirrorServer) GetUserDevicesRange(context.Context, *GetUserDevicesRangeRequest) (*GetUserDevicesRangeResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetUserDevicesRange not implemented")
+}
+
+func RegisterMirrorServer(s *grpc.Server, srv MirrorServer) {
+	s.RegisterService(&_Mirror_serviceDesc, srv)
+}
+
+func _Mirror_Ping_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PingRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MirrorServer).Ping(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/protocol.gaia.mirror.Mirror/Ping",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MirrorServer).Ping(ctx, req.(*PingRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Mirror_GetUserList_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetUserListRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MirrorServer).GetUserList(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/protocol.gaia.mirror.Mirror/GetUserList",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MirrorServer).GetUserList(ctx, req.(*GetUserListRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Mirror_GetDevicesByPartnerUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetDevicesByPartnerUserRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MirrorServer).GetDevicesByPartnerUser(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/protocol.gaia.mirror.Mirror/GetDevicesByPartnerUser",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MirrorServer).GetDevicesByPartnerUser(ctx, req.(*GetDevicesByPartnerUserRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Mirror_GetPartnerDevicesByIds_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetPartnerDevicesByIdsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MirrorServer).GetPartnerDevicesByIds(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/protocol.gaia.mirror.Mirror/GetPartnerDevicesByIds",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MirrorServer).GetPartnerDevicesByIds(ctx, req.(*GetPartnerDevicesByIdsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Mirror_GetUsersRange_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetUsersRangeRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MirrorServer).GetUsersRange(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/protocol.gaia.mirror.Mirror/GetUsersRange",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MirrorServer).GetUsersRange(ctx, req.(*GetUsersRangeRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Mirror_GetDevicesRange_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetDevicesRangeRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MirrorServer).GetDevicesRange(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/protocol.gaia.mirror.Mirror/GetDevicesRange",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MirrorServer).GetDevicesRange(ctx, req.(*GetDevicesRangeRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _Mirror_GetUserDevicesRange_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetUserDevicesRangeRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MirrorServer).GetUserDevicesRange(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/protocol.gaia.mirror.Mirror/GetUserDevicesRange",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MirrorServer).GetUserDevicesRange(ctx, req.(*GetUserDevicesRangeRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+var _Mirror_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "protocol.gaia.mirror.Mirror",
+	HandlerType: (*MirrorServer)(nil),
+	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "Ping",
+			Handler:    _Mirror_Ping_Handler,
+		},
+		{
+			MethodName: "GetUserList",
+			Handler:    _Mirror_GetUserList_Handler,
+		},
+		{
+			MethodName: "GetDevicesByPartnerUser",
+			Handler:    _Mirror_GetDevicesByPartnerUser_Handler,
+		},
+		{
+			MethodName: "GetPartnerDevicesByIds",
+			Handler:    _Mirror_GetPartnerDevicesByIds_Handler,
+		},
+		{
+			MethodName: "GetUsersRange",
+			Handler:    _Mirror_GetUsersRange_Handler,
+		},
+		{
+			MethodName: "GetDevicesRange",
+			Handler:    _Mirror_GetDevicesRange_Handler,
+		},
+		{
+			MethodName: "GetUserDevicesRange",
+			Handler:    _Mirror_GetUserDevicesRange_Handler,
+		},
+	},
+	Streams:  []grpc.StreamDesc{},
+	Metadata: "protocol/gaia/mirror/gaia_mirror_grpc_service.proto",
 }

@@ -7,8 +7,12 @@
 package proxy
 
 import (
+	context "context"
 	proto "github.com/golang/protobuf/proto"
 	_ "google.golang.org/genproto/googleapis/api/annotations"
+	grpc "google.golang.org/grpc"
+	codes "google.golang.org/grpc/codes"
+	status "google.golang.org/grpc/status"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -1080,4 +1084,374 @@ func file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_init() {
 	file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_rawDesc = nil
 	file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_goTypes = nil
 	file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_depIdxs = nil
+}
+
+// Reference imports to suppress errors if they are not otherwise used.
+var _ context.Context
+var _ grpc.ClientConnInterface
+
+// This is a compile-time assertion to ensure that this generated file
+// is compatible with the grpc package it is being compiled against.
+const _ = grpc.SupportPackageIsVersion6
+
+// GaiaProxyGrpcClient is the client API for GaiaProxyGrpc service.
+//
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
+type GaiaProxyGrpcClient interface {
+	Ping(ctx context.Context, in *PingRequest, opts ...grpc.CallOption) (*PingResponse, error)
+	ListPartnerConfig(ctx context.Context, in *PartnerConfigListRequest, opts ...grpc.CallOption) (*PartnerConfigListResponse, error)
+	GetPartnerConfig(ctx context.Context, in *PartnerConfigGetRequest, opts ...grpc.CallOption) (*PartnerConfigGetResponse, error)
+	AddPartnerConfig(ctx context.Context, in *PartnerConfigAddRequest, opts ...grpc.CallOption) (*PartnerConfigAddResponse, error)
+	SetAC(ctx context.Context, in *SetACRequest, opts ...grpc.CallOption) (*SetACResponse, error)
+	// for sync
+	GetPartnerResourceIdRange(ctx context.Context, in *GetPartnerResourceIdRangeRequest, opts ...grpc.CallOption) (*GetPartnerResourceIdRangeResponse, error)
+	GetUsers(ctx context.Context, in *GetUsersRequest, opts ...grpc.CallOption) (*GetUsersResponse, error)
+	GetDevices(ctx context.Context, in *GetDevicesRequest, opts ...grpc.CallOption) (*GetDevicesResponse, error)
+	GetUserDevice(ctx context.Context, in *GetUserDeviceRequest, opts ...grpc.CallOption) (*GetUserDeviceResponse, error)
+}
+
+type gaiaProxyGrpcClient struct {
+	cc grpc.ClientConnInterface
+}
+
+func NewGaiaProxyGrpcClient(cc grpc.ClientConnInterface) GaiaProxyGrpcClient {
+	return &gaiaProxyGrpcClient{cc}
+}
+
+func (c *gaiaProxyGrpcClient) Ping(ctx context.Context, in *PingRequest, opts ...grpc.CallOption) (*PingResponse, error) {
+	out := new(PingResponse)
+	err := c.cc.Invoke(ctx, "/protocol.gaia.proxy.GaiaProxyGrpc/Ping", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *gaiaProxyGrpcClient) ListPartnerConfig(ctx context.Context, in *PartnerConfigListRequest, opts ...grpc.CallOption) (*PartnerConfigListResponse, error) {
+	out := new(PartnerConfigListResponse)
+	err := c.cc.Invoke(ctx, "/protocol.gaia.proxy.GaiaProxyGrpc/ListPartnerConfig", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *gaiaProxyGrpcClient) GetPartnerConfig(ctx context.Context, in *PartnerConfigGetRequest, opts ...grpc.CallOption) (*PartnerConfigGetResponse, error) {
+	out := new(PartnerConfigGetResponse)
+	err := c.cc.Invoke(ctx, "/protocol.gaia.proxy.GaiaProxyGrpc/GetPartnerConfig", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *gaiaProxyGrpcClient) AddPartnerConfig(ctx context.Context, in *PartnerConfigAddRequest, opts ...grpc.CallOption) (*PartnerConfigAddResponse, error) {
+	out := new(PartnerConfigAddResponse)
+	err := c.cc.Invoke(ctx, "/protocol.gaia.proxy.GaiaProxyGrpc/AddPartnerConfig", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *gaiaProxyGrpcClient) SetAC(ctx context.Context, in *SetACRequest, opts ...grpc.CallOption) (*SetACResponse, error) {
+	out := new(SetACResponse)
+	err := c.cc.Invoke(ctx, "/protocol.gaia.proxy.GaiaProxyGrpc/SetAC", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *gaiaProxyGrpcClient) GetPartnerResourceIdRange(ctx context.Context, in *GetPartnerResourceIdRangeRequest, opts ...grpc.CallOption) (*GetPartnerResourceIdRangeResponse, error) {
+	out := new(GetPartnerResourceIdRangeResponse)
+	err := c.cc.Invoke(ctx, "/protocol.gaia.proxy.GaiaProxyGrpc/GetPartnerResourceIdRange", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *gaiaProxyGrpcClient) GetUsers(ctx context.Context, in *GetUsersRequest, opts ...grpc.CallOption) (*GetUsersResponse, error) {
+	out := new(GetUsersResponse)
+	err := c.cc.Invoke(ctx, "/protocol.gaia.proxy.GaiaProxyGrpc/GetUsers", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *gaiaProxyGrpcClient) GetDevices(ctx context.Context, in *GetDevicesRequest, opts ...grpc.CallOption) (*GetDevicesResponse, error) {
+	out := new(GetDevicesResponse)
+	err := c.cc.Invoke(ctx, "/protocol.gaia.proxy.GaiaProxyGrpc/GetDevices", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *gaiaProxyGrpcClient) GetUserDevice(ctx context.Context, in *GetUserDeviceRequest, opts ...grpc.CallOption) (*GetUserDeviceResponse, error) {
+	out := new(GetUserDeviceResponse)
+	err := c.cc.Invoke(ctx, "/protocol.gaia.proxy.GaiaProxyGrpc/GetUserDevice", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// GaiaProxyGrpcServer is the server API for GaiaProxyGrpc service.
+type GaiaProxyGrpcServer interface {
+	Ping(context.Context, *PingRequest) (*PingResponse, error)
+	ListPartnerConfig(context.Context, *PartnerConfigListRequest) (*PartnerConfigListResponse, error)
+	GetPartnerConfig(context.Context, *PartnerConfigGetRequest) (*PartnerConfigGetResponse, error)
+	AddPartnerConfig(context.Context, *PartnerConfigAddRequest) (*PartnerConfigAddResponse, error)
+	SetAC(context.Context, *SetACRequest) (*SetACResponse, error)
+	// for sync
+	GetPartnerResourceIdRange(context.Context, *GetPartnerResourceIdRangeRequest) (*GetPartnerResourceIdRangeResponse, error)
+	GetUsers(context.Context, *GetUsersRequest) (*GetUsersResponse, error)
+	GetDevices(context.Context, *GetDevicesRequest) (*GetDevicesResponse, error)
+	GetUserDevice(context.Context, *GetUserDeviceRequest) (*GetUserDeviceResponse, error)
+}
+
+// UnimplementedGaiaProxyGrpcServer can be embedded to have forward compatible implementations.
+type UnimplementedGaiaProxyGrpcServer struct {
+}
+
+func (*UnimplementedGaiaProxyGrpcServer) Ping(context.Context, *PingRequest) (*PingResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Ping not implemented")
+}
+func (*UnimplementedGaiaProxyGrpcServer) ListPartnerConfig(context.Context, *PartnerConfigListRequest) (*PartnerConfigListResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ListPartnerConfig not implemented")
+}
+func (*UnimplementedGaiaProxyGrpcServer) GetPartnerConfig(context.Context, *PartnerConfigGetRequest) (*PartnerConfigGetResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetPartnerConfig not implemented")
+}
+func (*UnimplementedGaiaProxyGrpcServer) AddPartnerConfig(context.Context, *PartnerConfigAddRequest) (*PartnerConfigAddResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method AddPartnerConfig not implemented")
+}
+func (*UnimplementedGaiaProxyGrpcServer) SetAC(context.Context, *SetACRequest) (*SetACResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method SetAC not implemented")
+}
+func (*UnimplementedGaiaProxyGrpcServer) GetPartnerResourceIdRange(context.Context, *GetPartnerResourceIdRangeRequest) (*GetPartnerResourceIdRangeResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetPartnerResourceIdRange not implemented")
+}
+func (*UnimplementedGaiaProxyGrpcServer) GetUsers(context.Context, *GetUsersRequest) (*GetUsersResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetUsers not implemented")
+}
+func (*UnimplementedGaiaProxyGrpcServer) GetDevices(context.Context, *GetDevicesRequest) (*GetDevicesResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetDevices not implemented")
+}
+func (*UnimplementedGaiaProxyGrpcServer) GetUserDevice(context.Context, *GetUserDeviceRequest) (*GetUserDeviceResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetUserDevice not implemented")
+}
+
+func RegisterGaiaProxyGrpcServer(s *grpc.Server, srv GaiaProxyGrpcServer) {
+	s.RegisterService(&_GaiaProxyGrpc_serviceDesc, srv)
+}
+
+func _GaiaProxyGrpc_Ping_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PingRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(GaiaProxyGrpcServer).Ping(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/protocol.gaia.proxy.GaiaProxyGrpc/Ping",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(GaiaProxyGrpcServer).Ping(ctx, req.(*PingRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _GaiaProxyGrpc_ListPartnerConfig_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PartnerConfigListRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(GaiaProxyGrpcServer).ListPartnerConfig(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/protocol.gaia.proxy.GaiaProxyGrpc/ListPartnerConfig",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(GaiaProxyGrpcServer).ListPartnerConfig(ctx, req.(*PartnerConfigListRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _GaiaProxyGrpc_GetPartnerConfig_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PartnerConfigGetRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(GaiaProxyGrpcServer).GetPartnerConfig(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/protocol.gaia.proxy.GaiaProxyGrpc/GetPartnerConfig",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(GaiaProxyGrpcServer).GetPartnerConfig(ctx, req.(*PartnerConfigGetRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _GaiaProxyGrpc_AddPartnerConfig_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PartnerConfigAddRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(GaiaProxyGrpcServer).AddPartnerConfig(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/protocol.gaia.proxy.GaiaProxyGrpc/AddPartnerConfig",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(GaiaProxyGrpcServer).AddPartnerConfig(ctx, req.(*PartnerConfigAddRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _GaiaProxyGrpc_SetAC_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(SetACRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(GaiaProxyGrpcServer).SetAC(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/protocol.gaia.proxy.GaiaProxyGrpc/SetAC",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(GaiaProxyGrpcServer).SetAC(ctx, req.(*SetACRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _GaiaProxyGrpc_GetPartnerResourceIdRange_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetPartnerResourceIdRangeRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(GaiaProxyGrpcServer).GetPartnerResourceIdRange(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/protocol.gaia.proxy.GaiaProxyGrpc/GetPartnerResourceIdRange",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(GaiaProxyGrpcServer).GetPartnerResourceIdRange(ctx, req.(*GetPartnerResourceIdRangeRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _GaiaProxyGrpc_GetUsers_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetUsersRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(GaiaProxyGrpcServer).GetUsers(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/protocol.gaia.proxy.GaiaProxyGrpc/GetUsers",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(GaiaProxyGrpcServer).GetUsers(ctx, req.(*GetUsersRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _GaiaProxyGrpc_GetDevices_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetDevicesRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(GaiaProxyGrpcServer).GetDevices(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/protocol.gaia.proxy.GaiaProxyGrpc/GetDevices",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(GaiaProxyGrpcServer).GetDevices(ctx, req.(*GetDevicesRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _GaiaProxyGrpc_GetUserDevice_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetUserDeviceRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(GaiaProxyGrpcServer).GetUserDevice(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/protocol.gaia.proxy.GaiaProxyGrpc/GetUserDevice",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(GaiaProxyGrpcServer).GetUserDevice(ctx, req.(*GetUserDeviceRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+var _GaiaProxyGrpc_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "protocol.gaia.proxy.GaiaProxyGrpc",
+	HandlerType: (*GaiaProxyGrpcServer)(nil),
+	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "Ping",
+			Handler:    _GaiaProxyGrpc_Ping_Handler,
+		},
+		{
+			MethodName: "ListPartnerConfig",
+			Handler:    _GaiaProxyGrpc_ListPartnerConfig_Handler,
+		},
+		{
+			MethodName: "GetPartnerConfig",
+			Handler:    _GaiaProxyGrpc_GetPartnerConfig_Handler,
+		},
+		{
+			MethodName: "AddPartnerConfig",
+			Handler:    _GaiaProxyGrpc_AddPartnerConfig_Handler,
+		},
+		{
+			MethodName: "SetAC",
+			Handler:    _GaiaProxyGrpc_SetAC_Handler,
+		},
+		{
+			MethodName: "GetPartnerResourceIdRange",
+			Handler:    _GaiaProxyGrpc_GetPartnerResourceIdRange_Handler,
+		},
+		{
+			MethodName: "GetUsers",
+			Handler:    _GaiaProxyGrpc_GetUsers_Handler,
+		},
+		{
+			MethodName: "GetDevices",
+			Handler:    _GaiaProxyGrpc_GetDevices_Handler,
+		},
+		{
+			MethodName: "GetUserDevice",
+			Handler:    _GaiaProxyGrpc_GetUserDevice_Handler,
+		},
+	},
+	Streams:  []grpc.StreamDesc{},
+	Metadata: "protocol/gaia/proxy/gaia_proxy_grpc_service.proto",
 }
