@@ -17,11 +17,17 @@ prepare:
 	bash ./scripts/env.sh prepare
 
 protocol:
-	protoc --proto_path=. --python_out=./build/python --plugin=protoc-gen-grpc-java=./.protoc-gen-grpc-java --java_out=./build/java --go_out=plugins=grpc:./build/go --swagger_out=logtostderr=true:./build/swagger ./protocol/common/tsl/*.proto
-	protoc --proto_path=. --python_out=./build/python --plugin=protoc-gen-grpc-java=./.protoc-gen-grpc-java --java_out=./build/java --go_out=plugins=grpc:./build/go --swagger_out=logtostderr=true:./build/swagger ./protocol/common/constant/*.proto
-	protoc --proto_path=. --python_out=./build/python --plugin=protoc-gen-grpc-java=./.protoc-gen-grpc-java --java_out=./build/java --go_out=plugins=grpc:./build/go --swagger_out=logtostderr=true:./build/swagger ./protocol/common/partner/*.proto
-	protoc --proto_path=. --python_out=./build/python --plugin=protoc-gen-grpc-java=./.protoc-gen-grpc-java --grpc-java_out=./build/java --java_out=./build/java --go_out=plugins=grpc:./build/go --grpc-gateway_out=logtostderr=true:./build/go --swagger_out=logtostderr=true:./build/swagger ./protocol/gaia/proxy/*.proto
-	protoc --proto_path=. --python_out=./build/python --plugin=protoc-gen-grpc-java=./.protoc-gen-grpc-java --java_out=./build/java --go_out=plugins=grpc:./build/go --grpc-gateway_out=logtostderr=true:./build/go --swagger_out=logtostderr=true:./build/swagger ./protocol/gaia/mirror/*.proto
+	protoc --proto_path=. --python_out=./build/python --java_out=./build/java --go_out=plugins=grpc:./build/go --swagger_out=logtostderr=true:./build/swagger ./protocol/common/tsl/*.proto
+	protoc --proto_path=. --python_out=./build/python --java_out=./build/java --go_out=plugins=grpc:./build/go --swagger_out=logtostderr=true:./build/swagger ./protocol/common/constant/*.proto
+	protoc --proto_path=. --python_out=./build/python --java_out=./build/java --go_out=plugins=grpc:./build/go --swagger_out=logtostderr=true:./build/swagger ./protocol/common/partner/*.proto
+	protoc --proto_path=. --python_out=./build/python --grpc-java_out=./build/java --java_out=./build/java --go_out=plugins=grpc:./build/go --grpc-gateway_out=logtostderr=true:./build/go --swagger_out=logtostderr=true:./build/swagger ./protocol/gaia/proxy/*.proto
+	protoc --proto_path=. --python_out=./build/python --java_out=./build/java --go_out=plugins=grpc:./build/go --grpc-gateway_out=logtostderr=true:./build/go --swagger_out=logtostderr=true:./build/swagger ./protocol/gaia/mirror/*.proto
+
+	#protoc --proto_path=. --python_out=./build/python --plugin=protoc-gen-grpc-java=./.protoc-gen-grpc-java --java_out=./build/java --go_out=plugins=grpc:./build/go --swagger_out=logtostderr=true:./build/swagger ./protocol/common/tsl/*.proto
+	#protoc --proto_path=. --python_out=./build/python --plugin=protoc-gen-grpc-java=./.protoc-gen-grpc-java --java_out=./build/java --go_out=plugins=grpc:./build/go --swagger_out=logtostderr=true:./build/swagger ./protocol/common/constant/*.proto
+	#protoc --proto_path=. --python_out=./build/python --plugin=protoc-gen-grpc-java=./.protoc-gen-grpc-java --java_out=./build/java --go_out=plugins=grpc:./build/go --swagger_out=logtostderr=true:./build/swagger ./protocol/common/partner/*.proto
+	#protoc --proto_path=. --python_out=./build/python --plugin=protoc-gen-grpc-java=./.protoc-gen-grpc-java --grpc-java_out=./build/java --java_out=./build/java --go_out=plugins=grpc:./build/go --grpc-gateway_out=logtostderr=true:./build/go --swagger_out=logtostderr=true:./build/swagger ./protocol/gaia/proxy/*.proto
+	#protoc --proto_path=. --python_out=./build/python --plugin=protoc-gen-grpc-java=./.protoc-gen-grpc-java --java_out=./build/java --go_out=plugins=grpc:./build/go --grpc-gateway_out=logtostderr=true:./build/go --swagger_out=logtostderr=true:./build/swagger ./protocol/gaia/mirror/*.proto
 
 	python -m grpc_tools.protoc --proto_path=. --python_out=./build/python --grpc_python_out=./build/python ./protocol/gaia/proxy/gaia_proxy_grpc_service.proto
 	python -m grpc_tools.protoc --proto_path=. --python_out=./build/python --grpc_python_out=./build/python ./protocol/gaia/mirror/gaia_mirror_grpc_service.proto
