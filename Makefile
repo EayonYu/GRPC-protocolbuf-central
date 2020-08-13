@@ -2,6 +2,10 @@ ifndef version
 	version=latest
 endif
 
+ifndef profile
+	profile=default
+endif
+
 .PHONY: protocol
 
 default:
@@ -30,4 +34,4 @@ clean:
 	mkdir build/swagger
 
 push:
-	aws s3 sync --delete ./build s3://protocols/gaia/protocol/$(version) --exclude *.DS_Store*
+	aws s3 sync --delete ./build s3://protocols/gaia/protocol/$(version) --exclude *.DS_Store* --region cn-north-1 --profile $(profile)

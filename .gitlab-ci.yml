@@ -30,7 +30,6 @@ deploy:
     - aws configure list --profile cn-iot4  
     - make clean
     - make protocol
-    - aws s3 ls  --profile cn-iot4 --region cn-north-1
-    - make push version=${CI_COMMIT_TAG}
+    - make push version=${CI_COMMIT_TAG} profile=cn-iot4
   only:
     - tags
