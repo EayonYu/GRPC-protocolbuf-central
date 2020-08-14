@@ -52,3 +52,4 @@ RUN unzip awscli-bundle.zip
 RUN ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
 
 RUN cp /grpc-java/grpc-java-1.30.2/compiler/build/exe/java_plugin/protoc-gen-grpc-java /usr/local/bin/
+ENV PATH="/root/go/bin:${PATH}"
