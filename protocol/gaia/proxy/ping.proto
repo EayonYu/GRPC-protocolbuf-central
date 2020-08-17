@@ -11,14 +11,17 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-syntax = "proto3";
+syntax = "proto2";
 
-option java_multiple_files = true;
-option java_package = "com.tcl.gaia.partner.proxy.api.grpc";
-option java_outer_classname = "PingProto";
-option objc_class_prefix = "PING";
+//option java_multiple_files = true;
+//option java_package = "com.tcl.gaia.partner.proxy.api.grpc";
+//option java_outer_classname = "PingProto";
+//option objc_class_prefix = "PING";
 
-package ping;
+package protocol.gaia.proxy;
+option go_package = "tcl.com/gaia/protocol/proxy";
+option java_package = "com.tcl.gaia.protocol.proxy";
+
 
 // The greeting service definition.
 service Ping {
