@@ -11,36 +11,15 @@
     "application/json"
   ],
   "paths": {
-    "/api/ping": {
+    "/api/partners": {
       "get": {
-        "operationId": "Ping",
+        "summary": "partner management",
+        "operationId": "ListPartner",
         "responses": {
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/proxyPingResponse"
-            }
-          },
-          "default": {
-            "description": "An unexpected error response",
-            "schema": {
-              "$ref": "#/definitions/runtimeError"
-            }
-          }
-        },
-        "tags": [
-          "GaiaProxyGrpc"
-        ]
-      }
-    },
-    "/api/rest/partners": {
-      "get": {
-        "operationId": "ListPartnerConfig",
-        "responses": {
-          "200": {
-            "description": "A successful response.",
-            "schema": {
-              "$ref": "#/definitions/proxyPartnerConfigListResponse"
+              "$ref": "#/definitions/proxyListPartnerResponse"
             }
           },
           "default": {
@@ -99,12 +78,12 @@
         ]
       },
       "post": {
-        "operationId": "AddPartnerConfig",
+        "operationId": "AddPartner",
         "responses": {
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/proxyPartnerConfigAddResponse"
+              "$ref": "#/definitions/proxyAddPartnerResponse"
             }
           },
           "default": {
@@ -120,7 +99,7 @@
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/proxyPartnerConfigAddRequest"
+              "$ref": "#/definitions/proxyAddPartnerRequest"
             }
           }
         ],
@@ -129,14 +108,14 @@
         ]
       }
     },
-    "/api/rest/partners/{partner_id}": {
+    "/api/partners/{partner_id}": {
       "get": {
-        "operationId": "GetPartnerConfig",
+        "operationId": "GetPartner",
         "responses": {
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/proxyPartnerConfigGetResponse"
+              "$ref": "#/definitions/proxyGetPartnerResponse"
             }
           },
           "default": {
@@ -159,14 +138,14 @@
         ]
       }
     },
-    "/api/rest/proxy/ac/set": {
-      "post": {
-        "operationId": "SetAC",
+    "/api/ping": {
+      "get": {
+        "operationId": "Ping",
         "responses": {
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/proxySetACResponse"
+              "$ref": "#/definitions/proxyPingResponse"
             }
           },
           "default": {
@@ -176,29 +155,20 @@
             }
           }
         },
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/proxySetACRequest"
-            }
-          }
-        ],
         "tags": [
           "GaiaProxyGrpc"
         ]
       }
     },
-    "/api/rest/proxy/devices": {
+    "/api/rest/proxy": {
       "get": {
-        "operationId": "GetDevices",
+        "summary": "proxy",
+        "operationId": "Proxy",
         "responses": {
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/proxyGetDevicesResponse"
+              "$ref": "#/definitions/proxyProxyResponse"
             }
           },
           "default": {
@@ -208,153 +178,6 @@
             }
           }
         },
-        "parameters": [
-          {
-            "name": "partner_uuid",
-            "in": "query",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "name": "start",
-            "in": "query",
-            "required": false,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "name": "end",
-            "in": "query",
-            "required": false,
-            "type": "integer",
-            "format": "int32"
-          }
-        ],
-        "tags": [
-          "GaiaProxyGrpc"
-        ]
-      }
-    },
-    "/api/rest/proxy/partners/{partner_uuid}/resource/{resource_type}/range": {
-      "get": {
-        "summary": "for sync",
-        "operationId": "GetPartnerResourceIdRange",
-        "responses": {
-          "200": {
-            "description": "A successful response.",
-            "schema": {
-              "$ref": "#/definitions/proxyGetPartnerResourceIdRangeResponse"
-            }
-          },
-          "default": {
-            "description": "An unexpected error response",
-            "schema": {
-              "$ref": "#/definitions/runtimeError"
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "partner_uuid",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "resource_type",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "tags": [
-          "GaiaProxyGrpc"
-        ]
-      }
-    },
-    "/api/rest/proxy/user_device": {
-      "get": {
-        "operationId": "GetUserDevice",
-        "responses": {
-          "200": {
-            "description": "A successful response.",
-            "schema": {
-              "$ref": "#/definitions/proxyGetUserDeviceResponse"
-            }
-          },
-          "default": {
-            "description": "An unexpected error response",
-            "schema": {
-              "$ref": "#/definitions/runtimeError"
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "partner_uuid",
-            "in": "query",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "name": "start",
-            "in": "query",
-            "required": false,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "name": "end",
-            "in": "query",
-            "required": false,
-            "type": "integer",
-            "format": "int32"
-          }
-        ],
-        "tags": [
-          "GaiaProxyGrpc"
-        ]
-      }
-    },
-    "/api/rest/proxy/users": {
-      "get": {
-        "operationId": "GetUsers",
-        "responses": {
-          "200": {
-            "description": "A successful response.",
-            "schema": {
-              "$ref": "#/definitions/proxyGetUsersResponse"
-            }
-          },
-          "default": {
-            "description": "An unexpected error response",
-            "schema": {
-              "$ref": "#/definitions/runtimeError"
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "partner_uuid",
-            "in": "query",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "name": "start",
-            "in": "query",
-            "required": false,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "name": "end",
-            "in": "query",
-            "required": false,
-            "type": "integer",
-            "format": "int32"
-          }
-        ],
         "tags": [
           "GaiaProxyGrpc"
         ]
@@ -362,379 +185,19 @@
     }
   },
   "definitions": {
-    "commonpartnerLocation": {
-      "type": "object",
-      "properties": {
-        "room": {
-          "type": "string"
-        },
-        "floor": {
-          "type": "integer",
-          "format": "int32"
-        }
-      }
-    },
-    "partnerAccountSystemId": {
-      "type": "string",
-      "enum": [
-        "TCL_SSO",
-        "WE_CHAT_OPEN_ID",
-        "MOBILE_PHONE"
-      ],
-      "default": "TCL_SSO",
-      "title": "https://confluence.tclking.com/display/IoT4/Partner+API+Common+Objects#PartnerAPICommonObjects-User"
-    },
-    "partnerConnection": {
-      "type": "object",
-      "properties": {
-        "type": {
-          "$ref": "#/definitions/partnerConnectionType"
-        },
-        "address": {
-          "$ref": "#/definitions/partnerConnectionAddress"
-        }
-      }
-    },
-    "partnerConnectionAddress": {
-      "type": "object"
-    },
-    "partnerConnectionType": {
-      "type": "string",
-      "enum": [
-        "CONNECTION_TYPE_UNKNOWN",
-        "CONNECTION_TYPE_WIFI",
-        "CONNECTION_TYPE_CELLULAR",
-        "CONNECTION_TYPE_ZIG_BEE",
-        "CONNECTION_TYPE_Z_WAVE",
-        "CONNECTION_TYPE_LORA",
-        "CONNECTION_TYPE_NB_IOT"
-      ],
-      "default": "CONNECTION_TYPE_UNKNOWN",
-      "title": "https://confluence.tclking.com/display/IoT4/Partner+API+Common+Objects#PartnerAPICommonObjects-Connection"
-    },
-    "partnerDevice": {
-      "type": "object",
-      "properties": {
-        "deviceId": {
-          "type": "string"
-        },
-        "deviceInfo": {
-          "$ref": "#/definitions/partnerDeviceInfo"
-        },
-        "reachAbility": {
-          "$ref": "#/definitions/partnerDeviceReachAbility"
-        },
-        "properties": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/tslTSLCapability"
-          }
-        }
-      },
-      "title": "https://confluence.tclking.com/display/IoT4/Partner+API+Common+Objects#PartnerAPICommonObjects-Device"
-    },
-    "partnerDeviceIcons": {
-      "type": "object",
-      "properties": {
-        "dp32": {
-          "type": "string"
-        },
-        "dp64": {
-          "type": "string"
-        }
-      }
-    },
-    "partnerDeviceInfo": {
-      "type": "object",
-      "properties": {
-        "deviceId": {
-          "type": "string"
-        },
-        "deviceName": {
-          "type": "string"
-        },
-        "tslId": {
-          "type": "string"
-        },
-        "deviceType": {
-          "$ref": "#/definitions/partnerDeviceType"
-        },
-        "tenantId": {
-          "type": "string"
-        },
-        "manufacturerId": {
-          "type": "string"
-        },
-        "model": {
-          "type": "string"
-        },
-        "parentId": {
-          "type": "string"
-        },
-        "serialNo": {
-          "type": "string"
-        },
-        "mac": {
-          "type": "string"
-        },
-        "connections": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/partnerConnection"
-          }
-        },
-        "geolocation": {
-          "$ref": "#/definitions/partnerGeolocation"
-        },
-        "location": {
-          "$ref": "#/definitions/commonpartnerLocation"
-        },
-        "firmwareVersions": {
-          "$ref": "#/definitions/partnerFirmwareVersions"
-        },
-        "deviceIcons": {
-          "$ref": "#/definitions/partnerDeviceIcons"
-        },
-        "extra": {
-          "$ref": "#/definitions/protobufAny"
-        }
-      },
-      "title": "https://confluence.tclking.com/display/IoT4/Partner+API+Common+Objects#PartnerAPICommonObjects-DeviceInfo"
-    },
-    "partnerDeviceReachAbility": {
-      "type": "object",
-      "properties": {
-        "deviceId": {
-          "type": "string"
-        },
-        "value": {
-          "$ref": "#/definitions/partnerDeviceReachAbilityValue"
-        },
-        "timestamp": {
-          "type": "string"
-        }
-      }
-    },
-    "partnerDeviceReachAbilityValue": {
-      "type": "string",
-      "enum": [
-        "DEVICE_REACH_ABILITY_VALUE_UNKNOWN",
-        "DEVICE_REACH_ABILITY_VALUE_ONLINE",
-        "DEVICE_REACH_ABILITY_VALUE_OFFLINE"
-      ],
-      "default": "DEVICE_REACH_ABILITY_VALUE_UNKNOWN",
-      "title": "https://confluence.tclking.com/display/IoT4/Partner+API+Common+Objects#PartnerAPICommonObjects-DeviceReachability"
-    },
-    "partnerDeviceType": {
-      "type": "string",
-      "enum": [
-        "DEVICE_TYPE_UNKNOWN",
-        "DEVICE_TYPE_AIR_CONDITIONER",
-        "DEVICE_TYPE_AIR_CLEANER",
-        "DEVICE_TYPE_WATER_PURIFIER",
-        "DEVICE_TYPE_TELEVISION",
-        "DEVICE_TYPE_PHONE",
-        "DEVICE_TYPE_PERSONAL_COMPUTER",
-        "DEVICE_TYPE_SOCKET"
-      ],
-      "default": "DEVICE_TYPE_UNKNOWN",
-      "title": "https://confluence.tclking.com/display/IoT4/Partner+API+Common+Objects#PartnerAPICommonObjects-DeviceType"
-    },
-    "partnerFirmwareVersions": {
-      "type": "object",
-      "properties": {
-        "wifiModule": {
-          "type": "string"
-        },
-        "mcu": {
-          "type": "integer",
-          "format": "int32"
-        }
-      }
-    },
-    "partnerGeolocation": {
-      "type": "object",
-      "properties": {
-        "longitude": {
-          "type": "number",
-          "format": "float"
-        },
-        "latitude": {
-          "type": "number",
-          "format": "float"
-        }
-      },
-      "title": "https://confluence.tclking.com/display/IoT4/Partner+API+Common+Objects#PartnerAPICommonObjects-DeviceInfo"
-    },
-    "partnerLoginDetails": {
-      "type": "object",
-      "properties": {
-        "accountSystemId": {
-          "$ref": "#/definitions/partnerAccountSystemId"
-        },
-        "loginAccountId": {
-          "type": "string"
-        }
-      }
-    },
-    "partnerUser": {
-      "type": "object",
-      "properties": {
-        "userId": {
-          "type": "string"
-        },
-        "tenantId": {
-          "type": "string"
-        },
-        "immutableIdentity": {
-          "type": "string"
-        },
-        "userName": {
-          "type": "string"
-        },
-        "loginDetails": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/partnerLoginDetails"
-          }
-        },
-        "extra": {
-          "$ref": "#/definitions/protobufAny"
-        }
-      }
-    },
-    "partnerUserDeviceBinding": {
-      "type": "object",
-      "properties": {
-        "deviceId": {
-          "type": "string"
-        },
-        "deviceNickName": {
-          "type": "string"
-        },
-        "device": {
-          "$ref": "#/definitions/partnerDevice"
-        },
-        "userId": {
-          "type": "string"
-        },
-        "userRole": {
-          "type": "string"
-        },
-        "extra": {
-          "$ref": "#/definitions/protobufAny"
-        }
-      },
-      "title": "https://confluence.tclking.com/display/IoT4/Partner+API+Common+Objects#PartnerAPICommonObjects-UserDeviceBinding"
-    },
     "protobufAny": {
       "type": "object",
       "properties": {
         "type_url": {
-          "type": "string",
-          "description": "A URL/resource name that uniquely identifies the type of the serialized\nprotocol buffer message. This string must contain at least\none \"/\" character. The last segment of the URL's path must represent\nthe fully qualified name of the type (as in\n`path/google.protobuf.Duration`). The name should be in a canonical form\n(e.g., leading \".\" is not accepted).\n\nIn practice, teams usually precompile into the binary all types that they\nexpect it to use in the context of Any. However, for URLs which use the\nscheme `http`, `https`, or no scheme, one can optionally set up a type\nserver that maps type URLs to message definitions as follows:\n\n* If no scheme is provided, `https` is assumed.\n* An HTTP GET on the URL must yield a [google.protobuf.Type][]\n  value in binary format, or produce an error.\n* Applications are allowed to cache lookup results based on the\n  URL, or have them precompiled into a binary to avoid any\n  lookup. Therefore, binary compatibility needs to be preserved\n  on changes to types. (Use versioned type names to manage\n  breaking changes.)\n\nNote: this functionality is not currently available in the official\nprotobuf release, and it is not used for type URLs beginning with\ntype.googleapis.com.\n\nSchemes other than `http`, `https` (or the empty scheme) might be\nused with implementation specific semantics."
+          "type": "string"
         },
         "value": {
           "type": "string",
-          "format": "byte",
-          "description": "Must be a valid serialized protocol buffer of the above specified type."
-        }
-      },
-      "description": "`Any` contains an arbitrary serialized protocol buffer message along with a\nURL that describes the type of the serialized message.\n\nProtobuf library provides support to pack/unpack Any values in the form\nof utility functions or additional generated methods of the Any type.\n\nExample 1: Pack and unpack a message in C++.\n\n    Foo foo = ...;\n    Any any;\n    any.PackFrom(foo);\n    ...\n    if (any.UnpackTo(\u0026foo)) {\n      ...\n    }\n\nExample 2: Pack and unpack a message in Java.\n\n    Foo foo = ...;\n    Any any = Any.pack(foo);\n    ...\n    if (any.is(Foo.class)) {\n      foo = any.unpack(Foo.class);\n    }\n\n Example 3: Pack and unpack a message in Python.\n\n    foo = Foo(...)\n    any = Any()\n    any.Pack(foo)\n    ...\n    if any.Is(Foo.DESCRIPTOR):\n      any.Unpack(foo)\n      ...\n\n Example 4: Pack and unpack a message in Go\n\n     foo := \u0026pb.Foo{...}\n     any, err := ptypes.MarshalAny(foo)\n     ...\n     foo := \u0026pb.Foo{}\n     if err := ptypes.UnmarshalAny(any, foo); err != nil {\n       ...\n     }\n\nThe pack methods provided by protobuf library will by default use\n'type.googleapis.com/full.type.name' as the type URL and the unpack\nmethods only use the fully qualified type name after the last '/'\nin the type URL, for example \"foo.bar.com/x/y.z\" will yield type\nname \"y.z\".\n\n\nJSON\n====\nThe JSON representation of an `Any` value uses the regular\nrepresentation of the deserialized, embedded message, with an\nadditional field `@type` which contains the type URL. Example:\n\n    package google.profile;\n    message Person {\n      string first_name = 1;\n      string last_name = 2;\n    }\n\n    {\n      \"@type\": \"type.googleapis.com/google.profile.Person\",\n      \"firstName\": \u003cstring\u003e,\n      \"lastName\": \u003cstring\u003e\n    }\n\nIf the embedded message type is well-known and has a custom JSON\nrepresentation, that representation will be embedded adding a field\n`value` which holds the custom JSON in addition to the `@type`\nfield. Example (for message [google.protobuf.Duration][]):\n\n    {\n      \"@type\": \"type.googleapis.com/google.protobuf.Duration\",\n      \"value\": \"1.212s\"\n    }"
-    },
-    "proxyGetDevicesResponse": {
-      "type": "object",
-      "properties": {
-        "code": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "message": {
-          "type": "string"
-        },
-        "data": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/partnerDevice"
-          }
+          "format": "byte"
         }
       }
     },
-    "proxyGetPartnerResourceIdRangeResponse": {
-      "type": "object",
-      "properties": {
-        "code": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "message": {
-          "type": "string"
-        },
-        "data": {
-          "$ref": "#/definitions/proxyPartnerResourceIdRangeData"
-        }
-      }
-    },
-    "proxyGetUserDeviceResponse": {
-      "type": "object",
-      "properties": {
-        "code": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "message": {
-          "type": "string"
-        },
-        "data": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/partnerUserDeviceBinding"
-          }
-        }
-      }
-    },
-    "proxyGetUsersResponse": {
-      "type": "object",
-      "properties": {
-        "code": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "message": {
-          "type": "string"
-        },
-        "data": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/partnerUser"
-          }
-        }
-      }
-    },
-    "proxyPartnerConfig": {
-      "type": "object",
-      "properties": {
-        "uuid": {
-          "type": "string"
-        },
-        "name": {
-          "type": "string"
-        },
-        "type": {
-          "type": "string"
-        },
-        "endpoint": {
-          "type": "string"
-        },
-        "createTime": {
-          "type": "string"
-        },
-        "updateTime": {
-          "type": "string"
-        }
-      }
-    },
-    "proxyPartnerConfigAddRequest": {
+    "proxyAddPartnerRequest": {
       "type": "object",
       "properties": {
         "name": {
@@ -757,7 +220,7 @@
         }
       }
     },
-    "proxyPartnerConfigAddResponse": {
+    "proxyAddPartnerResponse": {
       "type": "object",
       "properties": {
         "code": {
@@ -768,11 +231,11 @@
           "type": "string"
         },
         "data": {
-          "$ref": "#/definitions/proxyPartnerConfig"
+          "$ref": "#/definitions/proxyPartner"
         }
       }
     },
-    "proxyPartnerConfigGetResponse": {
+    "proxyGetPartnerResponse": {
       "type": "object",
       "properties": {
         "code": {
@@ -783,11 +246,11 @@
           "type": "string"
         },
         "data": {
-          "$ref": "#/definitions/proxyPartnerConfig"
+          "$ref": "#/definitions/proxyPartner"
         }
       }
     },
-    "proxyPartnerConfigListResponse": {
+    "proxyListPartnerResponse": {
       "type": "object",
       "properties": {
         "code": {
@@ -798,17 +261,40 @@
           "type": "string"
         },
         "data": {
-          "$ref": "#/definitions/proxyPartnerConfigPageData"
+          "$ref": "#/definitions/proxyPartnerPageData"
         }
       }
     },
-    "proxyPartnerConfigPageData": {
+    "proxyPartner": {
+      "type": "object",
+      "properties": {
+        "uuid": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "endpoint": {
+          "type": "string"
+        },
+        "createTime": {
+          "type": "string"
+        },
+        "updateTime": {
+          "type": "string"
+        }
+      }
+    },
+    "proxyPartnerPageData": {
       "type": "object",
       "properties": {
         "content": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/proxyPartnerConfig"
+            "$ref": "#/definitions/proxyPartner"
           }
         },
         "paged": {
@@ -841,19 +327,6 @@
         }
       }
     },
-    "proxyPartnerResourceIdRangeData": {
-      "type": "object",
-      "properties": {
-        "start": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "end": {
-          "type": "integer",
-          "format": "int32"
-        }
-      }
-    },
     "proxyPingResponse": {
       "type": "object",
       "properties": {
@@ -863,51 +336,8 @@
         }
       }
     },
-    "proxySetACRequest": {
-      "type": "object",
-      "properties": {
-        "partner_uuid": {
-          "type": "string"
-        },
-        "deviceId": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "targetTemperature": {
-          "type": "number",
-          "format": "float"
-        }
-      }
-    },
-    "proxySetACResponse": {
-      "type": "object",
-      "properties": {
-        "code": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "message": {
-          "type": "string"
-        },
-        "data": {
-          "$ref": "#/definitions/proxySetACResponseData"
-        }
-      }
-    },
-    "proxySetACResponseData": {
-      "type": "object",
-      "properties": {
-        "code": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "message": {
-          "type": "string"
-        },
-        "data": {
-          "type": "string"
-        }
-      }
+    "proxyProxyResponse": {
+      "type": "object"
     },
     "runtimeError": {
       "type": "object",
@@ -929,154 +359,6 @@
           }
         }
       }
-    },
-    "tslTSLCapability": {
-      "type": "object",
-      "properties": {
-        "capabilityId": {
-          "type": "string"
-        },
-        "properties": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/tslTSLProperty"
-          }
-        },
-        "events": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/tslTSLEvent"
-          }
-        },
-        "methods": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/tslTSLMethod"
-          }
-        }
-      },
-      "title": "https://confluence.tclking.com/display/IoT4/Partner+API+Common+Objects#PartnerAPICommonObjects-TSLCapability"
-    },
-    "tslTSLDesiredProperty": {
-      "type": "object",
-      "properties": {
-        "value": {
-          "$ref": "#/definitions/protobufAny"
-        },
-        "timestamp": {
-          "type": "string"
-        }
-      },
-      "title": "https://confluence.tclking.com/display/IoT4/Partner+API+Common+Objects#PartnerAPICommonObjects-TSLProperty"
-    },
-    "tslTSLEvent": {
-      "type": "object",
-      "properties": {
-        "eventId": {
-          "type": "string"
-        },
-        "attributes": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/tslTSLValueObject"
-          }
-        },
-        "timestamp": {
-          "type": "string"
-        }
-      },
-      "title": "https://confluence.tclking.com/display/IoT4/Partner+API+Common+Objects#PartnerAPICommonObjects-TSLEvent"
-    },
-    "tslTSLMethod": {
-      "type": "object",
-      "properties": {
-        "deviceId": {
-          "type": "string"
-        },
-        "invocationId": {
-          "type": "string"
-        },
-        "status": {
-          "$ref": "#/definitions/tslTSLMethodStatus"
-        },
-        "inputParams": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/tslTSLValueObject"
-          }
-        },
-        "outputValues": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/tslTSLValueObject"
-          }
-        },
-        "timestamp": {
-          "type": "string"
-        }
-      }
-    },
-    "tslTSLMethodStatus": {
-      "type": "string",
-      "enum": [
-        "TSL_METHOD_STATUS_UNKNOWN",
-        "TSL_METHOD_STATUS_DELIVERED",
-        "TSL_METHOD_STATUS_UNDELIVERED",
-        "TSL_METHOD_STATUS_COMPLETE"
-      ],
-      "default": "TSL_METHOD_STATUS_UNKNOWN",
-      "title": "https://confluence.tclking.com/display/IoT4/Partner+API+Common+Objects#PartnerAPICommonObjects-TSLMethod"
-    },
-    "tslTSLProperty": {
-      "type": "object",
-      "properties": {
-        "propertyId": {
-          "type": "string"
-        },
-        "desired": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/tslTSLDesiredProperty"
-          }
-        },
-        "reported": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/tslTSLReportedProperty"
-          }
-        }
-      }
-    },
-    "tslTSLReportedProperty": {
-      "type": "object",
-      "properties": {
-        "value": {
-          "$ref": "#/definitions/protobufAny"
-        },
-        "status": {
-          "$ref": "#/definitions/tslTSLReportedPropertyStatus"
-        }
-      }
-    },
-    "tslTSLReportedPropertyStatus": {
-      "type": "string",
-      "enum": [
-        "DELIVERED",
-        "UNDELIVERED"
-      ],
-      "default": "DELIVERED"
-    },
-    "tslTSLValueObject": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "string"
-        },
-        "value": {
-          "$ref": "#/definitions/protobufAny"
-        }
-      },
-      "title": "https://confluence.tclking.com/display/IoT4/Partner+API+Common+Objects#PartnerAPICommonObjects-TSLValueObject"
     }
   }
 }

@@ -50,40 +50,40 @@ func local_request_GaiaProxyGrpc_Ping_0(ctx context.Context, marshaler runtime.M
 }
 
 var (
-	filter_GaiaProxyGrpc_ListPartnerConfig_0 = &utilities.DoubleArray{Encoding: map[string]int{}, Base: []int(nil), Check: []int(nil)}
+	filter_GaiaProxyGrpc_ListPartner_0 = &utilities.DoubleArray{Encoding: map[string]int{}, Base: []int(nil), Check: []int(nil)}
 )
 
-func request_GaiaProxyGrpc_ListPartnerConfig_0(ctx context.Context, marshaler runtime.Marshaler, client GaiaProxyGrpcClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq PartnerConfigListRequest
+func request_GaiaProxyGrpc_ListPartner_0(ctx context.Context, marshaler runtime.Marshaler, client GaiaProxyGrpcClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq ListPartnerRequest
 	var metadata runtime.ServerMetadata
 
 	if err := req.ParseForm(); err != nil {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
-	if err := runtime.PopulateQueryParameters(&protoReq, req.Form, filter_GaiaProxyGrpc_ListPartnerConfig_0); err != nil {
+	if err := runtime.PopulateQueryParameters(&protoReq, req.Form, filter_GaiaProxyGrpc_ListPartner_0); err != nil {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
-	msg, err := client.ListPartnerConfig(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
+	msg, err := client.ListPartner(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
 
 }
 
-func local_request_GaiaProxyGrpc_ListPartnerConfig_0(ctx context.Context, marshaler runtime.Marshaler, server GaiaProxyGrpcServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq PartnerConfigListRequest
+func local_request_GaiaProxyGrpc_ListPartner_0(ctx context.Context, marshaler runtime.Marshaler, server GaiaProxyGrpcServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq ListPartnerRequest
 	var metadata runtime.ServerMetadata
 
-	if err := runtime.PopulateQueryParameters(&protoReq, req.URL.Query(), filter_GaiaProxyGrpc_ListPartnerConfig_0); err != nil {
+	if err := runtime.PopulateQueryParameters(&protoReq, req.URL.Query(), filter_GaiaProxyGrpc_ListPartner_0); err != nil {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
-	msg, err := server.ListPartnerConfig(ctx, &protoReq)
+	msg, err := server.ListPartner(ctx, &protoReq)
 	return msg, metadata, err
 
 }
 
-func request_GaiaProxyGrpc_GetPartnerConfig_0(ctx context.Context, marshaler runtime.Marshaler, client GaiaProxyGrpcClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq PartnerConfigGetRequest
+func request_GaiaProxyGrpc_GetPartner_0(ctx context.Context, marshaler runtime.Marshaler, client GaiaProxyGrpcClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq GetPartnerRequest
 	var metadata runtime.ServerMetadata
 
 	var (
@@ -104,13 +104,13 @@ func request_GaiaProxyGrpc_GetPartnerConfig_0(ctx context.Context, marshaler run
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "partner_id", err)
 	}
 
-	msg, err := client.GetPartnerConfig(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
+	msg, err := client.GetPartner(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
 
 }
 
-func local_request_GaiaProxyGrpc_GetPartnerConfig_0(ctx context.Context, marshaler runtime.Marshaler, server GaiaProxyGrpcServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq PartnerConfigGetRequest
+func local_request_GaiaProxyGrpc_GetPartner_0(ctx context.Context, marshaler runtime.Marshaler, server GaiaProxyGrpcServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq GetPartnerRequest
 	var metadata runtime.ServerMetadata
 
 	var (
@@ -131,13 +131,13 @@ func local_request_GaiaProxyGrpc_GetPartnerConfig_0(ctx context.Context, marshal
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "partner_id", err)
 	}
 
-	msg, err := server.GetPartnerConfig(ctx, &protoReq)
+	msg, err := server.GetPartner(ctx, &protoReq)
 	return msg, metadata, err
 
 }
 
-func request_GaiaProxyGrpc_AddPartnerConfig_0(ctx context.Context, marshaler runtime.Marshaler, client GaiaProxyGrpcClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq PartnerConfigAddRequest
+func request_GaiaProxyGrpc_AddPartner_0(ctx context.Context, marshaler runtime.Marshaler, client GaiaProxyGrpcClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq AddPartnerRequest
 	var metadata runtime.ServerMetadata
 
 	newReader, berr := utilities.IOReaderFactory(req.Body)
@@ -148,13 +148,13 @@ func request_GaiaProxyGrpc_AddPartnerConfig_0(ctx context.Context, marshaler run
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
-	msg, err := client.AddPartnerConfig(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
+	msg, err := client.AddPartner(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
 
 }
 
-func local_request_GaiaProxyGrpc_AddPartnerConfig_0(ctx context.Context, marshaler runtime.Marshaler, server GaiaProxyGrpcServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq PartnerConfigAddRequest
+func local_request_GaiaProxyGrpc_AddPartner_0(ctx context.Context, marshaler runtime.Marshaler, server GaiaProxyGrpcServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq AddPartnerRequest
 	var metadata runtime.ServerMetadata
 
 	newReader, berr := utilities.IOReaderFactory(req.Body)
@@ -165,216 +165,25 @@ func local_request_GaiaProxyGrpc_AddPartnerConfig_0(ctx context.Context, marshal
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
-	msg, err := server.AddPartnerConfig(ctx, &protoReq)
+	msg, err := server.AddPartner(ctx, &protoReq)
 	return msg, metadata, err
 
 }
 
-func request_GaiaProxyGrpc_SetAC_0(ctx context.Context, marshaler runtime.Marshaler, client GaiaProxyGrpcClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq SetACRequest
+func request_GaiaProxyGrpc_Proxy_0(ctx context.Context, marshaler runtime.Marshaler, client GaiaProxyGrpcClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq ProxyRequest
 	var metadata runtime.ServerMetadata
 
-	newReader, berr := utilities.IOReaderFactory(req.Body)
-	if berr != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", berr)
-	}
-	if err := marshaler.NewDecoder(newReader()).Decode(&protoReq); err != nil && err != io.EOF {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
-	}
-
-	msg, err := client.SetAC(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
+	msg, err := client.Proxy(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
 
 }
 
-func local_request_GaiaProxyGrpc_SetAC_0(ctx context.Context, marshaler runtime.Marshaler, server GaiaProxyGrpcServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq SetACRequest
+func local_request_GaiaProxyGrpc_Proxy_0(ctx context.Context, marshaler runtime.Marshaler, server GaiaProxyGrpcServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq ProxyRequest
 	var metadata runtime.ServerMetadata
 
-	newReader, berr := utilities.IOReaderFactory(req.Body)
-	if berr != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", berr)
-	}
-	if err := marshaler.NewDecoder(newReader()).Decode(&protoReq); err != nil && err != io.EOF {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
-	}
-
-	msg, err := server.SetAC(ctx, &protoReq)
-	return msg, metadata, err
-
-}
-
-func request_GaiaProxyGrpc_GetPartnerResourceIdRange_0(ctx context.Context, marshaler runtime.Marshaler, client GaiaProxyGrpcClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq GetPartnerResourceIdRangeRequest
-	var metadata runtime.ServerMetadata
-
-	var (
-		val string
-		ok  bool
-		err error
-		_   = err
-	)
-
-	val, ok = pathParams["partner_uuid"]
-	if !ok {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "partner_uuid")
-	}
-
-	protoReq.PartnerUuid, err = runtime.StringP(val)
-
-	if err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "partner_uuid", err)
-	}
-
-	val, ok = pathParams["resource_type"]
-	if !ok {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "resource_type")
-	}
-
-	protoReq.ResourceType, err = runtime.StringP(val)
-
-	if err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "resource_type", err)
-	}
-
-	msg, err := client.GetPartnerResourceIdRange(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
-	return msg, metadata, err
-
-}
-
-func local_request_GaiaProxyGrpc_GetPartnerResourceIdRange_0(ctx context.Context, marshaler runtime.Marshaler, server GaiaProxyGrpcServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq GetPartnerResourceIdRangeRequest
-	var metadata runtime.ServerMetadata
-
-	var (
-		val string
-		ok  bool
-		err error
-		_   = err
-	)
-
-	val, ok = pathParams["partner_uuid"]
-	if !ok {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "partner_uuid")
-	}
-
-	protoReq.PartnerUuid, err = runtime.StringP(val)
-
-	if err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "partner_uuid", err)
-	}
-
-	val, ok = pathParams["resource_type"]
-	if !ok {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "resource_type")
-	}
-
-	protoReq.ResourceType, err = runtime.StringP(val)
-
-	if err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "resource_type", err)
-	}
-
-	msg, err := server.GetPartnerResourceIdRange(ctx, &protoReq)
-	return msg, metadata, err
-
-}
-
-var (
-	filter_GaiaProxyGrpc_GetUsers_0 = &utilities.DoubleArray{Encoding: map[string]int{}, Base: []int(nil), Check: []int(nil)}
-)
-
-func request_GaiaProxyGrpc_GetUsers_0(ctx context.Context, marshaler runtime.Marshaler, client GaiaProxyGrpcClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq GetUsersRequest
-	var metadata runtime.ServerMetadata
-
-	if err := req.ParseForm(); err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
-	}
-	if err := runtime.PopulateQueryParameters(&protoReq, req.Form, filter_GaiaProxyGrpc_GetUsers_0); err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
-	}
-
-	msg, err := client.GetUsers(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
-	return msg, metadata, err
-
-}
-
-func local_request_GaiaProxyGrpc_GetUsers_0(ctx context.Context, marshaler runtime.Marshaler, server GaiaProxyGrpcServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq GetUsersRequest
-	var metadata runtime.ServerMetadata
-
-	if err := runtime.PopulateQueryParameters(&protoReq, req.URL.Query(), filter_GaiaProxyGrpc_GetUsers_0); err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
-	}
-
-	msg, err := server.GetUsers(ctx, &protoReq)
-	return msg, metadata, err
-
-}
-
-var (
-	filter_GaiaProxyGrpc_GetDevices_0 = &utilities.DoubleArray{Encoding: map[string]int{}, Base: []int(nil), Check: []int(nil)}
-)
-
-func request_GaiaProxyGrpc_GetDevices_0(ctx context.Context, marshaler runtime.Marshaler, client GaiaProxyGrpcClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq GetDevicesRequest
-	var metadata runtime.ServerMetadata
-
-	if err := req.ParseForm(); err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
-	}
-	if err := runtime.PopulateQueryParameters(&protoReq, req.Form, filter_GaiaProxyGrpc_GetDevices_0); err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
-	}
-
-	msg, err := client.GetDevices(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
-	return msg, metadata, err
-
-}
-
-func local_request_GaiaProxyGrpc_GetDevices_0(ctx context.Context, marshaler runtime.Marshaler, server GaiaProxyGrpcServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq GetDevicesRequest
-	var metadata runtime.ServerMetadata
-
-	if err := runtime.PopulateQueryParameters(&protoReq, req.URL.Query(), filter_GaiaProxyGrpc_GetDevices_0); err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
-	}
-
-	msg, err := server.GetDevices(ctx, &protoReq)
-	return msg, metadata, err
-
-}
-
-var (
-	filter_GaiaProxyGrpc_GetUserDevice_0 = &utilities.DoubleArray{Encoding: map[string]int{}, Base: []int(nil), Check: []int(nil)}
-)
-
-func request_GaiaProxyGrpc_GetUserDevice_0(ctx context.Context, marshaler runtime.Marshaler, client GaiaProxyGrpcClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq GetUserDeviceRequest
-	var metadata runtime.ServerMetadata
-
-	if err := req.ParseForm(); err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
-	}
-	if err := runtime.PopulateQueryParameters(&protoReq, req.Form, filter_GaiaProxyGrpc_GetUserDevice_0); err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
-	}
-
-	msg, err := client.GetUserDevice(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
-	return msg, metadata, err
-
-}
-
-func local_request_GaiaProxyGrpc_GetUserDevice_0(ctx context.Context, marshaler runtime.Marshaler, server GaiaProxyGrpcServer, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq GetUserDeviceRequest
-	var metadata runtime.ServerMetadata
-
-	if err := runtime.PopulateQueryParameters(&protoReq, req.URL.Query(), filter_GaiaProxyGrpc_GetUserDevice_0); err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
-	}
-
-	msg, err := server.GetUserDevice(ctx, &protoReq)
+	msg, err := server.Proxy(ctx, &protoReq)
 	return msg, metadata, err
 
 }
@@ -404,7 +213,7 @@ func RegisterGaiaProxyGrpcHandlerServer(ctx context.Context, mux *runtime.ServeM
 
 	})
 
-	mux.Handle("GET", pattern_GaiaProxyGrpc_ListPartnerConfig_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("GET", pattern_GaiaProxyGrpc_ListPartner_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
@@ -413,18 +222,18 @@ func RegisterGaiaProxyGrpcHandlerServer(ctx context.Context, mux *runtime.ServeM
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := local_request_GaiaProxyGrpc_ListPartnerConfig_0(rctx, inboundMarshaler, server, req, pathParams)
+		resp, md, err := local_request_GaiaProxyGrpc_ListPartner_0(rctx, inboundMarshaler, server, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_GaiaProxyGrpc_ListPartnerConfig_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_GaiaProxyGrpc_ListPartner_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("GET", pattern_GaiaProxyGrpc_GetPartnerConfig_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("GET", pattern_GaiaProxyGrpc_GetPartner_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
@@ -433,18 +242,18 @@ func RegisterGaiaProxyGrpcHandlerServer(ctx context.Context, mux *runtime.ServeM
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := local_request_GaiaProxyGrpc_GetPartnerConfig_0(rctx, inboundMarshaler, server, req, pathParams)
+		resp, md, err := local_request_GaiaProxyGrpc_GetPartner_0(rctx, inboundMarshaler, server, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_GaiaProxyGrpc_GetPartnerConfig_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_GaiaProxyGrpc_GetPartner_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("POST", pattern_GaiaProxyGrpc_AddPartnerConfig_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_GaiaProxyGrpc_AddPartner_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
@@ -453,18 +262,18 @@ func RegisterGaiaProxyGrpcHandlerServer(ctx context.Context, mux *runtime.ServeM
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := local_request_GaiaProxyGrpc_AddPartnerConfig_0(rctx, inboundMarshaler, server, req, pathParams)
+		resp, md, err := local_request_GaiaProxyGrpc_AddPartner_0(rctx, inboundMarshaler, server, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_GaiaProxyGrpc_AddPartnerConfig_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_GaiaProxyGrpc_AddPartner_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("POST", pattern_GaiaProxyGrpc_SetAC_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("GET", pattern_GaiaProxyGrpc_Proxy_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
@@ -473,94 +282,14 @@ func RegisterGaiaProxyGrpcHandlerServer(ctx context.Context, mux *runtime.ServeM
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := local_request_GaiaProxyGrpc_SetAC_0(rctx, inboundMarshaler, server, req, pathParams)
+		resp, md, err := local_request_GaiaProxyGrpc_Proxy_0(rctx, inboundMarshaler, server, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_GaiaProxyGrpc_SetAC_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
-	})
-
-	mux.Handle("GET", pattern_GaiaProxyGrpc_GetPartnerResourceIdRange_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
-		ctx, cancel := context.WithCancel(req.Context())
-		defer cancel()
-		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req)
-		if err != nil {
-			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
-			return
-		}
-		resp, md, err := local_request_GaiaProxyGrpc_GetPartnerResourceIdRange_0(rctx, inboundMarshaler, server, req, pathParams)
-		ctx = runtime.NewServerMetadataContext(ctx, md)
-		if err != nil {
-			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
-			return
-		}
-
-		forward_GaiaProxyGrpc_GetPartnerResourceIdRange_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
-	})
-
-	mux.Handle("GET", pattern_GaiaProxyGrpc_GetUsers_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
-		ctx, cancel := context.WithCancel(req.Context())
-		defer cancel()
-		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req)
-		if err != nil {
-			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
-			return
-		}
-		resp, md, err := local_request_GaiaProxyGrpc_GetUsers_0(rctx, inboundMarshaler, server, req, pathParams)
-		ctx = runtime.NewServerMetadataContext(ctx, md)
-		if err != nil {
-			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
-			return
-		}
-
-		forward_GaiaProxyGrpc_GetUsers_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
-	})
-
-	mux.Handle("GET", pattern_GaiaProxyGrpc_GetDevices_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
-		ctx, cancel := context.WithCancel(req.Context())
-		defer cancel()
-		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req)
-		if err != nil {
-			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
-			return
-		}
-		resp, md, err := local_request_GaiaProxyGrpc_GetDevices_0(rctx, inboundMarshaler, server, req, pathParams)
-		ctx = runtime.NewServerMetadataContext(ctx, md)
-		if err != nil {
-			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
-			return
-		}
-
-		forward_GaiaProxyGrpc_GetDevices_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
-	})
-
-	mux.Handle("GET", pattern_GaiaProxyGrpc_GetUserDevice_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
-		ctx, cancel := context.WithCancel(req.Context())
-		defer cancel()
-		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateIncomingContext(ctx, mux, req)
-		if err != nil {
-			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
-			return
-		}
-		resp, md, err := local_request_GaiaProxyGrpc_GetUserDevice_0(rctx, inboundMarshaler, server, req, pathParams)
-		ctx = runtime.NewServerMetadataContext(ctx, md)
-		if err != nil {
-			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
-			return
-		}
-
-		forward_GaiaProxyGrpc_GetUserDevice_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_GaiaProxyGrpc_Proxy_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
@@ -625,7 +354,7 @@ func RegisterGaiaProxyGrpcHandlerClient(ctx context.Context, mux *runtime.ServeM
 
 	})
 
-	mux.Handle("GET", pattern_GaiaProxyGrpc_ListPartnerConfig_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("GET", pattern_GaiaProxyGrpc_ListPartner_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
@@ -634,18 +363,18 @@ func RegisterGaiaProxyGrpcHandlerClient(ctx context.Context, mux *runtime.ServeM
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_GaiaProxyGrpc_ListPartnerConfig_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_GaiaProxyGrpc_ListPartner_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_GaiaProxyGrpc_ListPartnerConfig_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_GaiaProxyGrpc_ListPartner_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("GET", pattern_GaiaProxyGrpc_GetPartnerConfig_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("GET", pattern_GaiaProxyGrpc_GetPartner_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
@@ -654,18 +383,18 @@ func RegisterGaiaProxyGrpcHandlerClient(ctx context.Context, mux *runtime.ServeM
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_GaiaProxyGrpc_GetPartnerConfig_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_GaiaProxyGrpc_GetPartner_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_GaiaProxyGrpc_GetPartnerConfig_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_GaiaProxyGrpc_GetPartner_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("POST", pattern_GaiaProxyGrpc_AddPartnerConfig_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_GaiaProxyGrpc_AddPartner_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
@@ -674,18 +403,18 @@ func RegisterGaiaProxyGrpcHandlerClient(ctx context.Context, mux *runtime.ServeM
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_GaiaProxyGrpc_AddPartnerConfig_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_GaiaProxyGrpc_AddPartner_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_GaiaProxyGrpc_AddPartnerConfig_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_GaiaProxyGrpc_AddPartner_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("POST", pattern_GaiaProxyGrpc_SetAC_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("GET", pattern_GaiaProxyGrpc_Proxy_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
@@ -694,94 +423,14 @@ func RegisterGaiaProxyGrpcHandlerClient(ctx context.Context, mux *runtime.ServeM
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_GaiaProxyGrpc_SetAC_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_GaiaProxyGrpc_Proxy_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_GaiaProxyGrpc_SetAC_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
-	})
-
-	mux.Handle("GET", pattern_GaiaProxyGrpc_GetPartnerResourceIdRange_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
-		ctx, cancel := context.WithCancel(req.Context())
-		defer cancel()
-		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateContext(ctx, mux, req)
-		if err != nil {
-			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
-			return
-		}
-		resp, md, err := request_GaiaProxyGrpc_GetPartnerResourceIdRange_0(rctx, inboundMarshaler, client, req, pathParams)
-		ctx = runtime.NewServerMetadataContext(ctx, md)
-		if err != nil {
-			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
-			return
-		}
-
-		forward_GaiaProxyGrpc_GetPartnerResourceIdRange_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
-	})
-
-	mux.Handle("GET", pattern_GaiaProxyGrpc_GetUsers_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
-		ctx, cancel := context.WithCancel(req.Context())
-		defer cancel()
-		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateContext(ctx, mux, req)
-		if err != nil {
-			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
-			return
-		}
-		resp, md, err := request_GaiaProxyGrpc_GetUsers_0(rctx, inboundMarshaler, client, req, pathParams)
-		ctx = runtime.NewServerMetadataContext(ctx, md)
-		if err != nil {
-			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
-			return
-		}
-
-		forward_GaiaProxyGrpc_GetUsers_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
-	})
-
-	mux.Handle("GET", pattern_GaiaProxyGrpc_GetDevices_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
-		ctx, cancel := context.WithCancel(req.Context())
-		defer cancel()
-		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateContext(ctx, mux, req)
-		if err != nil {
-			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
-			return
-		}
-		resp, md, err := request_GaiaProxyGrpc_GetDevices_0(rctx, inboundMarshaler, client, req, pathParams)
-		ctx = runtime.NewServerMetadataContext(ctx, md)
-		if err != nil {
-			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
-			return
-		}
-
-		forward_GaiaProxyGrpc_GetDevices_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
-
-	})
-
-	mux.Handle("GET", pattern_GaiaProxyGrpc_GetUserDevice_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
-		ctx, cancel := context.WithCancel(req.Context())
-		defer cancel()
-		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateContext(ctx, mux, req)
-		if err != nil {
-			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
-			return
-		}
-		resp, md, err := request_GaiaProxyGrpc_GetUserDevice_0(rctx, inboundMarshaler, client, req, pathParams)
-		ctx = runtime.NewServerMetadataContext(ctx, md)
-		if err != nil {
-			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
-			return
-		}
-
-		forward_GaiaProxyGrpc_GetUserDevice_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_GaiaProxyGrpc_Proxy_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
@@ -791,39 +440,23 @@ func RegisterGaiaProxyGrpcHandlerClient(ctx context.Context, mux *runtime.ServeM
 var (
 	pattern_GaiaProxyGrpc_Ping_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"api", "ping"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_GaiaProxyGrpc_ListPartnerConfig_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"api", "rest", "partners"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_GaiaProxyGrpc_ListPartner_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"api", "partners"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_GaiaProxyGrpc_GetPartnerConfig_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 1, 0, 4, 1, 5, 3}, []string{"api", "rest", "partners", "partner_id"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_GaiaProxyGrpc_GetPartner_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2}, []string{"api", "partners", "partner_id"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_GaiaProxyGrpc_AddPartnerConfig_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"api", "rest", "partners"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_GaiaProxyGrpc_AddPartner_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"api", "partners"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_GaiaProxyGrpc_SetAC_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 2, 4}, []string{"api", "rest", "proxy", "ac", "set"}, "", runtime.AssumeColonVerbOpt(true)))
-
-	pattern_GaiaProxyGrpc_GetPartnerResourceIdRange_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3, 1, 0, 4, 1, 5, 4, 2, 5, 1, 0, 4, 1, 5, 6, 2, 7}, []string{"api", "rest", "proxy", "partners", "partner_uuid", "resource", "resource_type", "range"}, "", runtime.AssumeColonVerbOpt(true)))
-
-	pattern_GaiaProxyGrpc_GetUsers_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3}, []string{"api", "rest", "proxy", "users"}, "", runtime.AssumeColonVerbOpt(true)))
-
-	pattern_GaiaProxyGrpc_GetDevices_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3}, []string{"api", "rest", "proxy", "devices"}, "", runtime.AssumeColonVerbOpt(true)))
-
-	pattern_GaiaProxyGrpc_GetUserDevice_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2, 2, 3}, []string{"api", "rest", "proxy", "user_device"}, "", runtime.AssumeColonVerbOpt(true)))
+	pattern_GaiaProxyGrpc_Proxy_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"api", "rest", "proxy"}, "", runtime.AssumeColonVerbOpt(true)))
 )
 
 var (
 	forward_GaiaProxyGrpc_Ping_0 = runtime.ForwardResponseMessage
 
-	forward_GaiaProxyGrpc_ListPartnerConfig_0 = runtime.ForwardResponseMessage
+	forward_GaiaProxyGrpc_ListPartner_0 = runtime.ForwardResponseMessage
 
-	forward_GaiaProxyGrpc_GetPartnerConfig_0 = runtime.ForwardResponseMessage
+	forward_GaiaProxyGrpc_GetPartner_0 = runtime.ForwardResponseMessage
 
-	forward_GaiaProxyGrpc_AddPartnerConfig_0 = runtime.ForwardResponseMessage
+	forward_GaiaProxyGrpc_AddPartner_0 = runtime.ForwardResponseMessage
 
-	forward_GaiaProxyGrpc_SetAC_0 = runtime.ForwardResponseMessage
-
-	forward_GaiaProxyGrpc_GetPartnerResourceIdRange_0 = runtime.ForwardResponseMessage
-
-	forward_GaiaProxyGrpc_GetUsers_0 = runtime.ForwardResponseMessage
-
-	forward_GaiaProxyGrpc_GetDevices_0 = runtime.ForwardResponseMessage
-
-	forward_GaiaProxyGrpc_GetUserDevice_0 = runtime.ForwardResponseMessage
+	forward_GaiaProxyGrpc_Proxy_0 = runtime.ForwardResponseMessage
 )

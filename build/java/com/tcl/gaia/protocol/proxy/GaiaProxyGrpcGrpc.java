@@ -27,29 +27,29 @@ public final class GaiaProxyGrpcGrpc {
   public static final String SERVICE_NAME = "protocol.gaia.proxy.GaiaProxyGrpc";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.PingRequest,
-      com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.PingResponse> getPingMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.Ping.PingRequest,
+      com.tcl.gaia.protocol.proxy.Ping.PingResponse> getPingMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Ping",
-      requestType = com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.PingRequest.class,
-      responseType = com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.PingResponse.class,
+      requestType = com.tcl.gaia.protocol.proxy.Ping.PingRequest.class,
+      responseType = com.tcl.gaia.protocol.proxy.Ping.PingResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.PingRequest,
-      com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.PingResponse> getPingMethod() {
-    io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.PingRequest, com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.PingResponse> getPingMethod;
+  public static io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.Ping.PingRequest,
+      com.tcl.gaia.protocol.proxy.Ping.PingResponse> getPingMethod() {
+    io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.Ping.PingRequest, com.tcl.gaia.protocol.proxy.Ping.PingResponse> getPingMethod;
     if ((getPingMethod = GaiaProxyGrpcGrpc.getPingMethod) == null) {
       synchronized (GaiaProxyGrpcGrpc.class) {
         if ((getPingMethod = GaiaProxyGrpcGrpc.getPingMethod) == null) {
           GaiaProxyGrpcGrpc.getPingMethod = getPingMethod =
-              io.grpc.MethodDescriptor.<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.PingRequest, com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.PingResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.tcl.gaia.protocol.proxy.Ping.PingRequest, com.tcl.gaia.protocol.proxy.Ping.PingResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Ping"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.PingRequest.getDefaultInstance()))
+                  com.tcl.gaia.protocol.proxy.Ping.PingRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.PingResponse.getDefaultInstance()))
+                  com.tcl.gaia.protocol.proxy.Ping.PingResponse.getDefaultInstance()))
               .setSchemaDescriptor(new GaiaProxyGrpcMethodDescriptorSupplier("Ping"))
               .build();
         }
@@ -58,252 +58,128 @@ public final class GaiaProxyGrpcGrpc {
     return getPingMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigListRequest,
-      com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigListResponse> getListPartnerConfigMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.PartnerOuterClass.ListPartnerRequest,
+      com.tcl.gaia.protocol.proxy.PartnerOuterClass.ListPartnerResponse> getListPartnerMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ListPartnerConfig",
-      requestType = com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigListRequest.class,
-      responseType = com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigListResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "ListPartner",
+      requestType = com.tcl.gaia.protocol.proxy.PartnerOuterClass.ListPartnerRequest.class,
+      responseType = com.tcl.gaia.protocol.proxy.PartnerOuterClass.ListPartnerResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigListRequest,
-      com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigListResponse> getListPartnerConfigMethod() {
-    io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigListRequest, com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigListResponse> getListPartnerConfigMethod;
-    if ((getListPartnerConfigMethod = GaiaProxyGrpcGrpc.getListPartnerConfigMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.PartnerOuterClass.ListPartnerRequest,
+      com.tcl.gaia.protocol.proxy.PartnerOuterClass.ListPartnerResponse> getListPartnerMethod() {
+    io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.PartnerOuterClass.ListPartnerRequest, com.tcl.gaia.protocol.proxy.PartnerOuterClass.ListPartnerResponse> getListPartnerMethod;
+    if ((getListPartnerMethod = GaiaProxyGrpcGrpc.getListPartnerMethod) == null) {
       synchronized (GaiaProxyGrpcGrpc.class) {
-        if ((getListPartnerConfigMethod = GaiaProxyGrpcGrpc.getListPartnerConfigMethod) == null) {
-          GaiaProxyGrpcGrpc.getListPartnerConfigMethod = getListPartnerConfigMethod =
-              io.grpc.MethodDescriptor.<com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigListRequest, com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigListResponse>newBuilder()
+        if ((getListPartnerMethod = GaiaProxyGrpcGrpc.getListPartnerMethod) == null) {
+          GaiaProxyGrpcGrpc.getListPartnerMethod = getListPartnerMethod =
+              io.grpc.MethodDescriptor.<com.tcl.gaia.protocol.proxy.PartnerOuterClass.ListPartnerRequest, com.tcl.gaia.protocol.proxy.PartnerOuterClass.ListPartnerResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListPartnerConfig"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListPartner"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigListRequest.getDefaultInstance()))
+                  com.tcl.gaia.protocol.proxy.PartnerOuterClass.ListPartnerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigListResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new GaiaProxyGrpcMethodDescriptorSupplier("ListPartnerConfig"))
+                  com.tcl.gaia.protocol.proxy.PartnerOuterClass.ListPartnerResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new GaiaProxyGrpcMethodDescriptorSupplier("ListPartner"))
               .build();
         }
       }
     }
-    return getListPartnerConfigMethod;
+    return getListPartnerMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigGetRequest,
-      com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigGetResponse> getGetPartnerConfigMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.PartnerOuterClass.GetPartnerRequest,
+      com.tcl.gaia.protocol.proxy.PartnerOuterClass.GetPartnerResponse> getGetPartnerMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetPartnerConfig",
-      requestType = com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigGetRequest.class,
-      responseType = com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigGetResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "GetPartner",
+      requestType = com.tcl.gaia.protocol.proxy.PartnerOuterClass.GetPartnerRequest.class,
+      responseType = com.tcl.gaia.protocol.proxy.PartnerOuterClass.GetPartnerResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigGetRequest,
-      com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigGetResponse> getGetPartnerConfigMethod() {
-    io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigGetRequest, com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigGetResponse> getGetPartnerConfigMethod;
-    if ((getGetPartnerConfigMethod = GaiaProxyGrpcGrpc.getGetPartnerConfigMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.PartnerOuterClass.GetPartnerRequest,
+      com.tcl.gaia.protocol.proxy.PartnerOuterClass.GetPartnerResponse> getGetPartnerMethod() {
+    io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.PartnerOuterClass.GetPartnerRequest, com.tcl.gaia.protocol.proxy.PartnerOuterClass.GetPartnerResponse> getGetPartnerMethod;
+    if ((getGetPartnerMethod = GaiaProxyGrpcGrpc.getGetPartnerMethod) == null) {
       synchronized (GaiaProxyGrpcGrpc.class) {
-        if ((getGetPartnerConfigMethod = GaiaProxyGrpcGrpc.getGetPartnerConfigMethod) == null) {
-          GaiaProxyGrpcGrpc.getGetPartnerConfigMethod = getGetPartnerConfigMethod =
-              io.grpc.MethodDescriptor.<com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigGetRequest, com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigGetResponse>newBuilder()
+        if ((getGetPartnerMethod = GaiaProxyGrpcGrpc.getGetPartnerMethod) == null) {
+          GaiaProxyGrpcGrpc.getGetPartnerMethod = getGetPartnerMethod =
+              io.grpc.MethodDescriptor.<com.tcl.gaia.protocol.proxy.PartnerOuterClass.GetPartnerRequest, com.tcl.gaia.protocol.proxy.PartnerOuterClass.GetPartnerResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPartnerConfig"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPartner"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigGetRequest.getDefaultInstance()))
+                  com.tcl.gaia.protocol.proxy.PartnerOuterClass.GetPartnerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigGetResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new GaiaProxyGrpcMethodDescriptorSupplier("GetPartnerConfig"))
+                  com.tcl.gaia.protocol.proxy.PartnerOuterClass.GetPartnerResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new GaiaProxyGrpcMethodDescriptorSupplier("GetPartner"))
               .build();
         }
       }
     }
-    return getGetPartnerConfigMethod;
+    return getGetPartnerMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigAddRequest,
-      com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigAddResponse> getAddPartnerConfigMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest,
+      com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerResponse> getAddPartnerMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "AddPartnerConfig",
-      requestType = com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigAddRequest.class,
-      responseType = com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigAddResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "AddPartner",
+      requestType = com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest.class,
+      responseType = com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigAddRequest,
-      com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigAddResponse> getAddPartnerConfigMethod() {
-    io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigAddRequest, com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigAddResponse> getAddPartnerConfigMethod;
-    if ((getAddPartnerConfigMethod = GaiaProxyGrpcGrpc.getAddPartnerConfigMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest,
+      com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerResponse> getAddPartnerMethod() {
+    io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest, com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerResponse> getAddPartnerMethod;
+    if ((getAddPartnerMethod = GaiaProxyGrpcGrpc.getAddPartnerMethod) == null) {
       synchronized (GaiaProxyGrpcGrpc.class) {
-        if ((getAddPartnerConfigMethod = GaiaProxyGrpcGrpc.getAddPartnerConfigMethod) == null) {
-          GaiaProxyGrpcGrpc.getAddPartnerConfigMethod = getAddPartnerConfigMethod =
-              io.grpc.MethodDescriptor.<com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigAddRequest, com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigAddResponse>newBuilder()
+        if ((getAddPartnerMethod = GaiaProxyGrpcGrpc.getAddPartnerMethod) == null) {
+          GaiaProxyGrpcGrpc.getAddPartnerMethod = getAddPartnerMethod =
+              io.grpc.MethodDescriptor.<com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest, com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddPartnerConfig"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddPartner"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigAddRequest.getDefaultInstance()))
+                  com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigAddResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new GaiaProxyGrpcMethodDescriptorSupplier("AddPartnerConfig"))
+                  com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new GaiaProxyGrpcMethodDescriptorSupplier("AddPartner"))
               .build();
         }
       }
     }
-    return getAddPartnerConfigMethod;
+    return getAddPartnerMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.SetACRequest,
-      com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.SetACResponse> getSetACMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.Proxy.ProxyRequest,
+      com.tcl.gaia.protocol.proxy.Proxy.ProxyResponse> getProxyMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "SetAC",
-      requestType = com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.SetACRequest.class,
-      responseType = com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.SetACResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "Proxy",
+      requestType = com.tcl.gaia.protocol.proxy.Proxy.ProxyRequest.class,
+      responseType = com.tcl.gaia.protocol.proxy.Proxy.ProxyResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.SetACRequest,
-      com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.SetACResponse> getSetACMethod() {
-    io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.SetACRequest, com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.SetACResponse> getSetACMethod;
-    if ((getSetACMethod = GaiaProxyGrpcGrpc.getSetACMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.Proxy.ProxyRequest,
+      com.tcl.gaia.protocol.proxy.Proxy.ProxyResponse> getProxyMethod() {
+    io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.Proxy.ProxyRequest, com.tcl.gaia.protocol.proxy.Proxy.ProxyResponse> getProxyMethod;
+    if ((getProxyMethod = GaiaProxyGrpcGrpc.getProxyMethod) == null) {
       synchronized (GaiaProxyGrpcGrpc.class) {
-        if ((getSetACMethod = GaiaProxyGrpcGrpc.getSetACMethod) == null) {
-          GaiaProxyGrpcGrpc.getSetACMethod = getSetACMethod =
-              io.grpc.MethodDescriptor.<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.SetACRequest, com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.SetACResponse>newBuilder()
+        if ((getProxyMethod = GaiaProxyGrpcGrpc.getProxyMethod) == null) {
+          GaiaProxyGrpcGrpc.getProxyMethod = getProxyMethod =
+              io.grpc.MethodDescriptor.<com.tcl.gaia.protocol.proxy.Proxy.ProxyRequest, com.tcl.gaia.protocol.proxy.Proxy.ProxyResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetAC"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Proxy"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.SetACRequest.getDefaultInstance()))
+                  com.tcl.gaia.protocol.proxy.Proxy.ProxyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.SetACResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new GaiaProxyGrpcMethodDescriptorSupplier("SetAC"))
+                  com.tcl.gaia.protocol.proxy.Proxy.ProxyResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new GaiaProxyGrpcMethodDescriptorSupplier("Proxy"))
               .build();
         }
       }
     }
-    return getSetACMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.PartnerResource.GetPartnerResourceIdRangeRequest,
-      com.tcl.gaia.protocol.proxy.PartnerResource.GetPartnerResourceIdRangeResponse> getGetPartnerResourceIdRangeMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetPartnerResourceIdRange",
-      requestType = com.tcl.gaia.protocol.proxy.PartnerResource.GetPartnerResourceIdRangeRequest.class,
-      responseType = com.tcl.gaia.protocol.proxy.PartnerResource.GetPartnerResourceIdRangeResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.PartnerResource.GetPartnerResourceIdRangeRequest,
-      com.tcl.gaia.protocol.proxy.PartnerResource.GetPartnerResourceIdRangeResponse> getGetPartnerResourceIdRangeMethod() {
-    io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.PartnerResource.GetPartnerResourceIdRangeRequest, com.tcl.gaia.protocol.proxy.PartnerResource.GetPartnerResourceIdRangeResponse> getGetPartnerResourceIdRangeMethod;
-    if ((getGetPartnerResourceIdRangeMethod = GaiaProxyGrpcGrpc.getGetPartnerResourceIdRangeMethod) == null) {
-      synchronized (GaiaProxyGrpcGrpc.class) {
-        if ((getGetPartnerResourceIdRangeMethod = GaiaProxyGrpcGrpc.getGetPartnerResourceIdRangeMethod) == null) {
-          GaiaProxyGrpcGrpc.getGetPartnerResourceIdRangeMethod = getGetPartnerResourceIdRangeMethod =
-              io.grpc.MethodDescriptor.<com.tcl.gaia.protocol.proxy.PartnerResource.GetPartnerResourceIdRangeRequest, com.tcl.gaia.protocol.proxy.PartnerResource.GetPartnerResourceIdRangeResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPartnerResourceIdRange"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcl.gaia.protocol.proxy.PartnerResource.GetPartnerResourceIdRangeRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcl.gaia.protocol.proxy.PartnerResource.GetPartnerResourceIdRangeResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new GaiaProxyGrpcMethodDescriptorSupplier("GetPartnerResourceIdRange"))
-              .build();
-        }
-      }
-    }
-    return getGetPartnerResourceIdRangeMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUsersRequest,
-      com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUsersResponse> getGetUsersMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetUsers",
-      requestType = com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUsersRequest.class,
-      responseType = com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUsersResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUsersRequest,
-      com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUsersResponse> getGetUsersMethod() {
-    io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUsersRequest, com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUsersResponse> getGetUsersMethod;
-    if ((getGetUsersMethod = GaiaProxyGrpcGrpc.getGetUsersMethod) == null) {
-      synchronized (GaiaProxyGrpcGrpc.class) {
-        if ((getGetUsersMethod = GaiaProxyGrpcGrpc.getGetUsersMethod) == null) {
-          GaiaProxyGrpcGrpc.getGetUsersMethod = getGetUsersMethod =
-              io.grpc.MethodDescriptor.<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUsersRequest, com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUsersResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetUsers"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUsersRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUsersResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new GaiaProxyGrpcMethodDescriptorSupplier("GetUsers"))
-              .build();
-        }
-      }
-    }
-    return getGetUsersMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetDevicesRequest,
-      com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetDevicesResponse> getGetDevicesMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetDevices",
-      requestType = com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetDevicesRequest.class,
-      responseType = com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetDevicesResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetDevicesRequest,
-      com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetDevicesResponse> getGetDevicesMethod() {
-    io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetDevicesRequest, com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetDevicesResponse> getGetDevicesMethod;
-    if ((getGetDevicesMethod = GaiaProxyGrpcGrpc.getGetDevicesMethod) == null) {
-      synchronized (GaiaProxyGrpcGrpc.class) {
-        if ((getGetDevicesMethod = GaiaProxyGrpcGrpc.getGetDevicesMethod) == null) {
-          GaiaProxyGrpcGrpc.getGetDevicesMethod = getGetDevicesMethod =
-              io.grpc.MethodDescriptor.<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetDevicesRequest, com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetDevicesResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDevices"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetDevicesRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetDevicesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new GaiaProxyGrpcMethodDescriptorSupplier("GetDevices"))
-              .build();
-        }
-      }
-    }
-    return getGetDevicesMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUserDeviceRequest,
-      com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUserDeviceResponse> getGetUserDeviceMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetUserDevice",
-      requestType = com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUserDeviceRequest.class,
-      responseType = com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUserDeviceResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUserDeviceRequest,
-      com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUserDeviceResponse> getGetUserDeviceMethod() {
-    io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUserDeviceRequest, com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUserDeviceResponse> getGetUserDeviceMethod;
-    if ((getGetUserDeviceMethod = GaiaProxyGrpcGrpc.getGetUserDeviceMethod) == null) {
-      synchronized (GaiaProxyGrpcGrpc.class) {
-        if ((getGetUserDeviceMethod = GaiaProxyGrpcGrpc.getGetUserDeviceMethod) == null) {
-          GaiaProxyGrpcGrpc.getGetUserDeviceMethod = getGetUserDeviceMethod =
-              io.grpc.MethodDescriptor.<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUserDeviceRequest, com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUserDeviceResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetUserDevice"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUserDeviceRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUserDeviceResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new GaiaProxyGrpcMethodDescriptorSupplier("GetUserDevice"))
-              .build();
-        }
-      }
-    }
-    return getGetUserDeviceMethod;
+    return getProxyMethod;
   }
 
   /**
@@ -356,68 +232,43 @@ public final class GaiaProxyGrpcGrpc {
 
     /**
      */
-    public void ping(com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.PingRequest request,
-        io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.PingResponse> responseObserver) {
+    public void ping(com.tcl.gaia.protocol.proxy.Ping.PingRequest request,
+        io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.Ping.PingResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getPingMethod(), responseObserver);
     }
 
     /**
+     * <pre>
+     * partner management
+     * </pre>
      */
-    public void listPartnerConfig(com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigListRequest request,
-        io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigListResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListPartnerConfigMethod(), responseObserver);
+    public void listPartner(com.tcl.gaia.protocol.proxy.PartnerOuterClass.ListPartnerRequest request,
+        io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.PartnerOuterClass.ListPartnerResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getListPartnerMethod(), responseObserver);
     }
 
     /**
      */
-    public void getPartnerConfig(com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigGetRequest request,
-        io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigGetResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetPartnerConfigMethod(), responseObserver);
+    public void getPartner(com.tcl.gaia.protocol.proxy.PartnerOuterClass.GetPartnerRequest request,
+        io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.PartnerOuterClass.GetPartnerResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetPartnerMethod(), responseObserver);
     }
 
     /**
      */
-    public void addPartnerConfig(com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigAddRequest request,
-        io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigAddResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getAddPartnerConfigMethod(), responseObserver);
-    }
-
-    /**
-     */
-    public void setAC(com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.SetACRequest request,
-        io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.SetACResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getSetACMethod(), responseObserver);
+    public void addPartner(com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest request,
+        io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getAddPartnerMethod(), responseObserver);
     }
 
     /**
      * <pre>
-     * for sync
+     * proxy
      * </pre>
      */
-    public void getPartnerResourceIdRange(com.tcl.gaia.protocol.proxy.PartnerResource.GetPartnerResourceIdRangeRequest request,
-        io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.PartnerResource.GetPartnerResourceIdRangeResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetPartnerResourceIdRangeMethod(), responseObserver);
-    }
-
-    /**
-     */
-    public void getUsers(com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUsersRequest request,
-        io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUsersResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetUsersMethod(), responseObserver);
-    }
-
-    /**
-     */
-    public void getDevices(com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetDevicesRequest request,
-        io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetDevicesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetDevicesMethod(), responseObserver);
-    }
-
-    /**
-     */
-    public void getUserDevice(com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUserDeviceRequest request,
-        io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUserDeviceResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetUserDeviceMethod(), responseObserver);
+    public void proxy(com.tcl.gaia.protocol.proxy.Proxy.ProxyRequest request,
+        io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.Proxy.ProxyResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getProxyMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -426,65 +277,37 @@ public final class GaiaProxyGrpcGrpc {
             getPingMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.PingRequest,
-                com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.PingResponse>(
+                com.tcl.gaia.protocol.proxy.Ping.PingRequest,
+                com.tcl.gaia.protocol.proxy.Ping.PingResponse>(
                   this, METHODID_PING)))
           .addMethod(
-            getListPartnerConfigMethod(),
+            getListPartnerMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigListRequest,
-                com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigListResponse>(
-                  this, METHODID_LIST_PARTNER_CONFIG)))
+                com.tcl.gaia.protocol.proxy.PartnerOuterClass.ListPartnerRequest,
+                com.tcl.gaia.protocol.proxy.PartnerOuterClass.ListPartnerResponse>(
+                  this, METHODID_LIST_PARTNER)))
           .addMethod(
-            getGetPartnerConfigMethod(),
+            getGetPartnerMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigGetRequest,
-                com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigGetResponse>(
-                  this, METHODID_GET_PARTNER_CONFIG)))
+                com.tcl.gaia.protocol.proxy.PartnerOuterClass.GetPartnerRequest,
+                com.tcl.gaia.protocol.proxy.PartnerOuterClass.GetPartnerResponse>(
+                  this, METHODID_GET_PARTNER)))
           .addMethod(
-            getAddPartnerConfigMethod(),
+            getAddPartnerMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigAddRequest,
-                com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigAddResponse>(
-                  this, METHODID_ADD_PARTNER_CONFIG)))
+                com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest,
+                com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerResponse>(
+                  this, METHODID_ADD_PARTNER)))
           .addMethod(
-            getSetACMethod(),
+            getProxyMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.SetACRequest,
-                com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.SetACResponse>(
-                  this, METHODID_SET_AC)))
-          .addMethod(
-            getGetPartnerResourceIdRangeMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcl.gaia.protocol.proxy.PartnerResource.GetPartnerResourceIdRangeRequest,
-                com.tcl.gaia.protocol.proxy.PartnerResource.GetPartnerResourceIdRangeResponse>(
-                  this, METHODID_GET_PARTNER_RESOURCE_ID_RANGE)))
-          .addMethod(
-            getGetUsersMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUsersRequest,
-                com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUsersResponse>(
-                  this, METHODID_GET_USERS)))
-          .addMethod(
-            getGetDevicesMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetDevicesRequest,
-                com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetDevicesResponse>(
-                  this, METHODID_GET_DEVICES)))
-          .addMethod(
-            getGetUserDeviceMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUserDeviceRequest,
-                com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUserDeviceResponse>(
-                  this, METHODID_GET_USER_DEVICE)))
+                com.tcl.gaia.protocol.proxy.Proxy.ProxyRequest,
+                com.tcl.gaia.protocol.proxy.Proxy.ProxyResponse>(
+                  this, METHODID_PROXY)))
           .build();
     }
   }
@@ -505,77 +328,48 @@ public final class GaiaProxyGrpcGrpc {
 
     /**
      */
-    public void ping(com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.PingRequest request,
-        io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.PingResponse> responseObserver) {
+    public void ping(com.tcl.gaia.protocol.proxy.Ping.PingRequest request,
+        io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.Ping.PingResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getPingMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
+     * <pre>
+     * partner management
+     * </pre>
      */
-    public void listPartnerConfig(com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigListRequest request,
-        io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigListResponse> responseObserver) {
+    public void listPartner(com.tcl.gaia.protocol.proxy.PartnerOuterClass.ListPartnerRequest request,
+        io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.PartnerOuterClass.ListPartnerResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getListPartnerConfigMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getListPartnerMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void getPartnerConfig(com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigGetRequest request,
-        io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigGetResponse> responseObserver) {
+    public void getPartner(com.tcl.gaia.protocol.proxy.PartnerOuterClass.GetPartnerRequest request,
+        io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.PartnerOuterClass.GetPartnerResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetPartnerConfigMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetPartnerMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void addPartnerConfig(com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigAddRequest request,
-        io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigAddResponse> responseObserver) {
+    public void addPartner(com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest request,
+        io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getAddPartnerConfigMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
-    public void setAC(com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.SetACRequest request,
-        io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.SetACResponse> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(getSetACMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getAddPartnerMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      * <pre>
-     * for sync
+     * proxy
      * </pre>
      */
-    public void getPartnerResourceIdRange(com.tcl.gaia.protocol.proxy.PartnerResource.GetPartnerResourceIdRangeRequest request,
-        io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.PartnerResource.GetPartnerResourceIdRangeResponse> responseObserver) {
+    public void proxy(com.tcl.gaia.protocol.proxy.Proxy.ProxyRequest request,
+        io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.Proxy.ProxyResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetPartnerResourceIdRangeMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
-    public void getUsers(com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUsersRequest request,
-        io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUsersResponse> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(getGetUsersMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
-    public void getDevices(com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetDevicesRequest request,
-        io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetDevicesResponse> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(getGetDevicesMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
-    public void getUserDevice(com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUserDeviceRequest request,
-        io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUserDeviceResponse> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(getGetUserDeviceMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getProxyMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -595,68 +389,43 @@ public final class GaiaProxyGrpcGrpc {
 
     /**
      */
-    public com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.PingResponse ping(com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.PingRequest request) {
+    public com.tcl.gaia.protocol.proxy.Ping.PingResponse ping(com.tcl.gaia.protocol.proxy.Ping.PingRequest request) {
       return blockingUnaryCall(
           getChannel(), getPingMethod(), getCallOptions(), request);
     }
 
     /**
+     * <pre>
+     * partner management
+     * </pre>
      */
-    public com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigListResponse listPartnerConfig(com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigListRequest request) {
+    public com.tcl.gaia.protocol.proxy.PartnerOuterClass.ListPartnerResponse listPartner(com.tcl.gaia.protocol.proxy.PartnerOuterClass.ListPartnerRequest request) {
       return blockingUnaryCall(
-          getChannel(), getListPartnerConfigMethod(), getCallOptions(), request);
+          getChannel(), getListPartnerMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigGetResponse getPartnerConfig(com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigGetRequest request) {
+    public com.tcl.gaia.protocol.proxy.PartnerOuterClass.GetPartnerResponse getPartner(com.tcl.gaia.protocol.proxy.PartnerOuterClass.GetPartnerRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetPartnerConfigMethod(), getCallOptions(), request);
+          getChannel(), getGetPartnerMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigAddResponse addPartnerConfig(com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigAddRequest request) {
+    public com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerResponse addPartner(com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest request) {
       return blockingUnaryCall(
-          getChannel(), getAddPartnerConfigMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.SetACResponse setAC(com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.SetACRequest request) {
-      return blockingUnaryCall(
-          getChannel(), getSetACMethod(), getCallOptions(), request);
+          getChannel(), getAddPartnerMethod(), getCallOptions(), request);
     }
 
     /**
      * <pre>
-     * for sync
+     * proxy
      * </pre>
      */
-    public com.tcl.gaia.protocol.proxy.PartnerResource.GetPartnerResourceIdRangeResponse getPartnerResourceIdRange(com.tcl.gaia.protocol.proxy.PartnerResource.GetPartnerResourceIdRangeRequest request) {
+    public com.tcl.gaia.protocol.proxy.Proxy.ProxyResponse proxy(com.tcl.gaia.protocol.proxy.Proxy.ProxyRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetPartnerResourceIdRangeMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUsersResponse getUsers(com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUsersRequest request) {
-      return blockingUnaryCall(
-          getChannel(), getGetUsersMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetDevicesResponse getDevices(com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetDevicesRequest request) {
-      return blockingUnaryCall(
-          getChannel(), getGetDevicesMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUserDeviceResponse getUserDevice(com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUserDeviceRequest request) {
-      return blockingUnaryCall(
-          getChannel(), getGetUserDeviceMethod(), getCallOptions(), request);
+          getChannel(), getProxyMethod(), getCallOptions(), request);
     }
   }
 
@@ -676,89 +445,56 @@ public final class GaiaProxyGrpcGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.PingResponse> ping(
-        com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.PingRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcl.gaia.protocol.proxy.Ping.PingResponse> ping(
+        com.tcl.gaia.protocol.proxy.Ping.PingRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getPingMethod(), getCallOptions()), request);
     }
 
     /**
+     * <pre>
+     * partner management
+     * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigListResponse> listPartnerConfig(
-        com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigListRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcl.gaia.protocol.proxy.PartnerOuterClass.ListPartnerResponse> listPartner(
+        com.tcl.gaia.protocol.proxy.PartnerOuterClass.ListPartnerRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getListPartnerConfigMethod(), getCallOptions()), request);
+          getChannel().newCall(getListPartnerMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigGetResponse> getPartnerConfig(
-        com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigGetRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcl.gaia.protocol.proxy.PartnerOuterClass.GetPartnerResponse> getPartner(
+        com.tcl.gaia.protocol.proxy.PartnerOuterClass.GetPartnerRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetPartnerConfigMethod(), getCallOptions()), request);
+          getChannel().newCall(getGetPartnerMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigAddResponse> addPartnerConfig(
-        com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigAddRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerResponse> addPartner(
+        com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getAddPartnerConfigMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.SetACResponse> setAC(
-        com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.SetACRequest request) {
-      return futureUnaryCall(
-          getChannel().newCall(getSetACMethod(), getCallOptions()), request);
+          getChannel().newCall(getAddPartnerMethod(), getCallOptions()), request);
     }
 
     /**
      * <pre>
-     * for sync
+     * proxy
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcl.gaia.protocol.proxy.PartnerResource.GetPartnerResourceIdRangeResponse> getPartnerResourceIdRange(
-        com.tcl.gaia.protocol.proxy.PartnerResource.GetPartnerResourceIdRangeRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcl.gaia.protocol.proxy.Proxy.ProxyResponse> proxy(
+        com.tcl.gaia.protocol.proxy.Proxy.ProxyRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetPartnerResourceIdRangeMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUsersResponse> getUsers(
-        com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUsersRequest request) {
-      return futureUnaryCall(
-          getChannel().newCall(getGetUsersMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetDevicesResponse> getDevices(
-        com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetDevicesRequest request) {
-      return futureUnaryCall(
-          getChannel().newCall(getGetDevicesMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUserDeviceResponse> getUserDevice(
-        com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUserDeviceRequest request) {
-      return futureUnaryCall(
-          getChannel().newCall(getGetUserDeviceMethod(), getCallOptions()), request);
+          getChannel().newCall(getProxyMethod(), getCallOptions()), request);
     }
   }
 
   private static final int METHODID_PING = 0;
-  private static final int METHODID_LIST_PARTNER_CONFIG = 1;
-  private static final int METHODID_GET_PARTNER_CONFIG = 2;
-  private static final int METHODID_ADD_PARTNER_CONFIG = 3;
-  private static final int METHODID_SET_AC = 4;
-  private static final int METHODID_GET_PARTNER_RESOURCE_ID_RANGE = 5;
-  private static final int METHODID_GET_USERS = 6;
-  private static final int METHODID_GET_DEVICES = 7;
-  private static final int METHODID_GET_USER_DEVICE = 8;
+  private static final int METHODID_LIST_PARTNER = 1;
+  private static final int METHODID_GET_PARTNER = 2;
+  private static final int METHODID_ADD_PARTNER = 3;
+  private static final int METHODID_PROXY = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -778,40 +514,24 @@ public final class GaiaProxyGrpcGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_PING:
-          serviceImpl.ping((com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.PingRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.PingResponse>) responseObserver);
+          serviceImpl.ping((com.tcl.gaia.protocol.proxy.Ping.PingRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.Ping.PingResponse>) responseObserver);
           break;
-        case METHODID_LIST_PARTNER_CONFIG:
-          serviceImpl.listPartnerConfig((com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigListRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigListResponse>) responseObserver);
+        case METHODID_LIST_PARTNER:
+          serviceImpl.listPartner((com.tcl.gaia.protocol.proxy.PartnerOuterClass.ListPartnerRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.PartnerOuterClass.ListPartnerResponse>) responseObserver);
           break;
-        case METHODID_GET_PARTNER_CONFIG:
-          serviceImpl.getPartnerConfig((com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigGetRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigGetResponse>) responseObserver);
+        case METHODID_GET_PARTNER:
+          serviceImpl.getPartner((com.tcl.gaia.protocol.proxy.PartnerOuterClass.GetPartnerRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.PartnerOuterClass.GetPartnerResponse>) responseObserver);
           break;
-        case METHODID_ADD_PARTNER_CONFIG:
-          serviceImpl.addPartnerConfig((com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigAddRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.PartnerConfigOuterClass.PartnerConfigAddResponse>) responseObserver);
+        case METHODID_ADD_PARTNER:
+          serviceImpl.addPartner((com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerResponse>) responseObserver);
           break;
-        case METHODID_SET_AC:
-          serviceImpl.setAC((com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.SetACRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.SetACResponse>) responseObserver);
-          break;
-        case METHODID_GET_PARTNER_RESOURCE_ID_RANGE:
-          serviceImpl.getPartnerResourceIdRange((com.tcl.gaia.protocol.proxy.PartnerResource.GetPartnerResourceIdRangeRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.PartnerResource.GetPartnerResourceIdRangeResponse>) responseObserver);
-          break;
-        case METHODID_GET_USERS:
-          serviceImpl.getUsers((com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUsersRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUsersResponse>) responseObserver);
-          break;
-        case METHODID_GET_DEVICES:
-          serviceImpl.getDevices((com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetDevicesRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetDevicesResponse>) responseObserver);
-          break;
-        case METHODID_GET_USER_DEVICE:
-          serviceImpl.getUserDevice((com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUserDeviceRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.GaiaProxyGrpcService.GetUserDeviceResponse>) responseObserver);
+        case METHODID_PROXY:
+          serviceImpl.proxy((com.tcl.gaia.protocol.proxy.Proxy.ProxyRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.Proxy.ProxyResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -875,14 +595,10 @@ public final class GaiaProxyGrpcGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new GaiaProxyGrpcFileDescriptorSupplier())
               .addMethod(getPingMethod())
-              .addMethod(getListPartnerConfigMethod())
-              .addMethod(getGetPartnerConfigMethod())
-              .addMethod(getAddPartnerConfigMethod())
-              .addMethod(getSetACMethod())
-              .addMethod(getGetPartnerResourceIdRangeMethod())
-              .addMethod(getGetUsersMethod())
-              .addMethod(getGetDevicesMethod())
-              .addMethod(getGetUserDeviceMethod())
+              .addMethod(getListPartnerMethod())
+              .addMethod(getGetPartnerMethod())
+              .addMethod(getAddPartnerMethod())
+              .addMethod(getProxyMethod())
               .build();
         }
       }

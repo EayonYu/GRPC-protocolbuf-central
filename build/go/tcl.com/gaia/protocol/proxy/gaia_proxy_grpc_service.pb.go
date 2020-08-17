@@ -16,8 +16,6 @@ import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
-	sync "sync"
-	partner "tcl.com/gaia/protocol/partner"
 )
 
 const (
@@ -31,658 +29,6 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
-type PingRequest struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-}
-
-func (x *PingRequest) Reset() {
-	*x = PingRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes[0]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *PingRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*PingRequest) ProtoMessage() {}
-
-func (x *PingRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes[0]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use PingRequest.ProtoReflect.Descriptor instead.
-func (*PingRequest) Descriptor() ([]byte, []int) {
-	return file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_rawDescGZIP(), []int{0}
-}
-
-type PingResponse struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Pong *bool `protobuf:"varint,1,req,name=pong" json:"pong,omitempty"`
-}
-
-func (x *PingResponse) Reset() {
-	*x = PingResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes[1]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *PingResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*PingResponse) ProtoMessage() {}
-
-func (x *PingResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes[1]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use PingResponse.ProtoReflect.Descriptor instead.
-func (*PingResponse) Descriptor() ([]byte, []int) {
-	return file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_rawDescGZIP(), []int{1}
-}
-
-func (x *PingResponse) GetPong() bool {
-	if x != nil && x.Pong != nil {
-		return *x.Pong
-	}
-	return false
-}
-
-type SetACResponseData struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Code    *int32  `protobuf:"varint,1,req,name=code" json:"code,omitempty"`
-	Message *string `protobuf:"bytes,2,req,name=message" json:"message,omitempty"`
-	Data    *string `protobuf:"bytes,3,req,name=data" json:"data,omitempty"`
-}
-
-func (x *SetACResponseData) Reset() {
-	*x = SetACResponseData{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes[2]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *SetACResponseData) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*SetACResponseData) ProtoMessage() {}
-
-func (x *SetACResponseData) ProtoReflect() protoreflect.Message {
-	mi := &file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes[2]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use SetACResponseData.ProtoReflect.Descriptor instead.
-func (*SetACResponseData) Descriptor() ([]byte, []int) {
-	return file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_rawDescGZIP(), []int{2}
-}
-
-func (x *SetACResponseData) GetCode() int32 {
-	if x != nil && x.Code != nil {
-		return *x.Code
-	}
-	return 0
-}
-
-func (x *SetACResponseData) GetMessage() string {
-	if x != nil && x.Message != nil {
-		return *x.Message
-	}
-	return ""
-}
-
-func (x *SetACResponseData) GetData() string {
-	if x != nil && x.Data != nil {
-		return *x.Data
-	}
-	return ""
-}
-
-type SetACRequest struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	PartnerUuid       *string  `protobuf:"bytes,1,req,name=partner_uuid,json=partnerUuid" json:"partner_uuid,omitempty"`
-	DeviceId          *int32   `protobuf:"varint,2,req,name=deviceId" json:"deviceId,omitempty"`
-	TargetTemperature *float32 `protobuf:"fixed32,3,req,name=targetTemperature" json:"targetTemperature,omitempty"`
-}
-
-func (x *SetACRequest) Reset() {
-	*x = SetACRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes[3]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *SetACRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*SetACRequest) ProtoMessage() {}
-
-func (x *SetACRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes[3]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use SetACRequest.ProtoReflect.Descriptor instead.
-func (*SetACRequest) Descriptor() ([]byte, []int) {
-	return file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_rawDescGZIP(), []int{3}
-}
-
-func (x *SetACRequest) GetPartnerUuid() string {
-	if x != nil && x.PartnerUuid != nil {
-		return *x.PartnerUuid
-	}
-	return ""
-}
-
-func (x *SetACRequest) GetDeviceId() int32 {
-	if x != nil && x.DeviceId != nil {
-		return *x.DeviceId
-	}
-	return 0
-}
-
-func (x *SetACRequest) GetTargetTemperature() float32 {
-	if x != nil && x.TargetTemperature != nil {
-		return *x.TargetTemperature
-	}
-	return 0
-}
-
-type SetACResponse struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Code    *int32             `protobuf:"varint,1,req,name=code" json:"code,omitempty"`
-	Message *string            `protobuf:"bytes,2,req,name=message" json:"message,omitempty"`
-	Data    *SetACResponseData `protobuf:"bytes,3,req,name=data" json:"data,omitempty"`
-}
-
-func (x *SetACResponse) Reset() {
-	*x = SetACResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes[4]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *SetACResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*SetACResponse) ProtoMessage() {}
-
-func (x *SetACResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes[4]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use SetACResponse.ProtoReflect.Descriptor instead.
-func (*SetACResponse) Descriptor() ([]byte, []int) {
-	return file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_rawDescGZIP(), []int{4}
-}
-
-func (x *SetACResponse) GetCode() int32 {
-	if x != nil && x.Code != nil {
-		return *x.Code
-	}
-	return 0
-}
-
-func (x *SetACResponse) GetMessage() string {
-	if x != nil && x.Message != nil {
-		return *x.Message
-	}
-	return ""
-}
-
-func (x *SetACResponse) GetData() *SetACResponseData {
-	if x != nil {
-		return x.Data
-	}
-	return nil
-}
-
-type GetUsersRequest struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	PartnerUuid *string `protobuf:"bytes,1,req,name=partner_uuid,json=partnerUuid" json:"partner_uuid,omitempty"`
-	Start       *int32  `protobuf:"varint,2,req,name=start" json:"start,omitempty"`
-	End         *int32  `protobuf:"varint,3,req,name=end" json:"end,omitempty"`
-}
-
-func (x *GetUsersRequest) Reset() {
-	*x = GetUsersRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes[5]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *GetUsersRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*GetUsersRequest) ProtoMessage() {}
-
-func (x *GetUsersRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes[5]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use GetUsersRequest.ProtoReflect.Descriptor instead.
-func (*GetUsersRequest) Descriptor() ([]byte, []int) {
-	return file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_rawDescGZIP(), []int{5}
-}
-
-func (x *GetUsersRequest) GetPartnerUuid() string {
-	if x != nil && x.PartnerUuid != nil {
-		return *x.PartnerUuid
-	}
-	return ""
-}
-
-func (x *GetUsersRequest) GetStart() int32 {
-	if x != nil && x.Start != nil {
-		return *x.Start
-	}
-	return 0
-}
-
-func (x *GetUsersRequest) GetEnd() int32 {
-	if x != nil && x.End != nil {
-		return *x.End
-	}
-	return 0
-}
-
-type GetUsersResponse struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Code    *int32          `protobuf:"varint,1,req,name=code" json:"code,omitempty"`
-	Message *string         `protobuf:"bytes,2,req,name=message" json:"message,omitempty"`
-	Data    []*partner.User `protobuf:"bytes,3,rep,name=data" json:"data,omitempty"`
-}
-
-func (x *GetUsersResponse) Reset() {
-	*x = GetUsersResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes[6]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *GetUsersResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*GetUsersResponse) ProtoMessage() {}
-
-func (x *GetUsersResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes[6]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use GetUsersResponse.ProtoReflect.Descriptor instead.
-func (*GetUsersResponse) Descriptor() ([]byte, []int) {
-	return file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_rawDescGZIP(), []int{6}
-}
-
-func (x *GetUsersResponse) GetCode() int32 {
-	if x != nil && x.Code != nil {
-		return *x.Code
-	}
-	return 0
-}
-
-func (x *GetUsersResponse) GetMessage() string {
-	if x != nil && x.Message != nil {
-		return *x.Message
-	}
-	return ""
-}
-
-func (x *GetUsersResponse) GetData() []*partner.User {
-	if x != nil {
-		return x.Data
-	}
-	return nil
-}
-
-type GetDevicesRequest struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	PartnerUuid *string `protobuf:"bytes,1,req,name=partner_uuid,json=partnerUuid" json:"partner_uuid,omitempty"`
-	Start       *int32  `protobuf:"varint,2,req,name=start" json:"start,omitempty"`
-	End         *int32  `protobuf:"varint,3,req,name=end" json:"end,omitempty"`
-}
-
-func (x *GetDevicesRequest) Reset() {
-	*x = GetDevicesRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes[7]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *GetDevicesRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*GetDevicesRequest) ProtoMessage() {}
-
-func (x *GetDevicesRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes[7]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use GetDevicesRequest.ProtoReflect.Descriptor instead.
-func (*GetDevicesRequest) Descriptor() ([]byte, []int) {
-	return file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_rawDescGZIP(), []int{7}
-}
-
-func (x *GetDevicesRequest) GetPartnerUuid() string {
-	if x != nil && x.PartnerUuid != nil {
-		return *x.PartnerUuid
-	}
-	return ""
-}
-
-func (x *GetDevicesRequest) GetStart() int32 {
-	if x != nil && x.Start != nil {
-		return *x.Start
-	}
-	return 0
-}
-
-func (x *GetDevicesRequest) GetEnd() int32 {
-	if x != nil && x.End != nil {
-		return *x.End
-	}
-	return 0
-}
-
-type GetDevicesResponse struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Code    *int32            `protobuf:"varint,1,req,name=code" json:"code,omitempty"`
-	Message *string           `protobuf:"bytes,2,req,name=message" json:"message,omitempty"`
-	Data    []*partner.Device `protobuf:"bytes,3,rep,name=data" json:"data,omitempty"`
-}
-
-func (x *GetDevicesResponse) Reset() {
-	*x = GetDevicesResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes[8]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *GetDevicesResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*GetDevicesResponse) ProtoMessage() {}
-
-func (x *GetDevicesResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes[8]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use GetDevicesResponse.ProtoReflect.Descriptor instead.
-func (*GetDevicesResponse) Descriptor() ([]byte, []int) {
-	return file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_rawDescGZIP(), []int{8}
-}
-
-func (x *GetDevicesResponse) GetCode() int32 {
-	if x != nil && x.Code != nil {
-		return *x.Code
-	}
-	return 0
-}
-
-func (x *GetDevicesResponse) GetMessage() string {
-	if x != nil && x.Message != nil {
-		return *x.Message
-	}
-	return ""
-}
-
-func (x *GetDevicesResponse) GetData() []*partner.Device {
-	if x != nil {
-		return x.Data
-	}
-	return nil
-}
-
-type GetUserDeviceRequest struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	PartnerUuid *string `protobuf:"bytes,1,req,name=partner_uuid,json=partnerUuid" json:"partner_uuid,omitempty"`
-	Start       *int32  `protobuf:"varint,2,req,name=start" json:"start,omitempty"`
-	End         *int32  `protobuf:"varint,3,req,name=end" json:"end,omitempty"`
-}
-
-func (x *GetUserDeviceRequest) Reset() {
-	*x = GetUserDeviceRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes[9]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *GetUserDeviceRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*GetUserDeviceRequest) ProtoMessage() {}
-
-func (x *GetUserDeviceRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes[9]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use GetUserDeviceRequest.ProtoReflect.Descriptor instead.
-func (*GetUserDeviceRequest) Descriptor() ([]byte, []int) {
-	return file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_rawDescGZIP(), []int{9}
-}
-
-func (x *GetUserDeviceRequest) GetPartnerUuid() string {
-	if x != nil && x.PartnerUuid != nil {
-		return *x.PartnerUuid
-	}
-	return ""
-}
-
-func (x *GetUserDeviceRequest) GetStart() int32 {
-	if x != nil && x.Start != nil {
-		return *x.Start
-	}
-	return 0
-}
-
-func (x *GetUserDeviceRequest) GetEnd() int32 {
-	if x != nil && x.End != nil {
-		return *x.End
-	}
-	return 0
-}
-
-type GetUserDeviceResponse struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Code    *int32                       `protobuf:"varint,1,req,name=code" json:"code,omitempty"`
-	Message *string                      `protobuf:"bytes,2,req,name=message" json:"message,omitempty"`
-	Data    []*partner.UserDeviceBinding `protobuf:"bytes,3,rep,name=data" json:"data,omitempty"`
-}
-
-func (x *GetUserDeviceResponse) Reset() {
-	*x = GetUserDeviceResponse{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes[10]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *GetUserDeviceResponse) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*GetUserDeviceResponse) ProtoMessage() {}
-
-func (x *GetUserDeviceResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes[10]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use GetUserDeviceResponse.ProtoReflect.Descriptor instead.
-func (*GetUserDeviceResponse) Descriptor() ([]byte, []int) {
-	return file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_rawDescGZIP(), []int{10}
-}
-
-func (x *GetUserDeviceResponse) GetCode() int32 {
-	if x != nil && x.Code != nil {
-		return *x.Code
-	}
-	return 0
-}
-
-func (x *GetUserDeviceResponse) GetMessage() string {
-	if x != nil && x.Message != nil {
-		return *x.Message
-	}
-	return ""
-}
-
-func (x *GetUserDeviceResponse) GetData() []*partner.UserDeviceBinding {
-	if x != nil {
-		return x.Data
-	}
-	return nil
-}
-
 var File_protocol_gaia_proxy_gaia_proxy_grpc_service_proto protoreflect.FileDescriptor
 
 var file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_rawDesc = []byte{
@@ -692,237 +38,84 @@ var file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_rawDesc = []byte{
 	0x6f, 0x74, 0x6f, 0x12, 0x13, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x67, 0x61,
 	0x69, 0x61, 0x2e, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x1a, 0x1c, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65,
 	0x2f, 0x61, 0x70, 0x69, 0x2f, 0x61, 0x6e, 0x6e, 0x6f, 0x74, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x73,
-	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x22, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c,
-	0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x2f, 0x70, 0x61, 0x72, 0x74, 0x6e, 0x65, 0x72, 0x2f,
-	0x75, 0x73, 0x65, 0x72, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x24, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x63, 0x6f, 0x6c, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x2f, 0x70, 0x61, 0x72, 0x74,
-	0x6e, 0x65, 0x72, 0x2f, 0x64, 0x65, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f,
-	0x1a, 0x31, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x6f,
-	0x6e, 0x2f, 0x70, 0x61, 0x72, 0x74, 0x6e, 0x65, 0x72, 0x2f, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x64,
-	0x65, 0x76, 0x69, 0x63, 0x65, 0x5f, 0x62, 0x69, 0x6e, 0x64, 0x69, 0x6e, 0x67, 0x2e, 0x70, 0x72,
-	0x6f, 0x74, 0x6f, 0x1a, 0x28, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2f, 0x67, 0x61,
-	0x69, 0x61, 0x2f, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x2f, 0x70, 0x61, 0x72, 0x74, 0x6e, 0x65, 0x72,
-	0x5f, 0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x2a, 0x70,
-	0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2f, 0x67, 0x61, 0x69, 0x61, 0x2f, 0x70, 0x72, 0x6f,
-	0x78, 0x79, 0x2f, 0x70, 0x61, 0x72, 0x74, 0x6e, 0x65, 0x72, 0x5f, 0x72, 0x65, 0x73, 0x6f, 0x75,
-	0x72, 0x63, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0x0d, 0x0a, 0x0b, 0x50, 0x69, 0x6e,
-	0x67, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x22, 0x22, 0x0a, 0x0c, 0x50, 0x69, 0x6e, 0x67,
-	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x12, 0x0a, 0x04, 0x70, 0x6f, 0x6e, 0x67,
-	0x18, 0x01, 0x20, 0x02, 0x28, 0x08, 0x52, 0x04, 0x70, 0x6f, 0x6e, 0x67, 0x22, 0x55, 0x0a, 0x11,
-	0x53, 0x65, 0x74, 0x41, 0x43, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x44, 0x61, 0x74,
-	0x61, 0x12, 0x12, 0x0a, 0x04, 0x63, 0x6f, 0x64, 0x65, 0x18, 0x01, 0x20, 0x02, 0x28, 0x05, 0x52,
-	0x04, 0x63, 0x6f, 0x64, 0x65, 0x12, 0x18, 0x0a, 0x07, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65,
-	0x18, 0x02, 0x20, 0x02, 0x28, 0x09, 0x52, 0x07, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x12,
-	0x12, 0x0a, 0x04, 0x64, 0x61, 0x74, 0x61, 0x18, 0x03, 0x20, 0x02, 0x28, 0x09, 0x52, 0x04, 0x64,
-	0x61, 0x74, 0x61, 0x22, 0x7b, 0x0a, 0x0c, 0x53, 0x65, 0x74, 0x41, 0x43, 0x52, 0x65, 0x71, 0x75,
-	0x65, 0x73, 0x74, 0x12, 0x21, 0x0a, 0x0c, 0x70, 0x61, 0x72, 0x74, 0x6e, 0x65, 0x72, 0x5f, 0x75,
-	0x75, 0x69, 0x64, 0x18, 0x01, 0x20, 0x02, 0x28, 0x09, 0x52, 0x0b, 0x70, 0x61, 0x72, 0x74, 0x6e,
-	0x65, 0x72, 0x55, 0x75, 0x69, 0x64, 0x12, 0x1a, 0x0a, 0x08, 0x64, 0x65, 0x76, 0x69, 0x63, 0x65,
-	0x49, 0x64, 0x18, 0x02, 0x20, 0x02, 0x28, 0x05, 0x52, 0x08, 0x64, 0x65, 0x76, 0x69, 0x63, 0x65,
-	0x49, 0x64, 0x12, 0x2c, 0x0a, 0x11, 0x74, 0x61, 0x72, 0x67, 0x65, 0x74, 0x54, 0x65, 0x6d, 0x70,
-	0x65, 0x72, 0x61, 0x74, 0x75, 0x72, 0x65, 0x18, 0x03, 0x20, 0x02, 0x28, 0x02, 0x52, 0x11, 0x74,
-	0x61, 0x72, 0x67, 0x65, 0x74, 0x54, 0x65, 0x6d, 0x70, 0x65, 0x72, 0x61, 0x74, 0x75, 0x72, 0x65,
-	0x22, 0x79, 0x0a, 0x0d, 0x53, 0x65, 0x74, 0x41, 0x43, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
-	0x65, 0x12, 0x12, 0x0a, 0x04, 0x63, 0x6f, 0x64, 0x65, 0x18, 0x01, 0x20, 0x02, 0x28, 0x05, 0x52,
-	0x04, 0x63, 0x6f, 0x64, 0x65, 0x12, 0x18, 0x0a, 0x07, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65,
-	0x18, 0x02, 0x20, 0x02, 0x28, 0x09, 0x52, 0x07, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x12,
-	0x3a, 0x0a, 0x04, 0x64, 0x61, 0x74, 0x61, 0x18, 0x03, 0x20, 0x02, 0x28, 0x0b, 0x32, 0x26, 0x2e,
-	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x67, 0x61, 0x69, 0x61, 0x2e, 0x70, 0x72,
-	0x6f, 0x78, 0x79, 0x2e, 0x53, 0x65, 0x74, 0x41, 0x43, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
-	0x65, 0x44, 0x61, 0x74, 0x61, 0x52, 0x04, 0x64, 0x61, 0x74, 0x61, 0x22, 0x5c, 0x0a, 0x0f, 0x47,
-	0x65, 0x74, 0x55, 0x73, 0x65, 0x72, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x21,
-	0x0a, 0x0c, 0x70, 0x61, 0x72, 0x74, 0x6e, 0x65, 0x72, 0x5f, 0x75, 0x75, 0x69, 0x64, 0x18, 0x01,
-	0x20, 0x02, 0x28, 0x09, 0x52, 0x0b, 0x70, 0x61, 0x72, 0x74, 0x6e, 0x65, 0x72, 0x55, 0x75, 0x69,
-	0x64, 0x12, 0x14, 0x0a, 0x05, 0x73, 0x74, 0x61, 0x72, 0x74, 0x18, 0x02, 0x20, 0x02, 0x28, 0x05,
-	0x52, 0x05, 0x73, 0x74, 0x61, 0x72, 0x74, 0x12, 0x10, 0x0a, 0x03, 0x65, 0x6e, 0x64, 0x18, 0x03,
-	0x20, 0x02, 0x28, 0x05, 0x52, 0x03, 0x65, 0x6e, 0x64, 0x22, 0x73, 0x0a, 0x10, 0x47, 0x65, 0x74,
-	0x55, 0x73, 0x65, 0x72, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x12, 0x0a,
-	0x04, 0x63, 0x6f, 0x64, 0x65, 0x18, 0x01, 0x20, 0x02, 0x28, 0x05, 0x52, 0x04, 0x63, 0x6f, 0x64,
-	0x65, 0x12, 0x18, 0x0a, 0x07, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x18, 0x02, 0x20, 0x02,
-	0x28, 0x09, 0x52, 0x07, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x12, 0x31, 0x0a, 0x04, 0x64,
-	0x61, 0x74, 0x61, 0x18, 0x03, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x1d, 0x2e, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x63, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x2e, 0x70, 0x61, 0x72, 0x74,
-	0x6e, 0x65, 0x72, 0x2e, 0x55, 0x73, 0x65, 0x72, 0x52, 0x04, 0x64, 0x61, 0x74, 0x61, 0x22, 0x5e,
-	0x0a, 0x11, 0x47, 0x65, 0x74, 0x44, 0x65, 0x76, 0x69, 0x63, 0x65, 0x73, 0x52, 0x65, 0x71, 0x75,
-	0x65, 0x73, 0x74, 0x12, 0x21, 0x0a, 0x0c, 0x70, 0x61, 0x72, 0x74, 0x6e, 0x65, 0x72, 0x5f, 0x75,
-	0x75, 0x69, 0x64, 0x18, 0x01, 0x20, 0x02, 0x28, 0x09, 0x52, 0x0b, 0x70, 0x61, 0x72, 0x74, 0x6e,
-	0x65, 0x72, 0x55, 0x75, 0x69, 0x64, 0x12, 0x14, 0x0a, 0x05, 0x73, 0x74, 0x61, 0x72, 0x74, 0x18,
-	0x02, 0x20, 0x02, 0x28, 0x05, 0x52, 0x05, 0x73, 0x74, 0x61, 0x72, 0x74, 0x12, 0x10, 0x0a, 0x03,
-	0x65, 0x6e, 0x64, 0x18, 0x03, 0x20, 0x02, 0x28, 0x05, 0x52, 0x03, 0x65, 0x6e, 0x64, 0x22, 0x77,
-	0x0a, 0x12, 0x47, 0x65, 0x74, 0x44, 0x65, 0x76, 0x69, 0x63, 0x65, 0x73, 0x52, 0x65, 0x73, 0x70,
-	0x6f, 0x6e, 0x73, 0x65, 0x12, 0x12, 0x0a, 0x04, 0x63, 0x6f, 0x64, 0x65, 0x18, 0x01, 0x20, 0x02,
-	0x28, 0x05, 0x52, 0x04, 0x63, 0x6f, 0x64, 0x65, 0x12, 0x18, 0x0a, 0x07, 0x6d, 0x65, 0x73, 0x73,
-	0x61, 0x67, 0x65, 0x18, 0x02, 0x20, 0x02, 0x28, 0x09, 0x52, 0x07, 0x6d, 0x65, 0x73, 0x73, 0x61,
-	0x67, 0x65, 0x12, 0x33, 0x0a, 0x04, 0x64, 0x61, 0x74, 0x61, 0x18, 0x03, 0x20, 0x03, 0x28, 0x0b,
-	0x32, 0x1f, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x63, 0x6f, 0x6d, 0x6d,
-	0x6f, 0x6e, 0x2e, 0x70, 0x61, 0x72, 0x74, 0x6e, 0x65, 0x72, 0x2e, 0x44, 0x65, 0x76, 0x69, 0x63,
-	0x65, 0x52, 0x04, 0x64, 0x61, 0x74, 0x61, 0x22, 0x61, 0x0a, 0x14, 0x47, 0x65, 0x74, 0x55, 0x73,
-	0x65, 0x72, 0x44, 0x65, 0x76, 0x69, 0x63, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12,
-	0x21, 0x0a, 0x0c, 0x70, 0x61, 0x72, 0x74, 0x6e, 0x65, 0x72, 0x5f, 0x75, 0x75, 0x69, 0x64, 0x18,
-	0x01, 0x20, 0x02, 0x28, 0x09, 0x52, 0x0b, 0x70, 0x61, 0x72, 0x74, 0x6e, 0x65, 0x72, 0x55, 0x75,
-	0x69, 0x64, 0x12, 0x14, 0x0a, 0x05, 0x73, 0x74, 0x61, 0x72, 0x74, 0x18, 0x02, 0x20, 0x02, 0x28,
-	0x05, 0x52, 0x05, 0x73, 0x74, 0x61, 0x72, 0x74, 0x12, 0x10, 0x0a, 0x03, 0x65, 0x6e, 0x64, 0x18,
-	0x03, 0x20, 0x02, 0x28, 0x05, 0x52, 0x03, 0x65, 0x6e, 0x64, 0x22, 0x85, 0x01, 0x0a, 0x15, 0x47,
-	0x65, 0x74, 0x55, 0x73, 0x65, 0x72, 0x44, 0x65, 0x76, 0x69, 0x63, 0x65, 0x52, 0x65, 0x73, 0x70,
-	0x6f, 0x6e, 0x73, 0x65, 0x12, 0x12, 0x0a, 0x04, 0x63, 0x6f, 0x64, 0x65, 0x18, 0x01, 0x20, 0x02,
-	0x28, 0x05, 0x52, 0x04, 0x63, 0x6f, 0x64, 0x65, 0x12, 0x18, 0x0a, 0x07, 0x6d, 0x65, 0x73, 0x73,
-	0x61, 0x67, 0x65, 0x18, 0x02, 0x20, 0x02, 0x28, 0x09, 0x52, 0x07, 0x6d, 0x65, 0x73, 0x73, 0x61,
-	0x67, 0x65, 0x12, 0x3e, 0x0a, 0x04, 0x64, 0x61, 0x74, 0x61, 0x18, 0x03, 0x20, 0x03, 0x28, 0x0b,
-	0x32, 0x2a, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x63, 0x6f, 0x6d, 0x6d,
-	0x6f, 0x6e, 0x2e, 0x70, 0x61, 0x72, 0x74, 0x6e, 0x65, 0x72, 0x2e, 0x55, 0x73, 0x65, 0x72, 0x44,
-	0x65, 0x76, 0x69, 0x63, 0x65, 0x42, 0x69, 0x6e, 0x64, 0x69, 0x6e, 0x67, 0x52, 0x04, 0x64, 0x61,
-	0x74, 0x61, 0x32, 0x82, 0x0a, 0x0a, 0x0d, 0x47, 0x61, 0x69, 0x61, 0x50, 0x72, 0x6f, 0x78, 0x79,
-	0x47, 0x72, 0x70, 0x63, 0x12, 0x5e, 0x0a, 0x04, 0x50, 0x69, 0x6e, 0x67, 0x12, 0x20, 0x2e, 0x70,
-	0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x67, 0x61, 0x69, 0x61, 0x2e, 0x70, 0x72, 0x6f,
-	0x78, 0x79, 0x2e, 0x50, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x21,
-	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x67, 0x61, 0x69, 0x61, 0x2e, 0x70,
-	0x72, 0x6f, 0x78, 0x79, 0x2e, 0x50, 0x69, 0x6e, 0x67, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
-	0x65, 0x22, 0x11, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x0b, 0x12, 0x09, 0x2f, 0x61, 0x70, 0x69, 0x2f,
-	0x70, 0x69, 0x6e, 0x67, 0x12, 0x8e, 0x01, 0x0a, 0x11, 0x4c, 0x69, 0x73, 0x74, 0x50, 0x61, 0x72,
-	0x74, 0x6e, 0x65, 0x72, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x12, 0x2d, 0x2e, 0x70, 0x72, 0x6f,
-	0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x67, 0x61, 0x69, 0x61, 0x2e, 0x70, 0x72, 0x6f, 0x78, 0x79,
-	0x2e, 0x50, 0x61, 0x72, 0x74, 0x6e, 0x65, 0x72, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x4c, 0x69,
-	0x73, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x2e, 0x2e, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x67, 0x61, 0x69, 0x61, 0x2e, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x2e,
-	0x50, 0x61, 0x72, 0x74, 0x6e, 0x65, 0x72, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x4c, 0x69, 0x73,
-	0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x1a, 0x82, 0xd3, 0xe4, 0x93, 0x02,
-	0x14, 0x12, 0x12, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x72, 0x65, 0x73, 0x74, 0x2f, 0x70, 0x61, 0x72,
-	0x74, 0x6e, 0x65, 0x72, 0x73, 0x12, 0x98, 0x01, 0x0a, 0x10, 0x47, 0x65, 0x74, 0x50, 0x61, 0x72,
-	0x74, 0x6e, 0x65, 0x72, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x12, 0x2c, 0x2e, 0x70, 0x72, 0x6f,
-	0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x67, 0x61, 0x69, 0x61, 0x2e, 0x70, 0x72, 0x6f, 0x78, 0x79,
-	0x2e, 0x50, 0x61, 0x72, 0x74, 0x6e, 0x65, 0x72, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x47, 0x65,
-	0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x2d, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f,
-	0x63, 0x6f, 0x6c, 0x2e, 0x67, 0x61, 0x69, 0x61, 0x2e, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x2e, 0x50,
-	0x61, 0x72, 0x74, 0x6e, 0x65, 0x72, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x47, 0x65, 0x74, 0x52,
-	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x27, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x21, 0x12,
-	0x1f, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x72, 0x65, 0x73, 0x74, 0x2f, 0x70, 0x61, 0x72, 0x74, 0x6e,
-	0x65, 0x72, 0x73, 0x2f, 0x7b, 0x70, 0x61, 0x72, 0x74, 0x6e, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x7d,
-	0x12, 0x8e, 0x01, 0x0a, 0x10, 0x41, 0x64, 0x64, 0x50, 0x61, 0x72, 0x74, 0x6e, 0x65, 0x72, 0x43,
-	0x6f, 0x6e, 0x66, 0x69, 0x67, 0x12, 0x2c, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c,
-	0x2e, 0x67, 0x61, 0x69, 0x61, 0x2e, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x2e, 0x50, 0x61, 0x72, 0x74,
-	0x6e, 0x65, 0x72, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x41, 0x64, 0x64, 0x52, 0x65, 0x71, 0x75,
-	0x65, 0x73, 0x74, 0x1a, 0x2d, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x67,
-	0x61, 0x69, 0x61, 0x2e, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x2e, 0x50, 0x61, 0x72, 0x74, 0x6e, 0x65,
-	0x72, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x41, 0x64, 0x64, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
-	0x73, 0x65, 0x22, 0x1d, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x17, 0x22, 0x12, 0x2f, 0x61, 0x70, 0x69,
-	0x2f, 0x72, 0x65, 0x73, 0x74, 0x2f, 0x70, 0x61, 0x72, 0x74, 0x6e, 0x65, 0x72, 0x73, 0x3a, 0x01,
-	0x2a, 0x12, 0x71, 0x0a, 0x05, 0x53, 0x65, 0x74, 0x41, 0x43, 0x12, 0x21, 0x2e, 0x70, 0x72, 0x6f,
-	0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x67, 0x61, 0x69, 0x61, 0x2e, 0x70, 0x72, 0x6f, 0x78, 0x79,
-	0x2e, 0x53, 0x65, 0x74, 0x41, 0x43, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x22, 0x2e,
-	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x67, 0x61, 0x69, 0x61, 0x2e, 0x70, 0x72,
-	0x6f, 0x78, 0x79, 0x2e, 0x53, 0x65, 0x74, 0x41, 0x43, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
-	0x65, 0x22, 0x21, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x1b, 0x22, 0x16, 0x2f, 0x61, 0x70, 0x69, 0x2f,
-	0x72, 0x65, 0x73, 0x74, 0x2f, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x2f, 0x61, 0x63, 0x2f, 0x73, 0x65,
-	0x74, 0x3a, 0x01, 0x2a, 0x12, 0xda, 0x01, 0x0a, 0x19, 0x47, 0x65, 0x74, 0x50, 0x61, 0x72, 0x74,
-	0x6e, 0x65, 0x72, 0x52, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x49, 0x64, 0x52, 0x61, 0x6e,
-	0x67, 0x65, 0x12, 0x35, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x67, 0x61,
-	0x69, 0x61, 0x2e, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x2e, 0x47, 0x65, 0x74, 0x50, 0x61, 0x72, 0x74,
-	0x6e, 0x65, 0x72, 0x52, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x49, 0x64, 0x52, 0x61, 0x6e,
-	0x67, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x36, 0x2e, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x67, 0x61, 0x69, 0x61, 0x2e, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x2e,
-	0x47, 0x65, 0x74, 0x50, 0x61, 0x72, 0x74, 0x6e, 0x65, 0x72, 0x52, 0x65, 0x73, 0x6f, 0x75, 0x72,
-	0x63, 0x65, 0x49, 0x64, 0x52, 0x61, 0x6e, 0x67, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
-	0x65, 0x22, 0x4e, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x48, 0x12, 0x46, 0x2f, 0x61, 0x70, 0x69, 0x2f,
-	0x72, 0x65, 0x73, 0x74, 0x2f, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x2f, 0x70, 0x61, 0x72, 0x74, 0x6e,
-	0x65, 0x72, 0x73, 0x2f, 0x7b, 0x70, 0x61, 0x72, 0x74, 0x6e, 0x65, 0x72, 0x5f, 0x75, 0x75, 0x69,
-	0x64, 0x7d, 0x2f, 0x72, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x2f, 0x7b, 0x72, 0x65, 0x73,
-	0x6f, 0x75, 0x72, 0x63, 0x65, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x7d, 0x2f, 0x72, 0x61, 0x6e, 0x67,
-	0x65, 0x12, 0x76, 0x0a, 0x08, 0x47, 0x65, 0x74, 0x55, 0x73, 0x65, 0x72, 0x73, 0x12, 0x24, 0x2e,
-	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x67, 0x61, 0x69, 0x61, 0x2e, 0x70, 0x72,
-	0x6f, 0x78, 0x79, 0x2e, 0x47, 0x65, 0x74, 0x55, 0x73, 0x65, 0x72, 0x73, 0x52, 0x65, 0x71, 0x75,
-	0x65, 0x73, 0x74, 0x1a, 0x25, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x67,
-	0x61, 0x69, 0x61, 0x2e, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x2e, 0x47, 0x65, 0x74, 0x55, 0x73, 0x65,
-	0x72, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x1d, 0x82, 0xd3, 0xe4, 0x93,
-	0x02, 0x17, 0x12, 0x15, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x72, 0x65, 0x73, 0x74, 0x2f, 0x70, 0x72,
-	0x6f, 0x78, 0x79, 0x2f, 0x75, 0x73, 0x65, 0x72, 0x73, 0x12, 0x7e, 0x0a, 0x0a, 0x47, 0x65, 0x74,
-	0x44, 0x65, 0x76, 0x69, 0x63, 0x65, 0x73, 0x12, 0x26, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63,
-	0x6f, 0x6c, 0x2e, 0x67, 0x61, 0x69, 0x61, 0x2e, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x2e, 0x47, 0x65,
-	0x74, 0x44, 0x65, 0x76, 0x69, 0x63, 0x65, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a,
-	0x27, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x67, 0x61, 0x69, 0x61, 0x2e,
-	0x70, 0x72, 0x6f, 0x78, 0x79, 0x2e, 0x47, 0x65, 0x74, 0x44, 0x65, 0x76, 0x69, 0x63, 0x65, 0x73,
-	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x1f, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x19,
-	0x12, 0x17, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x72, 0x65, 0x73, 0x74, 0x2f, 0x70, 0x72, 0x6f, 0x78,
-	0x79, 0x2f, 0x64, 0x65, 0x76, 0x69, 0x63, 0x65, 0x73, 0x12, 0x8b, 0x01, 0x0a, 0x0d, 0x47, 0x65,
-	0x74, 0x55, 0x73, 0x65, 0x72, 0x44, 0x65, 0x76, 0x69, 0x63, 0x65, 0x12, 0x29, 0x2e, 0x70, 0x72,
+	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x1e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c,
+	0x2f, 0x67, 0x61, 0x69, 0x61, 0x2f, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x2f, 0x70, 0x69, 0x6e, 0x67,
+	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x21, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c,
+	0x2f, 0x67, 0x61, 0x69, 0x61, 0x2f, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x2f, 0x70, 0x61, 0x72, 0x74,
+	0x6e, 0x65, 0x72, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x1f, 0x70, 0x72, 0x6f, 0x74, 0x6f,
+	0x63, 0x6f, 0x6c, 0x2f, 0x67, 0x61, 0x69, 0x61, 0x2f, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x2f, 0x70,
+	0x72, 0x6f, 0x78, 0x79, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x32, 0xce, 0x04, 0x0a, 0x0d, 0x47,
+	0x61, 0x69, 0x61, 0x50, 0x72, 0x6f, 0x78, 0x79, 0x47, 0x72, 0x70, 0x63, 0x12, 0x5e, 0x0a, 0x04,
+	0x50, 0x69, 0x6e, 0x67, 0x12, 0x20, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e,
+	0x67, 0x61, 0x69, 0x61, 0x2e, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x2e, 0x50, 0x69, 0x6e, 0x67, 0x52,
+	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x21, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f,
+	0x6c, 0x2e, 0x67, 0x61, 0x69, 0x61, 0x2e, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x2e, 0x50, 0x69, 0x6e,
+	0x67, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x11, 0x82, 0xd3, 0xe4, 0x93, 0x02,
+	0x0b, 0x12, 0x09, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x70, 0x69, 0x6e, 0x67, 0x12, 0x77, 0x0a, 0x0b,
+	0x4c, 0x69, 0x73, 0x74, 0x50, 0x61, 0x72, 0x74, 0x6e, 0x65, 0x72, 0x12, 0x27, 0x2e, 0x70, 0x72,
 	0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x67, 0x61, 0x69, 0x61, 0x2e, 0x70, 0x72, 0x6f, 0x78,
-	0x79, 0x2e, 0x47, 0x65, 0x74, 0x55, 0x73, 0x65, 0x72, 0x44, 0x65, 0x76, 0x69, 0x63, 0x65, 0x52,
-	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x2a, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f,
-	0x6c, 0x2e, 0x67, 0x61, 0x69, 0x61, 0x2e, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x2e, 0x47, 0x65, 0x74,
-	0x55, 0x73, 0x65, 0x72, 0x44, 0x65, 0x76, 0x69, 0x63, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
-	0x73, 0x65, 0x22, 0x23, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x1d, 0x12, 0x1b, 0x2f, 0x61, 0x70, 0x69,
-	0x2f, 0x72, 0x65, 0x73, 0x74, 0x2f, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x2f, 0x75, 0x73, 0x65, 0x72,
-	0x5f, 0x64, 0x65, 0x76, 0x69, 0x63, 0x65, 0x42, 0x3d, 0x0a, 0x1b, 0x63, 0x6f, 0x6d, 0x2e, 0x74,
-	0x63, 0x6c, 0x2e, 0x67, 0x61, 0x69, 0x61, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c,
-	0x2e, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x5a, 0x1b, 0x74, 0x63, 0x6c, 0x2e, 0x63, 0x6f, 0x6d, 0x2f,
-	0x67, 0x61, 0x69, 0x61, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2f, 0x70, 0x72,
-	0x6f, 0x78, 0x79, 0x88, 0x01, 0x01,
+	0x79, 0x2e, 0x4c, 0x69, 0x73, 0x74, 0x50, 0x61, 0x72, 0x74, 0x6e, 0x65, 0x72, 0x52, 0x65, 0x71,
+	0x75, 0x65, 0x73, 0x74, 0x1a, 0x28, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e,
+	0x67, 0x61, 0x69, 0x61, 0x2e, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x2e, 0x4c, 0x69, 0x73, 0x74, 0x50,
+	0x61, 0x72, 0x74, 0x6e, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x15,
+	0x82, 0xd3, 0xe4, 0x93, 0x02, 0x0f, 0x12, 0x0d, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x70, 0x61, 0x72,
+	0x74, 0x6e, 0x65, 0x72, 0x73, 0x12, 0x81, 0x01, 0x0a, 0x0a, 0x47, 0x65, 0x74, 0x50, 0x61, 0x72,
+	0x74, 0x6e, 0x65, 0x72, 0x12, 0x26, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e,
+	0x67, 0x61, 0x69, 0x61, 0x2e, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x2e, 0x47, 0x65, 0x74, 0x50, 0x61,
+	0x72, 0x74, 0x6e, 0x65, 0x72, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x27, 0x2e, 0x70,
+	0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x67, 0x61, 0x69, 0x61, 0x2e, 0x70, 0x72, 0x6f,
+	0x78, 0x79, 0x2e, 0x47, 0x65, 0x74, 0x50, 0x61, 0x72, 0x74, 0x6e, 0x65, 0x72, 0x52, 0x65, 0x73,
+	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x22, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x1c, 0x12, 0x1a, 0x2f,
+	0x61, 0x70, 0x69, 0x2f, 0x70, 0x61, 0x72, 0x74, 0x6e, 0x65, 0x72, 0x73, 0x2f, 0x7b, 0x70, 0x61,
+	0x72, 0x74, 0x6e, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x7d, 0x12, 0x77, 0x0a, 0x0a, 0x41, 0x64, 0x64,
+	0x50, 0x61, 0x72, 0x74, 0x6e, 0x65, 0x72, 0x12, 0x26, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63,
+	0x6f, 0x6c, 0x2e, 0x67, 0x61, 0x69, 0x61, 0x2e, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x2e, 0x41, 0x64,
+	0x64, 0x50, 0x61, 0x72, 0x74, 0x6e, 0x65, 0x72, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a,
+	0x27, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x67, 0x61, 0x69, 0x61, 0x2e,
+	0x70, 0x72, 0x6f, 0x78, 0x79, 0x2e, 0x41, 0x64, 0x64, 0x50, 0x61, 0x72, 0x74, 0x6e, 0x65, 0x72,
+	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x18, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x12,
+	0x22, 0x0d, 0x2f, 0x61, 0x70, 0x69, 0x2f, 0x70, 0x61, 0x72, 0x74, 0x6e, 0x65, 0x72, 0x73, 0x3a,
+	0x01, 0x2a, 0x12, 0x67, 0x0a, 0x05, 0x50, 0x72, 0x6f, 0x78, 0x79, 0x12, 0x21, 0x2e, 0x70, 0x72,
+	0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x67, 0x61, 0x69, 0x61, 0x2e, 0x70, 0x72, 0x6f, 0x78,
+	0x79, 0x2e, 0x50, 0x72, 0x6f, 0x78, 0x79, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x22,
+	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x67, 0x61, 0x69, 0x61, 0x2e, 0x70,
+	0x72, 0x6f, 0x78, 0x79, 0x2e, 0x50, 0x72, 0x6f, 0x78, 0x79, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
+	0x73, 0x65, 0x22, 0x17, 0x82, 0xd3, 0xe4, 0x93, 0x02, 0x11, 0x12, 0x0f, 0x2f, 0x61, 0x70, 0x69,
+	0x2f, 0x72, 0x65, 0x73, 0x74, 0x2f, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x42, 0x3d, 0x0a, 0x1b, 0x63,
+	0x6f, 0x6d, 0x2e, 0x74, 0x63, 0x6c, 0x2e, 0x67, 0x61, 0x69, 0x61, 0x2e, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x5a, 0x1b, 0x74, 0x63, 0x6c, 0x2e,
+	0x63, 0x6f, 0x6d, 0x2f, 0x67, 0x61, 0x69, 0x61, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f,
+	0x6c, 0x2f, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x88, 0x01, 0x01,
 }
 
-var (
-	file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_rawDescOnce sync.Once
-	file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_rawDescData = file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_rawDesc
-)
-
-func file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_rawDescGZIP() []byte {
-	file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_rawDescOnce.Do(func() {
-		file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_rawDescData = protoimpl.X.CompressGZIP(file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_rawDescData)
-	})
-	return file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_rawDescData
-}
-
-var file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes = make([]protoimpl.MessageInfo, 11)
 var file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_goTypes = []interface{}{
-	(*PingRequest)(nil),                       // 0: protocol.gaia.proxy.PingRequest
-	(*PingResponse)(nil),                      // 1: protocol.gaia.proxy.PingResponse
-	(*SetACResponseData)(nil),                 // 2: protocol.gaia.proxy.SetACResponseData
-	(*SetACRequest)(nil),                      // 3: protocol.gaia.proxy.SetACRequest
-	(*SetACResponse)(nil),                     // 4: protocol.gaia.proxy.SetACResponse
-	(*GetUsersRequest)(nil),                   // 5: protocol.gaia.proxy.GetUsersRequest
-	(*GetUsersResponse)(nil),                  // 6: protocol.gaia.proxy.GetUsersResponse
-	(*GetDevicesRequest)(nil),                 // 7: protocol.gaia.proxy.GetDevicesRequest
-	(*GetDevicesResponse)(nil),                // 8: protocol.gaia.proxy.GetDevicesResponse
-	(*GetUserDeviceRequest)(nil),              // 9: protocol.gaia.proxy.GetUserDeviceRequest
-	(*GetUserDeviceResponse)(nil),             // 10: protocol.gaia.proxy.GetUserDeviceResponse
-	(*partner.User)(nil),                      // 11: protocol.common.partner.User
-	(*partner.Device)(nil),                    // 12: protocol.common.partner.Device
-	(*partner.UserDeviceBinding)(nil),         // 13: protocol.common.partner.UserDeviceBinding
-	(*PartnerConfigListRequest)(nil),          // 14: protocol.gaia.proxy.PartnerConfigListRequest
-	(*PartnerConfigGetRequest)(nil),           // 15: protocol.gaia.proxy.PartnerConfigGetRequest
-	(*PartnerConfigAddRequest)(nil),           // 16: protocol.gaia.proxy.PartnerConfigAddRequest
-	(*GetPartnerResourceIdRangeRequest)(nil),  // 17: protocol.gaia.proxy.GetPartnerResourceIdRangeRequest
-	(*PartnerConfigListResponse)(nil),         // 18: protocol.gaia.proxy.PartnerConfigListResponse
-	(*PartnerConfigGetResponse)(nil),          // 19: protocol.gaia.proxy.PartnerConfigGetResponse
-	(*PartnerConfigAddResponse)(nil),          // 20: protocol.gaia.proxy.PartnerConfigAddResponse
-	(*GetPartnerResourceIdRangeResponse)(nil), // 21: protocol.gaia.proxy.GetPartnerResourceIdRangeResponse
+	(*PingRequest)(nil),         // 0: protocol.gaia.proxy.PingRequest
+	(*ListPartnerRequest)(nil),  // 1: protocol.gaia.proxy.ListPartnerRequest
+	(*GetPartnerRequest)(nil),   // 2: protocol.gaia.proxy.GetPartnerRequest
+	(*AddPartnerRequest)(nil),   // 3: protocol.gaia.proxy.AddPartnerRequest
+	(*ProxyRequest)(nil),        // 4: protocol.gaia.proxy.ProxyRequest
+	(*PingResponse)(nil),        // 5: protocol.gaia.proxy.PingResponse
+	(*ListPartnerResponse)(nil), // 6: protocol.gaia.proxy.ListPartnerResponse
+	(*GetPartnerResponse)(nil),  // 7: protocol.gaia.proxy.GetPartnerResponse
+	(*AddPartnerResponse)(nil),  // 8: protocol.gaia.proxy.AddPartnerResponse
+	(*ProxyResponse)(nil),       // 9: protocol.gaia.proxy.ProxyResponse
 }
 var file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_depIdxs = []int32{
-	2,  // 0: protocol.gaia.proxy.SetACResponse.data:type_name -> protocol.gaia.proxy.SetACResponseData
-	11, // 1: protocol.gaia.proxy.GetUsersResponse.data:type_name -> protocol.common.partner.User
-	12, // 2: protocol.gaia.proxy.GetDevicesResponse.data:type_name -> protocol.common.partner.Device
-	13, // 3: protocol.gaia.proxy.GetUserDeviceResponse.data:type_name -> protocol.common.partner.UserDeviceBinding
-	0,  // 4: protocol.gaia.proxy.GaiaProxyGrpc.Ping:input_type -> protocol.gaia.proxy.PingRequest
-	14, // 5: protocol.gaia.proxy.GaiaProxyGrpc.ListPartnerConfig:input_type -> protocol.gaia.proxy.PartnerConfigListRequest
-	15, // 6: protocol.gaia.proxy.GaiaProxyGrpc.GetPartnerConfig:input_type -> protocol.gaia.proxy.PartnerConfigGetRequest
-	16, // 7: protocol.gaia.proxy.GaiaProxyGrpc.AddPartnerConfig:input_type -> protocol.gaia.proxy.PartnerConfigAddRequest
-	3,  // 8: protocol.gaia.proxy.GaiaProxyGrpc.SetAC:input_type -> protocol.gaia.proxy.SetACRequest
-	17, // 9: protocol.gaia.proxy.GaiaProxyGrpc.GetPartnerResourceIdRange:input_type -> protocol.gaia.proxy.GetPartnerResourceIdRangeRequest
-	5,  // 10: protocol.gaia.proxy.GaiaProxyGrpc.GetUsers:input_type -> protocol.gaia.proxy.GetUsersRequest
-	7,  // 11: protocol.gaia.proxy.GaiaProxyGrpc.GetDevices:input_type -> protocol.gaia.proxy.GetDevicesRequest
-	9,  // 12: protocol.gaia.proxy.GaiaProxyGrpc.GetUserDevice:input_type -> protocol.gaia.proxy.GetUserDeviceRequest
-	1,  // 13: protocol.gaia.proxy.GaiaProxyGrpc.Ping:output_type -> protocol.gaia.proxy.PingResponse
-	18, // 14: protocol.gaia.proxy.GaiaProxyGrpc.ListPartnerConfig:output_type -> protocol.gaia.proxy.PartnerConfigListResponse
-	19, // 15: protocol.gaia.proxy.GaiaProxyGrpc.GetPartnerConfig:output_type -> protocol.gaia.proxy.PartnerConfigGetResponse
-	20, // 16: protocol.gaia.proxy.GaiaProxyGrpc.AddPartnerConfig:output_type -> protocol.gaia.proxy.PartnerConfigAddResponse
-	4,  // 17: protocol.gaia.proxy.GaiaProxyGrpc.SetAC:output_type -> protocol.gaia.proxy.SetACResponse
-	21, // 18: protocol.gaia.proxy.GaiaProxyGrpc.GetPartnerResourceIdRange:output_type -> protocol.gaia.proxy.GetPartnerResourceIdRangeResponse
-	6,  // 19: protocol.gaia.proxy.GaiaProxyGrpc.GetUsers:output_type -> protocol.gaia.proxy.GetUsersResponse
-	8,  // 20: protocol.gaia.proxy.GaiaProxyGrpc.GetDevices:output_type -> protocol.gaia.proxy.GetDevicesResponse
-	10, // 21: protocol.gaia.proxy.GaiaProxyGrpc.GetUserDevice:output_type -> protocol.gaia.proxy.GetUserDeviceResponse
-	13, // [13:22] is the sub-list for method output_type
-	4,  // [4:13] is the sub-list for method input_type
-	4,  // [4:4] is the sub-list for extension type_name
-	4,  // [4:4] is the sub-list for extension extendee
-	0,  // [0:4] is the sub-list for field type_name
+	0, // 0: protocol.gaia.proxy.GaiaProxyGrpc.Ping:input_type -> protocol.gaia.proxy.PingRequest
+	1, // 1: protocol.gaia.proxy.GaiaProxyGrpc.ListPartner:input_type -> protocol.gaia.proxy.ListPartnerRequest
+	2, // 2: protocol.gaia.proxy.GaiaProxyGrpc.GetPartner:input_type -> protocol.gaia.proxy.GetPartnerRequest
+	3, // 3: protocol.gaia.proxy.GaiaProxyGrpc.AddPartner:input_type -> protocol.gaia.proxy.AddPartnerRequest
+	4, // 4: protocol.gaia.proxy.GaiaProxyGrpc.Proxy:input_type -> protocol.gaia.proxy.ProxyRequest
+	5, // 5: protocol.gaia.proxy.GaiaProxyGrpc.Ping:output_type -> protocol.gaia.proxy.PingResponse
+	6, // 6: protocol.gaia.proxy.GaiaProxyGrpc.ListPartner:output_type -> protocol.gaia.proxy.ListPartnerResponse
+	7, // 7: protocol.gaia.proxy.GaiaProxyGrpc.GetPartner:output_type -> protocol.gaia.proxy.GetPartnerResponse
+	8, // 8: protocol.gaia.proxy.GaiaProxyGrpc.AddPartner:output_type -> protocol.gaia.proxy.AddPartnerResponse
+	9, // 9: protocol.gaia.proxy.GaiaProxyGrpc.Proxy:output_type -> protocol.gaia.proxy.ProxyResponse
+	5, // [5:10] is the sub-list for method output_type
+	0, // [0:5] is the sub-list for method input_type
+	0, // [0:0] is the sub-list for extension type_name
+	0, // [0:0] is the sub-list for extension extendee
+	0, // [0:0] is the sub-list for field type_name
 }
 
 func init() { file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_init() }
@@ -930,155 +123,21 @@ func file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_init() {
 	if File_protocol_gaia_proxy_gaia_proxy_grpc_service_proto != nil {
 		return
 	}
-	file_protocol_gaia_proxy_partner_config_proto_init()
-	file_protocol_gaia_proxy_partner_resource_proto_init()
-	if !protoimpl.UnsafeEnabled {
-		file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*PingRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*PingResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SetACResponseData); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SetACRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SetACResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetUsersRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetUsersResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetDevicesRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetDevicesResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetUserDeviceRequest); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-		file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetUserDeviceResponse); i {
-			case 0:
-				return &v.state
-			case 1:
-				return &v.sizeCache
-			case 2:
-				return &v.unknownFields
-			default:
-				return nil
-			}
-		}
-	}
+	file_protocol_gaia_proxy_ping_proto_init()
+	file_protocol_gaia_proxy_partner_proto_init()
+	file_protocol_gaia_proxy_proxy_proto_init()
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   11,
+			NumMessages:   0,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
 		GoTypes:           file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_goTypes,
 		DependencyIndexes: file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_depIdxs,
-		MessageInfos:      file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_msgTypes,
 	}.Build()
 	File_protocol_gaia_proxy_gaia_proxy_grpc_service_proto = out.File
 	file_protocol_gaia_proxy_gaia_proxy_grpc_service_proto_rawDesc = nil
@@ -1099,15 +158,12 @@ const _ = grpc.SupportPackageIsVersion6
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type GaiaProxyGrpcClient interface {
 	Ping(ctx context.Context, in *PingRequest, opts ...grpc.CallOption) (*PingResponse, error)
-	ListPartnerConfig(ctx context.Context, in *PartnerConfigListRequest, opts ...grpc.CallOption) (*PartnerConfigListResponse, error)
-	GetPartnerConfig(ctx context.Context, in *PartnerConfigGetRequest, opts ...grpc.CallOption) (*PartnerConfigGetResponse, error)
-	AddPartnerConfig(ctx context.Context, in *PartnerConfigAddRequest, opts ...grpc.CallOption) (*PartnerConfigAddResponse, error)
-	SetAC(ctx context.Context, in *SetACRequest, opts ...grpc.CallOption) (*SetACResponse, error)
-	// for sync
-	GetPartnerResourceIdRange(ctx context.Context, in *GetPartnerResourceIdRangeRequest, opts ...grpc.CallOption) (*GetPartnerResourceIdRangeResponse, error)
-	GetUsers(ctx context.Context, in *GetUsersRequest, opts ...grpc.CallOption) (*GetUsersResponse, error)
-	GetDevices(ctx context.Context, in *GetDevicesRequest, opts ...grpc.CallOption) (*GetDevicesResponse, error)
-	GetUserDevice(ctx context.Context, in *GetUserDeviceRequest, opts ...grpc.CallOption) (*GetUserDeviceResponse, error)
+	// partner management
+	ListPartner(ctx context.Context, in *ListPartnerRequest, opts ...grpc.CallOption) (*ListPartnerResponse, error)
+	GetPartner(ctx context.Context, in *GetPartnerRequest, opts ...grpc.CallOption) (*GetPartnerResponse, error)
+	AddPartner(ctx context.Context, in *AddPartnerRequest, opts ...grpc.CallOption) (*AddPartnerResponse, error)
+	// proxy
+	Proxy(ctx context.Context, in *ProxyRequest, opts ...grpc.CallOption) (*ProxyResponse, error)
 }
 
 type gaiaProxyGrpcClient struct {
@@ -1127,72 +183,36 @@ func (c *gaiaProxyGrpcClient) Ping(ctx context.Context, in *PingRequest, opts ..
 	return out, nil
 }
 
-func (c *gaiaProxyGrpcClient) ListPartnerConfig(ctx context.Context, in *PartnerConfigListRequest, opts ...grpc.CallOption) (*PartnerConfigListResponse, error) {
-	out := new(PartnerConfigListResponse)
-	err := c.cc.Invoke(ctx, "/protocol.gaia.proxy.GaiaProxyGrpc/ListPartnerConfig", in, out, opts...)
+func (c *gaiaProxyGrpcClient) ListPartner(ctx context.Context, in *ListPartnerRequest, opts ...grpc.CallOption) (*ListPartnerResponse, error) {
+	out := new(ListPartnerResponse)
+	err := c.cc.Invoke(ctx, "/protocol.gaia.proxy.GaiaProxyGrpc/ListPartner", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *gaiaProxyGrpcClient) GetPartnerConfig(ctx context.Context, in *PartnerConfigGetRequest, opts ...grpc.CallOption) (*PartnerConfigGetResponse, error) {
-	out := new(PartnerConfigGetResponse)
-	err := c.cc.Invoke(ctx, "/protocol.gaia.proxy.GaiaProxyGrpc/GetPartnerConfig", in, out, opts...)
+func (c *gaiaProxyGrpcClient) GetPartner(ctx context.Context, in *GetPartnerRequest, opts ...grpc.CallOption) (*GetPartnerResponse, error) {
+	out := new(GetPartnerResponse)
+	err := c.cc.Invoke(ctx, "/protocol.gaia.proxy.GaiaProxyGrpc/GetPartner", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *gaiaProxyGrpcClient) AddPartnerConfig(ctx context.Context, in *PartnerConfigAddRequest, opts ...grpc.CallOption) (*PartnerConfigAddResponse, error) {
-	out := new(PartnerConfigAddResponse)
-	err := c.cc.Invoke(ctx, "/protocol.gaia.proxy.GaiaProxyGrpc/AddPartnerConfig", in, out, opts...)
+func (c *gaiaProxyGrpcClient) AddPartner(ctx context.Context, in *AddPartnerRequest, opts ...grpc.CallOption) (*AddPartnerResponse, error) {
+	out := new(AddPartnerResponse)
+	err := c.cc.Invoke(ctx, "/protocol.gaia.proxy.GaiaProxyGrpc/AddPartner", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *gaiaProxyGrpcClient) SetAC(ctx context.Context, in *SetACRequest, opts ...grpc.CallOption) (*SetACResponse, error) {
-	out := new(SetACResponse)
-	err := c.cc.Invoke(ctx, "/protocol.gaia.proxy.GaiaProxyGrpc/SetAC", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *gaiaProxyGrpcClient) GetPartnerResourceIdRange(ctx context.Context, in *GetPartnerResourceIdRangeRequest, opts ...grpc.CallOption) (*GetPartnerResourceIdRangeResponse, error) {
-	out := new(GetPartnerResourceIdRangeResponse)
-	err := c.cc.Invoke(ctx, "/protocol.gaia.proxy.GaiaProxyGrpc/GetPartnerResourceIdRange", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *gaiaProxyGrpcClient) GetUsers(ctx context.Context, in *GetUsersRequest, opts ...grpc.CallOption) (*GetUsersResponse, error) {
-	out := new(GetUsersResponse)
-	err := c.cc.Invoke(ctx, "/protocol.gaia.proxy.GaiaProxyGrpc/GetUsers", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *gaiaProxyGrpcClient) GetDevices(ctx context.Context, in *GetDevicesRequest, opts ...grpc.CallOption) (*GetDevicesResponse, error) {
-	out := new(GetDevicesResponse)
-	err := c.cc.Invoke(ctx, "/protocol.gaia.proxy.GaiaProxyGrpc/GetDevices", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *gaiaProxyGrpcClient) GetUserDevice(ctx context.Context, in *GetUserDeviceRequest, opts ...grpc.CallOption) (*GetUserDeviceResponse, error) {
-	out := new(GetUserDeviceResponse)
-	err := c.cc.Invoke(ctx, "/protocol.gaia.proxy.GaiaProxyGrpc/GetUserDevice", in, out, opts...)
+func (c *gaiaProxyGrpcClient) Proxy(ctx context.Context, in *ProxyRequest, opts ...grpc.CallOption) (*ProxyResponse, error) {
+	out := new(ProxyResponse)
+	err := c.cc.Invoke(ctx, "/protocol.gaia.proxy.GaiaProxyGrpc/Proxy", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1202,15 +222,12 @@ func (c *gaiaProxyGrpcClient) GetUserDevice(ctx context.Context, in *GetUserDevi
 // GaiaProxyGrpcServer is the server API for GaiaProxyGrpc service.
 type GaiaProxyGrpcServer interface {
 	Ping(context.Context, *PingRequest) (*PingResponse, error)
-	ListPartnerConfig(context.Context, *PartnerConfigListRequest) (*PartnerConfigListResponse, error)
-	GetPartnerConfig(context.Context, *PartnerConfigGetRequest) (*PartnerConfigGetResponse, error)
-	AddPartnerConfig(context.Context, *PartnerConfigAddRequest) (*PartnerConfigAddResponse, error)
-	SetAC(context.Context, *SetACRequest) (*SetACResponse, error)
-	// for sync
-	GetPartnerResourceIdRange(context.Context, *GetPartnerResourceIdRangeRequest) (*GetPartnerResourceIdRangeResponse, error)
-	GetUsers(context.Context, *GetUsersRequest) (*GetUsersResponse, error)
-	GetDevices(context.Context, *GetDevicesRequest) (*GetDevicesResponse, error)
-	GetUserDevice(context.Context, *GetUserDeviceRequest) (*GetUserDeviceResponse, error)
+	// partner management
+	ListPartner(context.Context, *ListPartnerRequest) (*ListPartnerResponse, error)
+	GetPartner(context.Context, *GetPartnerRequest) (*GetPartnerResponse, error)
+	AddPartner(context.Context, *AddPartnerRequest) (*AddPartnerResponse, error)
+	// proxy
+	Proxy(context.Context, *ProxyRequest) (*ProxyResponse, error)
 }
 
 // UnimplementedGaiaProxyGrpcServer can be embedded to have forward compatible implementations.
@@ -1220,29 +237,17 @@ type UnimplementedGaiaProxyGrpcServer struct {
 func (*UnimplementedGaiaProxyGrpcServer) Ping(context.Context, *PingRequest) (*PingResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Ping not implemented")
 }
-func (*UnimplementedGaiaProxyGrpcServer) ListPartnerConfig(context.Context, *PartnerConfigListRequest) (*PartnerConfigListResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method ListPartnerConfig not implemented")
+func (*UnimplementedGaiaProxyGrpcServer) ListPartner(context.Context, *ListPartnerRequest) (*ListPartnerResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ListPartner not implemented")
 }
-func (*UnimplementedGaiaProxyGrpcServer) GetPartnerConfig(context.Context, *PartnerConfigGetRequest) (*PartnerConfigGetResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetPartnerConfig not implemented")
+func (*UnimplementedGaiaProxyGrpcServer) GetPartner(context.Context, *GetPartnerRequest) (*GetPartnerResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetPartner not implemented")
 }
-func (*UnimplementedGaiaProxyGrpcServer) AddPartnerConfig(context.Context, *PartnerConfigAddRequest) (*PartnerConfigAddResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method AddPartnerConfig not implemented")
+func (*UnimplementedGaiaProxyGrpcServer) AddPartner(context.Context, *AddPartnerRequest) (*AddPartnerResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method AddPartner not implemented")
 }
-func (*UnimplementedGaiaProxyGrpcServer) SetAC(context.Context, *SetACRequest) (*SetACResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method SetAC not implemented")
-}
-func (*UnimplementedGaiaProxyGrpcServer) GetPartnerResourceIdRange(context.Context, *GetPartnerResourceIdRangeRequest) (*GetPartnerResourceIdRangeResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetPartnerResourceIdRange not implemented")
-}
-func (*UnimplementedGaiaProxyGrpcServer) GetUsers(context.Context, *GetUsersRequest) (*GetUsersResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetUsers not implemented")
-}
-func (*UnimplementedGaiaProxyGrpcServer) GetDevices(context.Context, *GetDevicesRequest) (*GetDevicesResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetDevices not implemented")
-}
-func (*UnimplementedGaiaProxyGrpcServer) GetUserDevice(context.Context, *GetUserDeviceRequest) (*GetUserDeviceResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetUserDevice not implemented")
+func (*UnimplementedGaiaProxyGrpcServer) Proxy(context.Context, *ProxyRequest) (*ProxyResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Proxy not implemented")
 }
 
 func RegisterGaiaProxyGrpcServer(s *grpc.Server, srv GaiaProxyGrpcServer) {
@@ -1267,146 +272,74 @@ func _GaiaProxyGrpc_Ping_Handler(srv interface{}, ctx context.Context, dec func(
 	return interceptor(ctx, in, info, handler)
 }
 
-func _GaiaProxyGrpc_ListPartnerConfig_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(PartnerConfigListRequest)
+func _GaiaProxyGrpc_ListPartner_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ListPartnerRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GaiaProxyGrpcServer).ListPartnerConfig(ctx, in)
+		return srv.(GaiaProxyGrpcServer).ListPartner(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/protocol.gaia.proxy.GaiaProxyGrpc/ListPartnerConfig",
+		FullMethod: "/protocol.gaia.proxy.GaiaProxyGrpc/ListPartner",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GaiaProxyGrpcServer).ListPartnerConfig(ctx, req.(*PartnerConfigListRequest))
+		return srv.(GaiaProxyGrpcServer).ListPartner(ctx, req.(*ListPartnerRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _GaiaProxyGrpc_GetPartnerConfig_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(PartnerConfigGetRequest)
+func _GaiaProxyGrpc_GetPartner_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetPartnerRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GaiaProxyGrpcServer).GetPartnerConfig(ctx, in)
+		return srv.(GaiaProxyGrpcServer).GetPartner(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/protocol.gaia.proxy.GaiaProxyGrpc/GetPartnerConfig",
+		FullMethod: "/protocol.gaia.proxy.GaiaProxyGrpc/GetPartner",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GaiaProxyGrpcServer).GetPartnerConfig(ctx, req.(*PartnerConfigGetRequest))
+		return srv.(GaiaProxyGrpcServer).GetPartner(ctx, req.(*GetPartnerRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _GaiaProxyGrpc_AddPartnerConfig_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(PartnerConfigAddRequest)
+func _GaiaProxyGrpc_AddPartner_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(AddPartnerRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GaiaProxyGrpcServer).AddPartnerConfig(ctx, in)
+		return srv.(GaiaProxyGrpcServer).AddPartner(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/protocol.gaia.proxy.GaiaProxyGrpc/AddPartnerConfig",
+		FullMethod: "/protocol.gaia.proxy.GaiaProxyGrpc/AddPartner",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GaiaProxyGrpcServer).AddPartnerConfig(ctx, req.(*PartnerConfigAddRequest))
+		return srv.(GaiaProxyGrpcServer).AddPartner(ctx, req.(*AddPartnerRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _GaiaProxyGrpc_SetAC_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(SetACRequest)
+func _GaiaProxyGrpc_Proxy_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ProxyRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GaiaProxyGrpcServer).SetAC(ctx, in)
+		return srv.(GaiaProxyGrpcServer).Proxy(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/protocol.gaia.proxy.GaiaProxyGrpc/SetAC",
+		FullMethod: "/protocol.gaia.proxy.GaiaProxyGrpc/Proxy",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GaiaProxyGrpcServer).SetAC(ctx, req.(*SetACRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _GaiaProxyGrpc_GetPartnerResourceIdRange_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetPartnerResourceIdRangeRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(GaiaProxyGrpcServer).GetPartnerResourceIdRange(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/protocol.gaia.proxy.GaiaProxyGrpc/GetPartnerResourceIdRange",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GaiaProxyGrpcServer).GetPartnerResourceIdRange(ctx, req.(*GetPartnerResourceIdRangeRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _GaiaProxyGrpc_GetUsers_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetUsersRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(GaiaProxyGrpcServer).GetUsers(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/protocol.gaia.proxy.GaiaProxyGrpc/GetUsers",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GaiaProxyGrpcServer).GetUsers(ctx, req.(*GetUsersRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _GaiaProxyGrpc_GetDevices_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetDevicesRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(GaiaProxyGrpcServer).GetDevices(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/protocol.gaia.proxy.GaiaProxyGrpc/GetDevices",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GaiaProxyGrpcServer).GetDevices(ctx, req.(*GetDevicesRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _GaiaProxyGrpc_GetUserDevice_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetUserDeviceRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(GaiaProxyGrpcServer).GetUserDevice(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/protocol.gaia.proxy.GaiaProxyGrpc/GetUserDevice",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GaiaProxyGrpcServer).GetUserDevice(ctx, req.(*GetUserDeviceRequest))
+		return srv.(GaiaProxyGrpcServer).Proxy(ctx, req.(*ProxyRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -1420,36 +353,20 @@ var _GaiaProxyGrpc_serviceDesc = grpc.ServiceDesc{
 			Handler:    _GaiaProxyGrpc_Ping_Handler,
 		},
 		{
-			MethodName: "ListPartnerConfig",
-			Handler:    _GaiaProxyGrpc_ListPartnerConfig_Handler,
+			MethodName: "ListPartner",
+			Handler:    _GaiaProxyGrpc_ListPartner_Handler,
 		},
 		{
-			MethodName: "GetPartnerConfig",
-			Handler:    _GaiaProxyGrpc_GetPartnerConfig_Handler,
+			MethodName: "GetPartner",
+			Handler:    _GaiaProxyGrpc_GetPartner_Handler,
 		},
 		{
-			MethodName: "AddPartnerConfig",
-			Handler:    _GaiaProxyGrpc_AddPartnerConfig_Handler,
+			MethodName: "AddPartner",
+			Handler:    _GaiaProxyGrpc_AddPartner_Handler,
 		},
 		{
-			MethodName: "SetAC",
-			Handler:    _GaiaProxyGrpc_SetAC_Handler,
-		},
-		{
-			MethodName: "GetPartnerResourceIdRange",
-			Handler:    _GaiaProxyGrpc_GetPartnerResourceIdRange_Handler,
-		},
-		{
-			MethodName: "GetUsers",
-			Handler:    _GaiaProxyGrpc_GetUsers_Handler,
-		},
-		{
-			MethodName: "GetDevices",
-			Handler:    _GaiaProxyGrpc_GetDevices_Handler,
-		},
-		{
-			MethodName: "GetUserDevice",
-			Handler:    _GaiaProxyGrpc_GetUserDevice_Handler,
+			MethodName: "Proxy",
+			Handler:    _GaiaProxyGrpc_Proxy_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

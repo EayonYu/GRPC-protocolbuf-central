@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+package protocol.gaia.proxy;
+option go_package = "tcl.com/gaia/protocol/proxy";
+option java_package = "com.tcl.gaia.protocol.proxy";
+
+
+message PingRequest {
+
+}
+
+message PingResponse {
+    required bool pong = 1;
+}

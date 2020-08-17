@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.25.0-devel
 // 	protoc        v3.12.4
-// source: protocol/gaia/proxy/partner_config.proto
+// source: protocol/gaia/proxy/partner.proto
 
 package proxy
 
