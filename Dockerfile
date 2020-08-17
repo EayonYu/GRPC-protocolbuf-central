@@ -34,8 +34,8 @@ RUN pip install grpcio-tools==1.31.0 -i https://mirrors.aliyun.com/pypi/simple
 
 # go
 WORKDIR /
-RUN wget -O go1.14.7.linux-amd64.tar.gz https://golang.org/dl/go1.14.7.linux-amd64.tar.gz
-RUN tar -C /usr/local -xzf go1.14.7.linux-amd64.tar.gz
+RUN wget -O go1.15.linux-amd64.tar.gz https://golang.org/dl/go1.15.linux-amd64.tar.gz
+RUN tar -C /usr/local -xzf go1.15.linux-amd64.tar.gz
 ENV PATH="/usr/local/go/bin:${PATH}"
 ENV GOPATH="/root/go:${GOPATH}"
 RUN apt-get install -y git

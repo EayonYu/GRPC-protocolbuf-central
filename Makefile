@@ -30,7 +30,7 @@ protocol:
 	python -m grpc_tools.protoc --proto_path=. --python_out=./build/python --grpc_python_out=./build/python ./protocol/gaia/proxy/gaia_proxy_grpc_service.proto
 	python -m grpc_tools.protoc --proto_path=. --python_out=./build/python --grpc_python_out=./build/python ./protocol/gaia/mirror/gaia_mirror_grpc_service.proto
 
-	cd ./build/go/tcl.com/gaia/protocol && rm -rf go.mod && go mod init tcl.com/gaia/protocol
+	cd ./build/go/tcl.com/gaia/protocol && rm -rf go.mod && go mod init tcl.com/gaia/protocol && touch version.$(version)
 
 clean:
 	bash ./scripts/env.sh clean
