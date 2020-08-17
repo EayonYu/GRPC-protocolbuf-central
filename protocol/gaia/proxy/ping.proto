@@ -30,10 +30,10 @@ service Ping {
 
 // The request message containing the user's name.
 message PingRequest {
-  string name = 1;
+  optional string name = 1;
 }
 
 // The response message containing the greetings
 message PongReply {
-  string message = 1;
+  required string message = 1;
 }
