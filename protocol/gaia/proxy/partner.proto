@@ -52,7 +52,7 @@ message AddPartnerRequest {
     required string name = 1;
     required string endpoint = 2;
     required string type = 3;
-    required string oauth2Endpoint = 4;
+    required string oAuth2Endpoint = 4;
     required string clientId = 5;
     required string clientSecret = 6;
 }
