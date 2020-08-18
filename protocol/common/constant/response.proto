@@ -6,10 +6,7 @@ option go_package = "tcl.com/gaia/protocol/constant";
 option java_package = "com.tcl.gaia.protocol.constant";
 
 
-import "protocol/common/constant/code.proto";
-
-
 message ResponseHeader {
-    required protocol.common.constant.StatusCode statusCode = 1;
+    required int32 statusCode = 1;
     optional string msg = 2;
 }
