@@ -7,5 +7,4 @@ option java_package = "com.tcl.gaia.protocol.constant";
 
 
 message RequestHeader {
-    required string deviceId = 1;
 }
