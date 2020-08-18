@@ -2,8 +2,8 @@ syntax = "proto2";
 
 
 package protocol.common.constant;
-option go_package = "tcl.com/gaia/protocol/code";
-option java_package = "com.tcl.gaia.protocol.code";
+option go_package = "tcl.com/gaia/protocol/constant";
+option java_package = "com.tcl.gaia.protocol.constant";
 
 // https://confluence.tclking.com/display/IoT4/Error+Codes
 enum Code {

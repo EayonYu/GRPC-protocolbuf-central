@@ -185,6 +185,25 @@
     }
   },
   "definitions": {
+    "constantRequestHeader": {
+      "type": "object",
+      "properties": {
+        "deviceId": {
+          "type": "string"
+        }
+      }
+    },
+    "constantResponseHeader": {
+      "type": "object",
+      "properties": {
+        "statusCode": {
+          "type": "string"
+        },
+        "msg": {
+          "type": "string"
+        }
+      }
+    },
     "protobufAny": {
       "type": "object",
       "properties": {
@@ -198,6 +217,17 @@
       }
     },
     "proxyAddPartnerRequest": {
+      "type": "object",
+      "properties": {
+        "header": {
+          "$ref": "#/definitions/constantRequestHeader"
+        },
+        "payload": {
+          "$ref": "#/definitions/proxyAddPartnerRequestPayload"
+        }
+      }
+    },
+    "proxyAddPartnerRequestPayload": {
       "type": "object",
       "properties": {
         "name": {
@@ -223,14 +253,10 @@
     "proxyAddPartnerResponse": {
       "type": "object",
       "properties": {
-        "code": {
-          "type": "integer",
-          "format": "int32"
+        "header": {
+          "$ref": "#/definitions/constantResponseHeader"
         },
-        "message": {
-          "type": "string"
-        },
-        "data": {
+        "payload": {
           "$ref": "#/definitions/proxyPartner"
         }
       }

@@ -11,6 +11,8 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from protocol.common.constant import request_pb2 as protocol_dot_common_dot_constant_dot_request__pb2
+from protocol.common.constant import response_pb2 as protocol_dot_common_dot_constant_dot_response__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -19,8 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=b'\n\033com.tcl.gaia.protocol.proxyZ\033tcl.com/gaia/protocol/proxy',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n!protocol/gaia/proxy/partner.proto\x12\x13protocol.gaia.proxy\"m\n\x07Partner\x12\x0c\n\x04uuid\x18\x01 \x02(\t\x12\x0c\n\x04name\x18\x02 \x02(\t\x12\x0c\n\x04type\x18\x03 \x02(\t\x12\x10\n\x08\x65ndpoint\x18\x04 \x02(\t\x12\x12\n\ncreateTime\x18\x05 \x02(\t\x12\x12\n\nupdateTime\x18\x06 \x02(\t\"\xb7\x01\n\x0fPartnerPageData\x12-\n\x07\x63ontent\x18\x01 \x03(\x0b\x32\x1c.protocol.gaia.proxy.Partner\x12\r\n\x05paged\x18\x02 \x02(\x08\x12\x0c\n\x04page\x18\x03 \x02(\x05\x12\x12\n\ntotalPages\x18\x04 \x02(\x05\x12\x10\n\x08\x65lements\x18\x05 \x02(\x05\x12\x15\n\rtotalElements\x18\x06 \x02(\x05\x12\r\n\x05\x66irst\x18\x07 \x02(\x08\x12\x0c\n\x04last\x18\x08 \x02(\x08\"R\n\x12ListPartnerRequest\x12\x10\n\x08searchBy\x18\x01 \x03(\t\x12\x0e\n\x06sortBy\x18\x02 \x03(\t\x12\x0c\n\x04page\x18\x03 \x03(\x05\x12\x0c\n\x04size\x18\x04 \x03(\x05\"h\n\x13ListPartnerResponse\x12\x0c\n\x04\x63ode\x18\x01 \x02(\x05\x12\x0f\n\x07message\x18\x02 \x02(\t\x12\x32\n\x04\x64\x61ta\x18\x03 \x02(\x0b\x32$.protocol.gaia.proxy.PartnerPageData\"\'\n\x11GetPartnerRequest\x12\x12\n\npartner_id\x18\x01 \x02(\t\"_\n\x12GetPartnerResponse\x12\x0c\n\x04\x63ode\x18\x01 \x02(\x05\x12\x0f\n\x07message\x18\x02 \x02(\t\x12*\n\x04\x64\x61ta\x18\x03 \x02(\x0b\x32\x1c.protocol.gaia.proxy.Partner\"\x81\x01\n\x11\x41\x64\x64PartnerRequest\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\x10\n\x08\x65ndpoint\x18\x02 \x02(\t\x12\x0c\n\x04type\x18\x03 \x02(\t\x12\x16\n\x0eoAuth2Endpoint\x18\x04 \x02(\t\x12\x10\n\x08\x63lientId\x18\x05 \x02(\t\x12\x14\n\x0c\x63lientSecret\x18\x06 \x02(\t\"_\n\x12\x41\x64\x64PartnerResponse\x12\x0c\n\x04\x63ode\x18\x01 \x02(\x05\x12\x0f\n\x07message\x18\x02 \x02(\t\x12*\n\x04\x64\x61ta\x18\x03 \x02(\x0b\x32\x1c.protocol.gaia.proxy.PartnerB:\n\x1b\x63om.tcl.gaia.protocol.proxyZ\x1btcl.com/gaia/protocol/proxy'
-)
+  serialized_pb=b'\n!protocol/gaia/proxy/partner.proto\x12\x13protocol.gaia.proxy\x1a&protocol/common/constant/request.proto\x1a\'protocol/common/constant/response.proto\"m\n\x07Partner\x12\x0c\n\x04uuid\x18\x01 \x02(\t\x12\x0c\n\x04name\x18\x02 \x02(\t\x12\x0c\n\x04type\x18\x03 \x02(\t\x12\x10\n\x08\x65ndpoint\x18\x04 \x02(\t\x12\x12\n\ncreateTime\x18\x05 \x02(\t\x12\x12\n\nupdateTime\x18\x06 \x02(\t\"\xb7\x01\n\x0fPartnerPageData\x12-\n\x07\x63ontent\x18\x01 \x03(\x0b\x32\x1c.protocol.gaia.proxy.Partner\x12\r\n\x05paged\x18\x02 \x02(\x08\x12\x0c\n\x04page\x18\x03 \x02(\x05\x12\x12\n\ntotalPages\x18\x04 \x02(\x05\x12\x10\n\x08\x65lements\x18\x05 \x02(\x05\x12\x15\n\rtotalElements\x18\x06 \x02(\x05\x12\r\n\x05\x66irst\x18\x07 \x02(\x08\x12\x0c\n\x04last\x18\x08 \x02(\x08\"R\n\x12ListPartnerRequest\x12\x10\n\x08searchBy\x18\x01 \x03(\t\x12\x0e\n\x06sortBy\x18\x02 \x03(\t\x12\x0c\n\x04page\x18\x03 \x03(\x05\x12\x0c\n\x04size\x18\x04 \x03(\x05\"h\n\x13ListPartnerResponse\x12\x0c\n\x04\x63ode\x18\x01 \x02(\x05\x12\x0f\n\x07message\x18\x02 \x02(\t\x12\x32\n\x04\x64\x61ta\x18\x03 \x02(\x0b\x32$.protocol.gaia.proxy.PartnerPageData\"\'\n\x11GetPartnerRequest\x12\x12\n\npartner_id\x18\x01 \x02(\t\"_\n\x12GetPartnerResponse\x12\x0c\n\x04\x63ode\x18\x01 \x02(\x05\x12\x0f\n\x07message\x18\x02 \x02(\t\x12*\n\x04\x64\x61ta\x18\x03 \x02(\x0b\x32\x1c.protocol.gaia.proxy.Partner\"\x88\x01\n\x18\x41\x64\x64PartnerRequestPayload\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\x10\n\x08\x65ndpoint\x18\x02 \x02(\t\x12\x0c\n\x04type\x18\x03 \x02(\t\x12\x16\n\x0eoAuth2Endpoint\x18\x04 \x02(\t\x12\x10\n\x08\x63lientId\x18\x05 \x02(\t\x12\x14\n\x0c\x63lientSecret\x18\x06 \x02(\t\"\x8c\x01\n\x11\x41\x64\x64PartnerRequest\x12\x37\n\x06header\x18\x01 \x02(\x0b\x32\'.protocol.common.constant.RequestHeader\x12>\n\x07payload\x18\x02 \x02(\x0b\x32-.protocol.gaia.proxy.AddPartnerRequestPayload\"}\n\x12\x41\x64\x64PartnerResponse\x12\x38\n\x06header\x18\x01 \x02(\x0b\x32(.protocol.common.constant.ResponseHeader\x12-\n\x07payload\x18\x02 \x01(\x0b\x32\x1c.protocol.gaia.proxy.PartnerB:\n\x1b\x63om.tcl.gaia.protocol.proxyZ\x1btcl.com/gaia/protocol/proxy'
+  ,
+  dependencies=[protocol_dot_common_dot_constant_dot_request__pb2.DESCRIPTOR,protocol_dot_common_dot_constant_dot_response__pb2.DESCRIPTOR,])
 
 
 
@@ -87,8 +90,8 @@ _PARTNER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=58,
-  serialized_end=167,
+  serialized_start=139,
+  serialized_end=248,
 )
 
 
@@ -168,8 +171,8 @@ _PARTNERPAGEDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=170,
-  serialized_end=353,
+  serialized_start=251,
+  serialized_end=434,
 )
 
 
@@ -221,8 +224,8 @@ _LISTPARTNERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=355,
-  serialized_end=437,
+  serialized_start=436,
+  serialized_end=518,
 )
 
 
@@ -267,8 +270,8 @@ _LISTPARTNERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=439,
-  serialized_end=543,
+  serialized_start=520,
+  serialized_end=624,
 )
 
 
@@ -299,8 +302,8 @@ _GETPARTNERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=545,
-  serialized_end=584,
+  serialized_start=626,
+  serialized_end=665,
 )
 
 
@@ -345,56 +348,56 @@ _GETPARTNERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=586,
-  serialized_end=681,
+  serialized_start=667,
+  serialized_end=762,
 )
 
 
-_ADDPARTNERREQUEST = _descriptor.Descriptor(
-  name='AddPartnerRequest',
-  full_name='protocol.gaia.proxy.AddPartnerRequest',
+_ADDPARTNERREQUESTPAYLOAD = _descriptor.Descriptor(
+  name='AddPartnerRequestPayload',
+  full_name='protocol.gaia.proxy.AddPartnerRequestPayload',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='protocol.gaia.proxy.AddPartnerRequest.name', index=0,
+      name='name', full_name='protocol.gaia.proxy.AddPartnerRequestPayload.name', index=0,
       number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='endpoint', full_name='protocol.gaia.proxy.AddPartnerRequest.endpoint', index=1,
+      name='endpoint', full_name='protocol.gaia.proxy.AddPartnerRequestPayload.endpoint', index=1,
       number=2, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='type', full_name='protocol.gaia.proxy.AddPartnerRequest.type', index=2,
+      name='type', full_name='protocol.gaia.proxy.AddPartnerRequestPayload.type', index=2,
       number=3, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='oAuth2Endpoint', full_name='protocol.gaia.proxy.AddPartnerRequest.oAuth2Endpoint', index=3,
+      name='oAuth2Endpoint', full_name='protocol.gaia.proxy.AddPartnerRequestPayload.oAuth2Endpoint', index=3,
       number=4, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='clientId', full_name='protocol.gaia.proxy.AddPartnerRequest.clientId', index=4,
+      name='clientId', full_name='protocol.gaia.proxy.AddPartnerRequestPayload.clientId', index=4,
       number=5, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='clientSecret', full_name='protocol.gaia.proxy.AddPartnerRequest.clientSecret', index=5,
+      name='clientSecret', full_name='protocol.gaia.proxy.AddPartnerRequestPayload.clientSecret', index=5,
       number=6, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -412,36 +415,29 @@ _ADDPARTNERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=684,
-  serialized_end=813,
+  serialized_start=765,
+  serialized_end=901,
 )
 
 
-_ADDPARTNERRESPONSE = _descriptor.Descriptor(
-  name='AddPartnerResponse',
-  full_name='protocol.gaia.proxy.AddPartnerResponse',
+_ADDPARTNERREQUEST = _descriptor.Descriptor(
+  name='AddPartnerRequest',
+  full_name='protocol.gaia.proxy.AddPartnerRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='code', full_name='protocol.gaia.proxy.AddPartnerResponse.code', index=0,
-      number=1, type=5, cpp_type=1, label=2,
-      has_default_value=False, default_value=0,
+      name='header', full_name='protocol.gaia.proxy.AddPartnerRequest.header', index=0,
+      number=1, type=11, cpp_type=10, label=2,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='message', full_name='protocol.gaia.proxy.AddPartnerResponse.message', index=1,
-      number=2, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='data', full_name='protocol.gaia.proxy.AddPartnerResponse.data', index=2,
-      number=3, type=11, cpp_type=10, label=2,
+      name='payload', full_name='protocol.gaia.proxy.AddPartnerRequest.payload', index=1,
+      number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -458,20 +454,63 @@ _ADDPARTNERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=815,
-  serialized_end=910,
+  serialized_start=904,
+  serialized_end=1044,
+)
+
+
+_ADDPARTNERRESPONSE = _descriptor.Descriptor(
+  name='AddPartnerResponse',
+  full_name='protocol.gaia.proxy.AddPartnerResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='header', full_name='protocol.gaia.proxy.AddPartnerResponse.header', index=0,
+      number=1, type=11, cpp_type=10, label=2,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='payload', full_name='protocol.gaia.proxy.AddPartnerResponse.payload', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1046,
+  serialized_end=1171,
 )
 
 _PARTNERPAGEDATA.fields_by_name['content'].message_type = _PARTNER
 _LISTPARTNERRESPONSE.fields_by_name['data'].message_type = _PARTNERPAGEDATA
 _GETPARTNERRESPONSE.fields_by_name['data'].message_type = _PARTNER
-_ADDPARTNERRESPONSE.fields_by_name['data'].message_type = _PARTNER
+_ADDPARTNERREQUEST.fields_by_name['header'].message_type = protocol_dot_common_dot_constant_dot_request__pb2._REQUESTHEADER
+_ADDPARTNERREQUEST.fields_by_name['payload'].message_type = _ADDPARTNERREQUESTPAYLOAD
+_ADDPARTNERRESPONSE.fields_by_name['header'].message_type = protocol_dot_common_dot_constant_dot_response__pb2._RESPONSEHEADER
+_ADDPARTNERRESPONSE.fields_by_name['payload'].message_type = _PARTNER
 DESCRIPTOR.message_types_by_name['Partner'] = _PARTNER
 DESCRIPTOR.message_types_by_name['PartnerPageData'] = _PARTNERPAGEDATA
 DESCRIPTOR.message_types_by_name['ListPartnerRequest'] = _LISTPARTNERREQUEST
 DESCRIPTOR.message_types_by_name['ListPartnerResponse'] = _LISTPARTNERRESPONSE
 DESCRIPTOR.message_types_by_name['GetPartnerRequest'] = _GETPARTNERREQUEST
 DESCRIPTOR.message_types_by_name['GetPartnerResponse'] = _GETPARTNERRESPONSE
+DESCRIPTOR.message_types_by_name['AddPartnerRequestPayload'] = _ADDPARTNERREQUESTPAYLOAD
 DESCRIPTOR.message_types_by_name['AddPartnerRequest'] = _ADDPARTNERREQUEST
 DESCRIPTOR.message_types_by_name['AddPartnerResponse'] = _ADDPARTNERRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -517,6 +556,13 @@ GetPartnerResponse = _reflection.GeneratedProtocolMessageType('GetPartnerRespons
   # @@protoc_insertion_point(class_scope:protocol.gaia.proxy.GetPartnerResponse)
   })
 _sym_db.RegisterMessage(GetPartnerResponse)
+
+AddPartnerRequestPayload = _reflection.GeneratedProtocolMessageType('AddPartnerRequestPayload', (_message.Message,), {
+  'DESCRIPTOR' : _ADDPARTNERREQUESTPAYLOAD,
+  '__module__' : 'protocol.gaia.proxy.partner_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.gaia.proxy.AddPartnerRequestPayload)
+  })
+_sym_db.RegisterMessage(AddPartnerRequestPayload)
 
 AddPartnerRequest = _reflection.GeneratedProtocolMessageType('AddPartnerRequest', (_message.Message,), {
   'DESCRIPTOR' : _ADDPARTNERREQUEST,
