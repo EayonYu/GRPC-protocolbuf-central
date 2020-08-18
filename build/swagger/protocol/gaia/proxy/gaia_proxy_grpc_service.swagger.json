@@ -209,7 +209,7 @@
         "type": {
           "type": "string"
         },
-        "oauth2Endpoint": {
+        "oAuth2Endpoint": {
           "type": "string"
         },
         "clientId": {

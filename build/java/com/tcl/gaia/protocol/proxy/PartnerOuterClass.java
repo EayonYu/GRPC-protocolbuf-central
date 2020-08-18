@@ -6894,21 +6894,21 @@ public final class PartnerOuterClass {
         getTypeBytes();
 
     /**
-     * <code>required string oauth2Endpoint = 4;</code>
-     * @return Whether the oauth2Endpoint field is set.
+     * <code>required string oAuth2Endpoint = 4;</code>
+     * @return Whether the oAuth2Endpoint field is set.
      */
-    boolean hasOauth2Endpoint();
+    boolean hasOAuth2Endpoint();
     /**
-     * <code>required string oauth2Endpoint = 4;</code>
-     * @return The oauth2Endpoint.
+     * <code>required string oAuth2Endpoint = 4;</code>
+     * @return The oAuth2Endpoint.
      */
-    java.lang.String getOauth2Endpoint();
+    java.lang.String getOAuth2Endpoint();
     /**
-     * <code>required string oauth2Endpoint = 4;</code>
-     * @return The bytes for oauth2Endpoint.
+     * <code>required string oAuth2Endpoint = 4;</code>
+     * @return The bytes for oAuth2Endpoint.
      */
     com.google.protobuf.ByteString
-        getOauth2EndpointBytes();
+        getOAuth2EndpointBytes();
 
     /**
      * <code>required string clientId = 5;</code>
@@ -6960,7 +6960,7 @@ public final class PartnerOuterClass {
       name_ = "";
       endpoint_ = "";
       type_ = "";
-      oauth2Endpoint_ = "";
+      oAuth2Endpoint_ = "";
       clientId_ = "";
       clientSecret_ = "";
     }
@@ -7017,7 +7017,7 @@ public final class PartnerOuterClass {
             case 34: {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000008;
-              oauth2Endpoint_ = bs;
+              oAuth2Endpoint_ = bs;
               break;
             }
             case 42: {
@@ -7210,22 +7210,22 @@ public final class PartnerOuterClass {
     }
 
     public static final int OAUTH2ENDPOINT_FIELD_NUMBER = 4;
-    private volatile java.lang.Object oauth2Endpoint_;
+    private volatile java.lang.Object oAuth2Endpoint_;
     /**
-     * <code>required string oauth2Endpoint = 4;</code>
-     * @return Whether the oauth2Endpoint field is set.
+     * <code>required string oAuth2Endpoint = 4;</code>
+     * @return Whether the oAuth2Endpoint field is set.
      */
     @java.lang.Override
-    public boolean hasOauth2Endpoint() {
+    public boolean hasOAuth2Endpoint() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <code>required string oauth2Endpoint = 4;</code>
-     * @return The oauth2Endpoint.
+     * <code>required string oAuth2Endpoint = 4;</code>
+     * @return The oAuth2Endpoint.
      */
     @java.lang.Override
-    public java.lang.String getOauth2Endpoint() {
-      java.lang.Object ref = oauth2Endpoint_;
+    public java.lang.String getOAuth2Endpoint() {
+      java.lang.Object ref = oAuth2Endpoint_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
@@ -7233,24 +7233,24 @@ public final class PartnerOuterClass {
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
-          oauth2Endpoint_ = s;
+          oAuth2Endpoint_ = s;
         }
         return s;
       }
     }
     /**
-     * <code>required string oauth2Endpoint = 4;</code>
-     * @return The bytes for oauth2Endpoint.
+     * <code>required string oAuth2Endpoint = 4;</code>
+     * @return The bytes for oAuth2Endpoint.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getOauth2EndpointBytes() {
-      java.lang.Object ref = oauth2Endpoint_;
+        getOAuth2EndpointBytes() {
+      java.lang.Object ref = oAuth2Endpoint_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        oauth2Endpoint_ = b;
+        oAuth2Endpoint_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -7372,7 +7372,7 @@ public final class PartnerOuterClass {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (!hasOauth2Endpoint()) {
+      if (!hasOAuth2Endpoint()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -7401,7 +7401,7 @@ public final class PartnerOuterClass {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, type_);
       }
       if (((bitField0_ & 0x00000008) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, oauth2Endpoint_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, oAuth2Endpoint_);
       }
       if (((bitField0_ & 0x00000010) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, clientId_);
@@ -7428,7 +7428,7 @@ public final class PartnerOuterClass {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, type_);
       }
       if (((bitField0_ & 0x00000008) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, oauth2Endpoint_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, oAuth2Endpoint_);
       }
       if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, clientId_);
@@ -7466,10 +7466,10 @@ public final class PartnerOuterClass {
         if (!getType()
             .equals(other.getType())) return false;
       }
-      if (hasOauth2Endpoint() != other.hasOauth2Endpoint()) return false;
-      if (hasOauth2Endpoint()) {
-        if (!getOauth2Endpoint()
-            .equals(other.getOauth2Endpoint())) return false;
+      if (hasOAuth2Endpoint() != other.hasOAuth2Endpoint()) return false;
+      if (hasOAuth2Endpoint()) {
+        if (!getOAuth2Endpoint()
+            .equals(other.getOAuth2Endpoint())) return false;
       }
       if (hasClientId() != other.hasClientId()) return false;
       if (hasClientId()) {
@@ -7504,9 +7504,9 @@ public final class PartnerOuterClass {
         hash = (37 * hash) + TYPE_FIELD_NUMBER;
         hash = (53 * hash) + getType().hashCode();
       }
-      if (hasOauth2Endpoint()) {
+      if (hasOAuth2Endpoint()) {
         hash = (37 * hash) + OAUTH2ENDPOINT_FIELD_NUMBER;
-        hash = (53 * hash) + getOauth2Endpoint().hashCode();
+        hash = (53 * hash) + getOAuth2Endpoint().hashCode();
       }
       if (hasClientId()) {
         hash = (37 * hash) + CLIENTID_FIELD_NUMBER;
@@ -7655,7 +7655,7 @@ public final class PartnerOuterClass {
         bitField0_ = (bitField0_ & ~0x00000002);
         type_ = "";
         bitField0_ = (bitField0_ & ~0x00000004);
-        oauth2Endpoint_ = "";
+        oAuth2Endpoint_ = "";
         bitField0_ = (bitField0_ & ~0x00000008);
         clientId_ = "";
         bitField0_ = (bitField0_ & ~0x00000010);
@@ -7704,7 +7704,7 @@ public final class PartnerOuterClass {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           to_bitField0_ |= 0x00000008;
         }
-        result.oauth2Endpoint_ = oauth2Endpoint_;
+        result.oAuth2Endpoint_ = oAuth2Endpoint_;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           to_bitField0_ |= 0x00000010;
         }
@@ -7777,9 +7777,9 @@ public final class PartnerOuterClass {
           type_ = other.type_;
           onChanged();
         }
-        if (other.hasOauth2Endpoint()) {
+        if (other.hasOAuth2Endpoint()) {
           bitField0_ |= 0x00000008;
-          oauth2Endpoint_ = other.oauth2Endpoint_;
+          oAuth2Endpoint_ = other.oAuth2Endpoint_;
           onChanged();
         }
         if (other.hasClientId()) {
@@ -7808,7 +7808,7 @@ public final class PartnerOuterClass {
         if (!hasType()) {
           return false;
         }
-        if (!hasOauth2Endpoint()) {
+        if (!hasOAuth2Endpoint()) {
           return false;
         }
         if (!hasClientId()) {
@@ -8092,26 +8092,26 @@ public final class PartnerOuterClass {
         return this;
       }
 
-      private java.lang.Object oauth2Endpoint_ = "";
+      private java.lang.Object oAuth2Endpoint_ = "";
       /**
-       * <code>required string oauth2Endpoint = 4;</code>
-       * @return Whether the oauth2Endpoint field is set.
+       * <code>required string oAuth2Endpoint = 4;</code>
+       * @return Whether the oAuth2Endpoint field is set.
        */
-      public boolean hasOauth2Endpoint() {
+      public boolean hasOAuth2Endpoint() {
         return ((bitField0_ & 0x00000008) != 0);
       }
       /**
-       * <code>required string oauth2Endpoint = 4;</code>
-       * @return The oauth2Endpoint.
+       * <code>required string oAuth2Endpoint = 4;</code>
+       * @return The oAuth2Endpoint.
        */
-      public java.lang.String getOauth2Endpoint() {
-        java.lang.Object ref = oauth2Endpoint_;
+      public java.lang.String getOAuth2Endpoint() {
+        java.lang.Object ref = oAuth2Endpoint_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
-            oauth2Endpoint_ = s;
+            oAuth2Endpoint_ = s;
           }
           return s;
         } else {
@@ -8119,59 +8119,59 @@ public final class PartnerOuterClass {
         }
       }
       /**
-       * <code>required string oauth2Endpoint = 4;</code>
-       * @return The bytes for oauth2Endpoint.
+       * <code>required string oAuth2Endpoint = 4;</code>
+       * @return The bytes for oAuth2Endpoint.
        */
       public com.google.protobuf.ByteString
-          getOauth2EndpointBytes() {
-        java.lang.Object ref = oauth2Endpoint_;
+          getOAuth2EndpointBytes() {
+        java.lang.Object ref = oAuth2Endpoint_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          oauth2Endpoint_ = b;
+          oAuth2Endpoint_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>required string oauth2Endpoint = 4;</code>
-       * @param value The oauth2Endpoint to set.
+       * <code>required string oAuth2Endpoint = 4;</code>
+       * @param value The oAuth2Endpoint to set.
        * @return This builder for chaining.
        */
-      public Builder setOauth2Endpoint(
+      public Builder setOAuth2Endpoint(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000008;
-        oauth2Endpoint_ = value;
+        oAuth2Endpoint_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required string oauth2Endpoint = 4;</code>
+       * <code>required string oAuth2Endpoint = 4;</code>
        * @return This builder for chaining.
        */
-      public Builder clearOauth2Endpoint() {
+      public Builder clearOAuth2Endpoint() {
         bitField0_ = (bitField0_ & ~0x00000008);
-        oauth2Endpoint_ = getDefaultInstance().getOauth2Endpoint();
+        oAuth2Endpoint_ = getDefaultInstance().getOAuth2Endpoint();
         onChanged();
         return this;
       }
       /**
-       * <code>required string oauth2Endpoint = 4;</code>
-       * @param value The bytes for oauth2Endpoint to set.
+       * <code>required string oAuth2Endpoint = 4;</code>
+       * @param value The bytes for oAuth2Endpoint to set.
        * @return This builder for chaining.
        */
-      public Builder setOauth2EndpointBytes(
+      public Builder setOAuth2EndpointBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000008;
-        oauth2Endpoint_ = value;
+        oAuth2Endpoint_ = value;
         onChanged();
         return this;
       }
@@ -9404,7 +9404,7 @@ public final class PartnerOuterClass {
       "sponse\022\014\n\004code\030\001 \002(\005\022\017\n\007message\030\002 \002(\t\022*\n" +
       "\004data\030\003 \002(\0132\034.protocol.gaia.proxy.Partne" +
       "r\"\201\001\n\021AddPartnerRequest\022\014\n\004name\030\001 \002(\t\022\020\n" +
-      "\010endpoint\030\002 \002(\t\022\014\n\004type\030\003 \002(\t\022\026\n\016oauth2E" +
+      "\010endpoint\030\002 \002(\t\022\014\n\004type\030\003 \002(\t\022\026\n\016oAuth2E" +
       "ndpoint\030\004 \002(\t\022\020\n\010clientId\030\005 \002(\t\022\024\n\014clien" +
       "tSecret\030\006 \002(\t\"_\n\022AddPartnerResponse\022\014\n\004c" +
       "ode\030\001 \002(\005\022\017\n\007message\030\002 \002(\t\022*\n\004data\030\003 \002(\013" +
@@ -9457,7 +9457,7 @@ public final class PartnerOuterClass {
     internal_static_protocol_gaia_proxy_AddPartnerRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protocol_gaia_proxy_AddPartnerRequest_descriptor,
-        new java.lang.String[] { "Name", "Endpoint", "Type", "Oauth2Endpoint", "ClientId", "ClientSecret", });
+        new java.lang.String[] { "Name", "Endpoint", "Type", "OAuth2Endpoint", "ClientId", "ClientSecret", });
     internal_static_protocol_gaia_proxy_AddPartnerResponse_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_protocol_gaia_proxy_AddPartnerResponse_fieldAccessorTable = new
