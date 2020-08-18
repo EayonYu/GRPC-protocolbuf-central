@@ -197,12 +197,21 @@
       "type": "object",
       "properties": {
         "statusCode": {
-          "type": "string"
+          "$ref": "#/definitions/constantStatusCode"
         },
         "msg": {
           "type": "string"
         }
       }
+    },
+    "constantStatusCode": {
+      "type": "string",
+      "enum": [
+        "STATUS_CODE_UNKNOWN",
+        "STATUS_CODE_SUCCESS",
+        "STATUS_CODE_BAD_REQUEST"
+      ],
+      "default": "STATUS_CODE_UNKNOWN"
     },
     "protobufAny": {
       "type": "object",
