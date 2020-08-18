@@ -35,6 +35,8 @@ protocol:
 	cd ./build/python/protocol && touch version.$(version)
 	cd ./build/swagger/protocol && touch version.$(version)
 
+	bash ./scripts/add_init_file.sh ./build/python/protocol
+
 clean:
 	bash ./scripts/env.sh clean
 	rm -rf ./build
