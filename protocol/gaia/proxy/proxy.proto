@@ -30,14 +30,14 @@ message GetResourcesResponse {
 }
 
 enum ProxyRequestType {
-    PROXY_REQUEST_TYPE_GET_RESOURCE_CHUNKS = 0;
-    PROXY_REQUEST_TYPE_GET_RESOURCES = 1;
+    GET_RESOURCE_CHUNKS = 0;
+    GET_RESOURCES = 1;
 }
 
 message ProxyRequestPayload {
     required string partner_name = 1;
-    required ProxyRequestType ProxyRequestType = 2;
-    oneof request {
+    required string proxy_request_type = 2;
+    oneof body {
         GetResourceChunksRequest get_resource_chunks_request = 3;
         GetResourcesRequest get_resources_request = 4;
     }
