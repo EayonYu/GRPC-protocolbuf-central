@@ -11,15 +11,35 @@ import "protocol/common/constant/request.proto";
 import "protocol/common/constant/response.proto";
 
 
-message GetResourceChunks {
+message GetResourceChunksRequest {
     required string resource_type = 1;
     required int32 chunk_size = 2;
 }
 
+message GetResourceChunksResponse {
+    repeated string delimiters = 1;
+}
+
+message GetResourcesRequest {
+    required string resource_type = 1;
+    optional string next_id = 2;
+    optional string end_id = 3;
+}
+
+message GetResourcesResponse {
+}
+
+enum ProxyRequestType {
+    PROXY_REQUEST_TYPE_GET_RESOURCE_CHUNKS = 0;
+    PROXY_REQUEST_TYPE_GET_RESOURCES = 1;
+}
+
 message ProxyRequestPayload {
     required string partner_name = 1;
+    required ProxyRequestType ProxyRequestType = 2;
     oneof request {
-        GetResourceChunks get_resource_chunks = 2;
+        GetResourceChunksRequest get_resource_chunks_request = 3;
+        GetResourcesRequest get_resources_request = 4;
     }
 }
 
@@ -29,8 +49,11 @@ message ProxyRequest {
 }
 
 message ProxyResponsePayload {
-    required int32 statusCode = 1;
-    repeated google.protobuf.Any body = 2;
+    required int32 http_status_code = 1;
+    oneof response {
+        GetResourceChunksResponse get_resource_chunks_response = 2;
+        GetResourcesResponse get_resources_response = 3;
+    }
 }
 
 message ProxyResponse {
