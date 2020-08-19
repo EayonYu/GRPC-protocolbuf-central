@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+
+package protocol.common.constant;
+option go_package = "tcl.com/gaia/protocol/constant";
+option java_package = "com.tcl.gaia.protocol.constant";
+
+
+message ResponseHeader {
+    required int32 statusCode = 1;
+    optional string msg = 2;
+}

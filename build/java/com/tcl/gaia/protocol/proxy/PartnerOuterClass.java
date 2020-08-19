@@ -6838,8 +6838,8 @@ public final class PartnerOuterClass {
 
   }
 
-  public interface AddPartnerRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:protocol.gaia.proxy.AddPartnerRequest)
+  public interface AddPartnerRequestPayloadOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:protocol.gaia.proxy.AddPartnerRequestPayload)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -6894,21 +6894,21 @@ public final class PartnerOuterClass {
         getTypeBytes();
 
     /**
-     * <code>required string oauth2Endpoint = 4;</code>
-     * @return Whether the oauth2Endpoint field is set.
+     * <code>required string oAuth2Endpoint = 4;</code>
+     * @return Whether the oAuth2Endpoint field is set.
      */
-    boolean hasOauth2Endpoint();
+    boolean hasOAuth2Endpoint();
     /**
-     * <code>required string oauth2Endpoint = 4;</code>
-     * @return The oauth2Endpoint.
+     * <code>required string oAuth2Endpoint = 4;</code>
+     * @return The oAuth2Endpoint.
      */
-    java.lang.String getOauth2Endpoint();
+    java.lang.String getOAuth2Endpoint();
     /**
-     * <code>required string oauth2Endpoint = 4;</code>
-     * @return The bytes for oauth2Endpoint.
+     * <code>required string oAuth2Endpoint = 4;</code>
+     * @return The bytes for oAuth2Endpoint.
      */
     com.google.protobuf.ByteString
-        getOauth2EndpointBytes();
+        getOAuth2EndpointBytes();
 
     /**
      * <code>required string clientId = 5;</code>
@@ -6945,22 +6945,22 @@ public final class PartnerOuterClass {
         getClientSecretBytes();
   }
   /**
-   * Protobuf type {@code protocol.gaia.proxy.AddPartnerRequest}
+   * Protobuf type {@code protocol.gaia.proxy.AddPartnerRequestPayload}
    */
-  public static final class AddPartnerRequest extends
+  public static final class AddPartnerRequestPayload extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:protocol.gaia.proxy.AddPartnerRequest)
-      AddPartnerRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:protocol.gaia.proxy.AddPartnerRequestPayload)
+      AddPartnerRequestPayloadOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use AddPartnerRequest.newBuilder() to construct.
-    private AddPartnerRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use AddPartnerRequestPayload.newBuilder() to construct.
+    private AddPartnerRequestPayload(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private AddPartnerRequest() {
+    private AddPartnerRequestPayload() {
       name_ = "";
       endpoint_ = "";
       type_ = "";
-      oauth2Endpoint_ = "";
+      oAuth2Endpoint_ = "";
       clientId_ = "";
       clientSecret_ = "";
     }
@@ -6969,7 +6969,7 @@ public final class PartnerOuterClass {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new AddPartnerRequest();
+      return new AddPartnerRequestPayload();
     }
 
     @java.lang.Override
@@ -6977,7 +6977,7 @@ public final class PartnerOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AddPartnerRequest(
+    private AddPartnerRequestPayload(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -7017,7 +7017,7 @@ public final class PartnerOuterClass {
             case 34: {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000008;
-              oauth2Endpoint_ = bs;
+              oAuth2Endpoint_ = bs;
               break;
             }
             case 42: {
@@ -7053,15 +7053,15 @@ public final class PartnerOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcl.gaia.protocol.proxy.PartnerOuterClass.internal_static_protocol_gaia_proxy_AddPartnerRequest_descriptor;
+      return com.tcl.gaia.protocol.proxy.PartnerOuterClass.internal_static_protocol_gaia_proxy_AddPartnerRequestPayload_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcl.gaia.protocol.proxy.PartnerOuterClass.internal_static_protocol_gaia_proxy_AddPartnerRequest_fieldAccessorTable
+      return com.tcl.gaia.protocol.proxy.PartnerOuterClass.internal_static_protocol_gaia_proxy_AddPartnerRequestPayload_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest.class, com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest.Builder.class);
+              com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload.class, com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload.Builder.class);
     }
 
     private int bitField0_;
@@ -7210,22 +7210,22 @@ public final class PartnerOuterClass {
     }
 
     public static final int OAUTH2ENDPOINT_FIELD_NUMBER = 4;
-    private volatile java.lang.Object oauth2Endpoint_;
+    private volatile java.lang.Object oAuth2Endpoint_;
     /**
-     * <code>required string oauth2Endpoint = 4;</code>
-     * @return Whether the oauth2Endpoint field is set.
+     * <code>required string oAuth2Endpoint = 4;</code>
+     * @return Whether the oAuth2Endpoint field is set.
      */
     @java.lang.Override
-    public boolean hasOauth2Endpoint() {
+    public boolean hasOAuth2Endpoint() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <code>required string oauth2Endpoint = 4;</code>
-     * @return The oauth2Endpoint.
+     * <code>required string oAuth2Endpoint = 4;</code>
+     * @return The oAuth2Endpoint.
      */
     @java.lang.Override
-    public java.lang.String getOauth2Endpoint() {
-      java.lang.Object ref = oauth2Endpoint_;
+    public java.lang.String getOAuth2Endpoint() {
+      java.lang.Object ref = oAuth2Endpoint_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
@@ -7233,24 +7233,24 @@ public final class PartnerOuterClass {
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
-          oauth2Endpoint_ = s;
+          oAuth2Endpoint_ = s;
         }
         return s;
       }
     }
     /**
-     * <code>required string oauth2Endpoint = 4;</code>
-     * @return The bytes for oauth2Endpoint.
+     * <code>required string oAuth2Endpoint = 4;</code>
+     * @return The bytes for oAuth2Endpoint.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getOauth2EndpointBytes() {
-      java.lang.Object ref = oauth2Endpoint_;
+        getOAuth2EndpointBytes() {
+      java.lang.Object ref = oAuth2Endpoint_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        oauth2Endpoint_ = b;
+        oAuth2Endpoint_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -7372,7 +7372,7 @@ public final class PartnerOuterClass {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (!hasOauth2Endpoint()) {
+      if (!hasOAuth2Endpoint()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -7401,7 +7401,7 @@ public final class PartnerOuterClass {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, type_);
       }
       if (((bitField0_ & 0x00000008) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, oauth2Endpoint_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, oAuth2Endpoint_);
       }
       if (((bitField0_ & 0x00000010) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, clientId_);
@@ -7428,7 +7428,7 @@ public final class PartnerOuterClass {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, type_);
       }
       if (((bitField0_ & 0x00000008) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, oauth2Endpoint_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, oAuth2Endpoint_);
       }
       if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, clientId_);
@@ -7446,10 +7446,10 @@ public final class PartnerOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest)) {
+      if (!(obj instanceof com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload)) {
         return super.equals(obj);
       }
-      com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest other = (com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest) obj;
+      com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload other = (com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload) obj;
 
       if (hasName() != other.hasName()) return false;
       if (hasName()) {
@@ -7466,10 +7466,10 @@ public final class PartnerOuterClass {
         if (!getType()
             .equals(other.getType())) return false;
       }
-      if (hasOauth2Endpoint() != other.hasOauth2Endpoint()) return false;
-      if (hasOauth2Endpoint()) {
-        if (!getOauth2Endpoint()
-            .equals(other.getOauth2Endpoint())) return false;
+      if (hasOAuth2Endpoint() != other.hasOAuth2Endpoint()) return false;
+      if (hasOAuth2Endpoint()) {
+        if (!getOAuth2Endpoint()
+            .equals(other.getOAuth2Endpoint())) return false;
       }
       if (hasClientId() != other.hasClientId()) return false;
       if (hasClientId()) {
@@ -7504,9 +7504,9 @@ public final class PartnerOuterClass {
         hash = (37 * hash) + TYPE_FIELD_NUMBER;
         hash = (53 * hash) + getType().hashCode();
       }
-      if (hasOauth2Endpoint()) {
+      if (hasOAuth2Endpoint()) {
         hash = (37 * hash) + OAUTH2ENDPOINT_FIELD_NUMBER;
-        hash = (53 * hash) + getOauth2Endpoint().hashCode();
+        hash = (53 * hash) + getOAuth2Endpoint().hashCode();
       }
       if (hasClientId()) {
         hash = (37 * hash) + CLIENTID_FIELD_NUMBER;
@@ -7521,69 +7521,69 @@ public final class PartnerOuterClass {
       return hash;
     }
 
-    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest parseFrom(
+    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest parseFrom(
+    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest parseFrom(
+    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest parseFrom(
+    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest parseFrom(byte[] data)
+    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest parseFrom(
+    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest parseFrom(java.io.InputStream input)
+    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest parseFrom(
+    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest parseDelimitedFrom(java.io.InputStream input)
+    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest parseDelimitedFrom(
+    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest parseFrom(
+    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest parseFrom(
+    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -7596,7 +7596,7 @@ public final class PartnerOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest prototype) {
+    public static Builder newBuilder(com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -7612,26 +7612,26 @@ public final class PartnerOuterClass {
       return builder;
     }
     /**
-     * Protobuf type {@code protocol.gaia.proxy.AddPartnerRequest}
+     * Protobuf type {@code protocol.gaia.proxy.AddPartnerRequestPayload}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:protocol.gaia.proxy.AddPartnerRequest)
-        com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:protocol.gaia.proxy.AddPartnerRequestPayload)
+        com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayloadOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.tcl.gaia.protocol.proxy.PartnerOuterClass.internal_static_protocol_gaia_proxy_AddPartnerRequest_descriptor;
+        return com.tcl.gaia.protocol.proxy.PartnerOuterClass.internal_static_protocol_gaia_proxy_AddPartnerRequestPayload_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.tcl.gaia.protocol.proxy.PartnerOuterClass.internal_static_protocol_gaia_proxy_AddPartnerRequest_fieldAccessorTable
+        return com.tcl.gaia.protocol.proxy.PartnerOuterClass.internal_static_protocol_gaia_proxy_AddPartnerRequestPayload_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest.class, com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest.Builder.class);
+                com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload.class, com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload.Builder.class);
       }
 
-      // Construct using com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest.newBuilder()
+      // Construct using com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -7655,7 +7655,7 @@ public final class PartnerOuterClass {
         bitField0_ = (bitField0_ & ~0x00000002);
         type_ = "";
         bitField0_ = (bitField0_ & ~0x00000004);
-        oauth2Endpoint_ = "";
+        oAuth2Endpoint_ = "";
         bitField0_ = (bitField0_ & ~0x00000008);
         clientId_ = "";
         bitField0_ = (bitField0_ & ~0x00000010);
@@ -7667,17 +7667,17 @@ public final class PartnerOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.tcl.gaia.protocol.proxy.PartnerOuterClass.internal_static_protocol_gaia_proxy_AddPartnerRequest_descriptor;
+        return com.tcl.gaia.protocol.proxy.PartnerOuterClass.internal_static_protocol_gaia_proxy_AddPartnerRequestPayload_descriptor;
       }
 
       @java.lang.Override
-      public com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest getDefaultInstanceForType() {
-        return com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest.getDefaultInstance();
+      public com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload getDefaultInstanceForType() {
+        return com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest build() {
-        com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest result = buildPartial();
+      public com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload build() {
+        com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -7685,8 +7685,8 @@ public final class PartnerOuterClass {
       }
 
       @java.lang.Override
-      public com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest buildPartial() {
-        com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest result = new com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest(this);
+      public com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload buildPartial() {
+        com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload result = new com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -7704,7 +7704,7 @@ public final class PartnerOuterClass {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           to_bitField0_ |= 0x00000008;
         }
-        result.oauth2Endpoint_ = oauth2Endpoint_;
+        result.oAuth2Endpoint_ = oAuth2Endpoint_;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           to_bitField0_ |= 0x00000010;
         }
@@ -7752,16 +7752,16 @@ public final class PartnerOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest) {
-          return mergeFrom((com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest)other);
+        if (other instanceof com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload) {
+          return mergeFrom((com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest other) {
-        if (other == com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload other) {
+        if (other == com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload.getDefaultInstance()) return this;
         if (other.hasName()) {
           bitField0_ |= 0x00000001;
           name_ = other.name_;
@@ -7777,9 +7777,9 @@ public final class PartnerOuterClass {
           type_ = other.type_;
           onChanged();
         }
-        if (other.hasOauth2Endpoint()) {
+        if (other.hasOAuth2Endpoint()) {
           bitField0_ |= 0x00000008;
-          oauth2Endpoint_ = other.oauth2Endpoint_;
+          oAuth2Endpoint_ = other.oAuth2Endpoint_;
           onChanged();
         }
         if (other.hasClientId()) {
@@ -7808,7 +7808,7 @@ public final class PartnerOuterClass {
         if (!hasType()) {
           return false;
         }
-        if (!hasOauth2Endpoint()) {
+        if (!hasOAuth2Endpoint()) {
           return false;
         }
         if (!hasClientId()) {
@@ -7825,11 +7825,11 @@ public final class PartnerOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest parsedMessage = null;
+        com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest) e.getUnfinishedMessage();
+          parsedMessage = (com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -8092,26 +8092,26 @@ public final class PartnerOuterClass {
         return this;
       }
 
-      private java.lang.Object oauth2Endpoint_ = "";
+      private java.lang.Object oAuth2Endpoint_ = "";
       /**
-       * <code>required string oauth2Endpoint = 4;</code>
-       * @return Whether the oauth2Endpoint field is set.
+       * <code>required string oAuth2Endpoint = 4;</code>
+       * @return Whether the oAuth2Endpoint field is set.
        */
-      public boolean hasOauth2Endpoint() {
+      public boolean hasOAuth2Endpoint() {
         return ((bitField0_ & 0x00000008) != 0);
       }
       /**
-       * <code>required string oauth2Endpoint = 4;</code>
-       * @return The oauth2Endpoint.
+       * <code>required string oAuth2Endpoint = 4;</code>
+       * @return The oAuth2Endpoint.
        */
-      public java.lang.String getOauth2Endpoint() {
-        java.lang.Object ref = oauth2Endpoint_;
+      public java.lang.String getOAuth2Endpoint() {
+        java.lang.Object ref = oAuth2Endpoint_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
-            oauth2Endpoint_ = s;
+            oAuth2Endpoint_ = s;
           }
           return s;
         } else {
@@ -8119,59 +8119,59 @@ public final class PartnerOuterClass {
         }
       }
       /**
-       * <code>required string oauth2Endpoint = 4;</code>
-       * @return The bytes for oauth2Endpoint.
+       * <code>required string oAuth2Endpoint = 4;</code>
+       * @return The bytes for oAuth2Endpoint.
        */
       public com.google.protobuf.ByteString
-          getOauth2EndpointBytes() {
-        java.lang.Object ref = oauth2Endpoint_;
+          getOAuth2EndpointBytes() {
+        java.lang.Object ref = oAuth2Endpoint_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          oauth2Endpoint_ = b;
+          oAuth2Endpoint_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>required string oauth2Endpoint = 4;</code>
-       * @param value The oauth2Endpoint to set.
+       * <code>required string oAuth2Endpoint = 4;</code>
+       * @param value The oAuth2Endpoint to set.
        * @return This builder for chaining.
        */
-      public Builder setOauth2Endpoint(
+      public Builder setOAuth2Endpoint(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000008;
-        oauth2Endpoint_ = value;
+        oAuth2Endpoint_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required string oauth2Endpoint = 4;</code>
+       * <code>required string oAuth2Endpoint = 4;</code>
        * @return This builder for chaining.
        */
-      public Builder clearOauth2Endpoint() {
+      public Builder clearOAuth2Endpoint() {
         bitField0_ = (bitField0_ & ~0x00000008);
-        oauth2Endpoint_ = getDefaultInstance().getOauth2Endpoint();
+        oAuth2Endpoint_ = getDefaultInstance().getOAuth2Endpoint();
         onChanged();
         return this;
       }
       /**
-       * <code>required string oauth2Endpoint = 4;</code>
-       * @param value The bytes for oauth2Endpoint to set.
+       * <code>required string oAuth2Endpoint = 4;</code>
+       * @param value The bytes for oAuth2Endpoint to set.
        * @return This builder for chaining.
        */
-      public Builder setOauth2EndpointBytes(
+      public Builder setOAuth2EndpointBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000008;
-        oauth2Endpoint_ = value;
+        oAuth2Endpoint_ = value;
         onChanged();
         return this;
       }
@@ -8356,6 +8356,874 @@ public final class PartnerOuterClass {
       }
 
 
+      // @@protoc_insertion_point(builder_scope:protocol.gaia.proxy.AddPartnerRequestPayload)
+    }
+
+    // @@protoc_insertion_point(class_scope:protocol.gaia.proxy.AddPartnerRequestPayload)
+    private static final com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload();
+    }
+
+    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<AddPartnerRequestPayload>
+        PARSER = new com.google.protobuf.AbstractParser<AddPartnerRequestPayload>() {
+      @java.lang.Override
+      public AddPartnerRequestPayload parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AddPartnerRequestPayload(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AddPartnerRequestPayload> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AddPartnerRequestPayload> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AddPartnerRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:protocol.gaia.proxy.AddPartnerRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .protocol.common.constant.RequestHeader header = 1;</code>
+     * @return Whether the header field is set.
+     */
+    boolean hasHeader();
+    /**
+     * <code>required .protocol.common.constant.RequestHeader header = 1;</code>
+     * @return The header.
+     */
+    com.tcl.gaia.protocol.constant.Request.RequestHeader getHeader();
+    /**
+     * <code>required .protocol.common.constant.RequestHeader header = 1;</code>
+     */
+    com.tcl.gaia.protocol.constant.Request.RequestHeaderOrBuilder getHeaderOrBuilder();
+
+    /**
+     * <code>required .protocol.gaia.proxy.AddPartnerRequestPayload payload = 2;</code>
+     * @return Whether the payload field is set.
+     */
+    boolean hasPayload();
+    /**
+     * <code>required .protocol.gaia.proxy.AddPartnerRequestPayload payload = 2;</code>
+     * @return The payload.
+     */
+    com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload getPayload();
+    /**
+     * <code>required .protocol.gaia.proxy.AddPartnerRequestPayload payload = 2;</code>
+     */
+    com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayloadOrBuilder getPayloadOrBuilder();
+  }
+  /**
+   * Protobuf type {@code protocol.gaia.proxy.AddPartnerRequest}
+   */
+  public static final class AddPartnerRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:protocol.gaia.proxy.AddPartnerRequest)
+      AddPartnerRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AddPartnerRequest.newBuilder() to construct.
+    private AddPartnerRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AddPartnerRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddPartnerRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AddPartnerRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.tcl.gaia.protocol.constant.Request.RequestHeader.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) != 0)) {
+                subBuilder = header_.toBuilder();
+              }
+              header_ = input.readMessage(com.tcl.gaia.protocol.constant.Request.RequestHeader.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(header_);
+                header_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 18: {
+              com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) != 0)) {
+                subBuilder = payload_.toBuilder();
+              }
+              payload_ = input.readMessage(com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(payload_);
+                payload_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcl.gaia.protocol.proxy.PartnerOuterClass.internal_static_protocol_gaia_proxy_AddPartnerRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcl.gaia.protocol.proxy.PartnerOuterClass.internal_static_protocol_gaia_proxy_AddPartnerRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest.class, com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int HEADER_FIELD_NUMBER = 1;
+    private com.tcl.gaia.protocol.constant.Request.RequestHeader header_;
+    /**
+     * <code>required .protocol.common.constant.RequestHeader header = 1;</code>
+     * @return Whether the header field is set.
+     */
+    @java.lang.Override
+    public boolean hasHeader() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>required .protocol.common.constant.RequestHeader header = 1;</code>
+     * @return The header.
+     */
+    @java.lang.Override
+    public com.tcl.gaia.protocol.constant.Request.RequestHeader getHeader() {
+      return header_ == null ? com.tcl.gaia.protocol.constant.Request.RequestHeader.getDefaultInstance() : header_;
+    }
+    /**
+     * <code>required .protocol.common.constant.RequestHeader header = 1;</code>
+     */
+    @java.lang.Override
+    public com.tcl.gaia.protocol.constant.Request.RequestHeaderOrBuilder getHeaderOrBuilder() {
+      return header_ == null ? com.tcl.gaia.protocol.constant.Request.RequestHeader.getDefaultInstance() : header_;
+    }
+
+    public static final int PAYLOAD_FIELD_NUMBER = 2;
+    private com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload payload_;
+    /**
+     * <code>required .protocol.gaia.proxy.AddPartnerRequestPayload payload = 2;</code>
+     * @return Whether the payload field is set.
+     */
+    @java.lang.Override
+    public boolean hasPayload() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>required .protocol.gaia.proxy.AddPartnerRequestPayload payload = 2;</code>
+     * @return The payload.
+     */
+    @java.lang.Override
+    public com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload getPayload() {
+      return payload_ == null ? com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload.getDefaultInstance() : payload_;
+    }
+    /**
+     * <code>required .protocol.gaia.proxy.AddPartnerRequestPayload payload = 2;</code>
+     */
+    @java.lang.Override
+    public com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayloadOrBuilder getPayloadOrBuilder() {
+      return payload_ == null ? com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload.getDefaultInstance() : payload_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasHeader()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasPayload()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getHeader().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getPayload().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getHeader());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(2, getPayload());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getHeader());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPayload());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest)) {
+        return super.equals(obj);
+      }
+      com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest other = (com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest) obj;
+
+      if (hasHeader() != other.hasHeader()) return false;
+      if (hasHeader()) {
+        if (!getHeader()
+            .equals(other.getHeader())) return false;
+      }
+      if (hasPayload() != other.hasPayload()) return false;
+      if (hasPayload()) {
+        if (!getPayload()
+            .equals(other.getPayload())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasHeader()) {
+        hash = (37 * hash) + HEADER_FIELD_NUMBER;
+        hash = (53 * hash) + getHeader().hashCode();
+      }
+      if (hasPayload()) {
+        hash = (37 * hash) + PAYLOAD_FIELD_NUMBER;
+        hash = (53 * hash) + getPayload().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code protocol.gaia.proxy.AddPartnerRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:protocol.gaia.proxy.AddPartnerRequest)
+        com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcl.gaia.protocol.proxy.PartnerOuterClass.internal_static_protocol_gaia_proxy_AddPartnerRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcl.gaia.protocol.proxy.PartnerOuterClass.internal_static_protocol_gaia_proxy_AddPartnerRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest.class, com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest.Builder.class);
+      }
+
+      // Construct using com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getHeaderFieldBuilder();
+          getPayloadFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (headerBuilder_ == null) {
+          header_ = null;
+        } else {
+          headerBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (payloadBuilder_ == null) {
+          payload_ = null;
+        } else {
+          payloadBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcl.gaia.protocol.proxy.PartnerOuterClass.internal_static_protocol_gaia_proxy_AddPartnerRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest getDefaultInstanceForType() {
+        return com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest build() {
+        com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest buildPartial() {
+        com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest result = new com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          if (headerBuilder_ == null) {
+            result.header_ = header_;
+          } else {
+            result.header_ = headerBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          if (payloadBuilder_ == null) {
+            result.payload_ = payload_;
+          } else {
+            result.payload_ = payloadBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest) {
+          return mergeFrom((com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest other) {
+        if (other == com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest.getDefaultInstance()) return this;
+        if (other.hasHeader()) {
+          mergeHeader(other.getHeader());
+        }
+        if (other.hasPayload()) {
+          mergePayload(other.getPayload());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        if (!hasHeader()) {
+          return false;
+        }
+        if (!hasPayload()) {
+          return false;
+        }
+        if (!getHeader().isInitialized()) {
+          return false;
+        }
+        if (!getPayload().isInitialized()) {
+          return false;
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.tcl.gaia.protocol.constant.Request.RequestHeader header_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcl.gaia.protocol.constant.Request.RequestHeader, com.tcl.gaia.protocol.constant.Request.RequestHeader.Builder, com.tcl.gaia.protocol.constant.Request.RequestHeaderOrBuilder> headerBuilder_;
+      /**
+       * <code>required .protocol.common.constant.RequestHeader header = 1;</code>
+       * @return Whether the header field is set.
+       */
+      public boolean hasHeader() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>required .protocol.common.constant.RequestHeader header = 1;</code>
+       * @return The header.
+       */
+      public com.tcl.gaia.protocol.constant.Request.RequestHeader getHeader() {
+        if (headerBuilder_ == null) {
+          return header_ == null ? com.tcl.gaia.protocol.constant.Request.RequestHeader.getDefaultInstance() : header_;
+        } else {
+          return headerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .protocol.common.constant.RequestHeader header = 1;</code>
+       */
+      public Builder setHeader(com.tcl.gaia.protocol.constant.Request.RequestHeader value) {
+        if (headerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          header_ = value;
+          onChanged();
+        } else {
+          headerBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .protocol.common.constant.RequestHeader header = 1;</code>
+       */
+      public Builder setHeader(
+          com.tcl.gaia.protocol.constant.Request.RequestHeader.Builder builderForValue) {
+        if (headerBuilder_ == null) {
+          header_ = builderForValue.build();
+          onChanged();
+        } else {
+          headerBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .protocol.common.constant.RequestHeader header = 1;</code>
+       */
+      public Builder mergeHeader(com.tcl.gaia.protocol.constant.Request.RequestHeader value) {
+        if (headerBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+              header_ != null &&
+              header_ != com.tcl.gaia.protocol.constant.Request.RequestHeader.getDefaultInstance()) {
+            header_ =
+              com.tcl.gaia.protocol.constant.Request.RequestHeader.newBuilder(header_).mergeFrom(value).buildPartial();
+          } else {
+            header_ = value;
+          }
+          onChanged();
+        } else {
+          headerBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>required .protocol.common.constant.RequestHeader header = 1;</code>
+       */
+      public Builder clearHeader() {
+        if (headerBuilder_ == null) {
+          header_ = null;
+          onChanged();
+        } else {
+          headerBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>required .protocol.common.constant.RequestHeader header = 1;</code>
+       */
+      public com.tcl.gaia.protocol.constant.Request.RequestHeader.Builder getHeaderBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getHeaderFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .protocol.common.constant.RequestHeader header = 1;</code>
+       */
+      public com.tcl.gaia.protocol.constant.Request.RequestHeaderOrBuilder getHeaderOrBuilder() {
+        if (headerBuilder_ != null) {
+          return headerBuilder_.getMessageOrBuilder();
+        } else {
+          return header_ == null ?
+              com.tcl.gaia.protocol.constant.Request.RequestHeader.getDefaultInstance() : header_;
+        }
+      }
+      /**
+       * <code>required .protocol.common.constant.RequestHeader header = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcl.gaia.protocol.constant.Request.RequestHeader, com.tcl.gaia.protocol.constant.Request.RequestHeader.Builder, com.tcl.gaia.protocol.constant.Request.RequestHeaderOrBuilder> 
+          getHeaderFieldBuilder() {
+        if (headerBuilder_ == null) {
+          headerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcl.gaia.protocol.constant.Request.RequestHeader, com.tcl.gaia.protocol.constant.Request.RequestHeader.Builder, com.tcl.gaia.protocol.constant.Request.RequestHeaderOrBuilder>(
+                  getHeader(),
+                  getParentForChildren(),
+                  isClean());
+          header_ = null;
+        }
+        return headerBuilder_;
+      }
+
+      private com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload payload_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload, com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload.Builder, com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayloadOrBuilder> payloadBuilder_;
+      /**
+       * <code>required .protocol.gaia.proxy.AddPartnerRequestPayload payload = 2;</code>
+       * @return Whether the payload field is set.
+       */
+      public boolean hasPayload() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>required .protocol.gaia.proxy.AddPartnerRequestPayload payload = 2;</code>
+       * @return The payload.
+       */
+      public com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload getPayload() {
+        if (payloadBuilder_ == null) {
+          return payload_ == null ? com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload.getDefaultInstance() : payload_;
+        } else {
+          return payloadBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>required .protocol.gaia.proxy.AddPartnerRequestPayload payload = 2;</code>
+       */
+      public Builder setPayload(com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload value) {
+        if (payloadBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payload_ = value;
+          onChanged();
+        } else {
+          payloadBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>required .protocol.gaia.proxy.AddPartnerRequestPayload payload = 2;</code>
+       */
+      public Builder setPayload(
+          com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload.Builder builderForValue) {
+        if (payloadBuilder_ == null) {
+          payload_ = builderForValue.build();
+          onChanged();
+        } else {
+          payloadBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>required .protocol.gaia.proxy.AddPartnerRequestPayload payload = 2;</code>
+       */
+      public Builder mergePayload(com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload value) {
+        if (payloadBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+              payload_ != null &&
+              payload_ != com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload.getDefaultInstance()) {
+            payload_ =
+              com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload.newBuilder(payload_).mergeFrom(value).buildPartial();
+          } else {
+            payload_ = value;
+          }
+          onChanged();
+        } else {
+          payloadBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>required .protocol.gaia.proxy.AddPartnerRequestPayload payload = 2;</code>
+       */
+      public Builder clearPayload() {
+        if (payloadBuilder_ == null) {
+          payload_ = null;
+          onChanged();
+        } else {
+          payloadBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+      /**
+       * <code>required .protocol.gaia.proxy.AddPartnerRequestPayload payload = 2;</code>
+       */
+      public com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload.Builder getPayloadBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPayloadFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .protocol.gaia.proxy.AddPartnerRequestPayload payload = 2;</code>
+       */
+      public com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayloadOrBuilder getPayloadOrBuilder() {
+        if (payloadBuilder_ != null) {
+          return payloadBuilder_.getMessageOrBuilder();
+        } else {
+          return payload_ == null ?
+              com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload.getDefaultInstance() : payload_;
+        }
+      }
+      /**
+       * <code>required .protocol.gaia.proxy.AddPartnerRequestPayload payload = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload, com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload.Builder, com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayloadOrBuilder> 
+          getPayloadFieldBuilder() {
+        if (payloadBuilder_ == null) {
+          payloadBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload, com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayload.Builder, com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequestPayloadOrBuilder>(
+                  getPayload(),
+                  getParentForChildren(),
+                  isClean());
+          payload_ = null;
+        }
+        return payloadBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
       // @@protoc_insertion_point(builder_scope:protocol.gaia.proxy.AddPartnerRequest)
     }
 
@@ -8401,47 +9269,34 @@ public final class PartnerOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required int32 code = 1;</code>
-     * @return Whether the code field is set.
+     * <code>required .protocol.common.constant.ResponseHeader header = 1;</code>
+     * @return Whether the header field is set.
      */
-    boolean hasCode();
+    boolean hasHeader();
     /**
-     * <code>required int32 code = 1;</code>
-     * @return The code.
+     * <code>required .protocol.common.constant.ResponseHeader header = 1;</code>
+     * @return The header.
      */
-    int getCode();
+    com.tcl.gaia.protocol.constant.Response.ResponseHeader getHeader();
+    /**
+     * <code>required .protocol.common.constant.ResponseHeader header = 1;</code>
+     */
+    com.tcl.gaia.protocol.constant.Response.ResponseHeaderOrBuilder getHeaderOrBuilder();
 
     /**
-     * <code>required string message = 2;</code>
-     * @return Whether the message field is set.
+     * <code>optional .protocol.gaia.proxy.Partner payload = 2;</code>
+     * @return Whether the payload field is set.
      */
-    boolean hasMessage();
+    boolean hasPayload();
     /**
-     * <code>required string message = 2;</code>
-     * @return The message.
+     * <code>optional .protocol.gaia.proxy.Partner payload = 2;</code>
+     * @return The payload.
      */
-    java.lang.String getMessage();
+    com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner getPayload();
     /**
-     * <code>required string message = 2;</code>
-     * @return The bytes for message.
+     * <code>optional .protocol.gaia.proxy.Partner payload = 2;</code>
      */
-    com.google.protobuf.ByteString
-        getMessageBytes();
-
-    /**
-     * <code>required .protocol.gaia.proxy.Partner data = 3;</code>
-     * @return Whether the data field is set.
-     */
-    boolean hasData();
-    /**
-     * <code>required .protocol.gaia.proxy.Partner data = 3;</code>
-     * @return The data.
-     */
-    com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner getData();
-    /**
-     * <code>required .protocol.gaia.proxy.Partner data = 3;</code>
-     */
-    com.tcl.gaia.protocol.proxy.PartnerOuterClass.PartnerOrBuilder getDataOrBuilder();
+    com.tcl.gaia.protocol.proxy.PartnerOuterClass.PartnerOrBuilder getPayloadOrBuilder();
   }
   /**
    * Protobuf type {@code protocol.gaia.proxy.AddPartnerResponse}
@@ -8456,7 +9311,6 @@ public final class PartnerOuterClass {
       super(builder);
     }
     private AddPartnerResponse() {
-      message_ = "";
     }
 
     @java.lang.Override
@@ -8490,28 +9344,30 @@ public final class PartnerOuterClass {
             case 0:
               done = true;
               break;
-            case 8: {
+            case 10: {
+              com.tcl.gaia.protocol.constant.Response.ResponseHeader.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) != 0)) {
+                subBuilder = header_.toBuilder();
+              }
+              header_ = input.readMessage(com.tcl.gaia.protocol.constant.Response.ResponseHeader.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(header_);
+                header_ = subBuilder.buildPartial();
+              }
               bitField0_ |= 0x00000001;
-              code_ = input.readInt32();
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000002;
-              message_ = bs;
-              break;
-            }
-            case 26: {
               com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000004) != 0)) {
-                subBuilder = data_.toBuilder();
+              if (((bitField0_ & 0x00000002) != 0)) {
+                subBuilder = payload_.toBuilder();
               }
-              data_ = input.readMessage(com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner.PARSER, extensionRegistry);
+              payload_ = input.readMessage(com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner.PARSER, extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(data_);
-                data_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(payload_);
+                payload_ = subBuilder.buildPartial();
               }
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000002;
               break;
             }
             default: {
@@ -8547,97 +9403,56 @@ public final class PartnerOuterClass {
     }
 
     private int bitField0_;
-    public static final int CODE_FIELD_NUMBER = 1;
-    private int code_;
+    public static final int HEADER_FIELD_NUMBER = 1;
+    private com.tcl.gaia.protocol.constant.Response.ResponseHeader header_;
     /**
-     * <code>required int32 code = 1;</code>
-     * @return Whether the code field is set.
+     * <code>required .protocol.common.constant.ResponseHeader header = 1;</code>
+     * @return Whether the header field is set.
      */
     @java.lang.Override
-    public boolean hasCode() {
+    public boolean hasHeader() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>required int32 code = 1;</code>
-     * @return The code.
+     * <code>required .protocol.common.constant.ResponseHeader header = 1;</code>
+     * @return The header.
      */
     @java.lang.Override
-    public int getCode() {
-      return code_;
+    public com.tcl.gaia.protocol.constant.Response.ResponseHeader getHeader() {
+      return header_ == null ? com.tcl.gaia.protocol.constant.Response.ResponseHeader.getDefaultInstance() : header_;
+    }
+    /**
+     * <code>required .protocol.common.constant.ResponseHeader header = 1;</code>
+     */
+    @java.lang.Override
+    public com.tcl.gaia.protocol.constant.Response.ResponseHeaderOrBuilder getHeaderOrBuilder() {
+      return header_ == null ? com.tcl.gaia.protocol.constant.Response.ResponseHeader.getDefaultInstance() : header_;
     }
 
-    public static final int MESSAGE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object message_;
+    public static final int PAYLOAD_FIELD_NUMBER = 2;
+    private com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner payload_;
     /**
-     * <code>required string message = 2;</code>
-     * @return Whether the message field is set.
+     * <code>optional .protocol.gaia.proxy.Partner payload = 2;</code>
+     * @return Whether the payload field is set.
      */
     @java.lang.Override
-    public boolean hasMessage() {
+    public boolean hasPayload() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>required string message = 2;</code>
-     * @return The message.
+     * <code>optional .protocol.gaia.proxy.Partner payload = 2;</code>
+     * @return The payload.
      */
     @java.lang.Override
-    public java.lang.String getMessage() {
-      java.lang.Object ref = message_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          message_ = s;
-        }
-        return s;
-      }
+    public com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner getPayload() {
+      return payload_ == null ? com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner.getDefaultInstance() : payload_;
     }
     /**
-     * <code>required string message = 2;</code>
-     * @return The bytes for message.
+     * <code>optional .protocol.gaia.proxy.Partner payload = 2;</code>
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getMessageBytes() {
-      java.lang.Object ref = message_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        message_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int DATA_FIELD_NUMBER = 3;
-    private com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner data_;
-    /**
-     * <code>required .protocol.gaia.proxy.Partner data = 3;</code>
-     * @return Whether the data field is set.
-     */
-    @java.lang.Override
-    public boolean hasData() {
-      return ((bitField0_ & 0x00000004) != 0);
-    }
-    /**
-     * <code>required .protocol.gaia.proxy.Partner data = 3;</code>
-     * @return The data.
-     */
-    @java.lang.Override
-    public com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner getData() {
-      return data_ == null ? com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner.getDefaultInstance() : data_;
-    }
-    /**
-     * <code>required .protocol.gaia.proxy.Partner data = 3;</code>
-     */
-    @java.lang.Override
-    public com.tcl.gaia.protocol.proxy.PartnerOuterClass.PartnerOrBuilder getDataOrBuilder() {
-      return data_ == null ? com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner.getDefaultInstance() : data_;
+    public com.tcl.gaia.protocol.proxy.PartnerOuterClass.PartnerOrBuilder getPayloadOrBuilder() {
+      return payload_ == null ? com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner.getDefaultInstance() : payload_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -8647,21 +9462,19 @@ public final class PartnerOuterClass {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasCode()) {
+      if (!hasHeader()) {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (!hasMessage()) {
+      if (!getHeader().isInitialized()) {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (!hasData()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!getData().isInitialized()) {
-        memoizedIsInitialized = 0;
-        return false;
+      if (hasPayload()) {
+        if (!getPayload().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
       }
       memoizedIsInitialized = 1;
       return true;
@@ -8671,13 +9484,10 @@ public final class PartnerOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeInt32(1, code_);
+        output.writeMessage(1, getHeader());
       }
       if (((bitField0_ & 0x00000002) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, message_);
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        output.writeMessage(3, getData());
+        output.writeMessage(2, getPayload());
       }
       unknownFields.writeTo(output);
     }
@@ -8690,14 +9500,11 @@ public final class PartnerOuterClass {
       size = 0;
       if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, code_);
+          .computeMessageSize(1, getHeader());
       }
       if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, message_);
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getData());
+          .computeMessageSize(2, getPayload());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8714,20 +9521,15 @@ public final class PartnerOuterClass {
       }
       com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerResponse other = (com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerResponse) obj;
 
-      if (hasCode() != other.hasCode()) return false;
-      if (hasCode()) {
-        if (getCode()
-            != other.getCode()) return false;
+      if (hasHeader() != other.hasHeader()) return false;
+      if (hasHeader()) {
+        if (!getHeader()
+            .equals(other.getHeader())) return false;
       }
-      if (hasMessage() != other.hasMessage()) return false;
-      if (hasMessage()) {
-        if (!getMessage()
-            .equals(other.getMessage())) return false;
-      }
-      if (hasData() != other.hasData()) return false;
-      if (hasData()) {
-        if (!getData()
-            .equals(other.getData())) return false;
+      if (hasPayload() != other.hasPayload()) return false;
+      if (hasPayload()) {
+        if (!getPayload()
+            .equals(other.getPayload())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -8740,17 +9542,13 @@ public final class PartnerOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasCode()) {
-        hash = (37 * hash) + CODE_FIELD_NUMBER;
-        hash = (53 * hash) + getCode();
+      if (hasHeader()) {
+        hash = (37 * hash) + HEADER_FIELD_NUMBER;
+        hash = (53 * hash) + getHeader().hashCode();
       }
-      if (hasMessage()) {
-        hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
-        hash = (53 * hash) + getMessage().hashCode();
-      }
-      if (hasData()) {
-        hash = (37 * hash) + DATA_FIELD_NUMBER;
-        hash = (53 * hash) + getData().hashCode();
+      if (hasPayload()) {
+        hash = (37 * hash) + PAYLOAD_FIELD_NUMBER;
+        hash = (53 * hash) + getPayload().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -8880,22 +9678,25 @@ public final class PartnerOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getDataFieldBuilder();
+          getHeaderFieldBuilder();
+          getPayloadFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        code_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        message_ = "";
-        bitField0_ = (bitField0_ & ~0x00000002);
-        if (dataBuilder_ == null) {
-          data_ = null;
+        if (headerBuilder_ == null) {
+          header_ = null;
         } else {
-          dataBuilder_.clear();
+          headerBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (payloadBuilder_ == null) {
+          payload_ = null;
+        } else {
+          payloadBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -8925,20 +9726,20 @@ public final class PartnerOuterClass {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.code_ = code_;
+          if (headerBuilder_ == null) {
+            result.header_ = header_;
+          } else {
+            result.header_ = headerBuilder_.build();
+          }
           to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.message_ = message_;
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          if (dataBuilder_ == null) {
-            result.data_ = data_;
+          if (payloadBuilder_ == null) {
+            result.payload_ = payload_;
           } else {
-            result.data_ = dataBuilder_.build();
+            result.payload_ = payloadBuilder_.build();
           }
-          to_bitField0_ |= 0x00000004;
+          to_bitField0_ |= 0x00000002;
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -8989,16 +9790,11 @@ public final class PartnerOuterClass {
 
       public Builder mergeFrom(com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerResponse other) {
         if (other == com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerResponse.getDefaultInstance()) return this;
-        if (other.hasCode()) {
-          setCode(other.getCode());
+        if (other.hasHeader()) {
+          mergeHeader(other.getHeader());
         }
-        if (other.hasMessage()) {
-          bitField0_ |= 0x00000002;
-          message_ = other.message_;
-          onChanged();
-        }
-        if (other.hasData()) {
-          mergeData(other.getData());
+        if (other.hasPayload()) {
+          mergePayload(other.getPayload());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9007,17 +9803,16 @@ public final class PartnerOuterClass {
 
       @java.lang.Override
       public final boolean isInitialized() {
-        if (!hasCode()) {
+        if (!hasHeader()) {
           return false;
         }
-        if (!hasMessage()) {
+        if (!getHeader().isInitialized()) {
           return false;
         }
-        if (!hasData()) {
-          return false;
-        }
-        if (!getData().isInitialized()) {
-          return false;
+        if (hasPayload()) {
+          if (!getPayload().isInitialized()) {
+            return false;
+          }
         }
         return true;
       }
@@ -9042,247 +9837,244 @@ public final class PartnerOuterClass {
       }
       private int bitField0_;
 
-      private int code_ ;
+      private com.tcl.gaia.protocol.constant.Response.ResponseHeader header_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcl.gaia.protocol.constant.Response.ResponseHeader, com.tcl.gaia.protocol.constant.Response.ResponseHeader.Builder, com.tcl.gaia.protocol.constant.Response.ResponseHeaderOrBuilder> headerBuilder_;
       /**
-       * <code>required int32 code = 1;</code>
-       * @return Whether the code field is set.
+       * <code>required .protocol.common.constant.ResponseHeader header = 1;</code>
+       * @return Whether the header field is set.
        */
-      @java.lang.Override
-      public boolean hasCode() {
+      public boolean hasHeader() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>required int32 code = 1;</code>
-       * @return The code.
+       * <code>required .protocol.common.constant.ResponseHeader header = 1;</code>
+       * @return The header.
        */
-      @java.lang.Override
-      public int getCode() {
-        return code_;
-      }
-      /**
-       * <code>required int32 code = 1;</code>
-       * @param value The code to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCode(int value) {
-        bitField0_ |= 0x00000001;
-        code_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required int32 code = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCode() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        code_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object message_ = "";
-      /**
-       * <code>required string message = 2;</code>
-       * @return Whether the message field is set.
-       */
-      public boolean hasMessage() {
-        return ((bitField0_ & 0x00000002) != 0);
-      }
-      /**
-       * <code>required string message = 2;</code>
-       * @return The message.
-       */
-      public java.lang.String getMessage() {
-        java.lang.Object ref = message_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            message_ = s;
-          }
-          return s;
+      public com.tcl.gaia.protocol.constant.Response.ResponseHeader getHeader() {
+        if (headerBuilder_ == null) {
+          return header_ == null ? com.tcl.gaia.protocol.constant.Response.ResponseHeader.getDefaultInstance() : header_;
         } else {
-          return (java.lang.String) ref;
+          return headerBuilder_.getMessage();
         }
       }
       /**
-       * <code>required string message = 2;</code>
-       * @return The bytes for message.
+       * <code>required .protocol.common.constant.ResponseHeader header = 1;</code>
        */
-      public com.google.protobuf.ByteString
-          getMessageBytes() {
-        java.lang.Object ref = message_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          message_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>required string message = 2;</code>
-       * @param value The message to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMessage(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        message_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required string message = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMessage() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        message_ = getDefaultInstance().getMessage();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required string message = 2;</code>
-       * @param value The bytes for message to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMessageBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        message_ = value;
-        onChanged();
-        return this;
-      }
-
-      private com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner data_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner, com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner.Builder, com.tcl.gaia.protocol.proxy.PartnerOuterClass.PartnerOrBuilder> dataBuilder_;
-      /**
-       * <code>required .protocol.gaia.proxy.Partner data = 3;</code>
-       * @return Whether the data field is set.
-       */
-      public boolean hasData() {
-        return ((bitField0_ & 0x00000004) != 0);
-      }
-      /**
-       * <code>required .protocol.gaia.proxy.Partner data = 3;</code>
-       * @return The data.
-       */
-      public com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner getData() {
-        if (dataBuilder_ == null) {
-          return data_ == null ? com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner.getDefaultInstance() : data_;
-        } else {
-          return dataBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>required .protocol.gaia.proxy.Partner data = 3;</code>
-       */
-      public Builder setData(com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner value) {
-        if (dataBuilder_ == null) {
+      public Builder setHeader(com.tcl.gaia.protocol.constant.Response.ResponseHeader value) {
+        if (headerBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          data_ = value;
+          header_ = value;
           onChanged();
         } else {
-          dataBuilder_.setMessage(value);
+          headerBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000001;
         return this;
       }
       /**
-       * <code>required .protocol.gaia.proxy.Partner data = 3;</code>
+       * <code>required .protocol.common.constant.ResponseHeader header = 1;</code>
        */
-      public Builder setData(
-          com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner.Builder builderForValue) {
-        if (dataBuilder_ == null) {
-          data_ = builderForValue.build();
+      public Builder setHeader(
+          com.tcl.gaia.protocol.constant.Response.ResponseHeader.Builder builderForValue) {
+        if (headerBuilder_ == null) {
+          header_ = builderForValue.build();
           onChanged();
         } else {
-          dataBuilder_.setMessage(builderForValue.build());
+          headerBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000001;
         return this;
       }
       /**
-       * <code>required .protocol.gaia.proxy.Partner data = 3;</code>
+       * <code>required .protocol.common.constant.ResponseHeader header = 1;</code>
        */
-      public Builder mergeData(com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner value) {
-        if (dataBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-              data_ != null &&
-              data_ != com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner.getDefaultInstance()) {
-            data_ =
-              com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner.newBuilder(data_).mergeFrom(value).buildPartial();
+      public Builder mergeHeader(com.tcl.gaia.protocol.constant.Response.ResponseHeader value) {
+        if (headerBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+              header_ != null &&
+              header_ != com.tcl.gaia.protocol.constant.Response.ResponseHeader.getDefaultInstance()) {
+            header_ =
+              com.tcl.gaia.protocol.constant.Response.ResponseHeader.newBuilder(header_).mergeFrom(value).buildPartial();
           } else {
-            data_ = value;
+            header_ = value;
           }
           onChanged();
         } else {
-          dataBuilder_.mergeFrom(value);
+          headerBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000001;
         return this;
       }
       /**
-       * <code>required .protocol.gaia.proxy.Partner data = 3;</code>
+       * <code>required .protocol.common.constant.ResponseHeader header = 1;</code>
        */
-      public Builder clearData() {
-        if (dataBuilder_ == null) {
-          data_ = null;
+      public Builder clearHeader() {
+        if (headerBuilder_ == null) {
+          header_ = null;
           onChanged();
         } else {
-          dataBuilder_.clear();
+          headerBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
       /**
-       * <code>required .protocol.gaia.proxy.Partner data = 3;</code>
+       * <code>required .protocol.common.constant.ResponseHeader header = 1;</code>
        */
-      public com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner.Builder getDataBuilder() {
-        bitField0_ |= 0x00000004;
+      public com.tcl.gaia.protocol.constant.Response.ResponseHeader.Builder getHeaderBuilder() {
+        bitField0_ |= 0x00000001;
         onChanged();
-        return getDataFieldBuilder().getBuilder();
+        return getHeaderFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .protocol.gaia.proxy.Partner data = 3;</code>
+       * <code>required .protocol.common.constant.ResponseHeader header = 1;</code>
        */
-      public com.tcl.gaia.protocol.proxy.PartnerOuterClass.PartnerOrBuilder getDataOrBuilder() {
-        if (dataBuilder_ != null) {
-          return dataBuilder_.getMessageOrBuilder();
+      public com.tcl.gaia.protocol.constant.Response.ResponseHeaderOrBuilder getHeaderOrBuilder() {
+        if (headerBuilder_ != null) {
+          return headerBuilder_.getMessageOrBuilder();
         } else {
-          return data_ == null ?
-              com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner.getDefaultInstance() : data_;
+          return header_ == null ?
+              com.tcl.gaia.protocol.constant.Response.ResponseHeader.getDefaultInstance() : header_;
         }
       }
       /**
-       * <code>required .protocol.gaia.proxy.Partner data = 3;</code>
+       * <code>required .protocol.common.constant.ResponseHeader header = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcl.gaia.protocol.constant.Response.ResponseHeader, com.tcl.gaia.protocol.constant.Response.ResponseHeader.Builder, com.tcl.gaia.protocol.constant.Response.ResponseHeaderOrBuilder> 
+          getHeaderFieldBuilder() {
+        if (headerBuilder_ == null) {
+          headerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcl.gaia.protocol.constant.Response.ResponseHeader, com.tcl.gaia.protocol.constant.Response.ResponseHeader.Builder, com.tcl.gaia.protocol.constant.Response.ResponseHeaderOrBuilder>(
+                  getHeader(),
+                  getParentForChildren(),
+                  isClean());
+          header_ = null;
+        }
+        return headerBuilder_;
+      }
+
+      private com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner payload_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner, com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner.Builder, com.tcl.gaia.protocol.proxy.PartnerOuterClass.PartnerOrBuilder> payloadBuilder_;
+      /**
+       * <code>optional .protocol.gaia.proxy.Partner payload = 2;</code>
+       * @return Whether the payload field is set.
+       */
+      public boolean hasPayload() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional .protocol.gaia.proxy.Partner payload = 2;</code>
+       * @return The payload.
+       */
+      public com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner getPayload() {
+        if (payloadBuilder_ == null) {
+          return payload_ == null ? com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner.getDefaultInstance() : payload_;
+        } else {
+          return payloadBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .protocol.gaia.proxy.Partner payload = 2;</code>
+       */
+      public Builder setPayload(com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner value) {
+        if (payloadBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payload_ = value;
+          onChanged();
+        } else {
+          payloadBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .protocol.gaia.proxy.Partner payload = 2;</code>
+       */
+      public Builder setPayload(
+          com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner.Builder builderForValue) {
+        if (payloadBuilder_ == null) {
+          payload_ = builderForValue.build();
+          onChanged();
+        } else {
+          payloadBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .protocol.gaia.proxy.Partner payload = 2;</code>
+       */
+      public Builder mergePayload(com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner value) {
+        if (payloadBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+              payload_ != null &&
+              payload_ != com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner.getDefaultInstance()) {
+            payload_ =
+              com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner.newBuilder(payload_).mergeFrom(value).buildPartial();
+          } else {
+            payload_ = value;
+          }
+          onChanged();
+        } else {
+          payloadBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .protocol.gaia.proxy.Partner payload = 2;</code>
+       */
+      public Builder clearPayload() {
+        if (payloadBuilder_ == null) {
+          payload_ = null;
+          onChanged();
+        } else {
+          payloadBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+      /**
+       * <code>optional .protocol.gaia.proxy.Partner payload = 2;</code>
+       */
+      public com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner.Builder getPayloadBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPayloadFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .protocol.gaia.proxy.Partner payload = 2;</code>
+       */
+      public com.tcl.gaia.protocol.proxy.PartnerOuterClass.PartnerOrBuilder getPayloadOrBuilder() {
+        if (payloadBuilder_ != null) {
+          return payloadBuilder_.getMessageOrBuilder();
+        } else {
+          return payload_ == null ?
+              com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner.getDefaultInstance() : payload_;
+        }
+      }
+      /**
+       * <code>optional .protocol.gaia.proxy.Partner payload = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner, com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner.Builder, com.tcl.gaia.protocol.proxy.PartnerOuterClass.PartnerOrBuilder> 
-          getDataFieldBuilder() {
-        if (dataBuilder_ == null) {
-          dataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          getPayloadFieldBuilder() {
+        if (payloadBuilder_ == null) {
+          payloadBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner, com.tcl.gaia.protocol.proxy.PartnerOuterClass.Partner.Builder, com.tcl.gaia.protocol.proxy.PartnerOuterClass.PartnerOrBuilder>(
-                  getData(),
+                  getPayload(),
                   getParentForChildren(),
                   isClean());
-          data_ = null;
+          payload_ = null;
         }
-        return dataBuilder_;
+        return payloadBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -9368,6 +10160,11 @@ public final class PartnerOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_protocol_gaia_proxy_GetPartnerResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_protocol_gaia_proxy_AddPartnerRequestPayload_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_protocol_gaia_proxy_AddPartnerRequestPayload_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_protocol_gaia_proxy_AddPartnerRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -9387,34 +10184,42 @@ public final class PartnerOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n!protocol/gaia/proxy/partner.proto\022\023pro" +
-      "tocol.gaia.proxy\"m\n\007Partner\022\014\n\004uuid\030\001 \002(" +
-      "\t\022\014\n\004name\030\002 \002(\t\022\014\n\004type\030\003 \002(\t\022\020\n\010endpoin" +
-      "t\030\004 \002(\t\022\022\n\ncreateTime\030\005 \002(\t\022\022\n\nupdateTim" +
-      "e\030\006 \002(\t\"\267\001\n\017PartnerPageData\022-\n\007content\030\001" +
-      " \003(\0132\034.protocol.gaia.proxy.Partner\022\r\n\005pa" +
-      "ged\030\002 \002(\010\022\014\n\004page\030\003 \002(\005\022\022\n\ntotalPages\030\004 " +
-      "\002(\005\022\020\n\010elements\030\005 \002(\005\022\025\n\rtotalElements\030\006" +
-      " \002(\005\022\r\n\005first\030\007 \002(\010\022\014\n\004last\030\010 \002(\010\"R\n\022Lis" +
-      "tPartnerRequest\022\020\n\010searchBy\030\001 \003(\t\022\016\n\006sor" +
-      "tBy\030\002 \003(\t\022\014\n\004page\030\003 \003(\005\022\014\n\004size\030\004 \003(\005\"h\n" +
-      "\023ListPartnerResponse\022\014\n\004code\030\001 \002(\005\022\017\n\007me" +
-      "ssage\030\002 \002(\t\0222\n\004data\030\003 \002(\0132$.protocol.gai" +
-      "a.proxy.PartnerPageData\"\'\n\021GetPartnerReq" +
-      "uest\022\022\n\npartner_id\030\001 \002(\t\"_\n\022GetPartnerRe" +
-      "sponse\022\014\n\004code\030\001 \002(\005\022\017\n\007message\030\002 \002(\t\022*\n" +
-      "\004data\030\003 \002(\0132\034.protocol.gaia.proxy.Partne" +
-      "r\"\201\001\n\021AddPartnerRequest\022\014\n\004name\030\001 \002(\t\022\020\n" +
-      "\010endpoint\030\002 \002(\t\022\014\n\004type\030\003 \002(\t\022\026\n\016oauth2E" +
-      "ndpoint\030\004 \002(\t\022\020\n\010clientId\030\005 \002(\t\022\024\n\014clien" +
-      "tSecret\030\006 \002(\t\"_\n\022AddPartnerResponse\022\014\n\004c" +
-      "ode\030\001 \002(\005\022\017\n\007message\030\002 \002(\t\022*\n\004data\030\003 \002(\013" +
-      "2\034.protocol.gaia.proxy.PartnerB:\n\033com.tc" +
-      "l.gaia.protocol.proxyZ\033tcl.com/gaia/prot" +
-      "ocol/proxy"
+      "tocol.gaia.proxy\032&protocol/common/consta" +
+      "nt/request.proto\032\'protocol/common/consta" +
+      "nt/response.proto\"m\n\007Partner\022\014\n\004uuid\030\001 \002" +
+      "(\t\022\014\n\004name\030\002 \002(\t\022\014\n\004type\030\003 \002(\t\022\020\n\010endpoi" +
+      "nt\030\004 \002(\t\022\022\n\ncreateTime\030\005 \002(\t\022\022\n\nupdateTi" +
+      "me\030\006 \002(\t\"\267\001\n\017PartnerPageData\022-\n\007content\030" +
+      "\001 \003(\0132\034.protocol.gaia.proxy.Partner\022\r\n\005p" +
+      "aged\030\002 \002(\010\022\014\n\004page\030\003 \002(\005\022\022\n\ntotalPages\030\004" +
+      " \002(\005\022\020\n\010elements\030\005 \002(\005\022\025\n\rtotalElements\030" +
+      "\006 \002(\005\022\r\n\005first\030\007 \002(\010\022\014\n\004last\030\010 \002(\010\"R\n\022Li" +
+      "stPartnerRequest\022\020\n\010searchBy\030\001 \003(\t\022\016\n\006so" +
+      "rtBy\030\002 \003(\t\022\014\n\004page\030\003 \003(\005\022\014\n\004size\030\004 \003(\005\"h" +
+      "\n\023ListPartnerResponse\022\014\n\004code\030\001 \002(\005\022\017\n\007m" +
+      "essage\030\002 \002(\t\0222\n\004data\030\003 \002(\0132$.protocol.ga" +
+      "ia.proxy.PartnerPageData\"\'\n\021GetPartnerRe" +
+      "quest\022\022\n\npartner_id\030\001 \002(\t\"_\n\022GetPartnerR" +
+      "esponse\022\014\n\004code\030\001 \002(\005\022\017\n\007message\030\002 \002(\t\022*" +
+      "\n\004data\030\003 \002(\0132\034.protocol.gaia.proxy.Partn" +
+      "er\"\210\001\n\030AddPartnerRequestPayload\022\014\n\004name\030" +
+      "\001 \002(\t\022\020\n\010endpoint\030\002 \002(\t\022\014\n\004type\030\003 \002(\t\022\026\n" +
+      "\016oAuth2Endpoint\030\004 \002(\t\022\020\n\010clientId\030\005 \002(\t\022" +
+      "\024\n\014clientSecret\030\006 \002(\t\"\214\001\n\021AddPartnerRequ" +
+      "est\0227\n\006header\030\001 \002(\0132\'.protocol.common.co" +
+      "nstant.RequestHeader\022>\n\007payload\030\002 \002(\0132-." +
+      "protocol.gaia.proxy.AddPartnerRequestPay" +
+      "load\"}\n\022AddPartnerResponse\0228\n\006header\030\001 \002" +
+      "(\0132(.protocol.common.constant.ResponseHe" +
+      "ader\022-\n\007payload\030\002 \001(\0132\034.protocol.gaia.pr" +
+      "oxy.PartnerB:\n\033com.tcl.gaia.protocol.pro" +
+      "xyZ\033tcl.com/gaia/protocol/proxy"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.tcl.gaia.protocol.constant.Request.getDescriptor(),
+          com.tcl.gaia.protocol.constant.Response.getDescriptor(),
         });
     internal_static_protocol_gaia_proxy_Partner_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -9452,18 +10257,26 @@ public final class PartnerOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protocol_gaia_proxy_GetPartnerResponse_descriptor,
         new java.lang.String[] { "Code", "Message", "Data", });
-    internal_static_protocol_gaia_proxy_AddPartnerRequest_descriptor =
+    internal_static_protocol_gaia_proxy_AddPartnerRequestPayload_descriptor =
       getDescriptor().getMessageTypes().get(6);
+    internal_static_protocol_gaia_proxy_AddPartnerRequestPayload_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_protocol_gaia_proxy_AddPartnerRequestPayload_descriptor,
+        new java.lang.String[] { "Name", "Endpoint", "Type", "OAuth2Endpoint", "ClientId", "ClientSecret", });
+    internal_static_protocol_gaia_proxy_AddPartnerRequest_descriptor =
+      getDescriptor().getMessageTypes().get(7);
     internal_static_protocol_gaia_proxy_AddPartnerRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protocol_gaia_proxy_AddPartnerRequest_descriptor,
-        new java.lang.String[] { "Name", "Endpoint", "Type", "Oauth2Endpoint", "ClientId", "ClientSecret", });
+        new java.lang.String[] { "Header", "Payload", });
     internal_static_protocol_gaia_proxy_AddPartnerResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_protocol_gaia_proxy_AddPartnerResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protocol_gaia_proxy_AddPartnerResponse_descriptor,
-        new java.lang.String[] { "Code", "Message", "Data", });
+        new java.lang.String[] { "Header", "Payload", });
+    com.tcl.gaia.protocol.constant.Request.getDescriptor();
+    com.tcl.gaia.protocol.constant.Response.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

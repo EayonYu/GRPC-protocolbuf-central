@@ -185,6 +185,34 @@
     }
   },
   "definitions": {
+    "constantRequestHeader": {
+      "type": "object",
+      "properties": {
+        "deviceId": {
+          "type": "string"
+        }
+      }
+    },
+    "constantResponseHeader": {
+      "type": "object",
+      "properties": {
+        "statusCode": {
+          "$ref": "#/definitions/constantStatusCode"
+        },
+        "msg": {
+          "type": "string"
+        }
+      }
+    },
+    "constantStatusCode": {
+      "type": "string",
+      "enum": [
+        "STATUS_CODE_UNKNOWN",
+        "STATUS_CODE_SUCCESS",
+        "STATUS_CODE_BAD_REQUEST"
+      ],
+      "default": "STATUS_CODE_UNKNOWN"
+    },
     "protobufAny": {
       "type": "object",
       "properties": {
@@ -200,6 +228,17 @@
     "proxyAddPartnerRequest": {
       "type": "object",
       "properties": {
+        "header": {
+          "$ref": "#/definitions/constantRequestHeader"
+        },
+        "payload": {
+          "$ref": "#/definitions/proxyAddPartnerRequestPayload"
+        }
+      }
+    },
+    "proxyAddPartnerRequestPayload": {
+      "type": "object",
+      "properties": {
         "name": {
           "type": "string"
         },
@@ -209,7 +248,7 @@
         "type": {
           "type": "string"
         },
-        "oauth2Endpoint": {
+        "oAuth2Endpoint": {
           "type": "string"
         },
         "clientId": {
@@ -223,14 +262,10 @@
     "proxyAddPartnerResponse": {
       "type": "object",
       "properties": {
-        "code": {
-          "type": "integer",
-          "format": "int32"
+        "header": {
+          "$ref": "#/definitions/constantResponseHeader"
         },
-        "message": {
-          "type": "string"
-        },
-        "data": {
+        "payload": {
           "$ref": "#/definitions/proxyPartner"
         }
       }
