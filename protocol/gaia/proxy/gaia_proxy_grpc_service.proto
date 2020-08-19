@@ -44,7 +44,7 @@ service GaiaProxyGrpc {
     // proxy
     rpc Proxy(ProxyRequest) returns(ProxyResponse) {
         option (google.api.http) = {
-            post: "/api/rest/proxy"
+            post: "/api/proxy"
             body: "*"
         };
     }
