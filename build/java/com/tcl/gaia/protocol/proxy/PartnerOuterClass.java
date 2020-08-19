@@ -8401,17 +8401,17 @@ public final class PartnerOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required .protocol.common.constant.RequestHeader header = 1;</code>
+     * <code>optional .protocol.common.constant.RequestHeader header = 1;</code>
      * @return Whether the header field is set.
      */
     boolean hasHeader();
     /**
-     * <code>required .protocol.common.constant.RequestHeader header = 1;</code>
+     * <code>optional .protocol.common.constant.RequestHeader header = 1;</code>
      * @return The header.
      */
     com.tcl.gaia.protocol.constant.Request.RequestHeader getHeader();
     /**
-     * <code>required .protocol.common.constant.RequestHeader header = 1;</code>
+     * <code>optional .protocol.common.constant.RequestHeader header = 1;</code>
      */
     com.tcl.gaia.protocol.constant.Request.RequestHeaderOrBuilder getHeaderOrBuilder();
 
@@ -8538,7 +8538,7 @@ public final class PartnerOuterClass {
     public static final int HEADER_FIELD_NUMBER = 1;
     private com.tcl.gaia.protocol.constant.Request.RequestHeader header_;
     /**
-     * <code>required .protocol.common.constant.RequestHeader header = 1;</code>
+     * <code>optional .protocol.common.constant.RequestHeader header = 1;</code>
      * @return Whether the header field is set.
      */
     @java.lang.Override
@@ -8546,7 +8546,7 @@ public final class PartnerOuterClass {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>required .protocol.common.constant.RequestHeader header = 1;</code>
+     * <code>optional .protocol.common.constant.RequestHeader header = 1;</code>
      * @return The header.
      */
     @java.lang.Override
@@ -8554,7 +8554,7 @@ public final class PartnerOuterClass {
       return header_ == null ? com.tcl.gaia.protocol.constant.Request.RequestHeader.getDefaultInstance() : header_;
     }
     /**
-     * <code>required .protocol.common.constant.RequestHeader header = 1;</code>
+     * <code>optional .protocol.common.constant.RequestHeader header = 1;</code>
      */
     @java.lang.Override
     public com.tcl.gaia.protocol.constant.Request.RequestHeaderOrBuilder getHeaderOrBuilder() {
@@ -8594,15 +8594,7 @@ public final class PartnerOuterClass {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasHeader()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       if (!hasPayload()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!getHeader().isInitialized()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -8937,13 +8929,7 @@ public final class PartnerOuterClass {
 
       @java.lang.Override
       public final boolean isInitialized() {
-        if (!hasHeader()) {
-          return false;
-        }
         if (!hasPayload()) {
-          return false;
-        }
-        if (!getHeader().isInitialized()) {
           return false;
         }
         if (!getPayload().isInitialized()) {
@@ -8976,14 +8962,14 @@ public final class PartnerOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.tcl.gaia.protocol.constant.Request.RequestHeader, com.tcl.gaia.protocol.constant.Request.RequestHeader.Builder, com.tcl.gaia.protocol.constant.Request.RequestHeaderOrBuilder> headerBuilder_;
       /**
-       * <code>required .protocol.common.constant.RequestHeader header = 1;</code>
+       * <code>optional .protocol.common.constant.RequestHeader header = 1;</code>
        * @return Whether the header field is set.
        */
       public boolean hasHeader() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>required .protocol.common.constant.RequestHeader header = 1;</code>
+       * <code>optional .protocol.common.constant.RequestHeader header = 1;</code>
        * @return The header.
        */
       public com.tcl.gaia.protocol.constant.Request.RequestHeader getHeader() {
@@ -8994,7 +8980,7 @@ public final class PartnerOuterClass {
         }
       }
       /**
-       * <code>required .protocol.common.constant.RequestHeader header = 1;</code>
+       * <code>optional .protocol.common.constant.RequestHeader header = 1;</code>
        */
       public Builder setHeader(com.tcl.gaia.protocol.constant.Request.RequestHeader value) {
         if (headerBuilder_ == null) {
@@ -9010,7 +8996,7 @@ public final class PartnerOuterClass {
         return this;
       }
       /**
-       * <code>required .protocol.common.constant.RequestHeader header = 1;</code>
+       * <code>optional .protocol.common.constant.RequestHeader header = 1;</code>
        */
       public Builder setHeader(
           com.tcl.gaia.protocol.constant.Request.RequestHeader.Builder builderForValue) {
@@ -9024,7 +9010,7 @@ public final class PartnerOuterClass {
         return this;
       }
       /**
-       * <code>required .protocol.common.constant.RequestHeader header = 1;</code>
+       * <code>optional .protocol.common.constant.RequestHeader header = 1;</code>
        */
       public Builder mergeHeader(com.tcl.gaia.protocol.constant.Request.RequestHeader value) {
         if (headerBuilder_ == null) {
@@ -9044,7 +9030,7 @@ public final class PartnerOuterClass {
         return this;
       }
       /**
-       * <code>required .protocol.common.constant.RequestHeader header = 1;</code>
+       * <code>optional .protocol.common.constant.RequestHeader header = 1;</code>
        */
       public Builder clearHeader() {
         if (headerBuilder_ == null) {
@@ -9057,7 +9043,7 @@ public final class PartnerOuterClass {
         return this;
       }
       /**
-       * <code>required .protocol.common.constant.RequestHeader header = 1;</code>
+       * <code>optional .protocol.common.constant.RequestHeader header = 1;</code>
        */
       public com.tcl.gaia.protocol.constant.Request.RequestHeader.Builder getHeaderBuilder() {
         bitField0_ |= 0x00000001;
@@ -9065,7 +9051,7 @@ public final class PartnerOuterClass {
         return getHeaderFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .protocol.common.constant.RequestHeader header = 1;</code>
+       * <code>optional .protocol.common.constant.RequestHeader header = 1;</code>
        */
       public com.tcl.gaia.protocol.constant.Request.RequestHeaderOrBuilder getHeaderOrBuilder() {
         if (headerBuilder_ != null) {
@@ -9076,7 +9062,7 @@ public final class PartnerOuterClass {
         }
       }
       /**
-       * <code>required .protocol.common.constant.RequestHeader header = 1;</code>
+       * <code>optional .protocol.common.constant.RequestHeader header = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.tcl.gaia.protocol.constant.Request.RequestHeader, com.tcl.gaia.protocol.constant.Request.RequestHeader.Builder, com.tcl.gaia.protocol.constant.Request.RequestHeaderOrBuilder> 
@@ -10206,7 +10192,7 @@ public final class PartnerOuterClass {
       "\001 \002(\t\022\020\n\010endpoint\030\002 \002(\t\022\014\n\004type\030\003 \002(\t\022\026\n" +
       "\016oAuth2Endpoint\030\004 \002(\t\022\020\n\010clientId\030\005 \002(\t\022" +
       "\024\n\014clientSecret\030\006 \002(\t\"\214\001\n\021AddPartnerRequ" +
-      "est\0227\n\006header\030\001 \002(\0132\'.protocol.common.co" +
+      "est\0227\n\006header\030\001 \001(\0132\'.protocol.common.co" +
       "nstant.RequestHeader\022>\n\007payload\030\002 \002(\0132-." +
       "protocol.gaia.proxy.AddPartnerRequestPay" +
       "load\"}\n\022AddPartnerResponse\0228\n\006header\030\001 \002" +

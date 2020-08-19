@@ -5,9 +5,35 @@ option go_package = "tcl.com/gaia/protocol/proxy";
 option java_package = "com.tcl.gaia.protocol.proxy";
 
 
+import "google/protobuf/any.proto";
+
+import "protocol/common/constant/request.proto";
+import "protocol/common/constant/response.proto";
+
+
+message GetResourceChunks {
+    required string resource_type = 1;
+    required int32 chunk_size = 2;
+}
+
+message ProxyRequestPayload {
+    required string partner_name = 1;
+    oneof request {
+        GetResourceChunks get_resource_chunks = 2;
+    }
+}
+
 message ProxyRequest {
+    optional protocol.common.constant.RequestHeader header = 1;
+    required ProxyRequestPayload payload = 2;
+}
+
+message ProxyResponsePayload {
+    required int32 statusCode = 1;
+    repeated google.protobuf.Any body = 2;
 }
 
 message ProxyResponse {
-
+    required protocol.common.constant.ResponseHeader header = 1;
+    optional ProxyResponsePayload payload = 2;
 }

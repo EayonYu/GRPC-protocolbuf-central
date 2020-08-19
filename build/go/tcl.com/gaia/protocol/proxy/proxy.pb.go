@@ -8,10 +8,12 @@ package proxy
 
 import (
 	proto "github.com/golang/protobuf/proto"
+	any "github.com/golang/protobuf/ptypes/any"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
+	constant "tcl.com/gaia/protocol/constant"
 )
 
 const (
@@ -25,16 +27,148 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
+type GetResourceChunks struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	ResourceType *string `protobuf:"bytes,1,req,name=resource_type,json=resourceType" json:"resource_type,omitempty"`
+	ChunkSize    *int32  `protobuf:"varint,2,req,name=chunk_size,json=chunkSize" json:"chunk_size,omitempty"`
+}
+
+func (x *GetResourceChunks) Reset() {
+	*x = GetResourceChunks{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_protocol_gaia_proxy_proxy_proto_msgTypes[0]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GetResourceChunks) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetResourceChunks) ProtoMessage() {}
+
+func (x *GetResourceChunks) ProtoReflect() protoreflect.Message {
+	mi := &file_protocol_gaia_proxy_proxy_proto_msgTypes[0]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetResourceChunks.ProtoReflect.Descriptor instead.
+func (*GetResourceChunks) Descriptor() ([]byte, []int) {
+	return file_protocol_gaia_proxy_proxy_proto_rawDescGZIP(), []int{0}
+}
+
+func (x *GetResourceChunks) GetResourceType() string {
+	if x != nil && x.ResourceType != nil {
+		return *x.ResourceType
+	}
+	return ""
+}
+
+func (x *GetResourceChunks) GetChunkSize() int32 {
+	if x != nil && x.ChunkSize != nil {
+		return *x.ChunkSize
+	}
+	return 0
+}
+
+type ProxyRequestPayload struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	PartnerName *string `protobuf:"bytes,1,req,name=partner_name,json=partnerName" json:"partner_name,omitempty"`
+	// Types that are assignable to Request:
+	//	*ProxyRequestPayload_GetResourceChunks
+	Request isProxyRequestPayload_Request `protobuf_oneof:"request"`
+}
+
+func (x *ProxyRequestPayload) Reset() {
+	*x = ProxyRequestPayload{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_protocol_gaia_proxy_proxy_proto_msgTypes[1]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ProxyRequestPayload) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ProxyRequestPayload) ProtoMessage() {}
+
+func (x *ProxyRequestPayload) ProtoReflect() protoreflect.Message {
+	mi := &file_protocol_gaia_proxy_proxy_proto_msgTypes[1]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ProxyRequestPayload.ProtoReflect.Descriptor instead.
+func (*ProxyRequestPayload) Descriptor() ([]byte, []int) {
+	return file_protocol_gaia_proxy_proxy_proto_rawDescGZIP(), []int{1}
+}
+
+func (x *ProxyRequestPayload) GetPartnerName() string {
+	if x != nil && x.PartnerName != nil {
+		return *x.PartnerName
+	}
+	return ""
+}
+
+func (m *ProxyRequestPayload) GetRequest() isProxyRequestPayload_Request {
+	if m != nil {
+		return m.Request
+	}
+	return nil
+}
+
+func (x *ProxyRequestPayload) GetGetResourceChunks() *GetResourceChunks {
+	if x, ok := x.GetRequest().(*ProxyRequestPayload_GetResourceChunks); ok {
+		return x.GetResourceChunks
+	}
+	return nil
+}
+
+type isProxyRequestPayload_Request interface {
+	isProxyRequestPayload_Request()
+}
+
+type ProxyRequestPayload_GetResourceChunks struct {
+	GetResourceChunks *GetResourceChunks `protobuf:"bytes,2,opt,name=get_resource_chunks,json=getResourceChunks,oneof"`
+}
+
+func (*ProxyRequestPayload_GetResourceChunks) isProxyRequestPayload_Request() {}
+
 type ProxyRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
+
+	Header  *constant.RequestHeader `protobuf:"bytes,1,opt,name=header" json:"header,omitempty"`
+	Payload *ProxyRequestPayload    `protobuf:"bytes,2,req,name=payload" json:"payload,omitempty"`
 }
 
 func (x *ProxyRequest) Reset() {
 	*x = ProxyRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_protocol_gaia_proxy_proxy_proto_msgTypes[0]
+		mi := &file_protocol_gaia_proxy_proxy_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -47,7 +181,7 @@ func (x *ProxyRequest) String() string {
 func (*ProxyRequest) ProtoMessage() {}
 
 func (x *ProxyRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_protocol_gaia_proxy_proxy_proto_msgTypes[0]
+	mi := &file_protocol_gaia_proxy_proxy_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -60,19 +194,91 @@ func (x *ProxyRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProxyRequest.ProtoReflect.Descriptor instead.
 func (*ProxyRequest) Descriptor() ([]byte, []int) {
-	return file_protocol_gaia_proxy_proxy_proto_rawDescGZIP(), []int{0}
+	return file_protocol_gaia_proxy_proxy_proto_rawDescGZIP(), []int{2}
+}
+
+func (x *ProxyRequest) GetHeader() *constant.RequestHeader {
+	if x != nil {
+		return x.Header
+	}
+	return nil
+}
+
+func (x *ProxyRequest) GetPayload() *ProxyRequestPayload {
+	if x != nil {
+		return x.Payload
+	}
+	return nil
+}
+
+type ProxyResponsePayload struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	StatusCode *int32     `protobuf:"varint,1,req,name=statusCode" json:"statusCode,omitempty"`
+	Body       []*any.Any `protobuf:"bytes,2,rep,name=body" json:"body,omitempty"`
+}
+
+func (x *ProxyResponsePayload) Reset() {
+	*x = ProxyResponsePayload{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_protocol_gaia_proxy_proxy_proto_msgTypes[3]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ProxyResponsePayload) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ProxyResponsePayload) ProtoMessage() {}
+
+func (x *ProxyResponsePayload) ProtoReflect() protoreflect.Message {
+	mi := &file_protocol_gaia_proxy_proxy_proto_msgTypes[3]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ProxyResponsePayload.ProtoReflect.Descriptor instead.
+func (*ProxyResponsePayload) Descriptor() ([]byte, []int) {
+	return file_protocol_gaia_proxy_proxy_proto_rawDescGZIP(), []int{3}
+}
+
+func (x *ProxyResponsePayload) GetStatusCode() int32 {
+	if x != nil && x.StatusCode != nil {
+		return *x.StatusCode
+	}
+	return 0
+}
+
+func (x *ProxyResponsePayload) GetBody() []*any.Any {
+	if x != nil {
+		return x.Body
+	}
+	return nil
 }
 
 type ProxyResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
+
+	Header  *constant.ResponseHeader `protobuf:"bytes,1,req,name=header" json:"header,omitempty"`
+	Payload *ProxyResponsePayload    `protobuf:"bytes,2,opt,name=payload" json:"payload,omitempty"`
 }
 
 func (x *ProxyResponse) Reset() {
 	*x = ProxyResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_protocol_gaia_proxy_proxy_proto_msgTypes[1]
+		mi := &file_protocol_gaia_proxy_proxy_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -85,7 +291,7 @@ func (x *ProxyResponse) String() string {
 func (*ProxyResponse) ProtoMessage() {}
 
 func (x *ProxyResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_protocol_gaia_proxy_proxy_proto_msgTypes[1]
+	mi := &file_protocol_gaia_proxy_proxy_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -98,7 +304,21 @@ func (x *ProxyResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProxyResponse.ProtoReflect.Descriptor instead.
 func (*ProxyResponse) Descriptor() ([]byte, []int) {
-	return file_protocol_gaia_proxy_proxy_proto_rawDescGZIP(), []int{1}
+	return file_protocol_gaia_proxy_proxy_proto_rawDescGZIP(), []int{4}
+}
+
+func (x *ProxyResponse) GetHeader() *constant.ResponseHeader {
+	if x != nil {
+		return x.Header
+	}
+	return nil
+}
+
+func (x *ProxyResponse) GetPayload() *ProxyResponsePayload {
+	if x != nil {
+		return x.Payload
+	}
+	return nil
 }
 
 var File_protocol_gaia_proxy_proxy_proto protoreflect.FileDescriptor
@@ -107,13 +327,58 @@ var file_protocol_gaia_proxy_proxy_proto_rawDesc = []byte{
 	0x0a, 0x1f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2f, 0x67, 0x61, 0x69, 0x61, 0x2f,
 	0x70, 0x72, 0x6f, 0x78, 0x79, 0x2f, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x2e, 0x70, 0x72, 0x6f, 0x74,
 	0x6f, 0x12, 0x13, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x67, 0x61, 0x69, 0x61,
-	0x2e, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x22, 0x0e, 0x0a, 0x0c, 0x50, 0x72, 0x6f, 0x78, 0x79, 0x52,
-	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x22, 0x0f, 0x0a, 0x0d, 0x50, 0x72, 0x6f, 0x78, 0x79, 0x52,
-	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x42, 0x3a, 0x0a, 0x1b, 0x63, 0x6f, 0x6d, 0x2e, 0x74,
-	0x63, 0x6c, 0x2e, 0x67, 0x61, 0x69, 0x61, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c,
-	0x2e, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x5a, 0x1b, 0x74, 0x63, 0x6c, 0x2e, 0x63, 0x6f, 0x6d, 0x2f,
-	0x67, 0x61, 0x69, 0x61, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2f, 0x70, 0x72,
-	0x6f, 0x78, 0x79,
+	0x2e, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x1a, 0x19, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2f, 0x70,
+	0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2f, 0x61, 0x6e, 0x79, 0x2e, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x1a, 0x26, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2f, 0x63, 0x6f, 0x6d, 0x6d,
+	0x6f, 0x6e, 0x2f, 0x63, 0x6f, 0x6e, 0x73, 0x74, 0x61, 0x6e, 0x74, 0x2f, 0x72, 0x65, 0x71, 0x75,
+	0x65, 0x73, 0x74, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x27, 0x70, 0x72, 0x6f, 0x74, 0x6f,
+	0x63, 0x6f, 0x6c, 0x2f, 0x63, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x2f, 0x63, 0x6f, 0x6e, 0x73, 0x74,
+	0x61, 0x6e, 0x74, 0x2f, 0x72, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x2e, 0x70, 0x72, 0x6f,
+	0x74, 0x6f, 0x22, 0x57, 0x0a, 0x11, 0x47, 0x65, 0x74, 0x52, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63,
+	0x65, 0x43, 0x68, 0x75, 0x6e, 0x6b, 0x73, 0x12, 0x23, 0x0a, 0x0d, 0x72, 0x65, 0x73, 0x6f, 0x75,
+	0x72, 0x63, 0x65, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x18, 0x01, 0x20, 0x02, 0x28, 0x09, 0x52, 0x0c,
+	0x72, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x54, 0x79, 0x70, 0x65, 0x12, 0x1d, 0x0a, 0x0a,
+	0x63, 0x68, 0x75, 0x6e, 0x6b, 0x5f, 0x73, 0x69, 0x7a, 0x65, 0x18, 0x02, 0x20, 0x02, 0x28, 0x05,
+	0x52, 0x09, 0x63, 0x68, 0x75, 0x6e, 0x6b, 0x53, 0x69, 0x7a, 0x65, 0x22, 0x9d, 0x01, 0x0a, 0x13,
+	0x50, 0x72, 0x6f, 0x78, 0x79, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x50, 0x61, 0x79, 0x6c,
+	0x6f, 0x61, 0x64, 0x12, 0x21, 0x0a, 0x0c, 0x70, 0x61, 0x72, 0x74, 0x6e, 0x65, 0x72, 0x5f, 0x6e,
+	0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x02, 0x28, 0x09, 0x52, 0x0b, 0x70, 0x61, 0x72, 0x74, 0x6e,
+	0x65, 0x72, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x58, 0x0a, 0x13, 0x67, 0x65, 0x74, 0x5f, 0x72, 0x65,
+	0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x5f, 0x63, 0x68, 0x75, 0x6e, 0x6b, 0x73, 0x18, 0x02, 0x20,
+	0x01, 0x28, 0x0b, 0x32, 0x26, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x67,
+	0x61, 0x69, 0x61, 0x2e, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x2e, 0x47, 0x65, 0x74, 0x52, 0x65, 0x73,
+	0x6f, 0x75, 0x72, 0x63, 0x65, 0x43, 0x68, 0x75, 0x6e, 0x6b, 0x73, 0x48, 0x00, 0x52, 0x11, 0x67,
+	0x65, 0x74, 0x52, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x43, 0x68, 0x75, 0x6e, 0x6b, 0x73,
+	0x42, 0x09, 0x0a, 0x07, 0x72, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x22, 0x93, 0x01, 0x0a, 0x0c,
+	0x50, 0x72, 0x6f, 0x78, 0x79, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x3f, 0x0a, 0x06,
+	0x68, 0x65, 0x61, 0x64, 0x65, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x27, 0x2e, 0x70,
+	0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x63, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x2e, 0x63,
+	0x6f, 0x6e, 0x73, 0x74, 0x61, 0x6e, 0x74, 0x2e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x48,
+	0x65, 0x61, 0x64, 0x65, 0x72, 0x52, 0x06, 0x68, 0x65, 0x61, 0x64, 0x65, 0x72, 0x12, 0x42, 0x0a,
+	0x07, 0x70, 0x61, 0x79, 0x6c, 0x6f, 0x61, 0x64, 0x18, 0x02, 0x20, 0x02, 0x28, 0x0b, 0x32, 0x28,
+	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x67, 0x61, 0x69, 0x61, 0x2e, 0x70,
+	0x72, 0x6f, 0x78, 0x79, 0x2e, 0x50, 0x72, 0x6f, 0x78, 0x79, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
+	0x74, 0x50, 0x61, 0x79, 0x6c, 0x6f, 0x61, 0x64, 0x52, 0x07, 0x70, 0x61, 0x79, 0x6c, 0x6f, 0x61,
+	0x64, 0x22, 0x60, 0x0a, 0x14, 0x50, 0x72, 0x6f, 0x78, 0x79, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
+	0x73, 0x65, 0x50, 0x61, 0x79, 0x6c, 0x6f, 0x61, 0x64, 0x12, 0x1e, 0x0a, 0x0a, 0x73, 0x74, 0x61,
+	0x74, 0x75, 0x73, 0x43, 0x6f, 0x64, 0x65, 0x18, 0x01, 0x20, 0x02, 0x28, 0x05, 0x52, 0x0a, 0x73,
+	0x74, 0x61, 0x74, 0x75, 0x73, 0x43, 0x6f, 0x64, 0x65, 0x12, 0x28, 0x0a, 0x04, 0x62, 0x6f, 0x64,
+	0x79, 0x18, 0x02, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x14, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65,
+	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x41, 0x6e, 0x79, 0x52, 0x04, 0x62,
+	0x6f, 0x64, 0x79, 0x22, 0x96, 0x01, 0x0a, 0x0d, 0x50, 0x72, 0x6f, 0x78, 0x79, 0x52, 0x65, 0x73,
+	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x40, 0x0a, 0x06, 0x68, 0x65, 0x61, 0x64, 0x65, 0x72, 0x18,
+	0x01, 0x20, 0x02, 0x28, 0x0b, 0x32, 0x28, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f, 0x6c,
+	0x2e, 0x63, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x2e, 0x63, 0x6f, 0x6e, 0x73, 0x74, 0x61, 0x6e, 0x74,
+	0x2e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x48, 0x65, 0x61, 0x64, 0x65, 0x72, 0x52,
+	0x06, 0x68, 0x65, 0x61, 0x64, 0x65, 0x72, 0x12, 0x43, 0x0a, 0x07, 0x70, 0x61, 0x79, 0x6c, 0x6f,
+	0x61, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x29, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f,
+	0x63, 0x6f, 0x6c, 0x2e, 0x67, 0x61, 0x69, 0x61, 0x2e, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x2e, 0x50,
+	0x72, 0x6f, 0x78, 0x79, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x50, 0x61, 0x79, 0x6c,
+	0x6f, 0x61, 0x64, 0x52, 0x07, 0x70, 0x61, 0x79, 0x6c, 0x6f, 0x61, 0x64, 0x42, 0x3a, 0x0a, 0x1b,
+	0x63, 0x6f, 0x6d, 0x2e, 0x74, 0x63, 0x6c, 0x2e, 0x67, 0x61, 0x69, 0x61, 0x2e, 0x70, 0x72, 0x6f,
+	0x74, 0x6f, 0x63, 0x6f, 0x6c, 0x2e, 0x70, 0x72, 0x6f, 0x78, 0x79, 0x5a, 0x1b, 0x74, 0x63, 0x6c,
+	0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x67, 0x61, 0x69, 0x61, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x63,
+	0x6f, 0x6c, 0x2f, 0x70, 0x72, 0x6f, 0x78, 0x79,
 }
 
 var (
@@ -128,17 +393,29 @@ func file_protocol_gaia_proxy_proxy_proto_rawDescGZIP() []byte {
 	return file_protocol_gaia_proxy_proxy_proto_rawDescData
 }
 
-var file_protocol_gaia_proxy_proxy_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_protocol_gaia_proxy_proxy_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_protocol_gaia_proxy_proxy_proto_goTypes = []interface{}{
-	(*ProxyRequest)(nil),  // 0: protocol.gaia.proxy.ProxyRequest
-	(*ProxyResponse)(nil), // 1: protocol.gaia.proxy.ProxyResponse
+	(*GetResourceChunks)(nil),       // 0: protocol.gaia.proxy.GetResourceChunks
+	(*ProxyRequestPayload)(nil),     // 1: protocol.gaia.proxy.ProxyRequestPayload
+	(*ProxyRequest)(nil),            // 2: protocol.gaia.proxy.ProxyRequest
+	(*ProxyResponsePayload)(nil),    // 3: protocol.gaia.proxy.ProxyResponsePayload
+	(*ProxyResponse)(nil),           // 4: protocol.gaia.proxy.ProxyResponse
+	(*constant.RequestHeader)(nil),  // 5: protocol.common.constant.RequestHeader
+	(*any.Any)(nil),                 // 6: google.protobuf.Any
+	(*constant.ResponseHeader)(nil), // 7: protocol.common.constant.ResponseHeader
 }
 var file_protocol_gaia_proxy_proxy_proto_depIdxs = []int32{
-	0, // [0:0] is the sub-list for method output_type
-	0, // [0:0] is the sub-list for method input_type
-	0, // [0:0] is the sub-list for extension type_name
-	0, // [0:0] is the sub-list for extension extendee
-	0, // [0:0] is the sub-list for field type_name
+	0, // 0: protocol.gaia.proxy.ProxyRequestPayload.get_resource_chunks:type_name -> protocol.gaia.proxy.GetResourceChunks
+	5, // 1: protocol.gaia.proxy.ProxyRequest.header:type_name -> protocol.common.constant.RequestHeader
+	1, // 2: protocol.gaia.proxy.ProxyRequest.payload:type_name -> protocol.gaia.proxy.ProxyRequestPayload
+	6, // 3: protocol.gaia.proxy.ProxyResponsePayload.body:type_name -> google.protobuf.Any
+	7, // 4: protocol.gaia.proxy.ProxyResponse.header:type_name -> protocol.common.constant.ResponseHeader
+	3, // 5: protocol.gaia.proxy.ProxyResponse.payload:type_name -> protocol.gaia.proxy.ProxyResponsePayload
+	6, // [6:6] is the sub-list for method output_type
+	6, // [6:6] is the sub-list for method input_type
+	6, // [6:6] is the sub-list for extension type_name
+	6, // [6:6] is the sub-list for extension extendee
+	0, // [0:6] is the sub-list for field type_name
 }
 
 func init() { file_protocol_gaia_proxy_proxy_proto_init() }
@@ -148,7 +425,7 @@ func file_protocol_gaia_proxy_proxy_proto_init() {
 	}
 	if !protoimpl.UnsafeEnabled {
 		file_protocol_gaia_proxy_proxy_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ProxyRequest); i {
+			switch v := v.(*GetResourceChunks); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -160,6 +437,42 @@ func file_protocol_gaia_proxy_proxy_proto_init() {
 			}
 		}
 		file_protocol_gaia_proxy_proxy_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ProxyRequestPayload); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_protocol_gaia_proxy_proxy_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ProxyRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_protocol_gaia_proxy_proxy_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ProxyResponsePayload); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_protocol_gaia_proxy_proxy_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ProxyResponse); i {
 			case 0:
 				return &v.state
@@ -172,13 +485,16 @@ func file_protocol_gaia_proxy_proxy_proto_init() {
 			}
 		}
 	}
+	file_protocol_gaia_proxy_proxy_proto_msgTypes[1].OneofWrappers = []interface{}{
+		(*ProxyRequestPayload_GetResourceChunks)(nil),
+	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_protocol_gaia_proxy_proxy_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   2,
+			NumMessages:   5,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

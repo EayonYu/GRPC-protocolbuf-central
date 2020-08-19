@@ -17,6 +17,8 @@ enum Code {
 
 enum StatusCode {
     STATUS_CODE_UNKNOWN = 0;
+
     STATUS_CODE_SUCCESS = 200;
+
     STATUS_CODE_BAD_REQUEST = 400;
 }

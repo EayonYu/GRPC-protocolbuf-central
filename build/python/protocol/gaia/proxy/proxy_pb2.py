@@ -11,6 +11,9 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from google.protobuf import any_pb2 as google_dot_protobuf_dot_any__pb2
+from protocol.common.constant import request_pb2 as protocol_dot_common_dot_constant_dot_request__pb2
+from protocol.common.constant import response_pb2 as protocol_dot_common_dot_constant_dot_response__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -19,20 +22,35 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=b'\n\033com.tcl.gaia.protocol.proxyZ\033tcl.com/gaia/protocol/proxy',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1fprotocol/gaia/proxy/proxy.proto\x12\x13protocol.gaia.proxy\"\x0e\n\x0cProxyRequest\"\x0f\n\rProxyResponseB:\n\x1b\x63om.tcl.gaia.protocol.proxyZ\x1btcl.com/gaia/protocol/proxy'
-)
+  serialized_pb=b'\n\x1fprotocol/gaia/proxy/proxy.proto\x12\x13protocol.gaia.proxy\x1a\x19google/protobuf/any.proto\x1a&protocol/common/constant/request.proto\x1a\'protocol/common/constant/response.proto\">\n\x11GetResourceChunks\x12\x15\n\rresource_type\x18\x01 \x02(\t\x12\x12\n\nchunk_size\x18\x02 \x02(\x05\"}\n\x13ProxyRequestPayload\x12\x14\n\x0cpartner_name\x18\x01 \x02(\t\x12\x45\n\x13get_resource_chunks\x18\x02 \x01(\x0b\x32&.protocol.gaia.proxy.GetResourceChunksH\x00\x42\t\n\x07request\"\x82\x01\n\x0cProxyRequest\x12\x37\n\x06header\x18\x01 \x01(\x0b\x32\'.protocol.common.constant.RequestHeader\x12\x39\n\x07payload\x18\x02 \x02(\x0b\x32(.protocol.gaia.proxy.ProxyRequestPayload\"N\n\x14ProxyResponsePayload\x12\x12\n\nstatusCode\x18\x01 \x02(\x05\x12\"\n\x04\x62ody\x18\x02 \x03(\x0b\x32\x14.google.protobuf.Any\"\x85\x01\n\rProxyResponse\x12\x38\n\x06header\x18\x01 \x02(\x0b\x32(.protocol.common.constant.ResponseHeader\x12:\n\x07payload\x18\x02 \x01(\x0b\x32).protocol.gaia.proxy.ProxyResponsePayloadB:\n\x1b\x63om.tcl.gaia.protocol.proxyZ\x1btcl.com/gaia/protocol/proxy'
+  ,
+  dependencies=[google_dot_protobuf_dot_any__pb2.DESCRIPTOR,protocol_dot_common_dot_constant_dot_request__pb2.DESCRIPTOR,protocol_dot_common_dot_constant_dot_response__pb2.DESCRIPTOR,])
 
 
 
 
-_PROXYREQUEST = _descriptor.Descriptor(
-  name='ProxyRequest',
-  full_name='protocol.gaia.proxy.ProxyRequest',
+_GETRESOURCECHUNKS = _descriptor.Descriptor(
+  name='GetResourceChunks',
+  full_name='protocol.gaia.proxy.GetResourceChunks',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='resource_type', full_name='protocol.gaia.proxy.GetResourceChunks.resource_type', index=0,
+      number=1, type=9, cpp_type=9, label=2,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='chunk_size', full_name='protocol.gaia.proxy.GetResourceChunks.chunk_size', index=1,
+      number=2, type=5, cpp_type=1, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -45,8 +63,130 @@ _PROXYREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=56,
-  serialized_end=70,
+  serialized_start=164,
+  serialized_end=226,
+)
+
+
+_PROXYREQUESTPAYLOAD = _descriptor.Descriptor(
+  name='ProxyRequestPayload',
+  full_name='protocol.gaia.proxy.ProxyRequestPayload',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='partner_name', full_name='protocol.gaia.proxy.ProxyRequestPayload.partner_name', index=0,
+      number=1, type=9, cpp_type=9, label=2,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='get_resource_chunks', full_name='protocol.gaia.proxy.ProxyRequestPayload.get_resource_chunks', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+    _descriptor.OneofDescriptor(
+      name='request', full_name='protocol.gaia.proxy.ProxyRequestPayload.request',
+      index=0, containing_type=None,
+      create_key=_descriptor._internal_create_key,
+    fields=[]),
+  ],
+  serialized_start=228,
+  serialized_end=353,
+)
+
+
+_PROXYREQUEST = _descriptor.Descriptor(
+  name='ProxyRequest',
+  full_name='protocol.gaia.proxy.ProxyRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='header', full_name='protocol.gaia.proxy.ProxyRequest.header', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='payload', full_name='protocol.gaia.proxy.ProxyRequest.payload', index=1,
+      number=2, type=11, cpp_type=10, label=2,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=356,
+  serialized_end=486,
+)
+
+
+_PROXYRESPONSEPAYLOAD = _descriptor.Descriptor(
+  name='ProxyResponsePayload',
+  full_name='protocol.gaia.proxy.ProxyResponsePayload',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='statusCode', full_name='protocol.gaia.proxy.ProxyResponsePayload.statusCode', index=0,
+      number=1, type=5, cpp_type=1, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='body', full_name='protocol.gaia.proxy.ProxyResponsePayload.body', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=488,
+  serialized_end=566,
 )
 
 
@@ -58,6 +198,20 @@ _PROXYRESPONSE = _descriptor.Descriptor(
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='header', full_name='protocol.gaia.proxy.ProxyResponse.header', index=0,
+      number=1, type=11, cpp_type=10, label=2,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='payload', full_name='protocol.gaia.proxy.ProxyResponse.payload', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -70,13 +224,39 @@ _PROXYRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=72,
-  serialized_end=87,
+  serialized_start=569,
+  serialized_end=702,
 )
 
+_PROXYREQUESTPAYLOAD.fields_by_name['get_resource_chunks'].message_type = _GETRESOURCECHUNKS
+_PROXYREQUESTPAYLOAD.oneofs_by_name['request'].fields.append(
+  _PROXYREQUESTPAYLOAD.fields_by_name['get_resource_chunks'])
+_PROXYREQUESTPAYLOAD.fields_by_name['get_resource_chunks'].containing_oneof = _PROXYREQUESTPAYLOAD.oneofs_by_name['request']
+_PROXYREQUEST.fields_by_name['header'].message_type = protocol_dot_common_dot_constant_dot_request__pb2._REQUESTHEADER
+_PROXYREQUEST.fields_by_name['payload'].message_type = _PROXYREQUESTPAYLOAD
+_PROXYRESPONSEPAYLOAD.fields_by_name['body'].message_type = google_dot_protobuf_dot_any__pb2._ANY
+_PROXYRESPONSE.fields_by_name['header'].message_type = protocol_dot_common_dot_constant_dot_response__pb2._RESPONSEHEADER
+_PROXYRESPONSE.fields_by_name['payload'].message_type = _PROXYRESPONSEPAYLOAD
+DESCRIPTOR.message_types_by_name['GetResourceChunks'] = _GETRESOURCECHUNKS
+DESCRIPTOR.message_types_by_name['ProxyRequestPayload'] = _PROXYREQUESTPAYLOAD
 DESCRIPTOR.message_types_by_name['ProxyRequest'] = _PROXYREQUEST
+DESCRIPTOR.message_types_by_name['ProxyResponsePayload'] = _PROXYRESPONSEPAYLOAD
 DESCRIPTOR.message_types_by_name['ProxyResponse'] = _PROXYRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
+
+GetResourceChunks = _reflection.GeneratedProtocolMessageType('GetResourceChunks', (_message.Message,), {
+  'DESCRIPTOR' : _GETRESOURCECHUNKS,
+  '__module__' : 'protocol.gaia.proxy.proxy_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.gaia.proxy.GetResourceChunks)
+  })
+_sym_db.RegisterMessage(GetResourceChunks)
+
+ProxyRequestPayload = _reflection.GeneratedProtocolMessageType('ProxyRequestPayload', (_message.Message,), {
+  'DESCRIPTOR' : _PROXYREQUESTPAYLOAD,
+  '__module__' : 'protocol.gaia.proxy.proxy_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.gaia.proxy.ProxyRequestPayload)
+  })
+_sym_db.RegisterMessage(ProxyRequestPayload)
 
 ProxyRequest = _reflection.GeneratedProtocolMessageType('ProxyRequest', (_message.Message,), {
   'DESCRIPTOR' : _PROXYREQUEST,
@@ -84,6 +264,13 @@ ProxyRequest = _reflection.GeneratedProtocolMessageType('ProxyRequest', (_messag
   # @@protoc_insertion_point(class_scope:protocol.gaia.proxy.ProxyRequest)
   })
 _sym_db.RegisterMessage(ProxyRequest)
+
+ProxyResponsePayload = _reflection.GeneratedProtocolMessageType('ProxyResponsePayload', (_message.Message,), {
+  'DESCRIPTOR' : _PROXYRESPONSEPAYLOAD,
+  '__module__' : 'protocol.gaia.proxy.proxy_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.gaia.proxy.ProxyResponsePayload)
+  })
+_sym_db.RegisterMessage(ProxyResponsePayload)
 
 ProxyResponse = _reflection.GeneratedProtocolMessageType('ProxyResponse', (_message.Message,), {
   'DESCRIPTOR' : _PROXYRESPONSE,

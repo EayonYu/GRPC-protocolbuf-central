@@ -62,7 +62,7 @@ message AddPartnerRequestPayload {
 }
 
 message AddPartnerRequest {
-    required protocol.common.constant.RequestHeader header = 1;
+    optional protocol.common.constant.RequestHeader header = 1;
     required AddPartnerRequestPayload payload = 2;
 }
 
