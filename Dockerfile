@@ -41,8 +41,9 @@ ENV GOPATH="/root/go:${GOPATH}"
 RUN apt-get install -y git
 RUN rm -rf /root/go/src/github.com/golang/protobuf
 RUN go get -v -d -u github.com/golang/protobuf/protoc-gen-go
-RUN git -C /root/go/src/github.com/golang/protobuf checkout v1.4.2
+RUN git -C /root/go/src/github.com/golang/protobuf checkout v1.2.0
 RUN go install github.com/golang/protobuf/protoc-gen-go
+RUN git -C /root/go/src/github.com/golang/protobuf checkout master
 RUN go get github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway
 RUN go get github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger
 

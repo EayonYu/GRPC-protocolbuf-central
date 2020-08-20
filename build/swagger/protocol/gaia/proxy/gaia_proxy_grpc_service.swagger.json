@@ -160,8 +160,8 @@
         ]
       }
     },
-    "/api/rest/proxy": {
-      "get": {
+    "/api/proxy": {
+      "post": {
         "summary": "proxy",
         "operationId": "Proxy",
         "responses": {
@@ -180,23 +180,12 @@
         },
         "parameters": [
           {
-            "name": "payload.partner_name",
-            "in": "query",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "name": "payload.get_resource_chunks.resource_type",
-            "in": "query",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "name": "payload.get_resource_chunks.chunk_size",
-            "in": "query",
-            "required": false,
-            "type": "integer",
-            "format": "int32"
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/proxyProxyRequest"
+            }
           }
         ],
         "tags": [
@@ -296,7 +285,7 @@
         }
       }
     },
-    "proxyGetResourceChunks": {
+    "proxyGetResourceChunksRequest": {
       "type": "object",
       "properties": {
         "resource_type": {
@@ -307,6 +296,34 @@
           "format": "int32"
         }
       }
+    },
+    "proxyGetResourceChunksResponse": {
+      "type": "object",
+      "properties": {
+        "delimiters": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "proxyGetResourcesRequest": {
+      "type": "object",
+      "properties": {
+        "resource_type": {
+          "type": "string"
+        },
+        "next_id": {
+          "type": "string"
+        },
+        "end_id": {
+          "type": "string"
+        }
+      }
+    },
+    "proxyGetResourcesResponse": {
+      "type": "object"
     },
     "proxyListPartnerResponse": {
       "type": "object",
@@ -394,14 +411,31 @@
         }
       }
     },
+    "proxyProxyRequest": {
+      "type": "object",
+      "properties": {
+        "header": {
+          "$ref": "#/definitions/constantRequestHeader"
+        },
+        "payload": {
+          "$ref": "#/definitions/proxyProxyRequestPayload"
+        }
+      }
+    },
     "proxyProxyRequestPayload": {
       "type": "object",
       "properties": {
         "partner_name": {
           "type": "string"
         },
-        "get_resource_chunks": {
-          "$ref": "#/definitions/proxyGetResourceChunks"
+        "proxy_request_type": {
+          "type": "string"
+        },
+        "get_resource_chunks_request": {
+          "$ref": "#/definitions/proxyGetResourceChunksRequest"
+        },
+        "get_resources_request": {
+          "$ref": "#/definitions/proxyGetResourcesRequest"
         }
       }
     },
@@ -419,15 +453,15 @@
     "proxyProxyResponsePayload": {
       "type": "object",
       "properties": {
-        "statusCode": {
+        "http_status_code": {
           "type": "integer",
           "format": "int32"
         },
-        "body": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/protobufAny"
-          }
+        "get_resource_chunks_response": {
+          "$ref": "#/definitions/proxyGetResourceChunksResponse"
+        },
+        "get_resources_response": {
+          "$ref": "#/definitions/proxyGetResourcesResponse"
         }
       }
     },
