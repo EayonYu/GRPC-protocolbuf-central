@@ -1,0 +1,34 @@
+syntax = "proto2";
+
+package protocol.common.partner;
+option go_package = "tcl.com/gaia/protocol/partner/api";
+option java_package = "com.tcl.gaia.protocol.partner.api";
+
+import "protocol/common/constant/code.proto";
+
+// https://confluence.tclking.com/display/IoT4/Partner+API++Format
+
+enum MessageType{
+  // MessageType.Event
+  EVENT = 0;
+  // MessageType.Command
+  COMMAND = 1;
+  // MessageType.Result
+  RESULT = 2;
+  // MessageType.Ack
+  ACK = 3;
+}
+
+message Header{
+  // protocol version
+  required string protocolVersion = 1;
+  // message type
+  required MessageType messageType = 2;
+  // Gaia Partner Id (for logging only)
+  required string partnerId = 3;
+  // message unique ID - UUID4 (for logging)
+  required string messageId = 4;
+  // For asynchronous xxx.Result only
+  optional protocol.common.constant.Code  statusCode = 5;
+
+}
