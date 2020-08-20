@@ -73,7 +73,10 @@ func local_request_Mirror_GetUserList_0(ctx context.Context, marshaler runtime.M
 	var protoReq GetUserListRequest
 	var metadata runtime.ServerMetadata
 
-	if err := runtime.PopulateQueryParameters(&protoReq, req.URL.Query(), filter_Mirror_GetUserList_0); err != nil {
+	if err := req.ParseForm(); err != nil {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
+	}
+	if err := runtime.PopulateQueryParameters(&protoReq, req.Form, filter_Mirror_GetUserList_0); err != nil {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
@@ -218,7 +221,10 @@ func local_request_Mirror_GetPartnerDevicesByIds_0(ctx context.Context, marshale
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "partner_uuid", err)
 	}
 
-	if err := runtime.PopulateQueryParameters(&protoReq, req.URL.Query(), filter_Mirror_GetPartnerDevicesByIds_0); err != nil {
+	if err := req.ParseForm(); err != nil {
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
+	}
+	if err := runtime.PopulateQueryParameters(&protoReq, req.Form, filter_Mirror_GetPartnerDevicesByIds_0); err != nil {
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
@@ -392,6 +398,7 @@ func local_request_Mirror_GetUserDevicesRange_0(ctx context.Context, marshaler r
 // RegisterMirrorHandlerServer registers the http handlers for service Mirror to "mux".
 // UnaryRPC     :call MirrorServer directly.
 // StreamingRPC :currently unsupported pending https://github.com/grpc/grpc-go/issues/906.
+// Note that using this registration option will cause many gRPC library features (such as grpc.SendHeader, etc) to stop working. Consider using RegisterMirrorHandlerFromEndpoint instead.
 func RegisterMirrorHandlerServer(ctx context.Context, mux *runtime.ServeMux, server MirrorServer) error {
 
 	mux.Handle("GET", pattern_Mirror_Ping_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
