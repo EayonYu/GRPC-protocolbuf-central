@@ -5,6 +5,10 @@ option go_package = "tcl.com/gaia/protocol/proxy";
 option java_package = "com.tcl.gaia.protocol.proxy";
 
 
+import "protocol/common/constant/request.proto";
+import "protocol/common/constant/response.proto";
+
+
 message Partner {
     required string uuid = 1;
     required string name = 2;
@@ -48,17 +52,21 @@ message GetPartnerResponse {
     required Partner data = 3;
 }
 
-message AddPartnerRequest {
+message AddPartnerRequestPayload {
     required string name = 1;
     required string endpoint = 2;
     required string type = 3;
-    required string oauth2Endpoint = 4;
+    required string oAuth2Endpoint = 4;
     required string clientId = 5;
     required string clientSecret = 6;
 }
 
+message AddPartnerRequest {
+    optional protocol.common.constant.RequestHeader header = 1;
+    required AddPartnerRequestPayload payload = 2;
+}
+
 message AddPartnerResponse {
-    required int32 code = 1;
-    required string message = 2;
-    required Partner data = 3;
+    required protocol.common.constant.ResponseHeader header = 1;
+    optional Partner payload = 2;
 }

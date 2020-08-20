@@ -1,0 +1,20 @@
+syntax = "proto2";
+
+
+package protocol.common.constant;
+option go_package = "tcl.com/gaia/protocol/constant";
+option java_package = "com.tcl.gaia.protocol.constant";
+
+
+enum HttpMethod{
+    HTTP_METHOD_UNKNOWN = 0;
+    HTTP_METHOD_HEAD = 1;
+    HTTP_METHOD_GET = 2;
+    HTTP_METHOD_POST = 3;
+    HTTP_METHOD_DELETE = 4;
+    HTTP_METHOD_PUT = 5;
+    HTTP_METHOD_OPTIONS = 6;
+    HTTP_METHOD_PATCH = 7;
+    HTTP_METHOD_TRACE = 8;
+    HTTP_METHOD_CONNECT = 9;
+}

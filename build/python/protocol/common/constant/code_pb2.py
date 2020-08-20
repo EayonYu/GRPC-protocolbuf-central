@@ -18,9 +18,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='protocol/common/constant/code.proto',
   package='protocol.common.constant',
   syntax='proto2',
-  serialized_options=b'\n\032com.tcl.gaia.protocol.codeZ\032tcl.com/gaia/protocol/code',
+  serialized_options=b'\n\036com.tcl.gaia.protocol.constantZ\036tcl.com/gaia/protocol/constant',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n#protocol/common/constant/code.proto\x12\x18protocol.common.constant*\x82\x01\n\x04\x43ode\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x07SUCCESS\x10\xc8\x01\x12\x10\n\x0b\x42\x41\x44_REQUEST\x10\x90\x03\x12\x17\n\x12RESOURCE_NOT_FOUND\x10\x94\x03\x12\x1a\n\x15INTERNAL_SERVER_ERROR\x10\xf4\x03\x12\x18\n\x13ORIGIN_SERVER_ERROR\x10\xf5\x03\x42\x38\n\x1a\x63om.tcl.gaia.protocol.codeZ\x1atcl.com/gaia/protocol/code'
+  serialized_pb=b'\n#protocol/common/constant/code.proto\x12\x18protocol.common.constant*\x82\x01\n\x04\x43ode\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x07SUCCESS\x10\xc8\x01\x12\x10\n\x0b\x42\x41\x44_REQUEST\x10\x90\x03\x12\x17\n\x12RESOURCE_NOT_FOUND\x10\x94\x03\x12\x1a\n\x15INTERNAL_SERVER_ERROR\x10\xf4\x03\x12\x18\n\x13ORIGIN_SERVER_ERROR\x10\xf5\x03*]\n\nStatusCode\x12\x17\n\x13STATUS_CODE_UNKNOWN\x10\x00\x12\x18\n\x13STATUS_CODE_SUCCESS\x10\xc8\x01\x12\x1c\n\x17STATUS_CODE_BAD_REQUEST\x10\x90\x03\x42@\n\x1e\x63om.tcl.gaia.protocol.constantZ\x1etcl.com/gaia/protocol/constant'
 )
 
 _CODE = _descriptor.EnumDescriptor(
@@ -69,15 +69,50 @@ _CODE = _descriptor.EnumDescriptor(
 _sym_db.RegisterEnumDescriptor(_CODE)
 
 Code = enum_type_wrapper.EnumTypeWrapper(_CODE)
+_STATUSCODE = _descriptor.EnumDescriptor(
+  name='StatusCode',
+  full_name='protocol.common.constant.StatusCode',
+  filename=None,
+  file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='STATUS_CODE_UNKNOWN', index=0, number=0,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='STATUS_CODE_SUCCESS', index=1, number=200,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='STATUS_CODE_BAD_REQUEST', index=2, number=400,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=198,
+  serialized_end=291,
+)
+_sym_db.RegisterEnumDescriptor(_STATUSCODE)
+
+StatusCode = enum_type_wrapper.EnumTypeWrapper(_STATUSCODE)
 UNKNOWN = 0
 SUCCESS = 200
 BAD_REQUEST = 400
 RESOURCE_NOT_FOUND = 404
 INTERNAL_SERVER_ERROR = 500
 ORIGIN_SERVER_ERROR = 501
+STATUS_CODE_UNKNOWN = 0
+STATUS_CODE_SUCCESS = 200
+STATUS_CODE_BAD_REQUEST = 400
 
 
 DESCRIPTOR.enum_types_by_name['Code'] = _CODE
+DESCRIPTOR.enum_types_by_name['StatusCode'] = _STATUSCODE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
