@@ -13,7 +13,7 @@
   "paths": {
     "/mirror/partner/{partner_uuid}/devices_by_ids": {
       "get": {
-        "operationId": "Mirror_GetPartnerDevicesByIds",
+        "operationId": "GetPartnerDevicesByIds",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -54,7 +54,7 @@
     },
     "/mirror/partner/{partner_uuid}/devices_range": {
       "get": {
-        "operationId": "Mirror_GetDevicesRange",
+        "operationId": "GetDevicesRange",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -84,7 +84,7 @@
     },
     "/mirror/partner/{partner_uuid}/user/{partner_user_id}/devices": {
       "get": {
-        "operationId": "Mirror_GetDevicesByPartnerUser",
+        "operationId": "GetDevicesByPartnerUser",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -120,7 +120,7 @@
     },
     "/mirror/partner/{partner_uuid}/user_devices_range": {
       "get": {
-        "operationId": "Mirror_GetUserDevicesRange",
+        "operationId": "GetUserDevicesRange",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -150,7 +150,7 @@
     },
     "/mirror/partner/{partner_uuid}/users_range": {
       "get": {
-        "operationId": "Mirror_GetUsersRange",
+        "operationId": "GetUsersRange",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -180,7 +180,7 @@
     },
     "/mirror/ping": {
       "get": {
-        "operationId": "Mirror_Ping",
+        "operationId": "Ping",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -202,7 +202,7 @@
     },
     "/mirror/users": {
       "get": {
-        "operationId": "Mirror_GetUserList",
+        "operationId": "GetUserList",
         "responses": {
           "200": {
             "description": "A successful response.",
@@ -448,7 +448,8 @@
       "type": "object",
       "properties": {
         "pong": {
-          "type": "boolean"
+          "type": "boolean",
+          "format": "boolean"
         }
       }
     },

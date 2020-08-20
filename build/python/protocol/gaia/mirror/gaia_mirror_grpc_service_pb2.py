@@ -21,7 +21,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='protocol.gaia.mirror',
   syntax='proto2',
   serialized_options=b'\n\034com.tcl.gaia.protocol.mirrorZ\034tcl.com/gaia/protocol/mirror\210\001\001',
-  create_key=_descriptor._internal_create_key,
   serialized_pb=b'\n3protocol/gaia/mirror/gaia_mirror_grpc_service.proto\x12\x14protocol.gaia.mirror\x1a\x1cgoogle/api/annotations.proto\x1a\x1fprotocol/gaia/mirror/user.proto\x1a!protocol/gaia/mirror/device.proto\"\r\n\x0bPingRequest\"\x1c\n\x0cPingResponse\x12\x0c\n\x04pong\x18\x01 \x01(\x08\x32\xf3\x08\n\x06Mirror\x12\x63\n\x04Ping\x12!.protocol.gaia.mirror.PingRequest\x1a\".protocol.gaia.mirror.PingResponse\"\x14\x82\xd3\xe4\x93\x02\x0e\x12\x0c/mirror/ping\x12y\n\x0bGetUserList\x12(.protocol.gaia.mirror.GetUserListRequest\x1a).protocol.gaia.mirror.GetUserListResponse\"\x15\x82\xd3\xe4\x93\x02\x0f\x12\r/mirror/users\x12\xcd\x01\n\x17GetDevicesByPartnerUser\x12\x34.protocol.gaia.mirror.GetDevicesByPartnerUserRequest\x1a\x35.protocol.gaia.mirror.GetDevicesByPartnerUserResponse\"E\x82\xd3\xe4\x93\x02?\x12=/mirror/partner/{partner_uuid}/user/{partner_user_id}/devices\x12\xba\x01\n\x16GetPartnerDevicesByIds\x12\x33.protocol.gaia.mirror.GetPartnerDevicesByIdsRequest\x1a\x34.protocol.gaia.mirror.GetPartnerDevicesByIdsResponse\"5\x82\xd3\xe4\x93\x02/\x12-/mirror/partner/{partner_uuid}/devices_by_ids\x12\x9c\x01\n\rGetUsersRange\x12*.protocol.gaia.mirror.GetUsersRangeRequest\x1a+.protocol.gaia.mirror.GetUsersRangeResponse\"2\x82\xd3\xe4\x93\x02,\x12*/mirror/partner/{partner_uuid}/users_range\x12\xa4\x01\n\x0fGetDevicesRange\x12,.protocol.gaia.mirror.GetDevicesRangeRequest\x1a-.protocol.gaia.mirror.GetDevicesRangeResponse\"4\x82\xd3\xe4\x93\x02.\x12,/mirror/partner/{partner_uuid}/devices_range\x12\xb5\x01\n\x13GetUserDevicesRange\x12\x30.protocol.gaia.mirror.GetUserDevicesRangeRequest\x1a\x31.protocol.gaia.mirror.GetUserDevicesRangeResponse\"9\x82\xd3\xe4\x93\x02\x33\x12\x31/mirror/partner/{partner_uuid}/user_devices_rangeB?\n\x1c\x63om.tcl.gaia.protocol.mirrorZ\x1ctcl.com/gaia/protocol/mirror\x88\x01\x01'
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,protocol_dot_gaia_dot_mirror_dot_user__pb2.DESCRIPTOR,protocol_dot_gaia_dot_mirror_dot_device__pb2.DESCRIPTOR,])
@@ -35,7 +34,6 @@ _PINGREQUEST = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
-  create_key=_descriptor._internal_create_key,
   fields=[
   ],
   extensions=[
@@ -60,7 +58,6 @@ _PINGRESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
-  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='pong', full_name='protocol.gaia.mirror.PingResponse.pong', index=0,
@@ -68,7 +65,7 @@ _PINGRESPONSE = _descriptor.Descriptor(
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -112,7 +109,6 @@ _MIRROR = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  create_key=_descriptor._internal_create_key,
   serialized_start=221,
   serialized_end=1360,
   methods=[
@@ -124,7 +120,6 @@ _MIRROR = _descriptor.ServiceDescriptor(
     input_type=_PINGREQUEST,
     output_type=_PINGRESPONSE,
     serialized_options=b'\202\323\344\223\002\016\022\014/mirror/ping',
-    create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
     name='GetUserList',
@@ -134,7 +129,6 @@ _MIRROR = _descriptor.ServiceDescriptor(
     input_type=protocol_dot_gaia_dot_mirror_dot_user__pb2._GETUSERLISTREQUEST,
     output_type=protocol_dot_gaia_dot_mirror_dot_user__pb2._GETUSERLISTRESPONSE,
     serialized_options=b'\202\323\344\223\002\017\022\r/mirror/users',
-    create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
     name='GetDevicesByPartnerUser',
@@ -144,7 +138,6 @@ _MIRROR = _descriptor.ServiceDescriptor(
     input_type=protocol_dot_gaia_dot_mirror_dot_device__pb2._GETDEVICESBYPARTNERUSERREQUEST,
     output_type=protocol_dot_gaia_dot_mirror_dot_device__pb2._GETDEVICESBYPARTNERUSERRESPONSE,
     serialized_options=b'\202\323\344\223\002?\022=/mirror/partner/{partner_uuid}/user/{partner_user_id}/devices',
-    create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
     name='GetPartnerDevicesByIds',
@@ -154,7 +147,6 @@ _MIRROR = _descriptor.ServiceDescriptor(
     input_type=protocol_dot_gaia_dot_mirror_dot_device__pb2._GETPARTNERDEVICESBYIDSREQUEST,
     output_type=protocol_dot_gaia_dot_mirror_dot_device__pb2._GETPARTNERDEVICESBYIDSRESPONSE,
     serialized_options=b'\202\323\344\223\002/\022-/mirror/partner/{partner_uuid}/devices_by_ids',
-    create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
     name='GetUsersRange',
@@ -164,7 +156,6 @@ _MIRROR = _descriptor.ServiceDescriptor(
     input_type=protocol_dot_gaia_dot_mirror_dot_user__pb2._GETUSERSRANGEREQUEST,
     output_type=protocol_dot_gaia_dot_mirror_dot_user__pb2._GETUSERSRANGERESPONSE,
     serialized_options=b'\202\323\344\223\002,\022*/mirror/partner/{partner_uuid}/users_range',
-    create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
     name='GetDevicesRange',
@@ -174,7 +165,6 @@ _MIRROR = _descriptor.ServiceDescriptor(
     input_type=protocol_dot_gaia_dot_mirror_dot_device__pb2._GETDEVICESRANGEREQUEST,
     output_type=protocol_dot_gaia_dot_mirror_dot_device__pb2._GETDEVICESRANGERESPONSE,
     serialized_options=b'\202\323\344\223\002.\022,/mirror/partner/{partner_uuid}/devices_range',
-    create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
     name='GetUserDevicesRange',
@@ -184,7 +174,6 @@ _MIRROR = _descriptor.ServiceDescriptor(
     input_type=protocol_dot_gaia_dot_mirror_dot_device__pb2._GETUSERDEVICESRANGEREQUEST,
     output_type=protocol_dot_gaia_dot_mirror_dot_device__pb2._GETUSERDEVICESRANGERESPONSE,
     serialized_options=b'\202\323\344\223\0023\0221/mirror/partner/{partner_uuid}/user_devices_range',
-    create_key=_descriptor._internal_create_key,
   ),
 ])
 _sym_db.RegisterServiceDescriptor(_MIRROR)
