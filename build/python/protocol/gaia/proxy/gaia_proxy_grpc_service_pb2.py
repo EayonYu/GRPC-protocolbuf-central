@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='protocol.gaia.proxy',
   syntax='proto2',
   serialized_options=b'\n\033com.tcl.gaia.protocol.proxyZ\033tcl.com/gaia/protocol/proxy\210\001\001',
-  serialized_pb=b'\n1protocol/gaia/proxy/gaia_proxy_grpc_service.proto\x12\x13protocol.gaia.proxy\x1a\x1cgoogle/api/annotations.proto\x1a\x1eprotocol/gaia/proxy/ping.proto\x1a!protocol/gaia/proxy/partner.proto\x1a\x1fprotocol/gaia/proxy/proxy.proto2\xd8\x05\n\rGaiaProxyGrpc\x12^\n\x04Ping\x12 .protocol.gaia.proxy.PingRequest\x1a!.protocol.gaia.proxy.PingResponse\"\x11\x82\xd3\xe4\x93\x02\x0b\x12\t/api/ping\x12w\n\x0bListPartner\x12\'.protocol.gaia.proxy.ListPartnerRequest\x1a(.protocol.gaia.proxy.ListPartnerResponse\"\x15\x82\xd3\xe4\x93\x02\x0f\x12\r/api/partners\x12\x81\x01\n\nGetPartner\x12&.protocol.gaia.proxy.GetPartnerRequest\x1a\'.protocol.gaia.proxy.GetPartnerResponse\"\"\x82\xd3\xe4\x93\x02\x1c\x12\x1a/api/partners/{partner_id}\x12w\n\nAddPartner\x12&.protocol.gaia.proxy.AddPartnerRequest\x1a\'.protocol.gaia.proxy.AddPartnerResponse\"\x18\x82\xd3\xe4\x93\x02\x12\"\r/api/partners:\x01*\x12\x65\n\x05Proxy\x12!.protocol.gaia.proxy.ProxyRequest\x1a\".protocol.gaia.proxy.ProxyResponse\"\x15\x82\xd3\xe4\x93\x02\x0f\"\n/api/proxy:\x01*\x12\x89\x01\n\x11GetResourceChunks\x12-.protocol.gaia.proxy.GetResourceChunksRequest\x1a..protocol.gaia.proxy.GetResourceChunksResponse\"\x15\x82\xd3\xe4\x93\x02\x0f\"\n/api/proxy:\x01*B=\n\x1b\x63om.tcl.gaia.protocol.proxyZ\x1btcl.com/gaia/protocol/proxy\x88\x01\x01'
+  serialized_pb=b'\n1protocol/gaia/proxy/gaia_proxy_grpc_service.proto\x12\x13protocol.gaia.proxy\x1a\x1cgoogle/api/annotations.proto\x1a\x1eprotocol/gaia/proxy/ping.proto\x1a!protocol/gaia/proxy/partner.proto\x1a\x1fprotocol/gaia/proxy/proxy.proto2\xdf\x05\n\rGaiaProxyGrpc\x12^\n\x04Ping\x12 .protocol.gaia.proxy.PingRequest\x1a!.protocol.gaia.proxy.PingResponse\"\x11\x82\xd3\xe4\x93\x02\x0b\x12\t/api/ping\x12w\n\x0bListPartner\x12\'.protocol.gaia.proxy.ListPartnerRequest\x1a(.protocol.gaia.proxy.ListPartnerResponse\"\x15\x82\xd3\xe4\x93\x02\x0f\x12\r/api/partners\x12\x81\x01\n\nGetPartner\x12&.protocol.gaia.proxy.GetPartnerRequest\x1a\'.protocol.gaia.proxy.GetPartnerResponse\"\"\x82\xd3\xe4\x93\x02\x1c\x12\x1a/api/partners/{partner_id}\x12w\n\nAddPartner\x12&.protocol.gaia.proxy.AddPartnerRequest\x1a\'.protocol.gaia.proxy.AddPartnerResponse\"\x18\x82\xd3\xe4\x93\x02\x12\"\r/api/partners:\x01*\x12\x65\n\x05Proxy\x12!.protocol.gaia.proxy.ProxyRequest\x1a\".protocol.gaia.proxy.ProxyResponse\"\x15\x82\xd3\xe4\x93\x02\x0f\"\n/api/proxy:\x01*\x12\x90\x01\n\x11GetResourceChunks\x12-.protocol.gaia.proxy.GetResourceChunksRequest\x1a..protocol.gaia.proxy.GetResourceChunksResponse\"\x1c\x82\xd3\xe4\x93\x02\x16\"\x11/api/proxy/chunks:\x01*B=\n\x1b\x63om.tcl.gaia.protocol.proxyZ\x1btcl.com/gaia/protocol/proxy\x88\x01\x01'
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,protocol_dot_gaia_dot_proxy_dot_ping__pb2.DESCRIPTOR,protocol_dot_gaia_dot_proxy_dot_partner__pb2.DESCRIPTOR,protocol_dot_gaia_dot_proxy_dot_proxy__pb2.DESCRIPTOR,])
 
@@ -40,7 +40,7 @@ _GAIAPROXYGRPC = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   serialized_start=205,
-  serialized_end=933,
+  serialized_end=940,
   methods=[
   _descriptor.MethodDescriptor(
     name='Ping',
@@ -94,7 +94,7 @@ _GAIAPROXYGRPC = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=protocol_dot_gaia_dot_proxy_dot_proxy__pb2._GETRESOURCECHUNKSREQUEST,
     output_type=protocol_dot_gaia_dot_proxy_dot_proxy__pb2._GETRESOURCECHUNKSRESPONSE,
-    serialized_options=b'\202\323\344\223\002\017\"\n/api/proxy:\001*',
+    serialized_options=b'\202\323\344\223\002\026\"\021/api/proxy/chunks:\001*',
   ),
 ])
 _sym_db.RegisterServiceDescriptor(_GAIAPROXYGRPC)

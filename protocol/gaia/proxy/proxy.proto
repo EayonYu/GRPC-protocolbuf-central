@@ -28,8 +28,25 @@ message GetResourceChunksRequest {
     required GetResourceChunksRequestPayload payload = 2;
 }
 
+enum IDType {
+  ID_TYPE_INT = 0;
+  ID_TYPE_STRING = 1;
+}
+
+message IntDelimiters {
+  repeated int32 delimiters = 1;
+}
+
+message StringDelimiters {
+  repeated string delimiters = 1;
+}
+
 message GetResourceChunksResponsePayload {
-    required int32 http_status_code = 1;
+    required IDType id_type = 1;
+    oneof delimiters {
+        IntDelimiters int_delimiters = 2;
+        StringDelimiters string_delimiters = 3;
+    }
 }
 
 message GetResourceChunksResponse {

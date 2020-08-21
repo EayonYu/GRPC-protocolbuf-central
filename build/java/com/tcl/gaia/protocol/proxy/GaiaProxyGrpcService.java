@@ -631,7 +631,7 @@ public final class GaiaProxyGrpcService {
       "/api/annotations.proto\032\036protocol/gaia/pr" +
       "oxy/ping.proto\032!protocol/gaia/proxy/part" +
       "ner.proto\032\037protocol/gaia/proxy/proxy.pro" +
-      "to2\330\005\n\rGaiaProxyGrpc\022^\n\004Ping\022 .protocol." +
+      "to2\337\005\n\rGaiaProxyGrpc\022^\n\004Ping\022 .protocol." +
       "gaia.proxy.PingRequest\032!.protocol.gaia.p" +
       "roxy.PingResponse\"\021\202\323\344\223\002\013\022\t/api/ping\022w\n\013" +
       "ListPartner\022\'.protocol.gaia.proxy.ListPa" +
@@ -645,12 +645,13 @@ public final class GaiaProxyGrpcService {
       "proxy.AddPartnerResponse\"\030\202\323\344\223\002\022\"\r/api/p" +
       "artners:\001*\022e\n\005Proxy\022!.protocol.gaia.prox" +
       "y.ProxyRequest\032\".protocol.gaia.proxy.Pro" +
-      "xyResponse\"\025\202\323\344\223\002\017\"\n/api/proxy:\001*\022\211\001\n\021Ge" +
+      "xyResponse\"\025\202\323\344\223\002\017\"\n/api/proxy:\001*\022\220\001\n\021Ge" +
       "tResourceChunks\022-.protocol.gaia.proxy.Ge" +
       "tResourceChunksRequest\032..protocol.gaia.p" +
-      "roxy.GetResourceChunksResponse\"\025\202\323\344\223\002\017\"\n" +
-      "/api/proxy:\001*B=\n\033com.tcl.gaia.protocol.p" +
-      "roxyZ\033tcl.com/gaia/protocol/proxy\210\001\001"
+      "roxy.GetResourceChunksResponse\"\034\202\323\344\223\002\026\"\021" +
+      "/api/proxy/chunks:\001*B=\n\033com.tcl.gaia.pro" +
+      "tocol.proxyZ\033tcl.com/gaia/protocol/proxy" +
+      "\210\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

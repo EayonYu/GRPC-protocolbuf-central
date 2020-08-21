@@ -15,6 +15,207 @@ public final class Proxy {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
+   * Protobuf enum {@code protocol.gaia.proxy.ResourceType}
+   */
+  public enum ResourceType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>RESOURCE_TYPE_USER = 1;</code>
+     */
+    RESOURCE_TYPE_USER(1),
+    /**
+     * <code>RESOURCE_TYPE_DEVICE = 2;</code>
+     */
+    RESOURCE_TYPE_DEVICE(2),
+    /**
+     * <code>RESOURCE_TYPE_USER_DEVICE_BINDING = 3;</code>
+     */
+    RESOURCE_TYPE_USER_DEVICE_BINDING(3),
+    ;
+
+    /**
+     * <code>RESOURCE_TYPE_USER = 1;</code>
+     */
+    public static final int RESOURCE_TYPE_USER_VALUE = 1;
+    /**
+     * <code>RESOURCE_TYPE_DEVICE = 2;</code>
+     */
+    public static final int RESOURCE_TYPE_DEVICE_VALUE = 2;
+    /**
+     * <code>RESOURCE_TYPE_USER_DEVICE_BINDING = 3;</code>
+     */
+    public static final int RESOURCE_TYPE_USER_DEVICE_BINDING_VALUE = 3;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ResourceType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ResourceType forNumber(int value) {
+      switch (value) {
+        case 1: return RESOURCE_TYPE_USER;
+        case 2: return RESOURCE_TYPE_DEVICE;
+        case 3: return RESOURCE_TYPE_USER_DEVICE_BINDING;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ResourceType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ResourceType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ResourceType>() {
+            public ResourceType findValueByNumber(int number) {
+              return ResourceType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.tcl.gaia.protocol.proxy.Proxy.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final ResourceType[] VALUES = values();
+
+    public static ResourceType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ResourceType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:protocol.gaia.proxy.ResourceType)
+  }
+
+  /**
+   * Protobuf enum {@code protocol.gaia.proxy.IDType}
+   */
+  public enum IDType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>ID_TYPE_INT = 0;</code>
+     */
+    ID_TYPE_INT(0),
+    /**
+     * <code>ID_TYPE_STRING = 1;</code>
+     */
+    ID_TYPE_STRING(1),
+    ;
+
+    /**
+     * <code>ID_TYPE_INT = 0;</code>
+     */
+    public static final int ID_TYPE_INT_VALUE = 0;
+    /**
+     * <code>ID_TYPE_STRING = 1;</code>
+     */
+    public static final int ID_TYPE_STRING_VALUE = 1;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static IDType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static IDType forNumber(int value) {
+      switch (value) {
+        case 0: return ID_TYPE_INT;
+        case 1: return ID_TYPE_STRING;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<IDType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        IDType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<IDType>() {
+            public IDType findValueByNumber(int number) {
+              return IDType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.tcl.gaia.protocol.proxy.Proxy.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final IDType[] VALUES = values();
+
+    public static IDType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private IDType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:protocol.gaia.proxy.IDType)
+  }
+
+  /**
    * Protobuf enum {@code protocol.gaia.proxy.ProxyRequestType}
    */
   public enum ProxyRequestType
@@ -87,7 +288,7 @@ public final class Proxy {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.tcl.gaia.protocol.proxy.Proxy.getDescriptor().getEnumTypes().get(0);
+      return com.tcl.gaia.protocol.proxy.Proxy.getDescriptor().getEnumTypes().get(2);
     }
 
     private static final ProxyRequestType[] VALUES = values();
@@ -108,424 +309,6 @@ public final class Proxy {
     }
 
     // @@protoc_insertion_point(enum_scope:protocol.gaia.proxy.ProxyRequestType)
-  }
-
-  public interface GetResourceChunksRequestHeaderOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:protocol.gaia.proxy.GetResourceChunksRequestHeader)
-      com.google.protobuf.MessageOrBuilder {
-  }
-  /**
-   * Protobuf type {@code protocol.gaia.proxy.GetResourceChunksRequestHeader}
-   */
-  public static final class GetResourceChunksRequestHeader extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:protocol.gaia.proxy.GetResourceChunksRequestHeader)
-      GetResourceChunksRequestHeaderOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetResourceChunksRequestHeader.newBuilder() to construct.
-    private GetResourceChunksRequestHeader(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private GetResourceChunksRequestHeader() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetResourceChunksRequestHeader();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private GetResourceChunksRequestHeader(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.tcl.gaia.protocol.proxy.Proxy.internal_static_protocol_gaia_proxy_GetResourceChunksRequestHeader_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.tcl.gaia.protocol.proxy.Proxy.internal_static_protocol_gaia_proxy_GetResourceChunksRequestHeader_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader.class, com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader)) {
-        return super.equals(obj);
-      }
-      com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader other = (com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader) obj;
-
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code protocol.gaia.proxy.GetResourceChunksRequestHeader}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:protocol.gaia.proxy.GetResourceChunksRequestHeader)
-        com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeaderOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.tcl.gaia.protocol.proxy.Proxy.internal_static_protocol_gaia_proxy_GetResourceChunksRequestHeader_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.tcl.gaia.protocol.proxy.Proxy.internal_static_protocol_gaia_proxy_GetResourceChunksRequestHeader_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader.class, com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader.Builder.class);
-      }
-
-      // Construct using com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.tcl.gaia.protocol.proxy.Proxy.internal_static_protocol_gaia_proxy_GetResourceChunksRequestHeader_descriptor;
-      }
-
-      @java.lang.Override
-      public com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader getDefaultInstanceForType() {
-        return com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader build() {
-        com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader buildPartial() {
-        com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader result = new com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader) {
-          return mergeFrom((com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader other) {
-        if (other == com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:protocol.gaia.proxy.GetResourceChunksRequestHeader)
-    }
-
-    // @@protoc_insertion_point(class_scope:protocol.gaia.proxy.GetResourceChunksRequestHeader)
-    private static final com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader();
-    }
-
-    public static com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    @java.lang.Deprecated public static final com.google.protobuf.Parser<GetResourceChunksRequestHeader>
-        PARSER = new com.google.protobuf.AbstractParser<GetResourceChunksRequestHeader>() {
-      @java.lang.Override
-      public GetResourceChunksRequestHeader parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GetResourceChunksRequestHeader(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<GetResourceChunksRequestHeader> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetResourceChunksRequestHeader> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetResourceChunksRequestPayloadOrBuilder extends
@@ -1441,19 +1224,19 @@ public final class Proxy {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional .protocol.gaia.proxy.GetResourceChunksRequestHeader header = 1;</code>
+     * <code>optional .protocol.common.constant.RequestHeader header = 1;</code>
      * @return Whether the header field is set.
      */
     boolean hasHeader();
     /**
-     * <code>optional .protocol.gaia.proxy.GetResourceChunksRequestHeader header = 1;</code>
+     * <code>optional .protocol.common.constant.RequestHeader header = 1;</code>
      * @return The header.
      */
-    com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader getHeader();
+    com.tcl.gaia.protocol.constant.Request.RequestHeader getHeader();
     /**
-     * <code>optional .protocol.gaia.proxy.GetResourceChunksRequestHeader header = 1;</code>
+     * <code>optional .protocol.common.constant.RequestHeader header = 1;</code>
      */
-    com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeaderOrBuilder getHeaderOrBuilder();
+    com.tcl.gaia.protocol.constant.Request.RequestHeaderOrBuilder getHeaderOrBuilder();
 
     /**
      * <code>required .protocol.gaia.proxy.GetResourceChunksRequestPayload payload = 2;</code>
@@ -1517,11 +1300,11 @@ public final class Proxy {
               done = true;
               break;
             case 10: {
-              com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader.Builder subBuilder = null;
+              com.tcl.gaia.protocol.constant.Request.RequestHeader.Builder subBuilder = null;
               if (((bitField0_ & 0x00000001) != 0)) {
                 subBuilder = header_.toBuilder();
               }
-              header_ = input.readMessage(com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader.PARSER, extensionRegistry);
+              header_ = input.readMessage(com.tcl.gaia.protocol.constant.Request.RequestHeader.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(header_);
                 header_ = subBuilder.buildPartial();
@@ -1576,9 +1359,9 @@ public final class Proxy {
 
     private int bitField0_;
     public static final int HEADER_FIELD_NUMBER = 1;
-    private com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader header_;
+    private com.tcl.gaia.protocol.constant.Request.RequestHeader header_;
     /**
-     * <code>optional .protocol.gaia.proxy.GetResourceChunksRequestHeader header = 1;</code>
+     * <code>optional .protocol.common.constant.RequestHeader header = 1;</code>
      * @return Whether the header field is set.
      */
     @java.lang.Override
@@ -1586,19 +1369,19 @@ public final class Proxy {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>optional .protocol.gaia.proxy.GetResourceChunksRequestHeader header = 1;</code>
+     * <code>optional .protocol.common.constant.RequestHeader header = 1;</code>
      * @return The header.
      */
     @java.lang.Override
-    public com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader getHeader() {
-      return header_ == null ? com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader.getDefaultInstance() : header_;
+    public com.tcl.gaia.protocol.constant.Request.RequestHeader getHeader() {
+      return header_ == null ? com.tcl.gaia.protocol.constant.Request.RequestHeader.getDefaultInstance() : header_;
     }
     /**
-     * <code>optional .protocol.gaia.proxy.GetResourceChunksRequestHeader header = 1;</code>
+     * <code>optional .protocol.common.constant.RequestHeader header = 1;</code>
      */
     @java.lang.Override
-    public com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeaderOrBuilder getHeaderOrBuilder() {
-      return header_ == null ? com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader.getDefaultInstance() : header_;
+    public com.tcl.gaia.protocol.constant.Request.RequestHeaderOrBuilder getHeaderOrBuilder() {
+      return header_ == null ? com.tcl.gaia.protocol.constant.Request.RequestHeader.getDefaultInstance() : header_;
     }
 
     public static final int PAYLOAD_FIELD_NUMBER = 2;
@@ -1998,31 +1781,31 @@ public final class Proxy {
       }
       private int bitField0_;
 
-      private com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader header_;
+      private com.tcl.gaia.protocol.constant.Request.RequestHeader header_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader, com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader.Builder, com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeaderOrBuilder> headerBuilder_;
+          com.tcl.gaia.protocol.constant.Request.RequestHeader, com.tcl.gaia.protocol.constant.Request.RequestHeader.Builder, com.tcl.gaia.protocol.constant.Request.RequestHeaderOrBuilder> headerBuilder_;
       /**
-       * <code>optional .protocol.gaia.proxy.GetResourceChunksRequestHeader header = 1;</code>
+       * <code>optional .protocol.common.constant.RequestHeader header = 1;</code>
        * @return Whether the header field is set.
        */
       public boolean hasHeader() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>optional .protocol.gaia.proxy.GetResourceChunksRequestHeader header = 1;</code>
+       * <code>optional .protocol.common.constant.RequestHeader header = 1;</code>
        * @return The header.
        */
-      public com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader getHeader() {
+      public com.tcl.gaia.protocol.constant.Request.RequestHeader getHeader() {
         if (headerBuilder_ == null) {
-          return header_ == null ? com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader.getDefaultInstance() : header_;
+          return header_ == null ? com.tcl.gaia.protocol.constant.Request.RequestHeader.getDefaultInstance() : header_;
         } else {
           return headerBuilder_.getMessage();
         }
       }
       /**
-       * <code>optional .protocol.gaia.proxy.GetResourceChunksRequestHeader header = 1;</code>
+       * <code>optional .protocol.common.constant.RequestHeader header = 1;</code>
        */
-      public Builder setHeader(com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader value) {
+      public Builder setHeader(com.tcl.gaia.protocol.constant.Request.RequestHeader value) {
         if (headerBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2036,10 +1819,10 @@ public final class Proxy {
         return this;
       }
       /**
-       * <code>optional .protocol.gaia.proxy.GetResourceChunksRequestHeader header = 1;</code>
+       * <code>optional .protocol.common.constant.RequestHeader header = 1;</code>
        */
       public Builder setHeader(
-          com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader.Builder builderForValue) {
+          com.tcl.gaia.protocol.constant.Request.RequestHeader.Builder builderForValue) {
         if (headerBuilder_ == null) {
           header_ = builderForValue.build();
           onChanged();
@@ -2050,15 +1833,15 @@ public final class Proxy {
         return this;
       }
       /**
-       * <code>optional .protocol.gaia.proxy.GetResourceChunksRequestHeader header = 1;</code>
+       * <code>optional .protocol.common.constant.RequestHeader header = 1;</code>
        */
-      public Builder mergeHeader(com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader value) {
+      public Builder mergeHeader(com.tcl.gaia.protocol.constant.Request.RequestHeader value) {
         if (headerBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0) &&
               header_ != null &&
-              header_ != com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader.getDefaultInstance()) {
+              header_ != com.tcl.gaia.protocol.constant.Request.RequestHeader.getDefaultInstance()) {
             header_ =
-              com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader.newBuilder(header_).mergeFrom(value).buildPartial();
+              com.tcl.gaia.protocol.constant.Request.RequestHeader.newBuilder(header_).mergeFrom(value).buildPartial();
           } else {
             header_ = value;
           }
@@ -2070,7 +1853,7 @@ public final class Proxy {
         return this;
       }
       /**
-       * <code>optional .protocol.gaia.proxy.GetResourceChunksRequestHeader header = 1;</code>
+       * <code>optional .protocol.common.constant.RequestHeader header = 1;</code>
        */
       public Builder clearHeader() {
         if (headerBuilder_ == null) {
@@ -2083,33 +1866,33 @@ public final class Proxy {
         return this;
       }
       /**
-       * <code>optional .protocol.gaia.proxy.GetResourceChunksRequestHeader header = 1;</code>
+       * <code>optional .protocol.common.constant.RequestHeader header = 1;</code>
        */
-      public com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader.Builder getHeaderBuilder() {
+      public com.tcl.gaia.protocol.constant.Request.RequestHeader.Builder getHeaderBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getHeaderFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .protocol.gaia.proxy.GetResourceChunksRequestHeader header = 1;</code>
+       * <code>optional .protocol.common.constant.RequestHeader header = 1;</code>
        */
-      public com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeaderOrBuilder getHeaderOrBuilder() {
+      public com.tcl.gaia.protocol.constant.Request.RequestHeaderOrBuilder getHeaderOrBuilder() {
         if (headerBuilder_ != null) {
           return headerBuilder_.getMessageOrBuilder();
         } else {
           return header_ == null ?
-              com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader.getDefaultInstance() : header_;
+              com.tcl.gaia.protocol.constant.Request.RequestHeader.getDefaultInstance() : header_;
         }
       }
       /**
-       * <code>optional .protocol.gaia.proxy.GetResourceChunksRequestHeader header = 1;</code>
+       * <code>optional .protocol.common.constant.RequestHeader header = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader, com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader.Builder, com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeaderOrBuilder> 
+          com.tcl.gaia.protocol.constant.Request.RequestHeader, com.tcl.gaia.protocol.constant.Request.RequestHeader.Builder, com.tcl.gaia.protocol.constant.Request.RequestHeaderOrBuilder> 
           getHeaderFieldBuilder() {
         if (headerBuilder_ == null) {
           headerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader, com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeader.Builder, com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequestHeaderOrBuilder>(
+              com.tcl.gaia.protocol.constant.Request.RequestHeader, com.tcl.gaia.protocol.constant.Request.RequestHeader.Builder, com.tcl.gaia.protocol.constant.Request.RequestHeaderOrBuilder>(
                   getHeader(),
                   getParentForChildren(),
                   isClean());
@@ -2290,8 +2073,612 @@ public final class Proxy {
 
   }
 
-  public interface GetResourceChunksResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:protocol.gaia.proxy.GetResourceChunksResponse)
+  public interface IntDelimitersOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:protocol.gaia.proxy.IntDelimiters)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated int32 delimiters = 1;</code>
+     * @return A list containing the delimiters.
+     */
+    java.util.List<java.lang.Integer> getDelimitersList();
+    /**
+     * <code>repeated int32 delimiters = 1;</code>
+     * @return The count of delimiters.
+     */
+    int getDelimitersCount();
+    /**
+     * <code>repeated int32 delimiters = 1;</code>
+     * @param index The index of the element to return.
+     * @return The delimiters at the given index.
+     */
+    int getDelimiters(int index);
+  }
+  /**
+   * Protobuf type {@code protocol.gaia.proxy.IntDelimiters}
+   */
+  public static final class IntDelimiters extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:protocol.gaia.proxy.IntDelimiters)
+      IntDelimitersOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use IntDelimiters.newBuilder() to construct.
+    private IntDelimiters(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IntDelimiters() {
+      delimiters_ = emptyIntList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IntDelimiters();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private IntDelimiters(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                delimiters_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              delimiters_.addInt(input.readInt32());
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                delimiters_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                delimiters_.addInt(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          delimiters_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcl.gaia.protocol.proxy.Proxy.internal_static_protocol_gaia_proxy_IntDelimiters_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcl.gaia.protocol.proxy.Proxy.internal_static_protocol_gaia_proxy_IntDelimiters_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters.class, com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters.Builder.class);
+    }
+
+    public static final int DELIMITERS_FIELD_NUMBER = 1;
+    private com.google.protobuf.Internal.IntList delimiters_;
+    /**
+     * <code>repeated int32 delimiters = 1;</code>
+     * @return A list containing the delimiters.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getDelimitersList() {
+      return delimiters_;
+    }
+    /**
+     * <code>repeated int32 delimiters = 1;</code>
+     * @return The count of delimiters.
+     */
+    public int getDelimitersCount() {
+      return delimiters_.size();
+    }
+    /**
+     * <code>repeated int32 delimiters = 1;</code>
+     * @param index The index of the element to return.
+     * @return The delimiters at the given index.
+     */
+    public int getDelimiters(int index) {
+      return delimiters_.getInt(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < delimiters_.size(); i++) {
+        output.writeInt32(1, delimiters_.getInt(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < delimiters_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(delimiters_.getInt(i));
+        }
+        size += dataSize;
+        size += 1 * getDelimitersList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters)) {
+        return super.equals(obj);
+      }
+      com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters other = (com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters) obj;
+
+      if (!getDelimitersList()
+          .equals(other.getDelimitersList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getDelimitersCount() > 0) {
+        hash = (37 * hash) + DELIMITERS_FIELD_NUMBER;
+        hash = (53 * hash) + getDelimitersList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code protocol.gaia.proxy.IntDelimiters}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:protocol.gaia.proxy.IntDelimiters)
+        com.tcl.gaia.protocol.proxy.Proxy.IntDelimitersOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcl.gaia.protocol.proxy.Proxy.internal_static_protocol_gaia_proxy_IntDelimiters_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcl.gaia.protocol.proxy.Proxy.internal_static_protocol_gaia_proxy_IntDelimiters_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters.class, com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters.Builder.class);
+      }
+
+      // Construct using com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        delimiters_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcl.gaia.protocol.proxy.Proxy.internal_static_protocol_gaia_proxy_IntDelimiters_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters getDefaultInstanceForType() {
+        return com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters build() {
+        com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters buildPartial() {
+        com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters result = new com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          delimiters_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.delimiters_ = delimiters_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters) {
+          return mergeFrom((com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters other) {
+        if (other == com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters.getDefaultInstance()) return this;
+        if (!other.delimiters_.isEmpty()) {
+          if (delimiters_.isEmpty()) {
+            delimiters_ = other.delimiters_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureDelimitersIsMutable();
+            delimiters_.addAll(other.delimiters_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Internal.IntList delimiters_ = emptyIntList();
+      private void ensureDelimitersIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          delimiters_ = mutableCopy(delimiters_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated int32 delimiters = 1;</code>
+       * @return A list containing the delimiters.
+       */
+      public java.util.List<java.lang.Integer>
+          getDelimitersList() {
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(delimiters_) : delimiters_;
+      }
+      /**
+       * <code>repeated int32 delimiters = 1;</code>
+       * @return The count of delimiters.
+       */
+      public int getDelimitersCount() {
+        return delimiters_.size();
+      }
+      /**
+       * <code>repeated int32 delimiters = 1;</code>
+       * @param index The index of the element to return.
+       * @return The delimiters at the given index.
+       */
+      public int getDelimiters(int index) {
+        return delimiters_.getInt(index);
+      }
+      /**
+       * <code>repeated int32 delimiters = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The delimiters to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelimiters(
+          int index, int value) {
+        ensureDelimitersIsMutable();
+        delimiters_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 delimiters = 1;</code>
+       * @param value The delimiters to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDelimiters(int value) {
+        ensureDelimitersIsMutable();
+        delimiters_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 delimiters = 1;</code>
+       * @param values The delimiters to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllDelimiters(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureDelimitersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, delimiters_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 delimiters = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDelimiters() {
+        delimiters_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:protocol.gaia.proxy.IntDelimiters)
+    }
+
+    // @@protoc_insertion_point(class_scope:protocol.gaia.proxy.IntDelimiters)
+    private static final com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters();
+    }
+
+    public static com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<IntDelimiters>
+        PARSER = new com.google.protobuf.AbstractParser<IntDelimiters>() {
+      @java.lang.Override
+      public IntDelimiters parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new IntDelimiters(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<IntDelimiters> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IntDelimiters> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface StringDelimitersOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:protocol.gaia.proxy.StringDelimiters)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2320,18 +2707,18 @@ public final class Proxy {
         getDelimitersBytes(int index);
   }
   /**
-   * Protobuf type {@code protocol.gaia.proxy.GetResourceChunksResponse}
+   * Protobuf type {@code protocol.gaia.proxy.StringDelimiters}
    */
-  public static final class GetResourceChunksResponse extends
+  public static final class StringDelimiters extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:protocol.gaia.proxy.GetResourceChunksResponse)
-      GetResourceChunksResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:protocol.gaia.proxy.StringDelimiters)
+      StringDelimitersOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use GetResourceChunksResponse.newBuilder() to construct.
-    private GetResourceChunksResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use StringDelimiters.newBuilder() to construct.
+    private StringDelimiters(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private GetResourceChunksResponse() {
+    private StringDelimiters() {
       delimiters_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
@@ -2339,7 +2726,7 @@ public final class Proxy {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new GetResourceChunksResponse();
+      return new StringDelimiters();
     }
 
     @java.lang.Override
@@ -2347,7 +2734,7 @@ public final class Proxy {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private GetResourceChunksResponse(
+    private StringDelimiters(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2399,15 +2786,15 @@ public final class Proxy {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcl.gaia.protocol.proxy.Proxy.internal_static_protocol_gaia_proxy_GetResourceChunksResponse_descriptor;
+      return com.tcl.gaia.protocol.proxy.Proxy.internal_static_protocol_gaia_proxy_StringDelimiters_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcl.gaia.protocol.proxy.Proxy.internal_static_protocol_gaia_proxy_GetResourceChunksResponse_fieldAccessorTable
+      return com.tcl.gaia.protocol.proxy.Proxy.internal_static_protocol_gaia_proxy_StringDelimiters_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponse.class, com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponse.Builder.class);
+              com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters.class, com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters.Builder.class);
     }
 
     public static final int DELIMITERS_FIELD_NUMBER = 1;
@@ -2489,10 +2876,10 @@ public final class Proxy {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponse)) {
+      if (!(obj instanceof com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters)) {
         return super.equals(obj);
       }
-      com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponse other = (com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponse) obj;
+      com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters other = (com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters) obj;
 
       if (!getDelimitersList()
           .equals(other.getDelimitersList())) return false;
@@ -2510,6 +2897,1778 @@ public final class Proxy {
       if (getDelimitersCount() > 0) {
         hash = (37 * hash) + DELIMITERS_FIELD_NUMBER;
         hash = (53 * hash) + getDelimitersList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code protocol.gaia.proxy.StringDelimiters}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:protocol.gaia.proxy.StringDelimiters)
+        com.tcl.gaia.protocol.proxy.Proxy.StringDelimitersOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcl.gaia.protocol.proxy.Proxy.internal_static_protocol_gaia_proxy_StringDelimiters_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcl.gaia.protocol.proxy.Proxy.internal_static_protocol_gaia_proxy_StringDelimiters_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters.class, com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters.Builder.class);
+      }
+
+      // Construct using com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        delimiters_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcl.gaia.protocol.proxy.Proxy.internal_static_protocol_gaia_proxy_StringDelimiters_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters getDefaultInstanceForType() {
+        return com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters build() {
+        com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters buildPartial() {
+        com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters result = new com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          delimiters_ = delimiters_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.delimiters_ = delimiters_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters) {
+          return mergeFrom((com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters other) {
+        if (other == com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters.getDefaultInstance()) return this;
+        if (!other.delimiters_.isEmpty()) {
+          if (delimiters_.isEmpty()) {
+            delimiters_ = other.delimiters_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureDelimitersIsMutable();
+            delimiters_.addAll(other.delimiters_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList delimiters_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureDelimitersIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          delimiters_ = new com.google.protobuf.LazyStringArrayList(delimiters_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated string delimiters = 1;</code>
+       * @return A list containing the delimiters.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getDelimitersList() {
+        return delimiters_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string delimiters = 1;</code>
+       * @return The count of delimiters.
+       */
+      public int getDelimitersCount() {
+        return delimiters_.size();
+      }
+      /**
+       * <code>repeated string delimiters = 1;</code>
+       * @param index The index of the element to return.
+       * @return The delimiters at the given index.
+       */
+      public java.lang.String getDelimiters(int index) {
+        return delimiters_.get(index);
+      }
+      /**
+       * <code>repeated string delimiters = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the delimiters at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getDelimitersBytes(int index) {
+        return delimiters_.getByteString(index);
+      }
+      /**
+       * <code>repeated string delimiters = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The delimiters to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelimiters(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureDelimitersIsMutable();
+        delimiters_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string delimiters = 1;</code>
+       * @param value The delimiters to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDelimiters(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureDelimitersIsMutable();
+        delimiters_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string delimiters = 1;</code>
+       * @param values The delimiters to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllDelimiters(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureDelimitersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, delimiters_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string delimiters = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDelimiters() {
+        delimiters_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string delimiters = 1;</code>
+       * @param value The bytes of the delimiters to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDelimitersBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureDelimitersIsMutable();
+        delimiters_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:protocol.gaia.proxy.StringDelimiters)
+    }
+
+    // @@protoc_insertion_point(class_scope:protocol.gaia.proxy.StringDelimiters)
+    private static final com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters();
+    }
+
+    public static com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<StringDelimiters>
+        PARSER = new com.google.protobuf.AbstractParser<StringDelimiters>() {
+      @java.lang.Override
+      public StringDelimiters parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StringDelimiters(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StringDelimiters> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StringDelimiters> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetResourceChunksResponsePayloadOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:protocol.gaia.proxy.GetResourceChunksResponsePayload)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .protocol.gaia.proxy.IDType id_type = 1;</code>
+     * @return Whether the idType field is set.
+     */
+    boolean hasIdType();
+    /**
+     * <code>required .protocol.gaia.proxy.IDType id_type = 1;</code>
+     * @return The idType.
+     */
+    com.tcl.gaia.protocol.proxy.Proxy.IDType getIdType();
+
+    /**
+     * <code>.protocol.gaia.proxy.IntDelimiters int_delimiters = 2;</code>
+     * @return Whether the intDelimiters field is set.
+     */
+    boolean hasIntDelimiters();
+    /**
+     * <code>.protocol.gaia.proxy.IntDelimiters int_delimiters = 2;</code>
+     * @return The intDelimiters.
+     */
+    com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters getIntDelimiters();
+    /**
+     * <code>.protocol.gaia.proxy.IntDelimiters int_delimiters = 2;</code>
+     */
+    com.tcl.gaia.protocol.proxy.Proxy.IntDelimitersOrBuilder getIntDelimitersOrBuilder();
+
+    /**
+     * <code>.protocol.gaia.proxy.StringDelimiters string_delimiters = 3;</code>
+     * @return Whether the stringDelimiters field is set.
+     */
+    boolean hasStringDelimiters();
+    /**
+     * <code>.protocol.gaia.proxy.StringDelimiters string_delimiters = 3;</code>
+     * @return The stringDelimiters.
+     */
+    com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters getStringDelimiters();
+    /**
+     * <code>.protocol.gaia.proxy.StringDelimiters string_delimiters = 3;</code>
+     */
+    com.tcl.gaia.protocol.proxy.Proxy.StringDelimitersOrBuilder getStringDelimitersOrBuilder();
+
+    public com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload.DelimitersCase getDelimitersCase();
+  }
+  /**
+   * Protobuf type {@code protocol.gaia.proxy.GetResourceChunksResponsePayload}
+   */
+  public static final class GetResourceChunksResponsePayload extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:protocol.gaia.proxy.GetResourceChunksResponsePayload)
+      GetResourceChunksResponsePayloadOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetResourceChunksResponsePayload.newBuilder() to construct.
+    private GetResourceChunksResponsePayload(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetResourceChunksResponsePayload() {
+      idType_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetResourceChunksResponsePayload();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetResourceChunksResponsePayload(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+                @SuppressWarnings("deprecation")
+              com.tcl.gaia.protocol.proxy.Proxy.IDType value = com.tcl.gaia.protocol.proxy.Proxy.IDType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                idType_ = rawValue;
+              }
+              break;
+            }
+            case 18: {
+              com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters.Builder subBuilder = null;
+              if (delimitersCase_ == 2) {
+                subBuilder = ((com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters) delimiters_).toBuilder();
+              }
+              delimiters_ =
+                  input.readMessage(com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters) delimiters_);
+                delimiters_ = subBuilder.buildPartial();
+              }
+              delimitersCase_ = 2;
+              break;
+            }
+            case 26: {
+              com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters.Builder subBuilder = null;
+              if (delimitersCase_ == 3) {
+                subBuilder = ((com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters) delimiters_).toBuilder();
+              }
+              delimiters_ =
+                  input.readMessage(com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters) delimiters_);
+                delimiters_ = subBuilder.buildPartial();
+              }
+              delimitersCase_ = 3;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcl.gaia.protocol.proxy.Proxy.internal_static_protocol_gaia_proxy_GetResourceChunksResponsePayload_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcl.gaia.protocol.proxy.Proxy.internal_static_protocol_gaia_proxy_GetResourceChunksResponsePayload_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload.class, com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload.Builder.class);
+    }
+
+    private int bitField0_;
+    private int delimitersCase_ = 0;
+    private java.lang.Object delimiters_;
+    public enum DelimitersCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      INT_DELIMITERS(2),
+      STRING_DELIMITERS(3),
+      DELIMITERS_NOT_SET(0);
+      private final int value;
+      private DelimitersCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static DelimitersCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static DelimitersCase forNumber(int value) {
+        switch (value) {
+          case 2: return INT_DELIMITERS;
+          case 3: return STRING_DELIMITERS;
+          case 0: return DELIMITERS_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public DelimitersCase
+    getDelimitersCase() {
+      return DelimitersCase.forNumber(
+          delimitersCase_);
+    }
+
+    public static final int ID_TYPE_FIELD_NUMBER = 1;
+    private int idType_;
+    /**
+     * <code>required .protocol.gaia.proxy.IDType id_type = 1;</code>
+     * @return Whether the idType field is set.
+     */
+    @java.lang.Override public boolean hasIdType() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>required .protocol.gaia.proxy.IDType id_type = 1;</code>
+     * @return The idType.
+     */
+    @java.lang.Override public com.tcl.gaia.protocol.proxy.Proxy.IDType getIdType() {
+      @SuppressWarnings("deprecation")
+      com.tcl.gaia.protocol.proxy.Proxy.IDType result = com.tcl.gaia.protocol.proxy.Proxy.IDType.valueOf(idType_);
+      return result == null ? com.tcl.gaia.protocol.proxy.Proxy.IDType.ID_TYPE_INT : result;
+    }
+
+    public static final int INT_DELIMITERS_FIELD_NUMBER = 2;
+    /**
+     * <code>.protocol.gaia.proxy.IntDelimiters int_delimiters = 2;</code>
+     * @return Whether the intDelimiters field is set.
+     */
+    @java.lang.Override
+    public boolean hasIntDelimiters() {
+      return delimitersCase_ == 2;
+    }
+    /**
+     * <code>.protocol.gaia.proxy.IntDelimiters int_delimiters = 2;</code>
+     * @return The intDelimiters.
+     */
+    @java.lang.Override
+    public com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters getIntDelimiters() {
+      if (delimitersCase_ == 2) {
+         return (com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters) delimiters_;
+      }
+      return com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters.getDefaultInstance();
+    }
+    /**
+     * <code>.protocol.gaia.proxy.IntDelimiters int_delimiters = 2;</code>
+     */
+    @java.lang.Override
+    public com.tcl.gaia.protocol.proxy.Proxy.IntDelimitersOrBuilder getIntDelimitersOrBuilder() {
+      if (delimitersCase_ == 2) {
+         return (com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters) delimiters_;
+      }
+      return com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters.getDefaultInstance();
+    }
+
+    public static final int STRING_DELIMITERS_FIELD_NUMBER = 3;
+    /**
+     * <code>.protocol.gaia.proxy.StringDelimiters string_delimiters = 3;</code>
+     * @return Whether the stringDelimiters field is set.
+     */
+    @java.lang.Override
+    public boolean hasStringDelimiters() {
+      return delimitersCase_ == 3;
+    }
+    /**
+     * <code>.protocol.gaia.proxy.StringDelimiters string_delimiters = 3;</code>
+     * @return The stringDelimiters.
+     */
+    @java.lang.Override
+    public com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters getStringDelimiters() {
+      if (delimitersCase_ == 3) {
+         return (com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters) delimiters_;
+      }
+      return com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters.getDefaultInstance();
+    }
+    /**
+     * <code>.protocol.gaia.proxy.StringDelimiters string_delimiters = 3;</code>
+     */
+    @java.lang.Override
+    public com.tcl.gaia.protocol.proxy.Proxy.StringDelimitersOrBuilder getStringDelimitersOrBuilder() {
+      if (delimitersCase_ == 3) {
+         return (com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters) delimiters_;
+      }
+      return com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasIdType()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeEnum(1, idType_);
+      }
+      if (delimitersCase_ == 2) {
+        output.writeMessage(2, (com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters) delimiters_);
+      }
+      if (delimitersCase_ == 3) {
+        output.writeMessage(3, (com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters) delimiters_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, idType_);
+      }
+      if (delimitersCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters) delimiters_);
+      }
+      if (delimitersCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters) delimiters_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload)) {
+        return super.equals(obj);
+      }
+      com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload other = (com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload) obj;
+
+      if (hasIdType() != other.hasIdType()) return false;
+      if (hasIdType()) {
+        if (idType_ != other.idType_) return false;
+      }
+      if (!getDelimitersCase().equals(other.getDelimitersCase())) return false;
+      switch (delimitersCase_) {
+        case 2:
+          if (!getIntDelimiters()
+              .equals(other.getIntDelimiters())) return false;
+          break;
+        case 3:
+          if (!getStringDelimiters()
+              .equals(other.getStringDelimiters())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasIdType()) {
+        hash = (37 * hash) + ID_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + idType_;
+      }
+      switch (delimitersCase_) {
+        case 2:
+          hash = (37 * hash) + INT_DELIMITERS_FIELD_NUMBER;
+          hash = (53 * hash) + getIntDelimiters().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + STRING_DELIMITERS_FIELD_NUMBER;
+          hash = (53 * hash) + getStringDelimiters().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code protocol.gaia.proxy.GetResourceChunksResponsePayload}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:protocol.gaia.proxy.GetResourceChunksResponsePayload)
+        com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayloadOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcl.gaia.protocol.proxy.Proxy.internal_static_protocol_gaia_proxy_GetResourceChunksResponsePayload_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcl.gaia.protocol.proxy.Proxy.internal_static_protocol_gaia_proxy_GetResourceChunksResponsePayload_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload.class, com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload.Builder.class);
+      }
+
+      // Construct using com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        idType_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        delimitersCase_ = 0;
+        delimiters_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcl.gaia.protocol.proxy.Proxy.internal_static_protocol_gaia_proxy_GetResourceChunksResponsePayload_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload getDefaultInstanceForType() {
+        return com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload build() {
+        com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload buildPartial() {
+        com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload result = new com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.idType_ = idType_;
+        if (delimitersCase_ == 2) {
+          if (intDelimitersBuilder_ == null) {
+            result.delimiters_ = delimiters_;
+          } else {
+            result.delimiters_ = intDelimitersBuilder_.build();
+          }
+        }
+        if (delimitersCase_ == 3) {
+          if (stringDelimitersBuilder_ == null) {
+            result.delimiters_ = delimiters_;
+          } else {
+            result.delimiters_ = stringDelimitersBuilder_.build();
+          }
+        }
+        result.bitField0_ = to_bitField0_;
+        result.delimitersCase_ = delimitersCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload) {
+          return mergeFrom((com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload other) {
+        if (other == com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload.getDefaultInstance()) return this;
+        if (other.hasIdType()) {
+          setIdType(other.getIdType());
+        }
+        switch (other.getDelimitersCase()) {
+          case INT_DELIMITERS: {
+            mergeIntDelimiters(other.getIntDelimiters());
+            break;
+          }
+          case STRING_DELIMITERS: {
+            mergeStringDelimiters(other.getStringDelimiters());
+            break;
+          }
+          case DELIMITERS_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        if (!hasIdType()) {
+          return false;
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int delimitersCase_ = 0;
+      private java.lang.Object delimiters_;
+      public DelimitersCase
+          getDelimitersCase() {
+        return DelimitersCase.forNumber(
+            delimitersCase_);
+      }
+
+      public Builder clearDelimiters() {
+        delimitersCase_ = 0;
+        delimiters_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private int idType_ = 0;
+      /**
+       * <code>required .protocol.gaia.proxy.IDType id_type = 1;</code>
+       * @return Whether the idType field is set.
+       */
+      @java.lang.Override public boolean hasIdType() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>required .protocol.gaia.proxy.IDType id_type = 1;</code>
+       * @return The idType.
+       */
+      @java.lang.Override
+      public com.tcl.gaia.protocol.proxy.Proxy.IDType getIdType() {
+        @SuppressWarnings("deprecation")
+        com.tcl.gaia.protocol.proxy.Proxy.IDType result = com.tcl.gaia.protocol.proxy.Proxy.IDType.valueOf(idType_);
+        return result == null ? com.tcl.gaia.protocol.proxy.Proxy.IDType.ID_TYPE_INT : result;
+      }
+      /**
+       * <code>required .protocol.gaia.proxy.IDType id_type = 1;</code>
+       * @param value The idType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdType(com.tcl.gaia.protocol.proxy.Proxy.IDType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        idType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .protocol.gaia.proxy.IDType id_type = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIdType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        idType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters, com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters.Builder, com.tcl.gaia.protocol.proxy.Proxy.IntDelimitersOrBuilder> intDelimitersBuilder_;
+      /**
+       * <code>.protocol.gaia.proxy.IntDelimiters int_delimiters = 2;</code>
+       * @return Whether the intDelimiters field is set.
+       */
+      @java.lang.Override
+      public boolean hasIntDelimiters() {
+        return delimitersCase_ == 2;
+      }
+      /**
+       * <code>.protocol.gaia.proxy.IntDelimiters int_delimiters = 2;</code>
+       * @return The intDelimiters.
+       */
+      @java.lang.Override
+      public com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters getIntDelimiters() {
+        if (intDelimitersBuilder_ == null) {
+          if (delimitersCase_ == 2) {
+            return (com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters) delimiters_;
+          }
+          return com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters.getDefaultInstance();
+        } else {
+          if (delimitersCase_ == 2) {
+            return intDelimitersBuilder_.getMessage();
+          }
+          return com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.protocol.gaia.proxy.IntDelimiters int_delimiters = 2;</code>
+       */
+      public Builder setIntDelimiters(com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters value) {
+        if (intDelimitersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          delimiters_ = value;
+          onChanged();
+        } else {
+          intDelimitersBuilder_.setMessage(value);
+        }
+        delimitersCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.protocol.gaia.proxy.IntDelimiters int_delimiters = 2;</code>
+       */
+      public Builder setIntDelimiters(
+          com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters.Builder builderForValue) {
+        if (intDelimitersBuilder_ == null) {
+          delimiters_ = builderForValue.build();
+          onChanged();
+        } else {
+          intDelimitersBuilder_.setMessage(builderForValue.build());
+        }
+        delimitersCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.protocol.gaia.proxy.IntDelimiters int_delimiters = 2;</code>
+       */
+      public Builder mergeIntDelimiters(com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters value) {
+        if (intDelimitersBuilder_ == null) {
+          if (delimitersCase_ == 2 &&
+              delimiters_ != com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters.getDefaultInstance()) {
+            delimiters_ = com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters.newBuilder((com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters) delimiters_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            delimiters_ = value;
+          }
+          onChanged();
+        } else {
+          if (delimitersCase_ == 2) {
+            intDelimitersBuilder_.mergeFrom(value);
+          }
+          intDelimitersBuilder_.setMessage(value);
+        }
+        delimitersCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.protocol.gaia.proxy.IntDelimiters int_delimiters = 2;</code>
+       */
+      public Builder clearIntDelimiters() {
+        if (intDelimitersBuilder_ == null) {
+          if (delimitersCase_ == 2) {
+            delimitersCase_ = 0;
+            delimiters_ = null;
+            onChanged();
+          }
+        } else {
+          if (delimitersCase_ == 2) {
+            delimitersCase_ = 0;
+            delimiters_ = null;
+          }
+          intDelimitersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.protocol.gaia.proxy.IntDelimiters int_delimiters = 2;</code>
+       */
+      public com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters.Builder getIntDelimitersBuilder() {
+        return getIntDelimitersFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.protocol.gaia.proxy.IntDelimiters int_delimiters = 2;</code>
+       */
+      @java.lang.Override
+      public com.tcl.gaia.protocol.proxy.Proxy.IntDelimitersOrBuilder getIntDelimitersOrBuilder() {
+        if ((delimitersCase_ == 2) && (intDelimitersBuilder_ != null)) {
+          return intDelimitersBuilder_.getMessageOrBuilder();
+        } else {
+          if (delimitersCase_ == 2) {
+            return (com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters) delimiters_;
+          }
+          return com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.protocol.gaia.proxy.IntDelimiters int_delimiters = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters, com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters.Builder, com.tcl.gaia.protocol.proxy.Proxy.IntDelimitersOrBuilder> 
+          getIntDelimitersFieldBuilder() {
+        if (intDelimitersBuilder_ == null) {
+          if (!(delimitersCase_ == 2)) {
+            delimiters_ = com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters.getDefaultInstance();
+          }
+          intDelimitersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters, com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters.Builder, com.tcl.gaia.protocol.proxy.Proxy.IntDelimitersOrBuilder>(
+                  (com.tcl.gaia.protocol.proxy.Proxy.IntDelimiters) delimiters_,
+                  getParentForChildren(),
+                  isClean());
+          delimiters_ = null;
+        }
+        delimitersCase_ = 2;
+        onChanged();;
+        return intDelimitersBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters, com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters.Builder, com.tcl.gaia.protocol.proxy.Proxy.StringDelimitersOrBuilder> stringDelimitersBuilder_;
+      /**
+       * <code>.protocol.gaia.proxy.StringDelimiters string_delimiters = 3;</code>
+       * @return Whether the stringDelimiters field is set.
+       */
+      @java.lang.Override
+      public boolean hasStringDelimiters() {
+        return delimitersCase_ == 3;
+      }
+      /**
+       * <code>.protocol.gaia.proxy.StringDelimiters string_delimiters = 3;</code>
+       * @return The stringDelimiters.
+       */
+      @java.lang.Override
+      public com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters getStringDelimiters() {
+        if (stringDelimitersBuilder_ == null) {
+          if (delimitersCase_ == 3) {
+            return (com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters) delimiters_;
+          }
+          return com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters.getDefaultInstance();
+        } else {
+          if (delimitersCase_ == 3) {
+            return stringDelimitersBuilder_.getMessage();
+          }
+          return com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.protocol.gaia.proxy.StringDelimiters string_delimiters = 3;</code>
+       */
+      public Builder setStringDelimiters(com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters value) {
+        if (stringDelimitersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          delimiters_ = value;
+          onChanged();
+        } else {
+          stringDelimitersBuilder_.setMessage(value);
+        }
+        delimitersCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.protocol.gaia.proxy.StringDelimiters string_delimiters = 3;</code>
+       */
+      public Builder setStringDelimiters(
+          com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters.Builder builderForValue) {
+        if (stringDelimitersBuilder_ == null) {
+          delimiters_ = builderForValue.build();
+          onChanged();
+        } else {
+          stringDelimitersBuilder_.setMessage(builderForValue.build());
+        }
+        delimitersCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.protocol.gaia.proxy.StringDelimiters string_delimiters = 3;</code>
+       */
+      public Builder mergeStringDelimiters(com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters value) {
+        if (stringDelimitersBuilder_ == null) {
+          if (delimitersCase_ == 3 &&
+              delimiters_ != com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters.getDefaultInstance()) {
+            delimiters_ = com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters.newBuilder((com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters) delimiters_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            delimiters_ = value;
+          }
+          onChanged();
+        } else {
+          if (delimitersCase_ == 3) {
+            stringDelimitersBuilder_.mergeFrom(value);
+          }
+          stringDelimitersBuilder_.setMessage(value);
+        }
+        delimitersCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.protocol.gaia.proxy.StringDelimiters string_delimiters = 3;</code>
+       */
+      public Builder clearStringDelimiters() {
+        if (stringDelimitersBuilder_ == null) {
+          if (delimitersCase_ == 3) {
+            delimitersCase_ = 0;
+            delimiters_ = null;
+            onChanged();
+          }
+        } else {
+          if (delimitersCase_ == 3) {
+            delimitersCase_ = 0;
+            delimiters_ = null;
+          }
+          stringDelimitersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.protocol.gaia.proxy.StringDelimiters string_delimiters = 3;</code>
+       */
+      public com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters.Builder getStringDelimitersBuilder() {
+        return getStringDelimitersFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.protocol.gaia.proxy.StringDelimiters string_delimiters = 3;</code>
+       */
+      @java.lang.Override
+      public com.tcl.gaia.protocol.proxy.Proxy.StringDelimitersOrBuilder getStringDelimitersOrBuilder() {
+        if ((delimitersCase_ == 3) && (stringDelimitersBuilder_ != null)) {
+          return stringDelimitersBuilder_.getMessageOrBuilder();
+        } else {
+          if (delimitersCase_ == 3) {
+            return (com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters) delimiters_;
+          }
+          return com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.protocol.gaia.proxy.StringDelimiters string_delimiters = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters, com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters.Builder, com.tcl.gaia.protocol.proxy.Proxy.StringDelimitersOrBuilder> 
+          getStringDelimitersFieldBuilder() {
+        if (stringDelimitersBuilder_ == null) {
+          if (!(delimitersCase_ == 3)) {
+            delimiters_ = com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters.getDefaultInstance();
+          }
+          stringDelimitersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters, com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters.Builder, com.tcl.gaia.protocol.proxy.Proxy.StringDelimitersOrBuilder>(
+                  (com.tcl.gaia.protocol.proxy.Proxy.StringDelimiters) delimiters_,
+                  getParentForChildren(),
+                  isClean());
+          delimiters_ = null;
+        }
+        delimitersCase_ = 3;
+        onChanged();;
+        return stringDelimitersBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:protocol.gaia.proxy.GetResourceChunksResponsePayload)
+    }
+
+    // @@protoc_insertion_point(class_scope:protocol.gaia.proxy.GetResourceChunksResponsePayload)
+    private static final com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload();
+    }
+
+    public static com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<GetResourceChunksResponsePayload>
+        PARSER = new com.google.protobuf.AbstractParser<GetResourceChunksResponsePayload>() {
+      @java.lang.Override
+      public GetResourceChunksResponsePayload parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetResourceChunksResponsePayload(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetResourceChunksResponsePayload> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetResourceChunksResponsePayload> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetResourceChunksResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:protocol.gaia.proxy.GetResourceChunksResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .protocol.common.constant.ResponseHeader header = 1;</code>
+     * @return Whether the header field is set.
+     */
+    boolean hasHeader();
+    /**
+     * <code>required .protocol.common.constant.ResponseHeader header = 1;</code>
+     * @return The header.
+     */
+    com.tcl.gaia.protocol.constant.Response.ResponseHeader getHeader();
+    /**
+     * <code>required .protocol.common.constant.ResponseHeader header = 1;</code>
+     */
+    com.tcl.gaia.protocol.constant.Response.ResponseHeaderOrBuilder getHeaderOrBuilder();
+
+    /**
+     * <code>optional .protocol.gaia.proxy.GetResourceChunksResponsePayload payload = 2;</code>
+     * @return Whether the payload field is set.
+     */
+    boolean hasPayload();
+    /**
+     * <code>optional .protocol.gaia.proxy.GetResourceChunksResponsePayload payload = 2;</code>
+     * @return The payload.
+     */
+    com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload getPayload();
+    /**
+     * <code>optional .protocol.gaia.proxy.GetResourceChunksResponsePayload payload = 2;</code>
+     */
+    com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayloadOrBuilder getPayloadOrBuilder();
+  }
+  /**
+   * Protobuf type {@code protocol.gaia.proxy.GetResourceChunksResponse}
+   */
+  public static final class GetResourceChunksResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:protocol.gaia.proxy.GetResourceChunksResponse)
+      GetResourceChunksResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetResourceChunksResponse.newBuilder() to construct.
+    private GetResourceChunksResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetResourceChunksResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetResourceChunksResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetResourceChunksResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.tcl.gaia.protocol.constant.Response.ResponseHeader.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) != 0)) {
+                subBuilder = header_.toBuilder();
+              }
+              header_ = input.readMessage(com.tcl.gaia.protocol.constant.Response.ResponseHeader.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(header_);
+                header_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 18: {
+              com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) != 0)) {
+                subBuilder = payload_.toBuilder();
+              }
+              payload_ = input.readMessage(com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(payload_);
+                payload_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcl.gaia.protocol.proxy.Proxy.internal_static_protocol_gaia_proxy_GetResourceChunksResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcl.gaia.protocol.proxy.Proxy.internal_static_protocol_gaia_proxy_GetResourceChunksResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponse.class, com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponse.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int HEADER_FIELD_NUMBER = 1;
+    private com.tcl.gaia.protocol.constant.Response.ResponseHeader header_;
+    /**
+     * <code>required .protocol.common.constant.ResponseHeader header = 1;</code>
+     * @return Whether the header field is set.
+     */
+    @java.lang.Override
+    public boolean hasHeader() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>required .protocol.common.constant.ResponseHeader header = 1;</code>
+     * @return The header.
+     */
+    @java.lang.Override
+    public com.tcl.gaia.protocol.constant.Response.ResponseHeader getHeader() {
+      return header_ == null ? com.tcl.gaia.protocol.constant.Response.ResponseHeader.getDefaultInstance() : header_;
+    }
+    /**
+     * <code>required .protocol.common.constant.ResponseHeader header = 1;</code>
+     */
+    @java.lang.Override
+    public com.tcl.gaia.protocol.constant.Response.ResponseHeaderOrBuilder getHeaderOrBuilder() {
+      return header_ == null ? com.tcl.gaia.protocol.constant.Response.ResponseHeader.getDefaultInstance() : header_;
+    }
+
+    public static final int PAYLOAD_FIELD_NUMBER = 2;
+    private com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload payload_;
+    /**
+     * <code>optional .protocol.gaia.proxy.GetResourceChunksResponsePayload payload = 2;</code>
+     * @return Whether the payload field is set.
+     */
+    @java.lang.Override
+    public boolean hasPayload() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional .protocol.gaia.proxy.GetResourceChunksResponsePayload payload = 2;</code>
+     * @return The payload.
+     */
+    @java.lang.Override
+    public com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload getPayload() {
+      return payload_ == null ? com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload.getDefaultInstance() : payload_;
+    }
+    /**
+     * <code>optional .protocol.gaia.proxy.GetResourceChunksResponsePayload payload = 2;</code>
+     */
+    @java.lang.Override
+    public com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayloadOrBuilder getPayloadOrBuilder() {
+      return payload_ == null ? com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload.getDefaultInstance() : payload_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasHeader()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!getHeader().isInitialized()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (hasPayload()) {
+        if (!getPayload().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getHeader());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(2, getPayload());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getHeader());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPayload());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponse)) {
+        return super.equals(obj);
+      }
+      com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponse other = (com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponse) obj;
+
+      if (hasHeader() != other.hasHeader()) return false;
+      if (hasHeader()) {
+        if (!getHeader()
+            .equals(other.getHeader())) return false;
+      }
+      if (hasPayload() != other.hasPayload()) return false;
+      if (hasPayload()) {
+        if (!getPayload()
+            .equals(other.getPayload())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasHeader()) {
+        hash = (37 * hash) + HEADER_FIELD_NUMBER;
+        hash = (53 * hash) + getHeader().hashCode();
+      }
+      if (hasPayload()) {
+        hash = (37 * hash) + PAYLOAD_FIELD_NUMBER;
+        hash = (53 * hash) + getPayload().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2639,13 +4798,25 @@ public final class Proxy {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getHeaderFieldBuilder();
+          getPayloadFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        delimiters_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        if (headerBuilder_ == null) {
+          header_ = null;
+        } else {
+          headerBuilder_.clear();
+        }
         bitField0_ = (bitField0_ & ~0x00000001);
+        if (payloadBuilder_ == null) {
+          payload_ = null;
+        } else {
+          payloadBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -2673,11 +4844,24 @@ public final class Proxy {
       public com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponse buildPartial() {
         com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponse result = new com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponse(this);
         int from_bitField0_ = bitField0_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          delimiters_ = delimiters_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          if (headerBuilder_ == null) {
+            result.header_ = header_;
+          } else {
+            result.header_ = headerBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000001;
         }
-        result.delimiters_ = delimiters_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          if (payloadBuilder_ == null) {
+            result.payload_ = payload_;
+          } else {
+            result.payload_ = payloadBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -2726,15 +4910,11 @@ public final class Proxy {
 
       public Builder mergeFrom(com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponse other) {
         if (other == com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponse.getDefaultInstance()) return this;
-        if (!other.delimiters_.isEmpty()) {
-          if (delimiters_.isEmpty()) {
-            delimiters_ = other.delimiters_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureDelimitersIsMutable();
-            delimiters_.addAll(other.delimiters_);
-          }
-          onChanged();
+        if (other.hasHeader()) {
+          mergeHeader(other.getHeader());
+        }
+        if (other.hasPayload()) {
+          mergePayload(other.getPayload());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2743,6 +4923,17 @@ public final class Proxy {
 
       @java.lang.Override
       public final boolean isInitialized() {
+        if (!hasHeader()) {
+          return false;
+        }
+        if (!getHeader().isInitialized()) {
+          return false;
+        }
+        if (hasPayload()) {
+          if (!getPayload().isInitialized()) {
+            return false;
+          }
+        }
         return true;
       }
 
@@ -2766,113 +4957,244 @@ public final class Proxy {
       }
       private int bitField0_;
 
-      private com.google.protobuf.LazyStringList delimiters_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureDelimitersIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          delimiters_ = new com.google.protobuf.LazyStringArrayList(delimiters_);
-          bitField0_ |= 0x00000001;
-         }
+      private com.tcl.gaia.protocol.constant.Response.ResponseHeader header_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcl.gaia.protocol.constant.Response.ResponseHeader, com.tcl.gaia.protocol.constant.Response.ResponseHeader.Builder, com.tcl.gaia.protocol.constant.Response.ResponseHeaderOrBuilder> headerBuilder_;
+      /**
+       * <code>required .protocol.common.constant.ResponseHeader header = 1;</code>
+       * @return Whether the header field is set.
+       */
+      public boolean hasHeader() {
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>repeated string delimiters = 1;</code>
-       * @return A list containing the delimiters.
+       * <code>required .protocol.common.constant.ResponseHeader header = 1;</code>
+       * @return The header.
        */
-      public com.google.protobuf.ProtocolStringList
-          getDelimitersList() {
-        return delimiters_.getUnmodifiableView();
+      public com.tcl.gaia.protocol.constant.Response.ResponseHeader getHeader() {
+        if (headerBuilder_ == null) {
+          return header_ == null ? com.tcl.gaia.protocol.constant.Response.ResponseHeader.getDefaultInstance() : header_;
+        } else {
+          return headerBuilder_.getMessage();
+        }
       }
       /**
-       * <code>repeated string delimiters = 1;</code>
-       * @return The count of delimiters.
+       * <code>required .protocol.common.constant.ResponseHeader header = 1;</code>
        */
-      public int getDelimitersCount() {
-        return delimiters_.size();
-      }
-      /**
-       * <code>repeated string delimiters = 1;</code>
-       * @param index The index of the element to return.
-       * @return The delimiters at the given index.
-       */
-      public java.lang.String getDelimiters(int index) {
-        return delimiters_.get(index);
-      }
-      /**
-       * <code>repeated string delimiters = 1;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the delimiters at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getDelimitersBytes(int index) {
-        return delimiters_.getByteString(index);
-      }
-      /**
-       * <code>repeated string delimiters = 1;</code>
-       * @param index The index to set the value at.
-       * @param value The delimiters to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDelimiters(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureDelimitersIsMutable();
-        delimiters_.set(index, value);
-        onChanged();
+      public Builder setHeader(com.tcl.gaia.protocol.constant.Response.ResponseHeader value) {
+        if (headerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          header_ = value;
+          onChanged();
+        } else {
+          headerBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
         return this;
       }
       /**
-       * <code>repeated string delimiters = 1;</code>
-       * @param value The delimiters to add.
-       * @return This builder for chaining.
+       * <code>required .protocol.common.constant.ResponseHeader header = 1;</code>
        */
-      public Builder addDelimiters(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureDelimitersIsMutable();
-        delimiters_.add(value);
-        onChanged();
+      public Builder setHeader(
+          com.tcl.gaia.protocol.constant.Response.ResponseHeader.Builder builderForValue) {
+        if (headerBuilder_ == null) {
+          header_ = builderForValue.build();
+          onChanged();
+        } else {
+          headerBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
         return this;
       }
       /**
-       * <code>repeated string delimiters = 1;</code>
-       * @param values The delimiters to add.
-       * @return This builder for chaining.
+       * <code>required .protocol.common.constant.ResponseHeader header = 1;</code>
        */
-      public Builder addAllDelimiters(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureDelimitersIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, delimiters_);
-        onChanged();
+      public Builder mergeHeader(com.tcl.gaia.protocol.constant.Response.ResponseHeader value) {
+        if (headerBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+              header_ != null &&
+              header_ != com.tcl.gaia.protocol.constant.Response.ResponseHeader.getDefaultInstance()) {
+            header_ =
+              com.tcl.gaia.protocol.constant.Response.ResponseHeader.newBuilder(header_).mergeFrom(value).buildPartial();
+          } else {
+            header_ = value;
+          }
+          onChanged();
+        } else {
+          headerBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
         return this;
       }
       /**
-       * <code>repeated string delimiters = 1;</code>
-       * @return This builder for chaining.
+       * <code>required .protocol.common.constant.ResponseHeader header = 1;</code>
        */
-      public Builder clearDelimiters() {
-        delimiters_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      public Builder clearHeader() {
+        if (headerBuilder_ == null) {
+          header_ = null;
+          onChanged();
+        } else {
+          headerBuilder_.clear();
+        }
         bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
         return this;
       }
       /**
-       * <code>repeated string delimiters = 1;</code>
-       * @param value The bytes of the delimiters to add.
-       * @return This builder for chaining.
+       * <code>required .protocol.common.constant.ResponseHeader header = 1;</code>
        */
-      public Builder addDelimitersBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureDelimitersIsMutable();
-        delimiters_.add(value);
+      public com.tcl.gaia.protocol.constant.Response.ResponseHeader.Builder getHeaderBuilder() {
+        bitField0_ |= 0x00000001;
         onChanged();
+        return getHeaderFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>required .protocol.common.constant.ResponseHeader header = 1;</code>
+       */
+      public com.tcl.gaia.protocol.constant.Response.ResponseHeaderOrBuilder getHeaderOrBuilder() {
+        if (headerBuilder_ != null) {
+          return headerBuilder_.getMessageOrBuilder();
+        } else {
+          return header_ == null ?
+              com.tcl.gaia.protocol.constant.Response.ResponseHeader.getDefaultInstance() : header_;
+        }
+      }
+      /**
+       * <code>required .protocol.common.constant.ResponseHeader header = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcl.gaia.protocol.constant.Response.ResponseHeader, com.tcl.gaia.protocol.constant.Response.ResponseHeader.Builder, com.tcl.gaia.protocol.constant.Response.ResponseHeaderOrBuilder> 
+          getHeaderFieldBuilder() {
+        if (headerBuilder_ == null) {
+          headerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcl.gaia.protocol.constant.Response.ResponseHeader, com.tcl.gaia.protocol.constant.Response.ResponseHeader.Builder, com.tcl.gaia.protocol.constant.Response.ResponseHeaderOrBuilder>(
+                  getHeader(),
+                  getParentForChildren(),
+                  isClean());
+          header_ = null;
+        }
+        return headerBuilder_;
+      }
+
+      private com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload payload_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload, com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload.Builder, com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayloadOrBuilder> payloadBuilder_;
+      /**
+       * <code>optional .protocol.gaia.proxy.GetResourceChunksResponsePayload payload = 2;</code>
+       * @return Whether the payload field is set.
+       */
+      public boolean hasPayload() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional .protocol.gaia.proxy.GetResourceChunksResponsePayload payload = 2;</code>
+       * @return The payload.
+       */
+      public com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload getPayload() {
+        if (payloadBuilder_ == null) {
+          return payload_ == null ? com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload.getDefaultInstance() : payload_;
+        } else {
+          return payloadBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .protocol.gaia.proxy.GetResourceChunksResponsePayload payload = 2;</code>
+       */
+      public Builder setPayload(com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload value) {
+        if (payloadBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payload_ = value;
+          onChanged();
+        } else {
+          payloadBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
         return this;
+      }
+      /**
+       * <code>optional .protocol.gaia.proxy.GetResourceChunksResponsePayload payload = 2;</code>
+       */
+      public Builder setPayload(
+          com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload.Builder builderForValue) {
+        if (payloadBuilder_ == null) {
+          payload_ = builderForValue.build();
+          onChanged();
+        } else {
+          payloadBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .protocol.gaia.proxy.GetResourceChunksResponsePayload payload = 2;</code>
+       */
+      public Builder mergePayload(com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload value) {
+        if (payloadBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+              payload_ != null &&
+              payload_ != com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload.getDefaultInstance()) {
+            payload_ =
+              com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload.newBuilder(payload_).mergeFrom(value).buildPartial();
+          } else {
+            payload_ = value;
+          }
+          onChanged();
+        } else {
+          payloadBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .protocol.gaia.proxy.GetResourceChunksResponsePayload payload = 2;</code>
+       */
+      public Builder clearPayload() {
+        if (payloadBuilder_ == null) {
+          payload_ = null;
+          onChanged();
+        } else {
+          payloadBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+      /**
+       * <code>optional .protocol.gaia.proxy.GetResourceChunksResponsePayload payload = 2;</code>
+       */
+      public com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload.Builder getPayloadBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPayloadFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .protocol.gaia.proxy.GetResourceChunksResponsePayload payload = 2;</code>
+       */
+      public com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayloadOrBuilder getPayloadOrBuilder() {
+        if (payloadBuilder_ != null) {
+          return payloadBuilder_.getMessageOrBuilder();
+        } else {
+          return payload_ == null ?
+              com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload.getDefaultInstance() : payload_;
+        }
+      }
+      /**
+       * <code>optional .protocol.gaia.proxy.GetResourceChunksResponsePayload payload = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload, com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload.Builder, com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayloadOrBuilder> 
+          getPayloadFieldBuilder() {
+        if (payloadBuilder_ == null) {
+          payloadBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload, com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayload.Builder, com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponsePayloadOrBuilder>(
+                  getPayload(),
+                  getParentForChildren(),
+                  isClean());
+          payload_ = null;
+        }
+        return payloadBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -6821,6 +9143,12 @@ public final class Proxy {
         memoizedIsInitialized = 0;
         return false;
       }
+      if (hasGetResourceChunksResponse()) {
+        if (!getGetResourceChunksResponse().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -7176,6 +9504,11 @@ public final class Proxy {
       public final boolean isInitialized() {
         if (!hasHttpStatusCode()) {
           return false;
+        }
+        if (hasGetResourceChunksResponse()) {
+          if (!getGetResourceChunksResponse().isInitialized()) {
+            return false;
+          }
         }
         return true;
       }
@@ -8454,11 +10787,6 @@ public final class Proxy {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_protocol_gaia_proxy_GetResourceChunksRequestHeader_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_protocol_gaia_proxy_GetResourceChunksRequestHeader_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_protocol_gaia_proxy_GetResourceChunksRequestPayload_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -8468,6 +10796,21 @@ public final class Proxy {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_protocol_gaia_proxy_GetResourceChunksRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_protocol_gaia_proxy_IntDelimiters_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_protocol_gaia_proxy_IntDelimiters_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_protocol_gaia_proxy_StringDelimiters_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_protocol_gaia_proxy_StringDelimiters_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_protocol_gaia_proxy_GetResourceChunksResponsePayload_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_protocol_gaia_proxy_GetResourceChunksResponsePayload_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_protocol_gaia_proxy_GetResourceChunksResponse_descriptor;
   private static final 
@@ -8516,40 +10859,53 @@ public final class Proxy {
       "col.gaia.proxy\032\031google/protobuf/any.prot" +
       "o\032&protocol/common/constant/request.prot" +
       "o\032\'protocol/common/constant/response.pro" +
-      "to\" \n\036GetResourceChunksRequestHeader\"b\n\037" +
-      "GetResourceChunksRequestPayload\022\024\n\014partn" +
-      "er_name\030\001 \002(\t\022\025\n\rresource_type\030\002 \002(\t\022\022\n\n" +
-      "chunk_size\030\003 \002(\005\"\246\001\n\030GetResourceChunksRe" +
-      "quest\022C\n\006header\030\001 \001(\01323.protocol.gaia.pr" +
-      "oxy.GetResourceChunksRequestHeader\022E\n\007pa" +
-      "yload\030\002 \002(\01324.protocol.gaia.proxy.GetRes" +
-      "ourceChunksRequestPayload\"/\n\031GetResource" +
-      "ChunksResponse\022\022\n\ndelimiters\030\001 \003(\t\"M\n\023Ge" +
-      "tResourcesRequest\022\025\n\rresource_type\030\001 \002(\t" +
-      "\022\017\n\007next_id\030\002 \001(\t\022\016\n\006end_id\030\003 \001(\t\"\026\n\024Get" +
-      "ResourcesResponse\"\360\001\n\023ProxyRequestPayloa" +
-      "d\022\024\n\014partner_name\030\001 \002(\t\022\032\n\022proxy_request" +
-      "_type\030\002 \002(\t\022T\n\033get_resource_chunks_reque" +
-      "st\030\003 \001(\0132-.protocol.gaia.proxy.GetResour" +
-      "ceChunksRequestH\000\022I\n\025get_resources_reque" +
-      "st\030\004 \001(\0132(.protocol.gaia.proxy.GetResour" +
-      "cesRequestH\000B\006\n\004body\"\202\001\n\014ProxyRequest\0227\n" +
-      "\006header\030\001 \001(\0132\'.protocol.common.constant" +
-      ".RequestHeader\0229\n\007payload\030\002 \002(\0132(.protoc" +
-      "ol.gaia.proxy.ProxyRequestPayload\"\341\001\n\024Pr" +
-      "oxyResponsePayload\022\030\n\020http_status_code\030\001" +
-      " \002(\005\022V\n\034get_resource_chunks_response\030\002 \001" +
-      "(\0132..protocol.gaia.proxy.GetResourceChun" +
-      "ksResponseH\000\022K\n\026get_resources_response\030\003" +
-      " \001(\0132).protocol.gaia.proxy.GetResourcesR" +
-      "esponseH\000B\n\n\010response\"\205\001\n\rProxyResponse\022" +
-      "8\n\006header\030\001 \002(\0132(.protocol.common.consta" +
-      "nt.ResponseHeader\022:\n\007payload\030\002 \001(\0132).pro" +
-      "tocol.gaia.proxy.ProxyResponsePayload*>\n" +
-      "\020ProxyRequestType\022\027\n\023GET_RESOURCE_CHUNKS" +
-      "\020\000\022\021\n\rGET_RESOURCES\020\001B:\n\033com.tcl.gaia.pr" +
-      "otocol.proxyZ\033tcl.com/gaia/protocol/prox" +
-      "y"
+      "to\"b\n\037GetResourceChunksRequestPayload\022\024\n" +
+      "\014partner_name\030\001 \002(\t\022\025\n\rresource_type\030\002 \002" +
+      "(\t\022\022\n\nchunk_size\030\003 \002(\005\"\232\001\n\030GetResourceCh" +
+      "unksRequest\0227\n\006header\030\001 \001(\0132\'.protocol.c" +
+      "ommon.constant.RequestHeader\022E\n\007payload\030" +
+      "\002 \002(\01324.protocol.gaia.proxy.GetResourceC" +
+      "hunksRequestPayload\"#\n\rIntDelimiters\022\022\n\n" +
+      "delimiters\030\001 \003(\005\"&\n\020StringDelimiters\022\022\n\n" +
+      "delimiters\030\001 \003(\t\"\340\001\n GetResourceChunksRe" +
+      "sponsePayload\022,\n\007id_type\030\001 \002(\0162\033.protoco" +
+      "l.gaia.proxy.IDType\022<\n\016int_delimiters\030\002 " +
+      "\001(\0132\".protocol.gaia.proxy.IntDelimitersH" +
+      "\000\022B\n\021string_delimiters\030\003 \001(\0132%.protocol." +
+      "gaia.proxy.StringDelimitersH\000B\014\n\ndelimit" +
+      "ers\"\235\001\n\031GetResourceChunksResponse\0228\n\006hea" +
+      "der\030\001 \002(\0132(.protocol.common.constant.Res" +
+      "ponseHeader\022F\n\007payload\030\002 \001(\01325.protocol." +
+      "gaia.proxy.GetResourceChunksResponsePayl" +
+      "oad\"M\n\023GetResourcesRequest\022\025\n\rresource_t" +
+      "ype\030\001 \002(\t\022\017\n\007next_id\030\002 \001(\t\022\016\n\006end_id\030\003 \001" +
+      "(\t\"\026\n\024GetResourcesResponse\"\360\001\n\023ProxyRequ" +
+      "estPayload\022\024\n\014partner_name\030\001 \002(\t\022\032\n\022prox" +
+      "y_request_type\030\002 \002(\t\022T\n\033get_resource_chu" +
+      "nks_request\030\003 \001(\0132-.protocol.gaia.proxy." +
+      "GetResourceChunksRequestH\000\022I\n\025get_resour" +
+      "ces_request\030\004 \001(\0132(.protocol.gaia.proxy." +
+      "GetResourcesRequestH\000B\006\n\004body\"\202\001\n\014ProxyR" +
+      "equest\0227\n\006header\030\001 \001(\0132\'.protocol.common" +
+      ".constant.RequestHeader\0229\n\007payload\030\002 \002(\013" +
+      "2(.protocol.gaia.proxy.ProxyRequestPaylo" +
+      "ad\"\341\001\n\024ProxyResponsePayload\022\030\n\020http_stat" +
+      "us_code\030\001 \002(\005\022V\n\034get_resource_chunks_res" +
+      "ponse\030\002 \001(\0132..protocol.gaia.proxy.GetRes" +
+      "ourceChunksResponseH\000\022K\n\026get_resources_r" +
+      "esponse\030\003 \001(\0132).protocol.gaia.proxy.GetR" +
+      "esourcesResponseH\000B\n\n\010response\"\205\001\n\rProxy" +
+      "Response\0228\n\006header\030\001 \002(\0132(.protocol.comm" +
+      "on.constant.ResponseHeader\022:\n\007payload\030\002 " +
+      "\001(\0132).protocol.gaia.proxy.ProxyResponseP" +
+      "ayload*g\n\014ResourceType\022\026\n\022RESOURCE_TYPE_" +
+      "USER\020\001\022\030\n\024RESOURCE_TYPE_DEVICE\020\002\022%\n!RESO" +
+      "URCE_TYPE_USER_DEVICE_BINDING\020\003*-\n\006IDTyp" +
+      "e\022\017\n\013ID_TYPE_INT\020\000\022\022\n\016ID_TYPE_STRING\020\001*>" +
+      "\n\020ProxyRequestType\022\027\n\023GET_RESOURCE_CHUNK" +
+      "S\020\000\022\021\n\rGET_RESOURCES\020\001B:\n\033com.tcl.gaia.p" +
+      "rotocol.proxyZ\033tcl.com/gaia/protocol/pro" +
+      "xy"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8558,62 +10914,74 @@ public final class Proxy {
           com.tcl.gaia.protocol.constant.Request.getDescriptor(),
           com.tcl.gaia.protocol.constant.Response.getDescriptor(),
         });
-    internal_static_protocol_gaia_proxy_GetResourceChunksRequestHeader_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_protocol_gaia_proxy_GetResourceChunksRequestHeader_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_protocol_gaia_proxy_GetResourceChunksRequestHeader_descriptor,
-        new java.lang.String[] { });
     internal_static_protocol_gaia_proxy_GetResourceChunksRequestPayload_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(0);
     internal_static_protocol_gaia_proxy_GetResourceChunksRequestPayload_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protocol_gaia_proxy_GetResourceChunksRequestPayload_descriptor,
         new java.lang.String[] { "PartnerName", "ResourceType", "ChunkSize", });
     internal_static_protocol_gaia_proxy_GetResourceChunksRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_protocol_gaia_proxy_GetResourceChunksRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protocol_gaia_proxy_GetResourceChunksRequest_descriptor,
         new java.lang.String[] { "Header", "Payload", });
-    internal_static_protocol_gaia_proxy_GetResourceChunksResponse_descriptor =
+    internal_static_protocol_gaia_proxy_IntDelimiters_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_protocol_gaia_proxy_IntDelimiters_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_protocol_gaia_proxy_IntDelimiters_descriptor,
+        new java.lang.String[] { "Delimiters", });
+    internal_static_protocol_gaia_proxy_StringDelimiters_descriptor =
       getDescriptor().getMessageTypes().get(3);
+    internal_static_protocol_gaia_proxy_StringDelimiters_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_protocol_gaia_proxy_StringDelimiters_descriptor,
+        new java.lang.String[] { "Delimiters", });
+    internal_static_protocol_gaia_proxy_GetResourceChunksResponsePayload_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_protocol_gaia_proxy_GetResourceChunksResponsePayload_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_protocol_gaia_proxy_GetResourceChunksResponsePayload_descriptor,
+        new java.lang.String[] { "IdType", "IntDelimiters", "StringDelimiters", "Delimiters", });
+    internal_static_protocol_gaia_proxy_GetResourceChunksResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
     internal_static_protocol_gaia_proxy_GetResourceChunksResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protocol_gaia_proxy_GetResourceChunksResponse_descriptor,
-        new java.lang.String[] { "Delimiters", });
+        new java.lang.String[] { "Header", "Payload", });
     internal_static_protocol_gaia_proxy_GetResourcesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_protocol_gaia_proxy_GetResourcesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protocol_gaia_proxy_GetResourcesRequest_descriptor,
         new java.lang.String[] { "ResourceType", "NextId", "EndId", });
     internal_static_protocol_gaia_proxy_GetResourcesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_protocol_gaia_proxy_GetResourcesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protocol_gaia_proxy_GetResourcesResponse_descriptor,
         new java.lang.String[] { });
     internal_static_protocol_gaia_proxy_ProxyRequestPayload_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_protocol_gaia_proxy_ProxyRequestPayload_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protocol_gaia_proxy_ProxyRequestPayload_descriptor,
         new java.lang.String[] { "PartnerName", "ProxyRequestType", "GetResourceChunksRequest", "GetResourcesRequest", "Body", });
     internal_static_protocol_gaia_proxy_ProxyRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_protocol_gaia_proxy_ProxyRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protocol_gaia_proxy_ProxyRequest_descriptor,
         new java.lang.String[] { "Header", "Payload", });
     internal_static_protocol_gaia_proxy_ProxyResponsePayload_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_protocol_gaia_proxy_ProxyResponsePayload_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protocol_gaia_proxy_ProxyResponsePayload_descriptor,
         new java.lang.String[] { "HttpStatusCode", "GetResourceChunksResponse", "GetResourcesResponse", "Response", });
     internal_static_protocol_gaia_proxy_ProxyResponse_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_protocol_gaia_proxy_ProxyResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protocol_gaia_proxy_ProxyResponse_descriptor,
