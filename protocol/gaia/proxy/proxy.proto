@@ -11,6 +11,12 @@ import "protocol/common/constant/request.proto";
 import "protocol/common/constant/response.proto";
 
 
+enum ResourceType {
+    RESOURCE_TYPE_USER = 1;
+    RESOURCE_TYPE_DEVICE = 2;
+    RESOURCE_TYPE_USER_DEVICE_BINDING = 3;
+}
+
 message GetResourceChunksRequestHeader {
 }
 
