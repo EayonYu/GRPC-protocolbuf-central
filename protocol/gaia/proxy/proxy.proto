@@ -57,19 +57,56 @@ message GetResourceChunksResponse {
 
 
 
-
-
-
-
+message GetResourcesRequestPayload {
+    required string partner_name = 1;
+    required string resource_type = 2;
+    optional string next_id = 3;
+    optional string end_id = 4;
+}
 
 message GetResourcesRequest {
-    required string resource_type = 1;
-    optional string next_id = 2;
-    optional string end_id = 3;
+    optional protocol.common.constant.RequestHeader header = 1;
+    required GetResourcesRequestPayload payload = 2;
+}
+
+// https://confluence.tclking.com/display/IoT4/Partner+API+Common+Objects#PartnerAPICommonObjects-User
+enum AccountSystemId {
+  TCL_SSO = 0;
+  WE_CHAT_OPEN_ID = 1;
+  MOBILE_PHONE = 2;
+}
+
+message LoginDetails {
+  required AccountSystemId account_system_id = 1;
+  required string login_account_id = 2;
+}
+
+message User {
+  required int32 user_id = 1;
+  optional string tenant_id = 2;
+  optional string immutable_identity = 3;
+  optional string user_name = 4;
+  repeated LoginDetails login_details = 5;
+  optional google.protobuf.Any extra = 6;
+}
+
+message GetResourcesResponsePayload {
+    repeated User users = 1;
 }
 
 message GetResourcesResponse {
+    required protocol.common.constant.ResponseHeader header = 1;
+    optional GetResourcesResponsePayload payload = 2;
 }
+
+
+
+
+
+
+
+
+
 
 enum ProxyRequestType {
     GET_RESOURCE_CHUNKS = 0;

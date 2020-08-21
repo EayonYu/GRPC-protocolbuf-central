@@ -213,6 +213,37 @@ public final class GaiaProxyGrpcGrpc {
     return getGetResourceChunksMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.Proxy.GetResourcesRequest,
+      com.tcl.gaia.protocol.proxy.Proxy.GetResourcesResponse> getGetResourcesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetResources",
+      requestType = com.tcl.gaia.protocol.proxy.Proxy.GetResourcesRequest.class,
+      responseType = com.tcl.gaia.protocol.proxy.Proxy.GetResourcesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.Proxy.GetResourcesRequest,
+      com.tcl.gaia.protocol.proxy.Proxy.GetResourcesResponse> getGetResourcesMethod() {
+    io.grpc.MethodDescriptor<com.tcl.gaia.protocol.proxy.Proxy.GetResourcesRequest, com.tcl.gaia.protocol.proxy.Proxy.GetResourcesResponse> getGetResourcesMethod;
+    if ((getGetResourcesMethod = GaiaProxyGrpcGrpc.getGetResourcesMethod) == null) {
+      synchronized (GaiaProxyGrpcGrpc.class) {
+        if ((getGetResourcesMethod = GaiaProxyGrpcGrpc.getGetResourcesMethod) == null) {
+          GaiaProxyGrpcGrpc.getGetResourcesMethod = getGetResourcesMethod =
+              io.grpc.MethodDescriptor.<com.tcl.gaia.protocol.proxy.Proxy.GetResourcesRequest, com.tcl.gaia.protocol.proxy.Proxy.GetResourcesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetResources"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcl.gaia.protocol.proxy.Proxy.GetResourcesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcl.gaia.protocol.proxy.Proxy.GetResourcesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new GaiaProxyGrpcMethodDescriptorSupplier("GetResources"))
+              .build();
+        }
+      }
+    }
+    return getGetResourcesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -309,6 +340,13 @@ public final class GaiaProxyGrpcGrpc {
       asyncUnimplementedUnaryCall(getGetResourceChunksMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void getResources(com.tcl.gaia.protocol.proxy.Proxy.GetResourcesRequest request,
+        io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.Proxy.GetResourcesResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetResourcesMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -353,6 +391,13 @@ public final class GaiaProxyGrpcGrpc {
                 com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequest,
                 com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponse>(
                   this, METHODID_GET_RESOURCE_CHUNKS)))
+          .addMethod(
+            getGetResourcesMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.tcl.gaia.protocol.proxy.Proxy.GetResourcesRequest,
+                com.tcl.gaia.protocol.proxy.Proxy.GetResourcesResponse>(
+                  this, METHODID_GET_RESOURCES)))
           .build();
     }
   }
@@ -424,6 +469,14 @@ public final class GaiaProxyGrpcGrpc {
       asyncUnaryCall(
           getChannel().newCall(getGetResourceChunksMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void getResources(com.tcl.gaia.protocol.proxy.Proxy.GetResourcesRequest request,
+        io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.Proxy.GetResourcesResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetResourcesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -486,6 +539,13 @@ public final class GaiaProxyGrpcGrpc {
     public com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponse getResourceChunks(com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetResourceChunksMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.tcl.gaia.protocol.proxy.Proxy.GetResourcesResponse getResources(com.tcl.gaia.protocol.proxy.Proxy.GetResourcesRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getGetResourcesMethod(), getCallOptions(), request);
     }
   }
 
@@ -556,6 +616,14 @@ public final class GaiaProxyGrpcGrpc {
       return futureUnaryCall(
           getChannel().newCall(getGetResourceChunksMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcl.gaia.protocol.proxy.Proxy.GetResourcesResponse> getResources(
+        com.tcl.gaia.protocol.proxy.Proxy.GetResourcesRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetResourcesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_PING = 0;
@@ -564,6 +632,7 @@ public final class GaiaProxyGrpcGrpc {
   private static final int METHODID_ADD_PARTNER = 3;
   private static final int METHODID_PROXY = 4;
   private static final int METHODID_GET_RESOURCE_CHUNKS = 5;
+  private static final int METHODID_GET_RESOURCES = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -605,6 +674,10 @@ public final class GaiaProxyGrpcGrpc {
         case METHODID_GET_RESOURCE_CHUNKS:
           serviceImpl.getResourceChunks((com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequest) request,
               (io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponse>) responseObserver);
+          break;
+        case METHODID_GET_RESOURCES:
+          serviceImpl.getResources((com.tcl.gaia.protocol.proxy.Proxy.GetResourcesRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcl.gaia.protocol.proxy.Proxy.GetResourcesResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -673,6 +746,7 @@ public final class GaiaProxyGrpcGrpc {
               .addMethod(getAddPartnerMethod())
               .addMethod(getProxyMethod())
               .addMethod(getGetResourceChunksMethod())
+              .addMethod(getGetResourcesMethod())
               .build();
         }
       }

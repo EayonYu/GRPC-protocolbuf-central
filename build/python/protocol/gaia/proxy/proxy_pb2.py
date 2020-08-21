@@ -23,7 +23,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=b'\n\033com.tcl.gaia.protocol.proxyZ\033tcl.com/gaia/protocol/proxy',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1fprotocol/gaia/proxy/proxy.proto\x12\x13protocol.gaia.proxy\x1a\x19google/protobuf/any.proto\x1a&protocol/common/constant/request.proto\x1a\'protocol/common/constant/response.proto\"b\n\x1fGetResourceChunksRequestPayload\x12\x14\n\x0cpartner_name\x18\x01 \x02(\t\x12\x15\n\rresource_type\x18\x02 \x02(\t\x12\x12\n\nchunk_size\x18\x03 \x02(\x05\"\x9a\x01\n\x18GetResourceChunksRequest\x12\x37\n\x06header\x18\x01 \x01(\x0b\x32\'.protocol.common.constant.RequestHeader\x12\x45\n\x07payload\x18\x02 \x02(\x0b\x32\x34.protocol.gaia.proxy.GetResourceChunksRequestPayload\"#\n\rIntDelimiters\x12\x12\n\ndelimiters\x18\x01 \x03(\x05\"&\n\x10StringDelimiters\x12\x12\n\ndelimiters\x18\x01 \x03(\t\"\xe0\x01\n GetResourceChunksResponsePayload\x12,\n\x07id_type\x18\x01 \x02(\x0e\x32\x1b.protocol.gaia.proxy.IDType\x12<\n\x0eint_delimiters\x18\x02 \x01(\x0b\x32\".protocol.gaia.proxy.IntDelimitersH\x00\x12\x42\n\x11string_delimiters\x18\x03 \x01(\x0b\x32%.protocol.gaia.proxy.StringDelimitersH\x00\x42\x0c\n\ndelimiters\"\x9d\x01\n\x19GetResourceChunksResponse\x12\x38\n\x06header\x18\x01 \x02(\x0b\x32(.protocol.common.constant.ResponseHeader\x12\x46\n\x07payload\x18\x02 \x01(\x0b\x32\x35.protocol.gaia.proxy.GetResourceChunksResponsePayload\"M\n\x13GetResourcesRequest\x12\x15\n\rresource_type\x18\x01 \x02(\t\x12\x0f\n\x07next_id\x18\x02 \x01(\t\x12\x0e\n\x06\x65nd_id\x18\x03 \x01(\t\"\x16\n\x14GetResourcesResponse\"\xf0\x01\n\x13ProxyRequestPayload\x12\x14\n\x0cpartner_name\x18\x01 \x02(\t\x12\x1a\n\x12proxy_request_type\x18\x02 \x02(\t\x12T\n\x1bget_resource_chunks_request\x18\x03 \x01(\x0b\x32-.protocol.gaia.proxy.GetResourceChunksRequestH\x00\x12I\n\x15get_resources_request\x18\x04 \x01(\x0b\x32(.protocol.gaia.proxy.GetResourcesRequestH\x00\x42\x06\n\x04\x62ody\"\x82\x01\n\x0cProxyRequest\x12\x37\n\x06header\x18\x01 \x01(\x0b\x32\'.protocol.common.constant.RequestHeader\x12\x39\n\x07payload\x18\x02 \x02(\x0b\x32(.protocol.gaia.proxy.ProxyRequestPayload\"\xe1\x01\n\x14ProxyResponsePayload\x12\x18\n\x10http_status_code\x18\x01 \x02(\x05\x12V\n\x1cget_resource_chunks_response\x18\x02 \x01(\x0b\x32..protocol.gaia.proxy.GetResourceChunksResponseH\x00\x12K\n\x16get_resources_response\x18\x03 \x01(\x0b\x32).protocol.gaia.proxy.GetResourcesResponseH\x00\x42\n\n\x08response\"\x85\x01\n\rProxyResponse\x12\x38\n\x06header\x18\x01 \x02(\x0b\x32(.protocol.common.constant.ResponseHeader\x12:\n\x07payload\x18\x02 \x01(\x0b\x32).protocol.gaia.proxy.ProxyResponsePayload*g\n\x0cResourceType\x12\x16\n\x12RESOURCE_TYPE_USER\x10\x01\x12\x18\n\x14RESOURCE_TYPE_DEVICE\x10\x02\x12%\n!RESOURCE_TYPE_USER_DEVICE_BINDING\x10\x03*-\n\x06IDType\x12\x0f\n\x0bID_TYPE_INT\x10\x00\x12\x12\n\x0eID_TYPE_STRING\x10\x01*>\n\x10ProxyRequestType\x12\x17\n\x13GET_RESOURCE_CHUNKS\x10\x00\x12\x11\n\rGET_RESOURCES\x10\x01\x42:\n\x1b\x63om.tcl.gaia.protocol.proxyZ\x1btcl.com/gaia/protocol/proxy'
+  serialized_pb=b'\n\x1fprotocol/gaia/proxy/proxy.proto\x12\x13protocol.gaia.proxy\x1a\x19google/protobuf/any.proto\x1a&protocol/common/constant/request.proto\x1a\'protocol/common/constant/response.proto\"b\n\x1fGetResourceChunksRequestPayload\x12\x14\n\x0cpartner_name\x18\x01 \x02(\t\x12\x15\n\rresource_type\x18\x02 \x02(\t\x12\x12\n\nchunk_size\x18\x03 \x02(\x05\"\x9a\x01\n\x18GetResourceChunksRequest\x12\x37\n\x06header\x18\x01 \x01(\x0b\x32\'.protocol.common.constant.RequestHeader\x12\x45\n\x07payload\x18\x02 \x02(\x0b\x32\x34.protocol.gaia.proxy.GetResourceChunksRequestPayload\"#\n\rIntDelimiters\x12\x12\n\ndelimiters\x18\x01 \x03(\x05\"&\n\x10StringDelimiters\x12\x12\n\ndelimiters\x18\x01 \x03(\t\"\xe0\x01\n GetResourceChunksResponsePayload\x12,\n\x07id_type\x18\x01 \x02(\x0e\x32\x1b.protocol.gaia.proxy.IDType\x12<\n\x0eint_delimiters\x18\x02 \x01(\x0b\x32\".protocol.gaia.proxy.IntDelimitersH\x00\x12\x42\n\x11string_delimiters\x18\x03 \x01(\x0b\x32%.protocol.gaia.proxy.StringDelimitersH\x00\x42\x0c\n\ndelimiters\"\x9d\x01\n\x19GetResourceChunksResponse\x12\x38\n\x06header\x18\x01 \x02(\x0b\x32(.protocol.common.constant.ResponseHeader\x12\x46\n\x07payload\x18\x02 \x01(\x0b\x32\x35.protocol.gaia.proxy.GetResourceChunksResponsePayload\"j\n\x1aGetResourcesRequestPayload\x12\x14\n\x0cpartner_name\x18\x01 \x02(\t\x12\x15\n\rresource_type\x18\x02 \x02(\t\x12\x0f\n\x07next_id\x18\x03 \x01(\t\x12\x0e\n\x06\x65nd_id\x18\x04 \x01(\t\"\x90\x01\n\x13GetResourcesRequest\x12\x37\n\x06header\x18\x01 \x01(\x0b\x32\'.protocol.common.constant.RequestHeader\x12@\n\x07payload\x18\x02 \x02(\x0b\x32/.protocol.gaia.proxy.GetResourcesRequestPayload\"i\n\x0cLoginDetails\x12?\n\x11\x61\x63\x63ount_system_id\x18\x01 \x02(\x0e\x32$.protocol.gaia.proxy.AccountSystemId\x12\x18\n\x10login_account_id\x18\x02 \x02(\t\"\xb8\x01\n\x04User\x12\x0f\n\x07user_id\x18\x01 \x02(\x05\x12\x11\n\ttenant_id\x18\x02 \x01(\t\x12\x1a\n\x12immutable_identity\x18\x03 \x01(\t\x12\x11\n\tuser_name\x18\x04 \x01(\t\x12\x38\n\rlogin_details\x18\x05 \x03(\x0b\x32!.protocol.gaia.proxy.LoginDetails\x12#\n\x05\x65xtra\x18\x06 \x01(\x0b\x32\x14.google.protobuf.Any\"G\n\x1bGetResourcesResponsePayload\x12(\n\x05users\x18\x01 \x03(\x0b\x32\x19.protocol.gaia.proxy.User\"\x93\x01\n\x14GetResourcesResponse\x12\x38\n\x06header\x18\x01 \x02(\x0b\x32(.protocol.common.constant.ResponseHeader\x12\x41\n\x07payload\x18\x02 \x01(\x0b\x32\x30.protocol.gaia.proxy.GetResourcesResponsePayload\"\xf0\x01\n\x13ProxyRequestPayload\x12\x14\n\x0cpartner_name\x18\x01 \x02(\t\x12\x1a\n\x12proxy_request_type\x18\x02 \x02(\t\x12T\n\x1bget_resource_chunks_request\x18\x03 \x01(\x0b\x32-.protocol.gaia.proxy.GetResourceChunksRequestH\x00\x12I\n\x15get_resources_request\x18\x04 \x01(\x0b\x32(.protocol.gaia.proxy.GetResourcesRequestH\x00\x42\x06\n\x04\x62ody\"\x82\x01\n\x0cProxyRequest\x12\x37\n\x06header\x18\x01 \x01(\x0b\x32\'.protocol.common.constant.RequestHeader\x12\x39\n\x07payload\x18\x02 \x02(\x0b\x32(.protocol.gaia.proxy.ProxyRequestPayload\"\xe1\x01\n\x14ProxyResponsePayload\x12\x18\n\x10http_status_code\x18\x01 \x02(\x05\x12V\n\x1cget_resource_chunks_response\x18\x02 \x01(\x0b\x32..protocol.gaia.proxy.GetResourceChunksResponseH\x00\x12K\n\x16get_resources_response\x18\x03 \x01(\x0b\x32).protocol.gaia.proxy.GetResourcesResponseH\x00\x42\n\n\x08response\"\x85\x01\n\rProxyResponse\x12\x38\n\x06header\x18\x01 \x02(\x0b\x32(.protocol.common.constant.ResponseHeader\x12:\n\x07payload\x18\x02 \x01(\x0b\x32).protocol.gaia.proxy.ProxyResponsePayload*g\n\x0cResourceType\x12\x16\n\x12RESOURCE_TYPE_USER\x10\x01\x12\x18\n\x14RESOURCE_TYPE_DEVICE\x10\x02\x12%\n!RESOURCE_TYPE_USER_DEVICE_BINDING\x10\x03*-\n\x06IDType\x12\x0f\n\x0bID_TYPE_INT\x10\x00\x12\x12\n\x0eID_TYPE_STRING\x10\x01*E\n\x0f\x41\x63\x63ountSystemId\x12\x0b\n\x07TCL_SSO\x10\x00\x12\x13\n\x0fWE_CHAT_OPEN_ID\x10\x01\x12\x10\n\x0cMOBILE_PHONE\x10\x02*>\n\x10ProxyRequestType\x12\x17\n\x13GET_RESOURCE_CHUNKS\x10\x00\x12\x11\n\rGET_RESOURCES\x10\x01\x42:\n\x1b\x63om.tcl.gaia.protocol.proxyZ\x1btcl.com/gaia/protocol/proxy'
   ,
   dependencies=[google_dot_protobuf_dot_any__pb2.DESCRIPTOR,protocol_dot_common_dot_constant_dot_request__pb2.DESCRIPTOR,protocol_dot_common_dot_constant_dot_response__pb2.DESCRIPTOR,])
 
@@ -52,8 +52,8 @@ _RESOURCETYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1728,
-  serialized_end=1831,
+  serialized_start=2397,
+  serialized_end=2500,
 )
 _sym_db.RegisterEnumDescriptor(_RESOURCETYPE)
 
@@ -78,12 +78,43 @@ _IDTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1833,
-  serialized_end=1878,
+  serialized_start=2502,
+  serialized_end=2547,
 )
 _sym_db.RegisterEnumDescriptor(_IDTYPE)
 
 IDType = enum_type_wrapper.EnumTypeWrapper(_IDTYPE)
+_ACCOUNTSYSTEMID = _descriptor.EnumDescriptor(
+  name='AccountSystemId',
+  full_name='protocol.gaia.proxy.AccountSystemId',
+  filename=None,
+  file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='TCL_SSO', index=0, number=0,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='WE_CHAT_OPEN_ID', index=1, number=1,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='MOBILE_PHONE', index=2, number=2,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=2549,
+  serialized_end=2618,
+)
+_sym_db.RegisterEnumDescriptor(_ACCOUNTSYSTEMID)
+
+AccountSystemId = enum_type_wrapper.EnumTypeWrapper(_ACCOUNTSYSTEMID)
 _PROXYREQUESTTYPE = _descriptor.EnumDescriptor(
   name='ProxyRequestType',
   full_name='protocol.gaia.proxy.ProxyRequestType',
@@ -104,8 +135,8 @@ _PROXYREQUESTTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1880,
-  serialized_end=1942,
+  serialized_start=2620,
+  serialized_end=2682,
 )
 _sym_db.RegisterEnumDescriptor(_PROXYREQUESTTYPE)
 
@@ -115,6 +146,9 @@ RESOURCE_TYPE_DEVICE = 2
 RESOURCE_TYPE_USER_DEVICE_BINDING = 3
 ID_TYPE_INT = 0
 ID_TYPE_STRING = 1
+TCL_SSO = 0
+WE_CHAT_OPEN_ID = 1
+MOBILE_PHONE = 2
 GET_RESOURCE_CHUNKS = 0
 GET_RESOURCES = 1
 
@@ -359,31 +393,38 @@ _GETRESOURCECHUNKSRESPONSE = _descriptor.Descriptor(
 )
 
 
-_GETRESOURCESREQUEST = _descriptor.Descriptor(
-  name='GetResourcesRequest',
-  full_name='protocol.gaia.proxy.GetResourcesRequest',
+_GETRESOURCESREQUESTPAYLOAD = _descriptor.Descriptor(
+  name='GetResourcesRequestPayload',
+  full_name='protocol.gaia.proxy.GetResourcesRequestPayload',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='resource_type', full_name='protocol.gaia.proxy.GetResourcesRequest.resource_type', index=0,
+      name='partner_name', full_name='protocol.gaia.proxy.GetResourcesRequestPayload.partner_name', index=0,
       number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='next_id', full_name='protocol.gaia.proxy.GetResourcesRequest.next_id', index=1,
-      number=2, type=9, cpp_type=9, label=1,
+      name='resource_type', full_name='protocol.gaia.proxy.GetResourcesRequestPayload.resource_type', index=1,
+      number=2, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='end_id', full_name='protocol.gaia.proxy.GetResourcesRequest.end_id', index=2,
+      name='next_id', full_name='protocol.gaia.proxy.GetResourcesRequestPayload.next_id', index=2,
       number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='end_id', full_name='protocol.gaia.proxy.GetResourcesRequestPayload.end_id', index=3,
+      number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -401,18 +442,32 @@ _GETRESOURCESREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=885,
-  serialized_end=962,
+  serialized_end=991,
 )
 
 
-_GETRESOURCESRESPONSE = _descriptor.Descriptor(
-  name='GetResourcesResponse',
-  full_name='protocol.gaia.proxy.GetResourcesResponse',
+_GETRESOURCESREQUEST = _descriptor.Descriptor(
+  name='GetResourcesRequest',
+  full_name='protocol.gaia.proxy.GetResourcesRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='header', full_name='protocol.gaia.proxy.GetResourcesRequest.header', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='payload', full_name='protocol.gaia.proxy.GetResourcesRequest.payload', index=1,
+      number=2, type=11, cpp_type=10, label=2,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -425,8 +480,185 @@ _GETRESOURCESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=964,
-  serialized_end=986,
+  serialized_start=994,
+  serialized_end=1138,
+)
+
+
+_LOGINDETAILS = _descriptor.Descriptor(
+  name='LoginDetails',
+  full_name='protocol.gaia.proxy.LoginDetails',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='account_system_id', full_name='protocol.gaia.proxy.LoginDetails.account_system_id', index=0,
+      number=1, type=14, cpp_type=8, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='login_account_id', full_name='protocol.gaia.proxy.LoginDetails.login_account_id', index=1,
+      number=2, type=9, cpp_type=9, label=2,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1140,
+  serialized_end=1245,
+)
+
+
+_USER = _descriptor.Descriptor(
+  name='User',
+  full_name='protocol.gaia.proxy.User',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='user_id', full_name='protocol.gaia.proxy.User.user_id', index=0,
+      number=1, type=5, cpp_type=1, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='tenant_id', full_name='protocol.gaia.proxy.User.tenant_id', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='immutable_identity', full_name='protocol.gaia.proxy.User.immutable_identity', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='user_name', full_name='protocol.gaia.proxy.User.user_name', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='login_details', full_name='protocol.gaia.proxy.User.login_details', index=4,
+      number=5, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='extra', full_name='protocol.gaia.proxy.User.extra', index=5,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1248,
+  serialized_end=1432,
+)
+
+
+_GETRESOURCESRESPONSEPAYLOAD = _descriptor.Descriptor(
+  name='GetResourcesResponsePayload',
+  full_name='protocol.gaia.proxy.GetResourcesResponsePayload',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='users', full_name='protocol.gaia.proxy.GetResourcesResponsePayload.users', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1434,
+  serialized_end=1505,
+)
+
+
+_GETRESOURCESRESPONSE = _descriptor.Descriptor(
+  name='GetResourcesResponse',
+  full_name='protocol.gaia.proxy.GetResourcesResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='header', full_name='protocol.gaia.proxy.GetResourcesResponse.header', index=0,
+      number=1, type=11, cpp_type=10, label=2,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='payload', full_name='protocol.gaia.proxy.GetResourcesResponse.payload', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1508,
+  serialized_end=1655,
 )
 
 
@@ -483,8 +715,8 @@ _PROXYREQUESTPAYLOAD = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=989,
-  serialized_end=1229,
+  serialized_start=1658,
+  serialized_end=1898,
 )
 
 
@@ -522,8 +754,8 @@ _PROXYREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1232,
-  serialized_end=1362,
+  serialized_start=1901,
+  serialized_end=2031,
 )
 
 
@@ -573,8 +805,8 @@ _PROXYRESPONSEPAYLOAD = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=1365,
-  serialized_end=1590,
+  serialized_start=2034,
+  serialized_end=2259,
 )
 
 
@@ -612,8 +844,8 @@ _PROXYRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1593,
-  serialized_end=1726,
+  serialized_start=2262,
+  serialized_end=2395,
 )
 
 _GETRESOURCECHUNKSREQUEST.fields_by_name['header'].message_type = protocol_dot_common_dot_constant_dot_request__pb2._REQUESTHEADER
@@ -629,6 +861,14 @@ _GETRESOURCECHUNKSRESPONSEPAYLOAD.oneofs_by_name['delimiters'].fields.append(
 _GETRESOURCECHUNKSRESPONSEPAYLOAD.fields_by_name['string_delimiters'].containing_oneof = _GETRESOURCECHUNKSRESPONSEPAYLOAD.oneofs_by_name['delimiters']
 _GETRESOURCECHUNKSRESPONSE.fields_by_name['header'].message_type = protocol_dot_common_dot_constant_dot_response__pb2._RESPONSEHEADER
 _GETRESOURCECHUNKSRESPONSE.fields_by_name['payload'].message_type = _GETRESOURCECHUNKSRESPONSEPAYLOAD
+_GETRESOURCESREQUEST.fields_by_name['header'].message_type = protocol_dot_common_dot_constant_dot_request__pb2._REQUESTHEADER
+_GETRESOURCESREQUEST.fields_by_name['payload'].message_type = _GETRESOURCESREQUESTPAYLOAD
+_LOGINDETAILS.fields_by_name['account_system_id'].enum_type = _ACCOUNTSYSTEMID
+_USER.fields_by_name['login_details'].message_type = _LOGINDETAILS
+_USER.fields_by_name['extra'].message_type = google_dot_protobuf_dot_any__pb2._ANY
+_GETRESOURCESRESPONSEPAYLOAD.fields_by_name['users'].message_type = _USER
+_GETRESOURCESRESPONSE.fields_by_name['header'].message_type = protocol_dot_common_dot_constant_dot_response__pb2._RESPONSEHEADER
+_GETRESOURCESRESPONSE.fields_by_name['payload'].message_type = _GETRESOURCESRESPONSEPAYLOAD
 _PROXYREQUESTPAYLOAD.fields_by_name['get_resource_chunks_request'].message_type = _GETRESOURCECHUNKSREQUEST
 _PROXYREQUESTPAYLOAD.fields_by_name['get_resources_request'].message_type = _GETRESOURCESREQUEST
 _PROXYREQUESTPAYLOAD.oneofs_by_name['body'].fields.append(
@@ -655,7 +895,11 @@ DESCRIPTOR.message_types_by_name['IntDelimiters'] = _INTDELIMITERS
 DESCRIPTOR.message_types_by_name['StringDelimiters'] = _STRINGDELIMITERS
 DESCRIPTOR.message_types_by_name['GetResourceChunksResponsePayload'] = _GETRESOURCECHUNKSRESPONSEPAYLOAD
 DESCRIPTOR.message_types_by_name['GetResourceChunksResponse'] = _GETRESOURCECHUNKSRESPONSE
+DESCRIPTOR.message_types_by_name['GetResourcesRequestPayload'] = _GETRESOURCESREQUESTPAYLOAD
 DESCRIPTOR.message_types_by_name['GetResourcesRequest'] = _GETRESOURCESREQUEST
+DESCRIPTOR.message_types_by_name['LoginDetails'] = _LOGINDETAILS
+DESCRIPTOR.message_types_by_name['User'] = _USER
+DESCRIPTOR.message_types_by_name['GetResourcesResponsePayload'] = _GETRESOURCESRESPONSEPAYLOAD
 DESCRIPTOR.message_types_by_name['GetResourcesResponse'] = _GETRESOURCESRESPONSE
 DESCRIPTOR.message_types_by_name['ProxyRequestPayload'] = _PROXYREQUESTPAYLOAD
 DESCRIPTOR.message_types_by_name['ProxyRequest'] = _PROXYREQUEST
@@ -663,6 +907,7 @@ DESCRIPTOR.message_types_by_name['ProxyResponsePayload'] = _PROXYRESPONSEPAYLOAD
 DESCRIPTOR.message_types_by_name['ProxyResponse'] = _PROXYRESPONSE
 DESCRIPTOR.enum_types_by_name['ResourceType'] = _RESOURCETYPE
 DESCRIPTOR.enum_types_by_name['IDType'] = _IDTYPE
+DESCRIPTOR.enum_types_by_name['AccountSystemId'] = _ACCOUNTSYSTEMID
 DESCRIPTOR.enum_types_by_name['ProxyRequestType'] = _PROXYREQUESTTYPE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -708,12 +953,40 @@ GetResourceChunksResponse = _reflection.GeneratedProtocolMessageType('GetResourc
   })
 _sym_db.RegisterMessage(GetResourceChunksResponse)
 
+GetResourcesRequestPayload = _reflection.GeneratedProtocolMessageType('GetResourcesRequestPayload', (_message.Message,), {
+  'DESCRIPTOR' : _GETRESOURCESREQUESTPAYLOAD,
+  '__module__' : 'protocol.gaia.proxy.proxy_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.gaia.proxy.GetResourcesRequestPayload)
+  })
+_sym_db.RegisterMessage(GetResourcesRequestPayload)
+
 GetResourcesRequest = _reflection.GeneratedProtocolMessageType('GetResourcesRequest', (_message.Message,), {
   'DESCRIPTOR' : _GETRESOURCESREQUEST,
   '__module__' : 'protocol.gaia.proxy.proxy_pb2'
   # @@protoc_insertion_point(class_scope:protocol.gaia.proxy.GetResourcesRequest)
   })
 _sym_db.RegisterMessage(GetResourcesRequest)
+
+LoginDetails = _reflection.GeneratedProtocolMessageType('LoginDetails', (_message.Message,), {
+  'DESCRIPTOR' : _LOGINDETAILS,
+  '__module__' : 'protocol.gaia.proxy.proxy_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.gaia.proxy.LoginDetails)
+  })
+_sym_db.RegisterMessage(LoginDetails)
+
+User = _reflection.GeneratedProtocolMessageType('User', (_message.Message,), {
+  'DESCRIPTOR' : _USER,
+  '__module__' : 'protocol.gaia.proxy.proxy_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.gaia.proxy.User)
+  })
+_sym_db.RegisterMessage(User)
+
+GetResourcesResponsePayload = _reflection.GeneratedProtocolMessageType('GetResourcesResponsePayload', (_message.Message,), {
+  'DESCRIPTOR' : _GETRESOURCESRESPONSEPAYLOAD,
+  '__module__' : 'protocol.gaia.proxy.proxy_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.gaia.proxy.GetResourcesResponsePayload)
+  })
+_sym_db.RegisterMessage(GetResourcesResponsePayload)
 
 GetResourcesResponse = _reflection.GeneratedProtocolMessageType('GetResourcesResponse', (_message.Message,), {
   'DESCRIPTOR' : _GETRESOURCESRESPONSE,

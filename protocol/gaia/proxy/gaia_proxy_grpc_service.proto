@@ -55,4 +55,11 @@ service GaiaProxyGrpc {
             body: "*"
         };
     }
+
+    rpc GetResources(GetResourcesRequest) returns(GetResourcesResponse) {
+        option (google.api.http) = {
+            post: "/api/proxy/resources"
+            body: "*"
+        };
+    }
 }
