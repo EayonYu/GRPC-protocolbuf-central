@@ -87,34 +87,34 @@ public final class PartnerOuterClass {
         getEndpointBytes();
 
     /**
-     * <code>required string createTime = 5;</code>
+     * <code>required string create_time = 5;</code>
      * @return Whether the createTime field is set.
      */
     boolean hasCreateTime();
     /**
-     * <code>required string createTime = 5;</code>
+     * <code>required string create_time = 5;</code>
      * @return The createTime.
      */
     java.lang.String getCreateTime();
     /**
-     * <code>required string createTime = 5;</code>
+     * <code>required string create_time = 5;</code>
      * @return The bytes for createTime.
      */
     com.google.protobuf.ByteString
         getCreateTimeBytes();
 
     /**
-     * <code>required string updateTime = 6;</code>
+     * <code>required string update_time = 6;</code>
      * @return Whether the updateTime field is set.
      */
     boolean hasUpdateTime();
     /**
-     * <code>required string updateTime = 6;</code>
+     * <code>required string update_time = 6;</code>
      * @return The updateTime.
      */
     java.lang.String getUpdateTime();
     /**
-     * <code>required string updateTime = 6;</code>
+     * <code>required string update_time = 6;</code>
      * @return The bytes for updateTime.
      */
     com.google.protobuf.ByteString
@@ -433,10 +433,10 @@ public final class PartnerOuterClass {
       }
     }
 
-    public static final int CREATETIME_FIELD_NUMBER = 5;
+    public static final int CREATE_TIME_FIELD_NUMBER = 5;
     private volatile java.lang.Object createTime_;
     /**
-     * <code>required string createTime = 5;</code>
+     * <code>required string create_time = 5;</code>
      * @return Whether the createTime field is set.
      */
     @java.lang.Override
@@ -444,7 +444,7 @@ public final class PartnerOuterClass {
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
-     * <code>required string createTime = 5;</code>
+     * <code>required string create_time = 5;</code>
      * @return The createTime.
      */
     @java.lang.Override
@@ -463,7 +463,7 @@ public final class PartnerOuterClass {
       }
     }
     /**
-     * <code>required string createTime = 5;</code>
+     * <code>required string create_time = 5;</code>
      * @return The bytes for createTime.
      */
     @java.lang.Override
@@ -481,10 +481,10 @@ public final class PartnerOuterClass {
       }
     }
 
-    public static final int UPDATETIME_FIELD_NUMBER = 6;
+    public static final int UPDATE_TIME_FIELD_NUMBER = 6;
     private volatile java.lang.Object updateTime_;
     /**
-     * <code>required string updateTime = 6;</code>
+     * <code>required string update_time = 6;</code>
      * @return Whether the updateTime field is set.
      */
     @java.lang.Override
@@ -492,7 +492,7 @@ public final class PartnerOuterClass {
       return ((bitField0_ & 0x00000020) != 0);
     }
     /**
-     * <code>required string updateTime = 6;</code>
+     * <code>required string update_time = 6;</code>
      * @return The updateTime.
      */
     @java.lang.Override
@@ -511,7 +511,7 @@ public final class PartnerOuterClass {
       }
     }
     /**
-     * <code>required string updateTime = 6;</code>
+     * <code>required string update_time = 6;</code>
      * @return The bytes for updateTime.
      */
     @java.lang.Override
@@ -685,11 +685,11 @@ public final class PartnerOuterClass {
         hash = (53 * hash) + getEndpoint().hashCode();
       }
       if (hasCreateTime()) {
-        hash = (37 * hash) + CREATETIME_FIELD_NUMBER;
+        hash = (37 * hash) + CREATE_TIME_FIELD_NUMBER;
         hash = (53 * hash) + getCreateTime().hashCode();
       }
       if (hasUpdateTime()) {
-        hash = (37 * hash) + UPDATETIME_FIELD_NUMBER;
+        hash = (37 * hash) + UPDATE_TIME_FIELD_NUMBER;
         hash = (53 * hash) + getUpdateTime().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
@@ -1354,14 +1354,14 @@ public final class PartnerOuterClass {
 
       private java.lang.Object createTime_ = "";
       /**
-       * <code>required string createTime = 5;</code>
+       * <code>required string create_time = 5;</code>
        * @return Whether the createTime field is set.
        */
       public boolean hasCreateTime() {
         return ((bitField0_ & 0x00000010) != 0);
       }
       /**
-       * <code>required string createTime = 5;</code>
+       * <code>required string create_time = 5;</code>
        * @return The createTime.
        */
       public java.lang.String getCreateTime() {
@@ -1379,7 +1379,7 @@ public final class PartnerOuterClass {
         }
       }
       /**
-       * <code>required string createTime = 5;</code>
+       * <code>required string create_time = 5;</code>
        * @return The bytes for createTime.
        */
       public com.google.protobuf.ByteString
@@ -1396,7 +1396,7 @@ public final class PartnerOuterClass {
         }
       }
       /**
-       * <code>required string createTime = 5;</code>
+       * <code>required string create_time = 5;</code>
        * @param value The createTime to set.
        * @return This builder for chaining.
        */
@@ -1411,7 +1411,7 @@ public final class PartnerOuterClass {
         return this;
       }
       /**
-       * <code>required string createTime = 5;</code>
+       * <code>required string create_time = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearCreateTime() {
@@ -1421,7 +1421,7 @@ public final class PartnerOuterClass {
         return this;
       }
       /**
-       * <code>required string createTime = 5;</code>
+       * <code>required string create_time = 5;</code>
        * @param value The bytes for createTime to set.
        * @return This builder for chaining.
        */
@@ -1438,14 +1438,14 @@ public final class PartnerOuterClass {
 
       private java.lang.Object updateTime_ = "";
       /**
-       * <code>required string updateTime = 6;</code>
+       * <code>required string update_time = 6;</code>
        * @return Whether the updateTime field is set.
        */
       public boolean hasUpdateTime() {
         return ((bitField0_ & 0x00000020) != 0);
       }
       /**
-       * <code>required string updateTime = 6;</code>
+       * <code>required string update_time = 6;</code>
        * @return The updateTime.
        */
       public java.lang.String getUpdateTime() {
@@ -1463,7 +1463,7 @@ public final class PartnerOuterClass {
         }
       }
       /**
-       * <code>required string updateTime = 6;</code>
+       * <code>required string update_time = 6;</code>
        * @return The bytes for updateTime.
        */
       public com.google.protobuf.ByteString
@@ -1480,7 +1480,7 @@ public final class PartnerOuterClass {
         }
       }
       /**
-       * <code>required string updateTime = 6;</code>
+       * <code>required string update_time = 6;</code>
        * @param value The updateTime to set.
        * @return This builder for chaining.
        */
@@ -1495,7 +1495,7 @@ public final class PartnerOuterClass {
         return this;
       }
       /**
-       * <code>required string updateTime = 6;</code>
+       * <code>required string update_time = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearUpdateTime() {
@@ -1505,7 +1505,7 @@ public final class PartnerOuterClass {
         return this;
       }
       /**
-       * <code>required string updateTime = 6;</code>
+       * <code>required string update_time = 6;</code>
        * @param value The bytes for updateTime to set.
        * @return This builder for chaining.
        */
@@ -1623,12 +1623,12 @@ public final class PartnerOuterClass {
     int getPage();
 
     /**
-     * <code>required int32 totalPages = 4;</code>
+     * <code>required int32 total_pages = 4;</code>
      * @return Whether the totalPages field is set.
      */
     boolean hasTotalPages();
     /**
-     * <code>required int32 totalPages = 4;</code>
+     * <code>required int32 total_pages = 4;</code>
      * @return The totalPages.
      */
     int getTotalPages();
@@ -1645,12 +1645,12 @@ public final class PartnerOuterClass {
     int getElements();
 
     /**
-     * <code>required int32 totalElements = 6;</code>
+     * <code>required int32 total_elements = 6;</code>
      * @return Whether the totalElements field is set.
      */
     boolean hasTotalElements();
     /**
-     * <code>required int32 totalElements = 6;</code>
+     * <code>required int32 total_elements = 6;</code>
      * @return The totalElements.
      */
     int getTotalElements();
@@ -1882,10 +1882,10 @@ public final class PartnerOuterClass {
       return page_;
     }
 
-    public static final int TOTALPAGES_FIELD_NUMBER = 4;
+    public static final int TOTAL_PAGES_FIELD_NUMBER = 4;
     private int totalPages_;
     /**
-     * <code>required int32 totalPages = 4;</code>
+     * <code>required int32 total_pages = 4;</code>
      * @return Whether the totalPages field is set.
      */
     @java.lang.Override
@@ -1893,7 +1893,7 @@ public final class PartnerOuterClass {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>required int32 totalPages = 4;</code>
+     * <code>required int32 total_pages = 4;</code>
      * @return The totalPages.
      */
     @java.lang.Override
@@ -1920,10 +1920,10 @@ public final class PartnerOuterClass {
       return elements_;
     }
 
-    public static final int TOTALELEMENTS_FIELD_NUMBER = 6;
+    public static final int TOTAL_ELEMENTS_FIELD_NUMBER = 6;
     private int totalElements_;
     /**
-     * <code>required int32 totalElements = 6;</code>
+     * <code>required int32 total_elements = 6;</code>
      * @return Whether the totalElements field is set.
      */
     @java.lang.Override
@@ -1931,7 +1931,7 @@ public final class PartnerOuterClass {
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
-     * <code>required int32 totalElements = 6;</code>
+     * <code>required int32 total_elements = 6;</code>
      * @return The totalElements.
      */
     @java.lang.Override
@@ -2167,7 +2167,7 @@ public final class PartnerOuterClass {
         hash = (53 * hash) + getPage();
       }
       if (hasTotalPages()) {
-        hash = (37 * hash) + TOTALPAGES_FIELD_NUMBER;
+        hash = (37 * hash) + TOTAL_PAGES_FIELD_NUMBER;
         hash = (53 * hash) + getTotalPages();
       }
       if (hasElements()) {
@@ -2175,7 +2175,7 @@ public final class PartnerOuterClass {
         hash = (53 * hash) + getElements();
       }
       if (hasTotalElements()) {
-        hash = (37 * hash) + TOTALELEMENTS_FIELD_NUMBER;
+        hash = (37 * hash) + TOTAL_ELEMENTS_FIELD_NUMBER;
         hash = (53 * hash) + getTotalElements();
       }
       if (hasFirst()) {
@@ -2879,7 +2879,7 @@ public final class PartnerOuterClass {
 
       private int totalPages_ ;
       /**
-       * <code>required int32 totalPages = 4;</code>
+       * <code>required int32 total_pages = 4;</code>
        * @return Whether the totalPages field is set.
        */
       @java.lang.Override
@@ -2887,7 +2887,7 @@ public final class PartnerOuterClass {
         return ((bitField0_ & 0x00000008) != 0);
       }
       /**
-       * <code>required int32 totalPages = 4;</code>
+       * <code>required int32 total_pages = 4;</code>
        * @return The totalPages.
        */
       @java.lang.Override
@@ -2895,7 +2895,7 @@ public final class PartnerOuterClass {
         return totalPages_;
       }
       /**
-       * <code>required int32 totalPages = 4;</code>
+       * <code>required int32 total_pages = 4;</code>
        * @param value The totalPages to set.
        * @return This builder for chaining.
        */
@@ -2906,7 +2906,7 @@ public final class PartnerOuterClass {
         return this;
       }
       /**
-       * <code>required int32 totalPages = 4;</code>
+       * <code>required int32 total_pages = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearTotalPages() {
@@ -2957,7 +2957,7 @@ public final class PartnerOuterClass {
 
       private int totalElements_ ;
       /**
-       * <code>required int32 totalElements = 6;</code>
+       * <code>required int32 total_elements = 6;</code>
        * @return Whether the totalElements field is set.
        */
       @java.lang.Override
@@ -2965,7 +2965,7 @@ public final class PartnerOuterClass {
         return ((bitField0_ & 0x00000020) != 0);
       }
       /**
-       * <code>required int32 totalElements = 6;</code>
+       * <code>required int32 total_elements = 6;</code>
        * @return The totalElements.
        */
       @java.lang.Override
@@ -2973,7 +2973,7 @@ public final class PartnerOuterClass {
         return totalElements_;
       }
       /**
-       * <code>required int32 totalElements = 6;</code>
+       * <code>required int32 total_elements = 6;</code>
        * @param value The totalElements to set.
        * @return This builder for chaining.
        */
@@ -2984,7 +2984,7 @@ public final class PartnerOuterClass {
         return this;
       }
       /**
-       * <code>required int32 totalElements = 6;</code>
+       * <code>required int32 total_elements = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearTotalElements() {
@@ -3129,24 +3129,24 @@ public final class PartnerOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated string searchBy = 1;</code>
+     * <code>repeated string search_by = 1;</code>
      * @return A list containing the searchBy.
      */
     java.util.List<java.lang.String>
         getSearchByList();
     /**
-     * <code>repeated string searchBy = 1;</code>
+     * <code>repeated string search_by = 1;</code>
      * @return The count of searchBy.
      */
     int getSearchByCount();
     /**
-     * <code>repeated string searchBy = 1;</code>
+     * <code>repeated string search_by = 1;</code>
      * @param index The index of the element to return.
      * @return The searchBy at the given index.
      */
     java.lang.String getSearchBy(int index);
     /**
-     * <code>repeated string searchBy = 1;</code>
+     * <code>repeated string search_by = 1;</code>
      * @param index The index of the value to return.
      * @return The bytes of the searchBy at the given index.
      */
@@ -3154,24 +3154,24 @@ public final class PartnerOuterClass {
         getSearchByBytes(int index);
 
     /**
-     * <code>repeated string sortBy = 2;</code>
+     * <code>repeated string sort_by = 2;</code>
      * @return A list containing the sortBy.
      */
     java.util.List<java.lang.String>
         getSortByList();
     /**
-     * <code>repeated string sortBy = 2;</code>
+     * <code>repeated string sort_by = 2;</code>
      * @return The count of sortBy.
      */
     int getSortByCount();
     /**
-     * <code>repeated string sortBy = 2;</code>
+     * <code>repeated string sort_by = 2;</code>
      * @param index The index of the element to return.
      * @return The sortBy at the given index.
      */
     java.lang.String getSortBy(int index);
     /**
-     * <code>repeated string sortBy = 2;</code>
+     * <code>repeated string sort_by = 2;</code>
      * @param index The index of the value to return.
      * @return The bytes of the sortBy at the given index.
      */
@@ -3366,10 +3366,10 @@ public final class PartnerOuterClass {
               com.tcl.gaia.protocol.proxy.PartnerOuterClass.ListPartnerRequest.class, com.tcl.gaia.protocol.proxy.PartnerOuterClass.ListPartnerRequest.Builder.class);
     }
 
-    public static final int SEARCHBY_FIELD_NUMBER = 1;
+    public static final int SEARCH_BY_FIELD_NUMBER = 1;
     private com.google.protobuf.LazyStringList searchBy_;
     /**
-     * <code>repeated string searchBy = 1;</code>
+     * <code>repeated string search_by = 1;</code>
      * @return A list containing the searchBy.
      */
     public com.google.protobuf.ProtocolStringList
@@ -3377,14 +3377,14 @@ public final class PartnerOuterClass {
       return searchBy_;
     }
     /**
-     * <code>repeated string searchBy = 1;</code>
+     * <code>repeated string search_by = 1;</code>
      * @return The count of searchBy.
      */
     public int getSearchByCount() {
       return searchBy_.size();
     }
     /**
-     * <code>repeated string searchBy = 1;</code>
+     * <code>repeated string search_by = 1;</code>
      * @param index The index of the element to return.
      * @return The searchBy at the given index.
      */
@@ -3392,7 +3392,7 @@ public final class PartnerOuterClass {
       return searchBy_.get(index);
     }
     /**
-     * <code>repeated string searchBy = 1;</code>
+     * <code>repeated string search_by = 1;</code>
      * @param index The index of the value to return.
      * @return The bytes of the searchBy at the given index.
      */
@@ -3401,10 +3401,10 @@ public final class PartnerOuterClass {
       return searchBy_.getByteString(index);
     }
 
-    public static final int SORTBY_FIELD_NUMBER = 2;
+    public static final int SORT_BY_FIELD_NUMBER = 2;
     private com.google.protobuf.LazyStringList sortBy_;
     /**
-     * <code>repeated string sortBy = 2;</code>
+     * <code>repeated string sort_by = 2;</code>
      * @return A list containing the sortBy.
      */
     public com.google.protobuf.ProtocolStringList
@@ -3412,14 +3412,14 @@ public final class PartnerOuterClass {
       return sortBy_;
     }
     /**
-     * <code>repeated string sortBy = 2;</code>
+     * <code>repeated string sort_by = 2;</code>
      * @return The count of sortBy.
      */
     public int getSortByCount() {
       return sortBy_.size();
     }
     /**
-     * <code>repeated string sortBy = 2;</code>
+     * <code>repeated string sort_by = 2;</code>
      * @param index The index of the element to return.
      * @return The sortBy at the given index.
      */
@@ -3427,7 +3427,7 @@ public final class PartnerOuterClass {
       return sortBy_.get(index);
     }
     /**
-     * <code>repeated string sortBy = 2;</code>
+     * <code>repeated string sort_by = 2;</code>
      * @param index The index of the value to return.
      * @return The bytes of the sortBy at the given index.
      */
@@ -3594,11 +3594,11 @@ public final class PartnerOuterClass {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       if (getSearchByCount() > 0) {
-        hash = (37 * hash) + SEARCHBY_FIELD_NUMBER;
+        hash = (37 * hash) + SEARCH_BY_FIELD_NUMBER;
         hash = (53 * hash) + getSearchByList().hashCode();
       }
       if (getSortByCount() > 0) {
-        hash = (37 * hash) + SORTBY_FIELD_NUMBER;
+        hash = (37 * hash) + SORT_BY_FIELD_NUMBER;
         hash = (53 * hash) + getSortByList().hashCode();
       }
       if (getPageCount() > 0) {
@@ -3923,7 +3923,7 @@ public final class PartnerOuterClass {
          }
       }
       /**
-       * <code>repeated string searchBy = 1;</code>
+       * <code>repeated string search_by = 1;</code>
        * @return A list containing the searchBy.
        */
       public com.google.protobuf.ProtocolStringList
@@ -3931,14 +3931,14 @@ public final class PartnerOuterClass {
         return searchBy_.getUnmodifiableView();
       }
       /**
-       * <code>repeated string searchBy = 1;</code>
+       * <code>repeated string search_by = 1;</code>
        * @return The count of searchBy.
        */
       public int getSearchByCount() {
         return searchBy_.size();
       }
       /**
-       * <code>repeated string searchBy = 1;</code>
+       * <code>repeated string search_by = 1;</code>
        * @param index The index of the element to return.
        * @return The searchBy at the given index.
        */
@@ -3946,7 +3946,7 @@ public final class PartnerOuterClass {
         return searchBy_.get(index);
       }
       /**
-       * <code>repeated string searchBy = 1;</code>
+       * <code>repeated string search_by = 1;</code>
        * @param index The index of the value to return.
        * @return The bytes of the searchBy at the given index.
        */
@@ -3955,7 +3955,7 @@ public final class PartnerOuterClass {
         return searchBy_.getByteString(index);
       }
       /**
-       * <code>repeated string searchBy = 1;</code>
+       * <code>repeated string search_by = 1;</code>
        * @param index The index to set the value at.
        * @param value The searchBy to set.
        * @return This builder for chaining.
@@ -3971,7 +3971,7 @@ public final class PartnerOuterClass {
         return this;
       }
       /**
-       * <code>repeated string searchBy = 1;</code>
+       * <code>repeated string search_by = 1;</code>
        * @param value The searchBy to add.
        * @return This builder for chaining.
        */
@@ -3986,7 +3986,7 @@ public final class PartnerOuterClass {
         return this;
       }
       /**
-       * <code>repeated string searchBy = 1;</code>
+       * <code>repeated string search_by = 1;</code>
        * @param values The searchBy to add.
        * @return This builder for chaining.
        */
@@ -3999,7 +3999,7 @@ public final class PartnerOuterClass {
         return this;
       }
       /**
-       * <code>repeated string searchBy = 1;</code>
+       * <code>repeated string search_by = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearSearchBy() {
@@ -4009,7 +4009,7 @@ public final class PartnerOuterClass {
         return this;
       }
       /**
-       * <code>repeated string searchBy = 1;</code>
+       * <code>repeated string search_by = 1;</code>
        * @param value The bytes of the searchBy to add.
        * @return This builder for chaining.
        */
@@ -4032,7 +4032,7 @@ public final class PartnerOuterClass {
          }
       }
       /**
-       * <code>repeated string sortBy = 2;</code>
+       * <code>repeated string sort_by = 2;</code>
        * @return A list containing the sortBy.
        */
       public com.google.protobuf.ProtocolStringList
@@ -4040,14 +4040,14 @@ public final class PartnerOuterClass {
         return sortBy_.getUnmodifiableView();
       }
       /**
-       * <code>repeated string sortBy = 2;</code>
+       * <code>repeated string sort_by = 2;</code>
        * @return The count of sortBy.
        */
       public int getSortByCount() {
         return sortBy_.size();
       }
       /**
-       * <code>repeated string sortBy = 2;</code>
+       * <code>repeated string sort_by = 2;</code>
        * @param index The index of the element to return.
        * @return The sortBy at the given index.
        */
@@ -4055,7 +4055,7 @@ public final class PartnerOuterClass {
         return sortBy_.get(index);
       }
       /**
-       * <code>repeated string sortBy = 2;</code>
+       * <code>repeated string sort_by = 2;</code>
        * @param index The index of the value to return.
        * @return The bytes of the sortBy at the given index.
        */
@@ -4064,7 +4064,7 @@ public final class PartnerOuterClass {
         return sortBy_.getByteString(index);
       }
       /**
-       * <code>repeated string sortBy = 2;</code>
+       * <code>repeated string sort_by = 2;</code>
        * @param index The index to set the value at.
        * @param value The sortBy to set.
        * @return This builder for chaining.
@@ -4080,7 +4080,7 @@ public final class PartnerOuterClass {
         return this;
       }
       /**
-       * <code>repeated string sortBy = 2;</code>
+       * <code>repeated string sort_by = 2;</code>
        * @param value The sortBy to add.
        * @return This builder for chaining.
        */
@@ -4095,7 +4095,7 @@ public final class PartnerOuterClass {
         return this;
       }
       /**
-       * <code>repeated string sortBy = 2;</code>
+       * <code>repeated string sort_by = 2;</code>
        * @param values The sortBy to add.
        * @return This builder for chaining.
        */
@@ -4108,7 +4108,7 @@ public final class PartnerOuterClass {
         return this;
       }
       /**
-       * <code>repeated string sortBy = 2;</code>
+       * <code>repeated string sort_by = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearSortBy() {
@@ -4118,7 +4118,7 @@ public final class PartnerOuterClass {
         return this;
       }
       /**
-       * <code>repeated string sortBy = 2;</code>
+       * <code>repeated string sort_by = 2;</code>
        * @param value The bytes of the sortBy to add.
        * @return This builder for chaining.
        */
@@ -6894,51 +6894,51 @@ public final class PartnerOuterClass {
         getTypeBytes();
 
     /**
-     * <code>required string oAuth2Endpoint = 4;</code>
+     * <code>required string oAuth2_endpoint = 4;</code>
      * @return Whether the oAuth2Endpoint field is set.
      */
     boolean hasOAuth2Endpoint();
     /**
-     * <code>required string oAuth2Endpoint = 4;</code>
+     * <code>required string oAuth2_endpoint = 4;</code>
      * @return The oAuth2Endpoint.
      */
     java.lang.String getOAuth2Endpoint();
     /**
-     * <code>required string oAuth2Endpoint = 4;</code>
+     * <code>required string oAuth2_endpoint = 4;</code>
      * @return The bytes for oAuth2Endpoint.
      */
     com.google.protobuf.ByteString
         getOAuth2EndpointBytes();
 
     /**
-     * <code>required string clientId = 5;</code>
+     * <code>required string client_id = 5;</code>
      * @return Whether the clientId field is set.
      */
     boolean hasClientId();
     /**
-     * <code>required string clientId = 5;</code>
+     * <code>required string client_id = 5;</code>
      * @return The clientId.
      */
     java.lang.String getClientId();
     /**
-     * <code>required string clientId = 5;</code>
+     * <code>required string client_id = 5;</code>
      * @return The bytes for clientId.
      */
     com.google.protobuf.ByteString
         getClientIdBytes();
 
     /**
-     * <code>required string clientSecret = 6;</code>
+     * <code>required string client_secret = 6;</code>
      * @return Whether the clientSecret field is set.
      */
     boolean hasClientSecret();
     /**
-     * <code>required string clientSecret = 6;</code>
+     * <code>required string client_secret = 6;</code>
      * @return The clientSecret.
      */
     java.lang.String getClientSecret();
     /**
-     * <code>required string clientSecret = 6;</code>
+     * <code>required string client_secret = 6;</code>
      * @return The bytes for clientSecret.
      */
     com.google.protobuf.ByteString
@@ -7209,10 +7209,10 @@ public final class PartnerOuterClass {
       }
     }
 
-    public static final int OAUTH2ENDPOINT_FIELD_NUMBER = 4;
+    public static final int OAUTH2_ENDPOINT_FIELD_NUMBER = 4;
     private volatile java.lang.Object oAuth2Endpoint_;
     /**
-     * <code>required string oAuth2Endpoint = 4;</code>
+     * <code>required string oAuth2_endpoint = 4;</code>
      * @return Whether the oAuth2Endpoint field is set.
      */
     @java.lang.Override
@@ -7220,7 +7220,7 @@ public final class PartnerOuterClass {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <code>required string oAuth2Endpoint = 4;</code>
+     * <code>required string oAuth2_endpoint = 4;</code>
      * @return The oAuth2Endpoint.
      */
     @java.lang.Override
@@ -7239,7 +7239,7 @@ public final class PartnerOuterClass {
       }
     }
     /**
-     * <code>required string oAuth2Endpoint = 4;</code>
+     * <code>required string oAuth2_endpoint = 4;</code>
      * @return The bytes for oAuth2Endpoint.
      */
     @java.lang.Override
@@ -7257,10 +7257,10 @@ public final class PartnerOuterClass {
       }
     }
 
-    public static final int CLIENTID_FIELD_NUMBER = 5;
+    public static final int CLIENT_ID_FIELD_NUMBER = 5;
     private volatile java.lang.Object clientId_;
     /**
-     * <code>required string clientId = 5;</code>
+     * <code>required string client_id = 5;</code>
      * @return Whether the clientId field is set.
      */
     @java.lang.Override
@@ -7268,7 +7268,7 @@ public final class PartnerOuterClass {
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
-     * <code>required string clientId = 5;</code>
+     * <code>required string client_id = 5;</code>
      * @return The clientId.
      */
     @java.lang.Override
@@ -7287,7 +7287,7 @@ public final class PartnerOuterClass {
       }
     }
     /**
-     * <code>required string clientId = 5;</code>
+     * <code>required string client_id = 5;</code>
      * @return The bytes for clientId.
      */
     @java.lang.Override
@@ -7305,10 +7305,10 @@ public final class PartnerOuterClass {
       }
     }
 
-    public static final int CLIENTSECRET_FIELD_NUMBER = 6;
+    public static final int CLIENT_SECRET_FIELD_NUMBER = 6;
     private volatile java.lang.Object clientSecret_;
     /**
-     * <code>required string clientSecret = 6;</code>
+     * <code>required string client_secret = 6;</code>
      * @return Whether the clientSecret field is set.
      */
     @java.lang.Override
@@ -7316,7 +7316,7 @@ public final class PartnerOuterClass {
       return ((bitField0_ & 0x00000020) != 0);
     }
     /**
-     * <code>required string clientSecret = 6;</code>
+     * <code>required string client_secret = 6;</code>
      * @return The clientSecret.
      */
     @java.lang.Override
@@ -7335,7 +7335,7 @@ public final class PartnerOuterClass {
       }
     }
     /**
-     * <code>required string clientSecret = 6;</code>
+     * <code>required string client_secret = 6;</code>
      * @return The bytes for clientSecret.
      */
     @java.lang.Override
@@ -7505,15 +7505,15 @@ public final class PartnerOuterClass {
         hash = (53 * hash) + getType().hashCode();
       }
       if (hasOAuth2Endpoint()) {
-        hash = (37 * hash) + OAUTH2ENDPOINT_FIELD_NUMBER;
+        hash = (37 * hash) + OAUTH2_ENDPOINT_FIELD_NUMBER;
         hash = (53 * hash) + getOAuth2Endpoint().hashCode();
       }
       if (hasClientId()) {
-        hash = (37 * hash) + CLIENTID_FIELD_NUMBER;
+        hash = (37 * hash) + CLIENT_ID_FIELD_NUMBER;
         hash = (53 * hash) + getClientId().hashCode();
       }
       if (hasClientSecret()) {
-        hash = (37 * hash) + CLIENTSECRET_FIELD_NUMBER;
+        hash = (37 * hash) + CLIENT_SECRET_FIELD_NUMBER;
         hash = (53 * hash) + getClientSecret().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
@@ -8094,14 +8094,14 @@ public final class PartnerOuterClass {
 
       private java.lang.Object oAuth2Endpoint_ = "";
       /**
-       * <code>required string oAuth2Endpoint = 4;</code>
+       * <code>required string oAuth2_endpoint = 4;</code>
        * @return Whether the oAuth2Endpoint field is set.
        */
       public boolean hasOAuth2Endpoint() {
         return ((bitField0_ & 0x00000008) != 0);
       }
       /**
-       * <code>required string oAuth2Endpoint = 4;</code>
+       * <code>required string oAuth2_endpoint = 4;</code>
        * @return The oAuth2Endpoint.
        */
       public java.lang.String getOAuth2Endpoint() {
@@ -8119,7 +8119,7 @@ public final class PartnerOuterClass {
         }
       }
       /**
-       * <code>required string oAuth2Endpoint = 4;</code>
+       * <code>required string oAuth2_endpoint = 4;</code>
        * @return The bytes for oAuth2Endpoint.
        */
       public com.google.protobuf.ByteString
@@ -8136,7 +8136,7 @@ public final class PartnerOuterClass {
         }
       }
       /**
-       * <code>required string oAuth2Endpoint = 4;</code>
+       * <code>required string oAuth2_endpoint = 4;</code>
        * @param value The oAuth2Endpoint to set.
        * @return This builder for chaining.
        */
@@ -8151,7 +8151,7 @@ public final class PartnerOuterClass {
         return this;
       }
       /**
-       * <code>required string oAuth2Endpoint = 4;</code>
+       * <code>required string oAuth2_endpoint = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearOAuth2Endpoint() {
@@ -8161,7 +8161,7 @@ public final class PartnerOuterClass {
         return this;
       }
       /**
-       * <code>required string oAuth2Endpoint = 4;</code>
+       * <code>required string oAuth2_endpoint = 4;</code>
        * @param value The bytes for oAuth2Endpoint to set.
        * @return This builder for chaining.
        */
@@ -8178,14 +8178,14 @@ public final class PartnerOuterClass {
 
       private java.lang.Object clientId_ = "";
       /**
-       * <code>required string clientId = 5;</code>
+       * <code>required string client_id = 5;</code>
        * @return Whether the clientId field is set.
        */
       public boolean hasClientId() {
         return ((bitField0_ & 0x00000010) != 0);
       }
       /**
-       * <code>required string clientId = 5;</code>
+       * <code>required string client_id = 5;</code>
        * @return The clientId.
        */
       public java.lang.String getClientId() {
@@ -8203,7 +8203,7 @@ public final class PartnerOuterClass {
         }
       }
       /**
-       * <code>required string clientId = 5;</code>
+       * <code>required string client_id = 5;</code>
        * @return The bytes for clientId.
        */
       public com.google.protobuf.ByteString
@@ -8220,7 +8220,7 @@ public final class PartnerOuterClass {
         }
       }
       /**
-       * <code>required string clientId = 5;</code>
+       * <code>required string client_id = 5;</code>
        * @param value The clientId to set.
        * @return This builder for chaining.
        */
@@ -8235,7 +8235,7 @@ public final class PartnerOuterClass {
         return this;
       }
       /**
-       * <code>required string clientId = 5;</code>
+       * <code>required string client_id = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearClientId() {
@@ -8245,7 +8245,7 @@ public final class PartnerOuterClass {
         return this;
       }
       /**
-       * <code>required string clientId = 5;</code>
+       * <code>required string client_id = 5;</code>
        * @param value The bytes for clientId to set.
        * @return This builder for chaining.
        */
@@ -8262,14 +8262,14 @@ public final class PartnerOuterClass {
 
       private java.lang.Object clientSecret_ = "";
       /**
-       * <code>required string clientSecret = 6;</code>
+       * <code>required string client_secret = 6;</code>
        * @return Whether the clientSecret field is set.
        */
       public boolean hasClientSecret() {
         return ((bitField0_ & 0x00000020) != 0);
       }
       /**
-       * <code>required string clientSecret = 6;</code>
+       * <code>required string client_secret = 6;</code>
        * @return The clientSecret.
        */
       public java.lang.String getClientSecret() {
@@ -8287,7 +8287,7 @@ public final class PartnerOuterClass {
         }
       }
       /**
-       * <code>required string clientSecret = 6;</code>
+       * <code>required string client_secret = 6;</code>
        * @return The bytes for clientSecret.
        */
       public com.google.protobuf.ByteString
@@ -8304,7 +8304,7 @@ public final class PartnerOuterClass {
         }
       }
       /**
-       * <code>required string clientSecret = 6;</code>
+       * <code>required string client_secret = 6;</code>
        * @param value The clientSecret to set.
        * @return This builder for chaining.
        */
@@ -8319,7 +8319,7 @@ public final class PartnerOuterClass {
         return this;
       }
       /**
-       * <code>required string clientSecret = 6;</code>
+       * <code>required string client_secret = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearClientSecret() {
@@ -8329,7 +8329,7 @@ public final class PartnerOuterClass {
         return this;
       }
       /**
-       * <code>required string clientSecret = 6;</code>
+       * <code>required string client_secret = 6;</code>
        * @param value The bytes for clientSecret to set.
        * @return This builder for chaining.
        */
@@ -10172,34 +10172,34 @@ public final class PartnerOuterClass {
       "\n!protocol/gaia/proxy/partner.proto\022\023pro" +
       "tocol.gaia.proxy\032&protocol/common/consta" +
       "nt/request.proto\032\'protocol/common/consta" +
-      "nt/response.proto\"m\n\007Partner\022\014\n\004uuid\030\001 \002" +
+      "nt/response.proto\"o\n\007Partner\022\014\n\004uuid\030\001 \002" +
       "(\t\022\014\n\004name\030\002 \002(\t\022\014\n\004type\030\003 \002(\t\022\020\n\010endpoi" +
-      "nt\030\004 \002(\t\022\022\n\ncreateTime\030\005 \002(\t\022\022\n\nupdateTi" +
-      "me\030\006 \002(\t\"\267\001\n\017PartnerPageData\022-\n\007content\030" +
-      "\001 \003(\0132\034.protocol.gaia.proxy.Partner\022\r\n\005p" +
-      "aged\030\002 \002(\010\022\014\n\004page\030\003 \002(\005\022\022\n\ntotalPages\030\004" +
-      " \002(\005\022\020\n\010elements\030\005 \002(\005\022\025\n\rtotalElements\030" +
-      "\006 \002(\005\022\r\n\005first\030\007 \002(\010\022\014\n\004last\030\010 \002(\010\"R\n\022Li" +
-      "stPartnerRequest\022\020\n\010searchBy\030\001 \003(\t\022\016\n\006so" +
-      "rtBy\030\002 \003(\t\022\014\n\004page\030\003 \003(\005\022\014\n\004size\030\004 \003(\005\"h" +
-      "\n\023ListPartnerResponse\022\014\n\004code\030\001 \002(\005\022\017\n\007m" +
-      "essage\030\002 \002(\t\0222\n\004data\030\003 \002(\0132$.protocol.ga" +
-      "ia.proxy.PartnerPageData\"\'\n\021GetPartnerRe" +
-      "quest\022\022\n\npartner_id\030\001 \002(\t\"_\n\022GetPartnerR" +
-      "esponse\022\014\n\004code\030\001 \002(\005\022\017\n\007message\030\002 \002(\t\022*" +
-      "\n\004data\030\003 \002(\0132\034.protocol.gaia.proxy.Partn" +
-      "er\"\210\001\n\030AddPartnerRequestPayload\022\014\n\004name\030" +
-      "\001 \002(\t\022\020\n\010endpoint\030\002 \002(\t\022\014\n\004type\030\003 \002(\t\022\026\n" +
-      "\016oAuth2Endpoint\030\004 \002(\t\022\020\n\010clientId\030\005 \002(\t\022" +
-      "\024\n\014clientSecret\030\006 \002(\t\"\214\001\n\021AddPartnerRequ" +
-      "est\0227\n\006header\030\001 \001(\0132\'.protocol.common.co" +
-      "nstant.RequestHeader\022>\n\007payload\030\002 \002(\0132-." +
-      "protocol.gaia.proxy.AddPartnerRequestPay" +
-      "load\"}\n\022AddPartnerResponse\0228\n\006header\030\001 \002" +
-      "(\0132(.protocol.common.constant.ResponseHe" +
-      "ader\022-\n\007payload\030\002 \001(\0132\034.protocol.gaia.pr" +
-      "oxy.PartnerB:\n\033com.tcl.gaia.protocol.pro" +
-      "xyZ\033tcl.com/gaia/protocol/proxy"
+      "nt\030\004 \002(\t\022\023\n\013create_time\030\005 \002(\t\022\023\n\013update_" +
+      "time\030\006 \002(\t\"\271\001\n\017PartnerPageData\022-\n\007conten" +
+      "t\030\001 \003(\0132\034.protocol.gaia.proxy.Partner\022\r\n" +
+      "\005paged\030\002 \002(\010\022\014\n\004page\030\003 \002(\005\022\023\n\013total_page" +
+      "s\030\004 \002(\005\022\020\n\010elements\030\005 \002(\005\022\026\n\016total_eleme" +
+      "nts\030\006 \002(\005\022\r\n\005first\030\007 \002(\010\022\014\n\004last\030\010 \002(\010\"T" +
+      "\n\022ListPartnerRequest\022\021\n\tsearch_by\030\001 \003(\t\022" +
+      "\017\n\007sort_by\030\002 \003(\t\022\014\n\004page\030\003 \003(\005\022\014\n\004size\030\004" +
+      " \003(\005\"h\n\023ListPartnerResponse\022\014\n\004code\030\001 \002(" +
+      "\005\022\017\n\007message\030\002 \002(\t\0222\n\004data\030\003 \002(\0132$.proto" +
+      "col.gaia.proxy.PartnerPageData\"\'\n\021GetPar" +
+      "tnerRequest\022\022\n\npartner_id\030\001 \002(\t\"_\n\022GetPa" +
+      "rtnerResponse\022\014\n\004code\030\001 \002(\005\022\017\n\007message\030\002" +
+      " \002(\t\022*\n\004data\030\003 \002(\0132\034.protocol.gaia.proxy" +
+      ".Partner\"\213\001\n\030AddPartnerRequestPayload\022\014\n" +
+      "\004name\030\001 \002(\t\022\020\n\010endpoint\030\002 \002(\t\022\014\n\004type\030\003 " +
+      "\002(\t\022\027\n\017oAuth2_endpoint\030\004 \002(\t\022\021\n\tclient_i" +
+      "d\030\005 \002(\t\022\025\n\rclient_secret\030\006 \002(\t\"\214\001\n\021AddPa" +
+      "rtnerRequest\0227\n\006header\030\001 \001(\0132\'.protocol." +
+      "common.constant.RequestHeader\022>\n\007payload" +
+      "\030\002 \002(\0132-.protocol.gaia.proxy.AddPartnerR" +
+      "equestPayload\"}\n\022AddPartnerResponse\0228\n\006h" +
+      "eader\030\001 \002(\0132(.protocol.common.constant.R" +
+      "esponseHeader\022-\n\007payload\030\002 \001(\0132\034.protoco" +
+      "l.gaia.proxy.PartnerB:\n\033com.tcl.gaia.pro" +
+      "tocol.proxyZ\033tcl.com/gaia/protocol/proxy"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

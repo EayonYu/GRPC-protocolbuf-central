@@ -2961,17 +2961,17 @@ public final class DeviceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required string wifiModule = 1;</code>
+     * <code>required string wifi_module = 1;</code>
      * @return Whether the wifiModule field is set.
      */
     boolean hasWifiModule();
     /**
-     * <code>required string wifiModule = 1;</code>
+     * <code>required string wifi_module = 1;</code>
      * @return The wifiModule.
      */
     java.lang.String getWifiModule();
     /**
-     * <code>required string wifiModule = 1;</code>
+     * <code>required string wifi_module = 1;</code>
      * @return The bytes for wifiModule.
      */
     com.google.protobuf.ByteString
@@ -3079,10 +3079,10 @@ public final class DeviceOuterClass {
     }
 
     private int bitField0_;
-    public static final int WIFIMODULE_FIELD_NUMBER = 1;
+    public static final int WIFI_MODULE_FIELD_NUMBER = 1;
     private volatile java.lang.Object wifiModule_;
     /**
-     * <code>required string wifiModule = 1;</code>
+     * <code>required string wifi_module = 1;</code>
      * @return Whether the wifiModule field is set.
      */
     @java.lang.Override
@@ -3090,7 +3090,7 @@ public final class DeviceOuterClass {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>required string wifiModule = 1;</code>
+     * <code>required string wifi_module = 1;</code>
      * @return The wifiModule.
      */
     @java.lang.Override
@@ -3109,7 +3109,7 @@ public final class DeviceOuterClass {
       }
     }
     /**
-     * <code>required string wifiModule = 1;</code>
+     * <code>required string wifi_module = 1;</code>
      * @return The bytes for wifiModule.
      */
     @java.lang.Override
@@ -3227,7 +3227,7 @@ public final class DeviceOuterClass {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       if (hasWifiModule()) {
-        hash = (37 * hash) + WIFIMODULE_FIELD_NUMBER;
+        hash = (37 * hash) + WIFI_MODULE_FIELD_NUMBER;
         hash = (53 * hash) + getWifiModule().hashCode();
       }
       if (hasMcu()) {
@@ -3502,14 +3502,14 @@ public final class DeviceOuterClass {
 
       private java.lang.Object wifiModule_ = "";
       /**
-       * <code>required string wifiModule = 1;</code>
+       * <code>required string wifi_module = 1;</code>
        * @return Whether the wifiModule field is set.
        */
       public boolean hasWifiModule() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>required string wifiModule = 1;</code>
+       * <code>required string wifi_module = 1;</code>
        * @return The wifiModule.
        */
       public java.lang.String getWifiModule() {
@@ -3527,7 +3527,7 @@ public final class DeviceOuterClass {
         }
       }
       /**
-       * <code>required string wifiModule = 1;</code>
+       * <code>required string wifi_module = 1;</code>
        * @return The bytes for wifiModule.
        */
       public com.google.protobuf.ByteString
@@ -3544,7 +3544,7 @@ public final class DeviceOuterClass {
         }
       }
       /**
-       * <code>required string wifiModule = 1;</code>
+       * <code>required string wifi_module = 1;</code>
        * @param value The wifiModule to set.
        * @return This builder for chaining.
        */
@@ -3559,7 +3559,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>required string wifiModule = 1;</code>
+       * <code>required string wifi_module = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearWifiModule() {
@@ -3569,7 +3569,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>required string wifiModule = 1;</code>
+       * <code>required string wifi_module = 1;</code>
        * @param value The bytes for wifiModule to set.
        * @return This builder for chaining.
        */
@@ -4468,96 +4468,96 @@ public final class DeviceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required string deviceId = 1;</code>
+     * <code>required string device_id = 1;</code>
      * @return Whether the deviceId field is set.
      */
     boolean hasDeviceId();
     /**
-     * <code>required string deviceId = 1;</code>
+     * <code>required string device_id = 1;</code>
      * @return The deviceId.
      */
     java.lang.String getDeviceId();
     /**
-     * <code>required string deviceId = 1;</code>
+     * <code>required string device_id = 1;</code>
      * @return The bytes for deviceId.
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
 
     /**
-     * <code>optional string deviceName = 2;</code>
+     * <code>optional string device_name = 2;</code>
      * @return Whether the deviceName field is set.
      */
     boolean hasDeviceName();
     /**
-     * <code>optional string deviceName = 2;</code>
+     * <code>optional string device_name = 2;</code>
      * @return The deviceName.
      */
     java.lang.String getDeviceName();
     /**
-     * <code>optional string deviceName = 2;</code>
+     * <code>optional string device_name = 2;</code>
      * @return The bytes for deviceName.
      */
     com.google.protobuf.ByteString
         getDeviceNameBytes();
 
     /**
-     * <code>optional string tslId = 3;</code>
+     * <code>optional string tsl_id = 3;</code>
      * @return Whether the tslId field is set.
      */
     boolean hasTslId();
     /**
-     * <code>optional string tslId = 3;</code>
+     * <code>optional string tsl_id = 3;</code>
      * @return The tslId.
      */
     java.lang.String getTslId();
     /**
-     * <code>optional string tslId = 3;</code>
+     * <code>optional string tsl_id = 3;</code>
      * @return The bytes for tslId.
      */
     com.google.protobuf.ByteString
         getTslIdBytes();
 
     /**
-     * <code>optional .protocol.common.partner.DeviceType deviceType = 4;</code>
+     * <code>optional .protocol.common.partner.DeviceType device_type = 4;</code>
      * @return Whether the deviceType field is set.
      */
     boolean hasDeviceType();
     /**
-     * <code>optional .protocol.common.partner.DeviceType deviceType = 4;</code>
+     * <code>optional .protocol.common.partner.DeviceType device_type = 4;</code>
      * @return The deviceType.
      */
     com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceType getDeviceType();
 
     /**
-     * <code>optional string tenantId = 5;</code>
+     * <code>optional string tenant_id = 5;</code>
      * @return Whether the tenantId field is set.
      */
     boolean hasTenantId();
     /**
-     * <code>optional string tenantId = 5;</code>
+     * <code>optional string tenant_id = 5;</code>
      * @return The tenantId.
      */
     java.lang.String getTenantId();
     /**
-     * <code>optional string tenantId = 5;</code>
+     * <code>optional string tenant_id = 5;</code>
      * @return The bytes for tenantId.
      */
     com.google.protobuf.ByteString
         getTenantIdBytes();
 
     /**
-     * <code>optional string manufacturerId = 6;</code>
+     * <code>optional string manufacturer_id = 6;</code>
      * @return Whether the manufacturerId field is set.
      */
     boolean hasManufacturerId();
     /**
-     * <code>optional string manufacturerId = 6;</code>
+     * <code>optional string manufacturer_id = 6;</code>
      * @return The manufacturerId.
      */
     java.lang.String getManufacturerId();
     /**
-     * <code>optional string manufacturerId = 6;</code>
+     * <code>optional string manufacturer_id = 6;</code>
      * @return The bytes for manufacturerId.
      */
     com.google.protobuf.ByteString
@@ -4581,34 +4581,34 @@ public final class DeviceOuterClass {
         getModelBytes();
 
     /**
-     * <code>optional string parentId = 8;</code>
+     * <code>optional string parent_id = 8;</code>
      * @return Whether the parentId field is set.
      */
     boolean hasParentId();
     /**
-     * <code>optional string parentId = 8;</code>
+     * <code>optional string parent_id = 8;</code>
      * @return The parentId.
      */
     java.lang.String getParentId();
     /**
-     * <code>optional string parentId = 8;</code>
+     * <code>optional string parent_id = 8;</code>
      * @return The bytes for parentId.
      */
     com.google.protobuf.ByteString
         getParentIdBytes();
 
     /**
-     * <code>optional string serialNo = 9;</code>
+     * <code>optional string serial_no = 9;</code>
      * @return Whether the serialNo field is set.
      */
     boolean hasSerialNo();
     /**
-     * <code>optional string serialNo = 9;</code>
+     * <code>optional string serial_no = 9;</code>
      * @return The serialNo.
      */
     java.lang.String getSerialNo();
     /**
-     * <code>optional string serialNo = 9;</code>
+     * <code>optional string serial_no = 9;</code>
      * @return The bytes for serialNo.
      */
     com.google.protobuf.ByteString
@@ -4686,32 +4686,32 @@ public final class DeviceOuterClass {
     com.tcl.gaia.protocol.partner.DeviceOuterClass.LocationOrBuilder getLocationOrBuilder();
 
     /**
-     * <code>optional .protocol.common.partner.FirmwareVersions firmwareVersions = 14;</code>
+     * <code>optional .protocol.common.partner.FirmwareVersions firmware_versions = 14;</code>
      * @return Whether the firmwareVersions field is set.
      */
     boolean hasFirmwareVersions();
     /**
-     * <code>optional .protocol.common.partner.FirmwareVersions firmwareVersions = 14;</code>
+     * <code>optional .protocol.common.partner.FirmwareVersions firmware_versions = 14;</code>
      * @return The firmwareVersions.
      */
     com.tcl.gaia.protocol.partner.DeviceOuterClass.FirmwareVersions getFirmwareVersions();
     /**
-     * <code>optional .protocol.common.partner.FirmwareVersions firmwareVersions = 14;</code>
+     * <code>optional .protocol.common.partner.FirmwareVersions firmware_versions = 14;</code>
      */
     com.tcl.gaia.protocol.partner.DeviceOuterClass.FirmwareVersionsOrBuilder getFirmwareVersionsOrBuilder();
 
     /**
-     * <code>optional .protocol.common.partner.DeviceIcons deviceIcons = 15;</code>
+     * <code>optional .protocol.common.partner.DeviceIcons device_icons = 15;</code>
      * @return Whether the deviceIcons field is set.
      */
     boolean hasDeviceIcons();
     /**
-     * <code>optional .protocol.common.partner.DeviceIcons deviceIcons = 15;</code>
+     * <code>optional .protocol.common.partner.DeviceIcons device_icons = 15;</code>
      * @return The deviceIcons.
      */
     com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceIcons getDeviceIcons();
     /**
-     * <code>optional .protocol.common.partner.DeviceIcons deviceIcons = 15;</code>
+     * <code>optional .protocol.common.partner.DeviceIcons device_icons = 15;</code>
      */
     com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceIconsOrBuilder getDeviceIconsOrBuilder();
 
@@ -4967,10 +4967,10 @@ public final class DeviceOuterClass {
     }
 
     private int bitField0_;
-    public static final int DEVICEID_FIELD_NUMBER = 1;
+    public static final int DEVICE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object deviceId_;
     /**
-     * <code>required string deviceId = 1;</code>
+     * <code>required string device_id = 1;</code>
      * @return Whether the deviceId field is set.
      */
     @java.lang.Override
@@ -4978,7 +4978,7 @@ public final class DeviceOuterClass {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>required string deviceId = 1;</code>
+     * <code>required string device_id = 1;</code>
      * @return The deviceId.
      */
     @java.lang.Override
@@ -4997,7 +4997,7 @@ public final class DeviceOuterClass {
       }
     }
     /**
-     * <code>required string deviceId = 1;</code>
+     * <code>required string device_id = 1;</code>
      * @return The bytes for deviceId.
      */
     @java.lang.Override
@@ -5015,10 +5015,10 @@ public final class DeviceOuterClass {
       }
     }
 
-    public static final int DEVICENAME_FIELD_NUMBER = 2;
+    public static final int DEVICE_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object deviceName_;
     /**
-     * <code>optional string deviceName = 2;</code>
+     * <code>optional string device_name = 2;</code>
      * @return Whether the deviceName field is set.
      */
     @java.lang.Override
@@ -5026,7 +5026,7 @@ public final class DeviceOuterClass {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>optional string deviceName = 2;</code>
+     * <code>optional string device_name = 2;</code>
      * @return The deviceName.
      */
     @java.lang.Override
@@ -5045,7 +5045,7 @@ public final class DeviceOuterClass {
       }
     }
     /**
-     * <code>optional string deviceName = 2;</code>
+     * <code>optional string device_name = 2;</code>
      * @return The bytes for deviceName.
      */
     @java.lang.Override
@@ -5063,10 +5063,10 @@ public final class DeviceOuterClass {
       }
     }
 
-    public static final int TSLID_FIELD_NUMBER = 3;
+    public static final int TSL_ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object tslId_;
     /**
-     * <code>optional string tslId = 3;</code>
+     * <code>optional string tsl_id = 3;</code>
      * @return Whether the tslId field is set.
      */
     @java.lang.Override
@@ -5074,7 +5074,7 @@ public final class DeviceOuterClass {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>optional string tslId = 3;</code>
+     * <code>optional string tsl_id = 3;</code>
      * @return The tslId.
      */
     @java.lang.Override
@@ -5093,7 +5093,7 @@ public final class DeviceOuterClass {
       }
     }
     /**
-     * <code>optional string tslId = 3;</code>
+     * <code>optional string tsl_id = 3;</code>
      * @return The bytes for tslId.
      */
     @java.lang.Override
@@ -5111,17 +5111,17 @@ public final class DeviceOuterClass {
       }
     }
 
-    public static final int DEVICETYPE_FIELD_NUMBER = 4;
+    public static final int DEVICE_TYPE_FIELD_NUMBER = 4;
     private int deviceType_;
     /**
-     * <code>optional .protocol.common.partner.DeviceType deviceType = 4;</code>
+     * <code>optional .protocol.common.partner.DeviceType device_type = 4;</code>
      * @return Whether the deviceType field is set.
      */
     @java.lang.Override public boolean hasDeviceType() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <code>optional .protocol.common.partner.DeviceType deviceType = 4;</code>
+     * <code>optional .protocol.common.partner.DeviceType device_type = 4;</code>
      * @return The deviceType.
      */
     @java.lang.Override public com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceType getDeviceType() {
@@ -5130,10 +5130,10 @@ public final class DeviceOuterClass {
       return result == null ? com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceType.DEVICE_TYPE_UNKNOWN : result;
     }
 
-    public static final int TENANTID_FIELD_NUMBER = 5;
+    public static final int TENANT_ID_FIELD_NUMBER = 5;
     private volatile java.lang.Object tenantId_;
     /**
-     * <code>optional string tenantId = 5;</code>
+     * <code>optional string tenant_id = 5;</code>
      * @return Whether the tenantId field is set.
      */
     @java.lang.Override
@@ -5141,7 +5141,7 @@ public final class DeviceOuterClass {
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
-     * <code>optional string tenantId = 5;</code>
+     * <code>optional string tenant_id = 5;</code>
      * @return The tenantId.
      */
     @java.lang.Override
@@ -5160,7 +5160,7 @@ public final class DeviceOuterClass {
       }
     }
     /**
-     * <code>optional string tenantId = 5;</code>
+     * <code>optional string tenant_id = 5;</code>
      * @return The bytes for tenantId.
      */
     @java.lang.Override
@@ -5178,10 +5178,10 @@ public final class DeviceOuterClass {
       }
     }
 
-    public static final int MANUFACTURERID_FIELD_NUMBER = 6;
+    public static final int MANUFACTURER_ID_FIELD_NUMBER = 6;
     private volatile java.lang.Object manufacturerId_;
     /**
-     * <code>optional string manufacturerId = 6;</code>
+     * <code>optional string manufacturer_id = 6;</code>
      * @return Whether the manufacturerId field is set.
      */
     @java.lang.Override
@@ -5189,7 +5189,7 @@ public final class DeviceOuterClass {
       return ((bitField0_ & 0x00000020) != 0);
     }
     /**
-     * <code>optional string manufacturerId = 6;</code>
+     * <code>optional string manufacturer_id = 6;</code>
      * @return The manufacturerId.
      */
     @java.lang.Override
@@ -5208,7 +5208,7 @@ public final class DeviceOuterClass {
       }
     }
     /**
-     * <code>optional string manufacturerId = 6;</code>
+     * <code>optional string manufacturer_id = 6;</code>
      * @return The bytes for manufacturerId.
      */
     @java.lang.Override
@@ -5274,10 +5274,10 @@ public final class DeviceOuterClass {
       }
     }
 
-    public static final int PARENTID_FIELD_NUMBER = 8;
+    public static final int PARENT_ID_FIELD_NUMBER = 8;
     private volatile java.lang.Object parentId_;
     /**
-     * <code>optional string parentId = 8;</code>
+     * <code>optional string parent_id = 8;</code>
      * @return Whether the parentId field is set.
      */
     @java.lang.Override
@@ -5285,7 +5285,7 @@ public final class DeviceOuterClass {
       return ((bitField0_ & 0x00000080) != 0);
     }
     /**
-     * <code>optional string parentId = 8;</code>
+     * <code>optional string parent_id = 8;</code>
      * @return The parentId.
      */
     @java.lang.Override
@@ -5304,7 +5304,7 @@ public final class DeviceOuterClass {
       }
     }
     /**
-     * <code>optional string parentId = 8;</code>
+     * <code>optional string parent_id = 8;</code>
      * @return The bytes for parentId.
      */
     @java.lang.Override
@@ -5322,10 +5322,10 @@ public final class DeviceOuterClass {
       }
     }
 
-    public static final int SERIALNO_FIELD_NUMBER = 9;
+    public static final int SERIAL_NO_FIELD_NUMBER = 9;
     private volatile java.lang.Object serialNo_;
     /**
-     * <code>optional string serialNo = 9;</code>
+     * <code>optional string serial_no = 9;</code>
      * @return Whether the serialNo field is set.
      */
     @java.lang.Override
@@ -5333,7 +5333,7 @@ public final class DeviceOuterClass {
       return ((bitField0_ & 0x00000100) != 0);
     }
     /**
-     * <code>optional string serialNo = 9;</code>
+     * <code>optional string serial_no = 9;</code>
      * @return The serialNo.
      */
     @java.lang.Override
@@ -5352,7 +5352,7 @@ public final class DeviceOuterClass {
       }
     }
     /**
-     * <code>optional string serialNo = 9;</code>
+     * <code>optional string serial_no = 9;</code>
      * @return The bytes for serialNo.
      */
     @java.lang.Override
@@ -5510,10 +5510,10 @@ public final class DeviceOuterClass {
       return location_ == null ? com.tcl.gaia.protocol.partner.DeviceOuterClass.Location.getDefaultInstance() : location_;
     }
 
-    public static final int FIRMWAREVERSIONS_FIELD_NUMBER = 14;
+    public static final int FIRMWARE_VERSIONS_FIELD_NUMBER = 14;
     private com.tcl.gaia.protocol.partner.DeviceOuterClass.FirmwareVersions firmwareVersions_;
     /**
-     * <code>optional .protocol.common.partner.FirmwareVersions firmwareVersions = 14;</code>
+     * <code>optional .protocol.common.partner.FirmwareVersions firmware_versions = 14;</code>
      * @return Whether the firmwareVersions field is set.
      */
     @java.lang.Override
@@ -5521,7 +5521,7 @@ public final class DeviceOuterClass {
       return ((bitField0_ & 0x00001000) != 0);
     }
     /**
-     * <code>optional .protocol.common.partner.FirmwareVersions firmwareVersions = 14;</code>
+     * <code>optional .protocol.common.partner.FirmwareVersions firmware_versions = 14;</code>
      * @return The firmwareVersions.
      */
     @java.lang.Override
@@ -5529,17 +5529,17 @@ public final class DeviceOuterClass {
       return firmwareVersions_ == null ? com.tcl.gaia.protocol.partner.DeviceOuterClass.FirmwareVersions.getDefaultInstance() : firmwareVersions_;
     }
     /**
-     * <code>optional .protocol.common.partner.FirmwareVersions firmwareVersions = 14;</code>
+     * <code>optional .protocol.common.partner.FirmwareVersions firmware_versions = 14;</code>
      */
     @java.lang.Override
     public com.tcl.gaia.protocol.partner.DeviceOuterClass.FirmwareVersionsOrBuilder getFirmwareVersionsOrBuilder() {
       return firmwareVersions_ == null ? com.tcl.gaia.protocol.partner.DeviceOuterClass.FirmwareVersions.getDefaultInstance() : firmwareVersions_;
     }
 
-    public static final int DEVICEICONS_FIELD_NUMBER = 15;
+    public static final int DEVICE_ICONS_FIELD_NUMBER = 15;
     private com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceIcons deviceIcons_;
     /**
-     * <code>optional .protocol.common.partner.DeviceIcons deviceIcons = 15;</code>
+     * <code>optional .protocol.common.partner.DeviceIcons device_icons = 15;</code>
      * @return Whether the deviceIcons field is set.
      */
     @java.lang.Override
@@ -5547,7 +5547,7 @@ public final class DeviceOuterClass {
       return ((bitField0_ & 0x00002000) != 0);
     }
     /**
-     * <code>optional .protocol.common.partner.DeviceIcons deviceIcons = 15;</code>
+     * <code>optional .protocol.common.partner.DeviceIcons device_icons = 15;</code>
      * @return The deviceIcons.
      */
     @java.lang.Override
@@ -5555,7 +5555,7 @@ public final class DeviceOuterClass {
       return deviceIcons_ == null ? com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceIcons.getDefaultInstance() : deviceIcons_;
     }
     /**
-     * <code>optional .protocol.common.partner.DeviceIcons deviceIcons = 15;</code>
+     * <code>optional .protocol.common.partner.DeviceIcons device_icons = 15;</code>
      */
     @java.lang.Override
     public com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceIconsOrBuilder getDeviceIconsOrBuilder() {
@@ -5845,27 +5845,27 @@ public final class DeviceOuterClass {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       if (hasDeviceId()) {
-        hash = (37 * hash) + DEVICEID_FIELD_NUMBER;
+        hash = (37 * hash) + DEVICE_ID_FIELD_NUMBER;
         hash = (53 * hash) + getDeviceId().hashCode();
       }
       if (hasDeviceName()) {
-        hash = (37 * hash) + DEVICENAME_FIELD_NUMBER;
+        hash = (37 * hash) + DEVICE_NAME_FIELD_NUMBER;
         hash = (53 * hash) + getDeviceName().hashCode();
       }
       if (hasTslId()) {
-        hash = (37 * hash) + TSLID_FIELD_NUMBER;
+        hash = (37 * hash) + TSL_ID_FIELD_NUMBER;
         hash = (53 * hash) + getTslId().hashCode();
       }
       if (hasDeviceType()) {
-        hash = (37 * hash) + DEVICETYPE_FIELD_NUMBER;
+        hash = (37 * hash) + DEVICE_TYPE_FIELD_NUMBER;
         hash = (53 * hash) + deviceType_;
       }
       if (hasTenantId()) {
-        hash = (37 * hash) + TENANTID_FIELD_NUMBER;
+        hash = (37 * hash) + TENANT_ID_FIELD_NUMBER;
         hash = (53 * hash) + getTenantId().hashCode();
       }
       if (hasManufacturerId()) {
-        hash = (37 * hash) + MANUFACTURERID_FIELD_NUMBER;
+        hash = (37 * hash) + MANUFACTURER_ID_FIELD_NUMBER;
         hash = (53 * hash) + getManufacturerId().hashCode();
       }
       if (hasModel()) {
@@ -5873,11 +5873,11 @@ public final class DeviceOuterClass {
         hash = (53 * hash) + getModel().hashCode();
       }
       if (hasParentId()) {
-        hash = (37 * hash) + PARENTID_FIELD_NUMBER;
+        hash = (37 * hash) + PARENT_ID_FIELD_NUMBER;
         hash = (53 * hash) + getParentId().hashCode();
       }
       if (hasSerialNo()) {
-        hash = (37 * hash) + SERIALNO_FIELD_NUMBER;
+        hash = (37 * hash) + SERIAL_NO_FIELD_NUMBER;
         hash = (53 * hash) + getSerialNo().hashCode();
       }
       if (hasMac()) {
@@ -5897,11 +5897,11 @@ public final class DeviceOuterClass {
         hash = (53 * hash) + getLocation().hashCode();
       }
       if (hasFirmwareVersions()) {
-        hash = (37 * hash) + FIRMWAREVERSIONS_FIELD_NUMBER;
+        hash = (37 * hash) + FIRMWARE_VERSIONS_FIELD_NUMBER;
         hash = (53 * hash) + getFirmwareVersions().hashCode();
       }
       if (hasDeviceIcons()) {
-        hash = (37 * hash) + DEVICEICONS_FIELD_NUMBER;
+        hash = (37 * hash) + DEVICE_ICONS_FIELD_NUMBER;
         hash = (53 * hash) + getDeviceIcons().hashCode();
       }
       if (hasExtra()) {
@@ -6417,14 +6417,14 @@ public final class DeviceOuterClass {
 
       private java.lang.Object deviceId_ = "";
       /**
-       * <code>required string deviceId = 1;</code>
+       * <code>required string device_id = 1;</code>
        * @return Whether the deviceId field is set.
        */
       public boolean hasDeviceId() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>required string deviceId = 1;</code>
+       * <code>required string device_id = 1;</code>
        * @return The deviceId.
        */
       public java.lang.String getDeviceId() {
@@ -6442,7 +6442,7 @@ public final class DeviceOuterClass {
         }
       }
       /**
-       * <code>required string deviceId = 1;</code>
+       * <code>required string device_id = 1;</code>
        * @return The bytes for deviceId.
        */
       public com.google.protobuf.ByteString
@@ -6459,7 +6459,7 @@ public final class DeviceOuterClass {
         }
       }
       /**
-       * <code>required string deviceId = 1;</code>
+       * <code>required string device_id = 1;</code>
        * @param value The deviceId to set.
        * @return This builder for chaining.
        */
@@ -6474,7 +6474,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>required string deviceId = 1;</code>
+       * <code>required string device_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearDeviceId() {
@@ -6484,7 +6484,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>required string deviceId = 1;</code>
+       * <code>required string device_id = 1;</code>
        * @param value The bytes for deviceId to set.
        * @return This builder for chaining.
        */
@@ -6501,14 +6501,14 @@ public final class DeviceOuterClass {
 
       private java.lang.Object deviceName_ = "";
       /**
-       * <code>optional string deviceName = 2;</code>
+       * <code>optional string device_name = 2;</code>
        * @return Whether the deviceName field is set.
        */
       public boolean hasDeviceName() {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>optional string deviceName = 2;</code>
+       * <code>optional string device_name = 2;</code>
        * @return The deviceName.
        */
       public java.lang.String getDeviceName() {
@@ -6526,7 +6526,7 @@ public final class DeviceOuterClass {
         }
       }
       /**
-       * <code>optional string deviceName = 2;</code>
+       * <code>optional string device_name = 2;</code>
        * @return The bytes for deviceName.
        */
       public com.google.protobuf.ByteString
@@ -6543,7 +6543,7 @@ public final class DeviceOuterClass {
         }
       }
       /**
-       * <code>optional string deviceName = 2;</code>
+       * <code>optional string device_name = 2;</code>
        * @param value The deviceName to set.
        * @return This builder for chaining.
        */
@@ -6558,7 +6558,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>optional string deviceName = 2;</code>
+       * <code>optional string device_name = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearDeviceName() {
@@ -6568,7 +6568,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>optional string deviceName = 2;</code>
+       * <code>optional string device_name = 2;</code>
        * @param value The bytes for deviceName to set.
        * @return This builder for chaining.
        */
@@ -6585,14 +6585,14 @@ public final class DeviceOuterClass {
 
       private java.lang.Object tslId_ = "";
       /**
-       * <code>optional string tslId = 3;</code>
+       * <code>optional string tsl_id = 3;</code>
        * @return Whether the tslId field is set.
        */
       public boolean hasTslId() {
         return ((bitField0_ & 0x00000004) != 0);
       }
       /**
-       * <code>optional string tslId = 3;</code>
+       * <code>optional string tsl_id = 3;</code>
        * @return The tslId.
        */
       public java.lang.String getTslId() {
@@ -6610,7 +6610,7 @@ public final class DeviceOuterClass {
         }
       }
       /**
-       * <code>optional string tslId = 3;</code>
+       * <code>optional string tsl_id = 3;</code>
        * @return The bytes for tslId.
        */
       public com.google.protobuf.ByteString
@@ -6627,7 +6627,7 @@ public final class DeviceOuterClass {
         }
       }
       /**
-       * <code>optional string tslId = 3;</code>
+       * <code>optional string tsl_id = 3;</code>
        * @param value The tslId to set.
        * @return This builder for chaining.
        */
@@ -6642,7 +6642,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>optional string tslId = 3;</code>
+       * <code>optional string tsl_id = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearTslId() {
@@ -6652,7 +6652,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>optional string tslId = 3;</code>
+       * <code>optional string tsl_id = 3;</code>
        * @param value The bytes for tslId to set.
        * @return This builder for chaining.
        */
@@ -6669,14 +6669,14 @@ public final class DeviceOuterClass {
 
       private int deviceType_ = 0;
       /**
-       * <code>optional .protocol.common.partner.DeviceType deviceType = 4;</code>
+       * <code>optional .protocol.common.partner.DeviceType device_type = 4;</code>
        * @return Whether the deviceType field is set.
        */
       @java.lang.Override public boolean hasDeviceType() {
         return ((bitField0_ & 0x00000008) != 0);
       }
       /**
-       * <code>optional .protocol.common.partner.DeviceType deviceType = 4;</code>
+       * <code>optional .protocol.common.partner.DeviceType device_type = 4;</code>
        * @return The deviceType.
        */
       @java.lang.Override
@@ -6686,7 +6686,7 @@ public final class DeviceOuterClass {
         return result == null ? com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceType.DEVICE_TYPE_UNKNOWN : result;
       }
       /**
-       * <code>optional .protocol.common.partner.DeviceType deviceType = 4;</code>
+       * <code>optional .protocol.common.partner.DeviceType device_type = 4;</code>
        * @param value The deviceType to set.
        * @return This builder for chaining.
        */
@@ -6700,7 +6700,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>optional .protocol.common.partner.DeviceType deviceType = 4;</code>
+       * <code>optional .protocol.common.partner.DeviceType device_type = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearDeviceType() {
@@ -6712,14 +6712,14 @@ public final class DeviceOuterClass {
 
       private java.lang.Object tenantId_ = "";
       /**
-       * <code>optional string tenantId = 5;</code>
+       * <code>optional string tenant_id = 5;</code>
        * @return Whether the tenantId field is set.
        */
       public boolean hasTenantId() {
         return ((bitField0_ & 0x00000010) != 0);
       }
       /**
-       * <code>optional string tenantId = 5;</code>
+       * <code>optional string tenant_id = 5;</code>
        * @return The tenantId.
        */
       public java.lang.String getTenantId() {
@@ -6737,7 +6737,7 @@ public final class DeviceOuterClass {
         }
       }
       /**
-       * <code>optional string tenantId = 5;</code>
+       * <code>optional string tenant_id = 5;</code>
        * @return The bytes for tenantId.
        */
       public com.google.protobuf.ByteString
@@ -6754,7 +6754,7 @@ public final class DeviceOuterClass {
         }
       }
       /**
-       * <code>optional string tenantId = 5;</code>
+       * <code>optional string tenant_id = 5;</code>
        * @param value The tenantId to set.
        * @return This builder for chaining.
        */
@@ -6769,7 +6769,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>optional string tenantId = 5;</code>
+       * <code>optional string tenant_id = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearTenantId() {
@@ -6779,7 +6779,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>optional string tenantId = 5;</code>
+       * <code>optional string tenant_id = 5;</code>
        * @param value The bytes for tenantId to set.
        * @return This builder for chaining.
        */
@@ -6796,14 +6796,14 @@ public final class DeviceOuterClass {
 
       private java.lang.Object manufacturerId_ = "";
       /**
-       * <code>optional string manufacturerId = 6;</code>
+       * <code>optional string manufacturer_id = 6;</code>
        * @return Whether the manufacturerId field is set.
        */
       public boolean hasManufacturerId() {
         return ((bitField0_ & 0x00000020) != 0);
       }
       /**
-       * <code>optional string manufacturerId = 6;</code>
+       * <code>optional string manufacturer_id = 6;</code>
        * @return The manufacturerId.
        */
       public java.lang.String getManufacturerId() {
@@ -6821,7 +6821,7 @@ public final class DeviceOuterClass {
         }
       }
       /**
-       * <code>optional string manufacturerId = 6;</code>
+       * <code>optional string manufacturer_id = 6;</code>
        * @return The bytes for manufacturerId.
        */
       public com.google.protobuf.ByteString
@@ -6838,7 +6838,7 @@ public final class DeviceOuterClass {
         }
       }
       /**
-       * <code>optional string manufacturerId = 6;</code>
+       * <code>optional string manufacturer_id = 6;</code>
        * @param value The manufacturerId to set.
        * @return This builder for chaining.
        */
@@ -6853,7 +6853,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>optional string manufacturerId = 6;</code>
+       * <code>optional string manufacturer_id = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearManufacturerId() {
@@ -6863,7 +6863,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>optional string manufacturerId = 6;</code>
+       * <code>optional string manufacturer_id = 6;</code>
        * @param value The bytes for manufacturerId to set.
        * @return This builder for chaining.
        */
@@ -6964,14 +6964,14 @@ public final class DeviceOuterClass {
 
       private java.lang.Object parentId_ = "";
       /**
-       * <code>optional string parentId = 8;</code>
+       * <code>optional string parent_id = 8;</code>
        * @return Whether the parentId field is set.
        */
       public boolean hasParentId() {
         return ((bitField0_ & 0x00000080) != 0);
       }
       /**
-       * <code>optional string parentId = 8;</code>
+       * <code>optional string parent_id = 8;</code>
        * @return The parentId.
        */
       public java.lang.String getParentId() {
@@ -6989,7 +6989,7 @@ public final class DeviceOuterClass {
         }
       }
       /**
-       * <code>optional string parentId = 8;</code>
+       * <code>optional string parent_id = 8;</code>
        * @return The bytes for parentId.
        */
       public com.google.protobuf.ByteString
@@ -7006,7 +7006,7 @@ public final class DeviceOuterClass {
         }
       }
       /**
-       * <code>optional string parentId = 8;</code>
+       * <code>optional string parent_id = 8;</code>
        * @param value The parentId to set.
        * @return This builder for chaining.
        */
@@ -7021,7 +7021,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>optional string parentId = 8;</code>
+       * <code>optional string parent_id = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearParentId() {
@@ -7031,7 +7031,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>optional string parentId = 8;</code>
+       * <code>optional string parent_id = 8;</code>
        * @param value The bytes for parentId to set.
        * @return This builder for chaining.
        */
@@ -7048,14 +7048,14 @@ public final class DeviceOuterClass {
 
       private java.lang.Object serialNo_ = "";
       /**
-       * <code>optional string serialNo = 9;</code>
+       * <code>optional string serial_no = 9;</code>
        * @return Whether the serialNo field is set.
        */
       public boolean hasSerialNo() {
         return ((bitField0_ & 0x00000100) != 0);
       }
       /**
-       * <code>optional string serialNo = 9;</code>
+       * <code>optional string serial_no = 9;</code>
        * @return The serialNo.
        */
       public java.lang.String getSerialNo() {
@@ -7073,7 +7073,7 @@ public final class DeviceOuterClass {
         }
       }
       /**
-       * <code>optional string serialNo = 9;</code>
+       * <code>optional string serial_no = 9;</code>
        * @return The bytes for serialNo.
        */
       public com.google.protobuf.ByteString
@@ -7090,7 +7090,7 @@ public final class DeviceOuterClass {
         }
       }
       /**
-       * <code>optional string serialNo = 9;</code>
+       * <code>optional string serial_no = 9;</code>
        * @param value The serialNo to set.
        * @return This builder for chaining.
        */
@@ -7105,7 +7105,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>optional string serialNo = 9;</code>
+       * <code>optional string serial_no = 9;</code>
        * @return This builder for chaining.
        */
       public Builder clearSerialNo() {
@@ -7115,7 +7115,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>optional string serialNo = 9;</code>
+       * <code>optional string serial_no = 9;</code>
        * @param value The bytes for serialNo to set.
        * @return This builder for chaining.
        */
@@ -7698,14 +7698,14 @@ public final class DeviceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.tcl.gaia.protocol.partner.DeviceOuterClass.FirmwareVersions, com.tcl.gaia.protocol.partner.DeviceOuterClass.FirmwareVersions.Builder, com.tcl.gaia.protocol.partner.DeviceOuterClass.FirmwareVersionsOrBuilder> firmwareVersionsBuilder_;
       /**
-       * <code>optional .protocol.common.partner.FirmwareVersions firmwareVersions = 14;</code>
+       * <code>optional .protocol.common.partner.FirmwareVersions firmware_versions = 14;</code>
        * @return Whether the firmwareVersions field is set.
        */
       public boolean hasFirmwareVersions() {
         return ((bitField0_ & 0x00002000) != 0);
       }
       /**
-       * <code>optional .protocol.common.partner.FirmwareVersions firmwareVersions = 14;</code>
+       * <code>optional .protocol.common.partner.FirmwareVersions firmware_versions = 14;</code>
        * @return The firmwareVersions.
        */
       public com.tcl.gaia.protocol.partner.DeviceOuterClass.FirmwareVersions getFirmwareVersions() {
@@ -7716,7 +7716,7 @@ public final class DeviceOuterClass {
         }
       }
       /**
-       * <code>optional .protocol.common.partner.FirmwareVersions firmwareVersions = 14;</code>
+       * <code>optional .protocol.common.partner.FirmwareVersions firmware_versions = 14;</code>
        */
       public Builder setFirmwareVersions(com.tcl.gaia.protocol.partner.DeviceOuterClass.FirmwareVersions value) {
         if (firmwareVersionsBuilder_ == null) {
@@ -7732,7 +7732,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>optional .protocol.common.partner.FirmwareVersions firmwareVersions = 14;</code>
+       * <code>optional .protocol.common.partner.FirmwareVersions firmware_versions = 14;</code>
        */
       public Builder setFirmwareVersions(
           com.tcl.gaia.protocol.partner.DeviceOuterClass.FirmwareVersions.Builder builderForValue) {
@@ -7746,7 +7746,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>optional .protocol.common.partner.FirmwareVersions firmwareVersions = 14;</code>
+       * <code>optional .protocol.common.partner.FirmwareVersions firmware_versions = 14;</code>
        */
       public Builder mergeFirmwareVersions(com.tcl.gaia.protocol.partner.DeviceOuterClass.FirmwareVersions value) {
         if (firmwareVersionsBuilder_ == null) {
@@ -7766,7 +7766,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>optional .protocol.common.partner.FirmwareVersions firmwareVersions = 14;</code>
+       * <code>optional .protocol.common.partner.FirmwareVersions firmware_versions = 14;</code>
        */
       public Builder clearFirmwareVersions() {
         if (firmwareVersionsBuilder_ == null) {
@@ -7779,7 +7779,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>optional .protocol.common.partner.FirmwareVersions firmwareVersions = 14;</code>
+       * <code>optional .protocol.common.partner.FirmwareVersions firmware_versions = 14;</code>
        */
       public com.tcl.gaia.protocol.partner.DeviceOuterClass.FirmwareVersions.Builder getFirmwareVersionsBuilder() {
         bitField0_ |= 0x00002000;
@@ -7787,7 +7787,7 @@ public final class DeviceOuterClass {
         return getFirmwareVersionsFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .protocol.common.partner.FirmwareVersions firmwareVersions = 14;</code>
+       * <code>optional .protocol.common.partner.FirmwareVersions firmware_versions = 14;</code>
        */
       public com.tcl.gaia.protocol.partner.DeviceOuterClass.FirmwareVersionsOrBuilder getFirmwareVersionsOrBuilder() {
         if (firmwareVersionsBuilder_ != null) {
@@ -7798,7 +7798,7 @@ public final class DeviceOuterClass {
         }
       }
       /**
-       * <code>optional .protocol.common.partner.FirmwareVersions firmwareVersions = 14;</code>
+       * <code>optional .protocol.common.partner.FirmwareVersions firmware_versions = 14;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.tcl.gaia.protocol.partner.DeviceOuterClass.FirmwareVersions, com.tcl.gaia.protocol.partner.DeviceOuterClass.FirmwareVersions.Builder, com.tcl.gaia.protocol.partner.DeviceOuterClass.FirmwareVersionsOrBuilder> 
@@ -7818,14 +7818,14 @@ public final class DeviceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceIcons, com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceIcons.Builder, com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceIconsOrBuilder> deviceIconsBuilder_;
       /**
-       * <code>optional .protocol.common.partner.DeviceIcons deviceIcons = 15;</code>
+       * <code>optional .protocol.common.partner.DeviceIcons device_icons = 15;</code>
        * @return Whether the deviceIcons field is set.
        */
       public boolean hasDeviceIcons() {
         return ((bitField0_ & 0x00004000) != 0);
       }
       /**
-       * <code>optional .protocol.common.partner.DeviceIcons deviceIcons = 15;</code>
+       * <code>optional .protocol.common.partner.DeviceIcons device_icons = 15;</code>
        * @return The deviceIcons.
        */
       public com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceIcons getDeviceIcons() {
@@ -7836,7 +7836,7 @@ public final class DeviceOuterClass {
         }
       }
       /**
-       * <code>optional .protocol.common.partner.DeviceIcons deviceIcons = 15;</code>
+       * <code>optional .protocol.common.partner.DeviceIcons device_icons = 15;</code>
        */
       public Builder setDeviceIcons(com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceIcons value) {
         if (deviceIconsBuilder_ == null) {
@@ -7852,7 +7852,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>optional .protocol.common.partner.DeviceIcons deviceIcons = 15;</code>
+       * <code>optional .protocol.common.partner.DeviceIcons device_icons = 15;</code>
        */
       public Builder setDeviceIcons(
           com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceIcons.Builder builderForValue) {
@@ -7866,7 +7866,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>optional .protocol.common.partner.DeviceIcons deviceIcons = 15;</code>
+       * <code>optional .protocol.common.partner.DeviceIcons device_icons = 15;</code>
        */
       public Builder mergeDeviceIcons(com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceIcons value) {
         if (deviceIconsBuilder_ == null) {
@@ -7886,7 +7886,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>optional .protocol.common.partner.DeviceIcons deviceIcons = 15;</code>
+       * <code>optional .protocol.common.partner.DeviceIcons device_icons = 15;</code>
        */
       public Builder clearDeviceIcons() {
         if (deviceIconsBuilder_ == null) {
@@ -7899,7 +7899,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>optional .protocol.common.partner.DeviceIcons deviceIcons = 15;</code>
+       * <code>optional .protocol.common.partner.DeviceIcons device_icons = 15;</code>
        */
       public com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceIcons.Builder getDeviceIconsBuilder() {
         bitField0_ |= 0x00004000;
@@ -7907,7 +7907,7 @@ public final class DeviceOuterClass {
         return getDeviceIconsFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .protocol.common.partner.DeviceIcons deviceIcons = 15;</code>
+       * <code>optional .protocol.common.partner.DeviceIcons device_icons = 15;</code>
        */
       public com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceIconsOrBuilder getDeviceIconsOrBuilder() {
         if (deviceIconsBuilder_ != null) {
@@ -7918,7 +7918,7 @@ public final class DeviceOuterClass {
         }
       }
       /**
-       * <code>optional .protocol.common.partner.DeviceIcons deviceIcons = 15;</code>
+       * <code>optional .protocol.common.partner.DeviceIcons device_icons = 15;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceIcons, com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceIcons.Builder, com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceIconsOrBuilder> 
@@ -8111,17 +8111,17 @@ public final class DeviceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required string deviceId = 1;</code>
+     * <code>required string device_id = 1;</code>
      * @return Whether the deviceId field is set.
      */
     boolean hasDeviceId();
     /**
-     * <code>required string deviceId = 1;</code>
+     * <code>required string device_id = 1;</code>
      * @return The deviceId.
      */
     java.lang.String getDeviceId();
     /**
-     * <code>required string deviceId = 1;</code>
+     * <code>required string device_id = 1;</code>
      * @return The bytes for deviceId.
      */
     com.google.protobuf.ByteString
@@ -8261,10 +8261,10 @@ public final class DeviceOuterClass {
     }
 
     private int bitField0_;
-    public static final int DEVICEID_FIELD_NUMBER = 1;
+    public static final int DEVICE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object deviceId_;
     /**
-     * <code>required string deviceId = 1;</code>
+     * <code>required string device_id = 1;</code>
      * @return Whether the deviceId field is set.
      */
     @java.lang.Override
@@ -8272,7 +8272,7 @@ public final class DeviceOuterClass {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>required string deviceId = 1;</code>
+     * <code>required string device_id = 1;</code>
      * @return The deviceId.
      */
     @java.lang.Override
@@ -8291,7 +8291,7 @@ public final class DeviceOuterClass {
       }
     }
     /**
-     * <code>required string deviceId = 1;</code>
+     * <code>required string device_id = 1;</code>
      * @return The bytes for deviceId.
      */
     @java.lang.Override
@@ -8471,7 +8471,7 @@ public final class DeviceOuterClass {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       if (hasDeviceId()) {
-        hash = (37 * hash) + DEVICEID_FIELD_NUMBER;
+        hash = (37 * hash) + DEVICE_ID_FIELD_NUMBER;
         hash = (53 * hash) + getDeviceId().hashCode();
       }
       if (hasValue()) {
@@ -8764,14 +8764,14 @@ public final class DeviceOuterClass {
 
       private java.lang.Object deviceId_ = "";
       /**
-       * <code>required string deviceId = 1;</code>
+       * <code>required string device_id = 1;</code>
        * @return Whether the deviceId field is set.
        */
       public boolean hasDeviceId() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>required string deviceId = 1;</code>
+       * <code>required string device_id = 1;</code>
        * @return The deviceId.
        */
       public java.lang.String getDeviceId() {
@@ -8789,7 +8789,7 @@ public final class DeviceOuterClass {
         }
       }
       /**
-       * <code>required string deviceId = 1;</code>
+       * <code>required string device_id = 1;</code>
        * @return The bytes for deviceId.
        */
       public com.google.protobuf.ByteString
@@ -8806,7 +8806,7 @@ public final class DeviceOuterClass {
         }
       }
       /**
-       * <code>required string deviceId = 1;</code>
+       * <code>required string device_id = 1;</code>
        * @param value The deviceId to set.
        * @return This builder for chaining.
        */
@@ -8821,7 +8821,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>required string deviceId = 1;</code>
+       * <code>required string device_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearDeviceId() {
@@ -8831,7 +8831,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>required string deviceId = 1;</code>
+       * <code>required string device_id = 1;</code>
        * @param value The bytes for deviceId to set.
        * @return This builder for chaining.
        */
@@ -9030,49 +9030,49 @@ public final class DeviceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required string deviceId = 1;</code>
+     * <code>required string device_id = 1;</code>
      * @return Whether the deviceId field is set.
      */
     boolean hasDeviceId();
     /**
-     * <code>required string deviceId = 1;</code>
+     * <code>required string device_id = 1;</code>
      * @return The deviceId.
      */
     java.lang.String getDeviceId();
     /**
-     * <code>required string deviceId = 1;</code>
+     * <code>required string device_id = 1;</code>
      * @return The bytes for deviceId.
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
 
     /**
-     * <code>required .protocol.common.partner.DeviceInfo deviceInfo = 2;</code>
+     * <code>required .protocol.common.partner.DeviceInfo device_info = 2;</code>
      * @return Whether the deviceInfo field is set.
      */
     boolean hasDeviceInfo();
     /**
-     * <code>required .protocol.common.partner.DeviceInfo deviceInfo = 2;</code>
+     * <code>required .protocol.common.partner.DeviceInfo device_info = 2;</code>
      * @return The deviceInfo.
      */
     com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceInfo getDeviceInfo();
     /**
-     * <code>required .protocol.common.partner.DeviceInfo deviceInfo = 2;</code>
+     * <code>required .protocol.common.partner.DeviceInfo device_info = 2;</code>
      */
     com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceInfoOrBuilder getDeviceInfoOrBuilder();
 
     /**
-     * <code>optional .protocol.common.partner.DeviceReachAbility reachAbility = 3;</code>
+     * <code>optional .protocol.common.partner.DeviceReachAbility reach_ability = 3;</code>
      * @return Whether the reachAbility field is set.
      */
     boolean hasReachAbility();
     /**
-     * <code>optional .protocol.common.partner.DeviceReachAbility reachAbility = 3;</code>
+     * <code>optional .protocol.common.partner.DeviceReachAbility reach_ability = 3;</code>
      * @return The reachAbility.
      */
     com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceReachAbility getReachAbility();
     /**
-     * <code>optional .protocol.common.partner.DeviceReachAbility reachAbility = 3;</code>
+     * <code>optional .protocol.common.partner.DeviceReachAbility reach_ability = 3;</code>
      */
     com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceReachAbilityOrBuilder getReachAbilityOrBuilder();
 
@@ -9229,10 +9229,10 @@ public final class DeviceOuterClass {
     }
 
     private int bitField0_;
-    public static final int DEVICEID_FIELD_NUMBER = 1;
+    public static final int DEVICE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object deviceId_;
     /**
-     * <code>required string deviceId = 1;</code>
+     * <code>required string device_id = 1;</code>
      * @return Whether the deviceId field is set.
      */
     @java.lang.Override
@@ -9240,7 +9240,7 @@ public final class DeviceOuterClass {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>required string deviceId = 1;</code>
+     * <code>required string device_id = 1;</code>
      * @return The deviceId.
      */
     @java.lang.Override
@@ -9259,7 +9259,7 @@ public final class DeviceOuterClass {
       }
     }
     /**
-     * <code>required string deviceId = 1;</code>
+     * <code>required string device_id = 1;</code>
      * @return The bytes for deviceId.
      */
     @java.lang.Override
@@ -9277,10 +9277,10 @@ public final class DeviceOuterClass {
       }
     }
 
-    public static final int DEVICEINFO_FIELD_NUMBER = 2;
+    public static final int DEVICE_INFO_FIELD_NUMBER = 2;
     private com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceInfo deviceInfo_;
     /**
-     * <code>required .protocol.common.partner.DeviceInfo deviceInfo = 2;</code>
+     * <code>required .protocol.common.partner.DeviceInfo device_info = 2;</code>
      * @return Whether the deviceInfo field is set.
      */
     @java.lang.Override
@@ -9288,7 +9288,7 @@ public final class DeviceOuterClass {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>required .protocol.common.partner.DeviceInfo deviceInfo = 2;</code>
+     * <code>required .protocol.common.partner.DeviceInfo device_info = 2;</code>
      * @return The deviceInfo.
      */
     @java.lang.Override
@@ -9296,17 +9296,17 @@ public final class DeviceOuterClass {
       return deviceInfo_ == null ? com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceInfo.getDefaultInstance() : deviceInfo_;
     }
     /**
-     * <code>required .protocol.common.partner.DeviceInfo deviceInfo = 2;</code>
+     * <code>required .protocol.common.partner.DeviceInfo device_info = 2;</code>
      */
     @java.lang.Override
     public com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceInfoOrBuilder getDeviceInfoOrBuilder() {
       return deviceInfo_ == null ? com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceInfo.getDefaultInstance() : deviceInfo_;
     }
 
-    public static final int REACHABILITY_FIELD_NUMBER = 3;
+    public static final int REACH_ABILITY_FIELD_NUMBER = 3;
     private com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceReachAbility reachAbility_;
     /**
-     * <code>optional .protocol.common.partner.DeviceReachAbility reachAbility = 3;</code>
+     * <code>optional .protocol.common.partner.DeviceReachAbility reach_ability = 3;</code>
      * @return Whether the reachAbility field is set.
      */
     @java.lang.Override
@@ -9314,7 +9314,7 @@ public final class DeviceOuterClass {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>optional .protocol.common.partner.DeviceReachAbility reachAbility = 3;</code>
+     * <code>optional .protocol.common.partner.DeviceReachAbility reach_ability = 3;</code>
      * @return The reachAbility.
      */
     @java.lang.Override
@@ -9322,7 +9322,7 @@ public final class DeviceOuterClass {
       return reachAbility_ == null ? com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceReachAbility.getDefaultInstance() : reachAbility_;
     }
     /**
-     * <code>optional .protocol.common.partner.DeviceReachAbility reachAbility = 3;</code>
+     * <code>optional .protocol.common.partner.DeviceReachAbility reach_ability = 3;</code>
      */
     @java.lang.Override
     public com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceReachAbilityOrBuilder getReachAbilityOrBuilder() {
@@ -9487,15 +9487,15 @@ public final class DeviceOuterClass {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       if (hasDeviceId()) {
-        hash = (37 * hash) + DEVICEID_FIELD_NUMBER;
+        hash = (37 * hash) + DEVICE_ID_FIELD_NUMBER;
         hash = (53 * hash) + getDeviceId().hashCode();
       }
       if (hasDeviceInfo()) {
-        hash = (37 * hash) + DEVICEINFO_FIELD_NUMBER;
+        hash = (37 * hash) + DEVICE_INFO_FIELD_NUMBER;
         hash = (53 * hash) + getDeviceInfo().hashCode();
       }
       if (hasReachAbility()) {
-        hash = (37 * hash) + REACHABILITY_FIELD_NUMBER;
+        hash = (37 * hash) + REACH_ABILITY_FIELD_NUMBER;
         hash = (53 * hash) + getReachAbility().hashCode();
       }
       if (getPropertiesCount() > 0) {
@@ -9856,14 +9856,14 @@ public final class DeviceOuterClass {
 
       private java.lang.Object deviceId_ = "";
       /**
-       * <code>required string deviceId = 1;</code>
+       * <code>required string device_id = 1;</code>
        * @return Whether the deviceId field is set.
        */
       public boolean hasDeviceId() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>required string deviceId = 1;</code>
+       * <code>required string device_id = 1;</code>
        * @return The deviceId.
        */
       public java.lang.String getDeviceId() {
@@ -9881,7 +9881,7 @@ public final class DeviceOuterClass {
         }
       }
       /**
-       * <code>required string deviceId = 1;</code>
+       * <code>required string device_id = 1;</code>
        * @return The bytes for deviceId.
        */
       public com.google.protobuf.ByteString
@@ -9898,7 +9898,7 @@ public final class DeviceOuterClass {
         }
       }
       /**
-       * <code>required string deviceId = 1;</code>
+       * <code>required string device_id = 1;</code>
        * @param value The deviceId to set.
        * @return This builder for chaining.
        */
@@ -9913,7 +9913,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>required string deviceId = 1;</code>
+       * <code>required string device_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearDeviceId() {
@@ -9923,7 +9923,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>required string deviceId = 1;</code>
+       * <code>required string device_id = 1;</code>
        * @param value The bytes for deviceId to set.
        * @return This builder for chaining.
        */
@@ -9942,14 +9942,14 @@ public final class DeviceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceInfo, com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceInfo.Builder, com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceInfoOrBuilder> deviceInfoBuilder_;
       /**
-       * <code>required .protocol.common.partner.DeviceInfo deviceInfo = 2;</code>
+       * <code>required .protocol.common.partner.DeviceInfo device_info = 2;</code>
        * @return Whether the deviceInfo field is set.
        */
       public boolean hasDeviceInfo() {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>required .protocol.common.partner.DeviceInfo deviceInfo = 2;</code>
+       * <code>required .protocol.common.partner.DeviceInfo device_info = 2;</code>
        * @return The deviceInfo.
        */
       public com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceInfo getDeviceInfo() {
@@ -9960,7 +9960,7 @@ public final class DeviceOuterClass {
         }
       }
       /**
-       * <code>required .protocol.common.partner.DeviceInfo deviceInfo = 2;</code>
+       * <code>required .protocol.common.partner.DeviceInfo device_info = 2;</code>
        */
       public Builder setDeviceInfo(com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceInfo value) {
         if (deviceInfoBuilder_ == null) {
@@ -9976,7 +9976,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>required .protocol.common.partner.DeviceInfo deviceInfo = 2;</code>
+       * <code>required .protocol.common.partner.DeviceInfo device_info = 2;</code>
        */
       public Builder setDeviceInfo(
           com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceInfo.Builder builderForValue) {
@@ -9990,7 +9990,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>required .protocol.common.partner.DeviceInfo deviceInfo = 2;</code>
+       * <code>required .protocol.common.partner.DeviceInfo device_info = 2;</code>
        */
       public Builder mergeDeviceInfo(com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceInfo value) {
         if (deviceInfoBuilder_ == null) {
@@ -10010,7 +10010,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>required .protocol.common.partner.DeviceInfo deviceInfo = 2;</code>
+       * <code>required .protocol.common.partner.DeviceInfo device_info = 2;</code>
        */
       public Builder clearDeviceInfo() {
         if (deviceInfoBuilder_ == null) {
@@ -10023,7 +10023,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>required .protocol.common.partner.DeviceInfo deviceInfo = 2;</code>
+       * <code>required .protocol.common.partner.DeviceInfo device_info = 2;</code>
        */
       public com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceInfo.Builder getDeviceInfoBuilder() {
         bitField0_ |= 0x00000002;
@@ -10031,7 +10031,7 @@ public final class DeviceOuterClass {
         return getDeviceInfoFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .protocol.common.partner.DeviceInfo deviceInfo = 2;</code>
+       * <code>required .protocol.common.partner.DeviceInfo device_info = 2;</code>
        */
       public com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceInfoOrBuilder getDeviceInfoOrBuilder() {
         if (deviceInfoBuilder_ != null) {
@@ -10042,7 +10042,7 @@ public final class DeviceOuterClass {
         }
       }
       /**
-       * <code>required .protocol.common.partner.DeviceInfo deviceInfo = 2;</code>
+       * <code>required .protocol.common.partner.DeviceInfo device_info = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceInfo, com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceInfo.Builder, com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceInfoOrBuilder> 
@@ -10062,14 +10062,14 @@ public final class DeviceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceReachAbility, com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceReachAbility.Builder, com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceReachAbilityOrBuilder> reachAbilityBuilder_;
       /**
-       * <code>optional .protocol.common.partner.DeviceReachAbility reachAbility = 3;</code>
+       * <code>optional .protocol.common.partner.DeviceReachAbility reach_ability = 3;</code>
        * @return Whether the reachAbility field is set.
        */
       public boolean hasReachAbility() {
         return ((bitField0_ & 0x00000004) != 0);
       }
       /**
-       * <code>optional .protocol.common.partner.DeviceReachAbility reachAbility = 3;</code>
+       * <code>optional .protocol.common.partner.DeviceReachAbility reach_ability = 3;</code>
        * @return The reachAbility.
        */
       public com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceReachAbility getReachAbility() {
@@ -10080,7 +10080,7 @@ public final class DeviceOuterClass {
         }
       }
       /**
-       * <code>optional .protocol.common.partner.DeviceReachAbility reachAbility = 3;</code>
+       * <code>optional .protocol.common.partner.DeviceReachAbility reach_ability = 3;</code>
        */
       public Builder setReachAbility(com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceReachAbility value) {
         if (reachAbilityBuilder_ == null) {
@@ -10096,7 +10096,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>optional .protocol.common.partner.DeviceReachAbility reachAbility = 3;</code>
+       * <code>optional .protocol.common.partner.DeviceReachAbility reach_ability = 3;</code>
        */
       public Builder setReachAbility(
           com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceReachAbility.Builder builderForValue) {
@@ -10110,7 +10110,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>optional .protocol.common.partner.DeviceReachAbility reachAbility = 3;</code>
+       * <code>optional .protocol.common.partner.DeviceReachAbility reach_ability = 3;</code>
        */
       public Builder mergeReachAbility(com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceReachAbility value) {
         if (reachAbilityBuilder_ == null) {
@@ -10130,7 +10130,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>optional .protocol.common.partner.DeviceReachAbility reachAbility = 3;</code>
+       * <code>optional .protocol.common.partner.DeviceReachAbility reach_ability = 3;</code>
        */
       public Builder clearReachAbility() {
         if (reachAbilityBuilder_ == null) {
@@ -10143,7 +10143,7 @@ public final class DeviceOuterClass {
         return this;
       }
       /**
-       * <code>optional .protocol.common.partner.DeviceReachAbility reachAbility = 3;</code>
+       * <code>optional .protocol.common.partner.DeviceReachAbility reach_ability = 3;</code>
        */
       public com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceReachAbility.Builder getReachAbilityBuilder() {
         bitField0_ |= 0x00000004;
@@ -10151,7 +10151,7 @@ public final class DeviceOuterClass {
         return getReachAbilityFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .protocol.common.partner.DeviceReachAbility reachAbility = 3;</code>
+       * <code>optional .protocol.common.partner.DeviceReachAbility reach_ability = 3;</code>
        */
       public com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceReachAbilityOrBuilder getReachAbilityOrBuilder() {
         if (reachAbilityBuilder_ != null) {
@@ -10162,7 +10162,7 @@ public final class DeviceOuterClass {
         }
       }
       /**
-       * <code>optional .protocol.common.partner.DeviceReachAbility reachAbility = 3;</code>
+       * <code>optional .protocol.common.partner.DeviceReachAbility reach_ability = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceReachAbility, com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceReachAbility.Builder, com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceReachAbilityOrBuilder> 
@@ -10533,48 +10533,49 @@ public final class DeviceOuterClass {
       "rotocol.common.partner.ConnectionAddress" +
       "\"2\n\013Geolocation\022\021\n\tlongitude\030\001 \002(\002\022\020\n\010la" +
       "titude\030\002 \002(\002\"\'\n\010Location\022\014\n\004room\030\001 \002(\t\022\r" +
-      "\n\005floor\030\002 \002(\005\"3\n\020FirmwareVersions\022\022\n\nwif" +
-      "iModule\030\001 \002(\t\022\013\n\003mcu\030\002 \002(\005\")\n\013DeviceIcon" +
-      "s\022\014\n\004dp32\030\001 \001(\t\022\014\n\004dp64\030\002 \001(\t\"\263\004\n\nDevice" +
-      "Info\022\020\n\010deviceId\030\001 \002(\t\022\022\n\ndeviceName\030\002 \001" +
-      "(\t\022\r\n\005tslId\030\003 \001(\t\0227\n\ndeviceType\030\004 \001(\0162#." +
-      "protocol.common.partner.DeviceType\022\020\n\010te" +
-      "nantId\030\005 \001(\t\022\026\n\016manufacturerId\030\006 \001(\t\022\r\n\005" +
-      "model\030\007 \001(\t\022\020\n\010parentId\030\010 \001(\t\022\020\n\010serialN" +
-      "o\030\t \001(\t\022\013\n\003mac\030\n \001(\t\0228\n\013connections\030\013 \003(" +
-      "\0132#.protocol.common.partner.Connection\0229" +
-      "\n\013geolocation\030\014 \001(\0132$.protocol.common.pa" +
-      "rtner.Geolocation\0223\n\010location\030\r \001(\0132!.pr" +
-      "otocol.common.partner.Location\022C\n\020firmwa" +
-      "reVersions\030\016 \001(\0132).protocol.common.partn" +
-      "er.FirmwareVersions\0229\n\013deviceIcons\030\017 \001(\013" +
-      "2$.protocol.common.partner.DeviceIcons\022#" +
-      "\n\005extra\030\020 \001(\0132\024.google.protobuf.Any\"z\n\022D" +
-      "eviceReachAbility\022\020\n\010deviceId\030\001 \002(\t\022?\n\005v" +
-      "alue\030\002 \002(\01620.protocol.common.partner.Dev" +
-      "iceReachAbilityValue\022\021\n\ttimestamp\030\003 \002(\t\"" +
-      "\316\001\n\006Device\022\020\n\010deviceId\030\001 \002(\t\0227\n\ndeviceIn" +
-      "fo\030\002 \002(\0132#.protocol.common.partner.Devic" +
-      "eInfo\022A\n\014reachAbility\030\003 \001(\0132+.protocol.c" +
-      "ommon.partner.DeviceReachAbility\0226\n\nprop" +
-      "erties\030\004 \003(\0132\".protocol.common.tsl.TSLCa" +
-      "pability*\361\001\n\nDeviceType\022\027\n\023DEVICE_TYPE_U" +
-      "NKNOWN\020\000\022\037\n\033DEVICE_TYPE_AIR_CONDITIONER\020" +
-      "\001\022\033\n\027DEVICE_TYPE_AIR_CLEANER\020\002\022\036\n\032DEVICE" +
-      "_TYPE_WATER_PURIFIER\020\003\022\032\n\026DEVICE_TYPE_TE" +
-      "LEVISION\020\004\022\025\n\021DEVICE_TYPE_PHONE\020\005\022!\n\035DEV" +
-      "ICE_TYPE_PERSONAL_COMPUTER\020\006\022\026\n\022DEVICE_T" +
-      "YPE_SOCKET\020\007*\324\001\n\016ConnectionType\022\033\n\027CONNE" +
-      "CTION_TYPE_UNKNOWN\020\000\022\030\n\024CONNECTION_TYPE_" +
-      "WIFI\020\001\022\034\n\030CONNECTION_TYPE_CELLULAR\020\002\022\033\n\027" +
-      "CONNECTION_TYPE_ZIG_BEE\020\003\022\032\n\026CONNECTION_" +
-      "TYPE_Z_WAVE\020\004\022\030\n\024CONNECTION_TYPE_LORA\020\005\022" +
-      "\032\n\026CONNECTION_TYPE_NB_IOT\020\006*\220\001\n\027DeviceRe" +
-      "achAbilityValue\022&\n\"DEVICE_REACH_ABILITY_" +
-      "VALUE_UNKNOWN\020\000\022%\n!DEVICE_REACH_ABILITY_" +
-      "VALUE_ONLINE\020\001\022&\n\"DEVICE_REACH_ABILITY_V" +
-      "ALUE_OFFLINE\020\002B>\n\035com.tcl.gaia.protocol." +
-      "partnerZ\035tcl.com/gaia/protocol/partner"
+      "\n\005floor\030\002 \002(\005\"4\n\020FirmwareVersions\022\023\n\013wif" +
+      "i_module\030\001 \002(\t\022\013\n\003mcu\030\002 \002(\005\")\n\013DeviceIco" +
+      "ns\022\014\n\004dp32\030\001 \001(\t\022\014\n\004dp64\030\002 \001(\t\"\275\004\n\nDevic" +
+      "eInfo\022\021\n\tdevice_id\030\001 \002(\t\022\023\n\013device_name\030" +
+      "\002 \001(\t\022\016\n\006tsl_id\030\003 \001(\t\0228\n\013device_type\030\004 \001" +
+      "(\0162#.protocol.common.partner.DeviceType\022" +
+      "\021\n\ttenant_id\030\005 \001(\t\022\027\n\017manufacturer_id\030\006 " +
+      "\001(\t\022\r\n\005model\030\007 \001(\t\022\021\n\tparent_id\030\010 \001(\t\022\021\n" +
+      "\tserial_no\030\t \001(\t\022\013\n\003mac\030\n \001(\t\0228\n\013connect" +
+      "ions\030\013 \003(\0132#.protocol.common.partner.Con" +
+      "nection\0229\n\013geolocation\030\014 \001(\0132$.protocol." +
+      "common.partner.Geolocation\0223\n\010location\030\r" +
+      " \001(\0132!.protocol.common.partner.Location\022" +
+      "D\n\021firmware_versions\030\016 \001(\0132).protocol.co" +
+      "mmon.partner.FirmwareVersions\022:\n\014device_" +
+      "icons\030\017 \001(\0132$.protocol.common.partner.De" +
+      "viceIcons\022#\n\005extra\030\020 \001(\0132\024.google.protob" +
+      "uf.Any\"{\n\022DeviceReachAbility\022\021\n\tdevice_i" +
+      "d\030\001 \002(\t\022?\n\005value\030\002 \002(\01620.protocol.common" +
+      ".partner.DeviceReachAbilityValue\022\021\n\ttime" +
+      "stamp\030\003 \002(\t\"\321\001\n\006Device\022\021\n\tdevice_id\030\001 \002(" +
+      "\t\0228\n\013device_info\030\002 \002(\0132#.protocol.common" +
+      ".partner.DeviceInfo\022B\n\rreach_ability\030\003 \001" +
+      "(\0132+.protocol.common.partner.DeviceReach" +
+      "Ability\0226\n\nproperties\030\004 \003(\0132\".protocol.c" +
+      "ommon.tsl.TSLCapability*\361\001\n\nDeviceType\022\027" +
+      "\n\023DEVICE_TYPE_UNKNOWN\020\000\022\037\n\033DEVICE_TYPE_A" +
+      "IR_CONDITIONER\020\001\022\033\n\027DEVICE_TYPE_AIR_CLEA" +
+      "NER\020\002\022\036\n\032DEVICE_TYPE_WATER_PURIFIER\020\003\022\032\n" +
+      "\026DEVICE_TYPE_TELEVISION\020\004\022\025\n\021DEVICE_TYPE" +
+      "_PHONE\020\005\022!\n\035DEVICE_TYPE_PERSONAL_COMPUTE" +
+      "R\020\006\022\026\n\022DEVICE_TYPE_SOCKET\020\007*\324\001\n\016Connecti" +
+      "onType\022\033\n\027CONNECTION_TYPE_UNKNOWN\020\000\022\030\n\024C" +
+      "ONNECTION_TYPE_WIFI\020\001\022\034\n\030CONNECTION_TYPE" +
+      "_CELLULAR\020\002\022\033\n\027CONNECTION_TYPE_ZIG_BEE\020\003" +
+      "\022\032\n\026CONNECTION_TYPE_Z_WAVE\020\004\022\030\n\024CONNECTI" +
+      "ON_TYPE_LORA\020\005\022\032\n\026CONNECTION_TYPE_NB_IOT" +
+      "\020\006*\220\001\n\027DeviceReachAbilityValue\022&\n\"DEVICE" +
+      "_REACH_ABILITY_VALUE_UNKNOWN\020\000\022%\n!DEVICE" +
+      "_REACH_ABILITY_VALUE_ONLINE\020\001\022&\n\"DEVICE_" +
+      "REACH_ABILITY_VALUE_OFFLINE\020\002B>\n\035com.tcl" +
+      ".gaia.protocol.partnerZ\035tcl.com/gaia/pro" +
+      "tocol/partner"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

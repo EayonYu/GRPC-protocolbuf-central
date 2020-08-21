@@ -123,33 +123,129 @@ public final class UserOuterClass {
     // @@protoc_insertion_point(enum_scope:protocol.common.partner.AccountSystemId)
   }
 
+  /**
+   * Protobuf enum {@code protocol.common.partner.IDType}
+   */
+  public enum IDType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>ID_TYPE_INT = 0;</code>
+     */
+    ID_TYPE_INT(0),
+    /**
+     * <code>ID_TYPE_STRING = 1;</code>
+     */
+    ID_TYPE_STRING(1),
+    ;
+
+    /**
+     * <code>ID_TYPE_INT = 0;</code>
+     */
+    public static final int ID_TYPE_INT_VALUE = 0;
+    /**
+     * <code>ID_TYPE_STRING = 1;</code>
+     */
+    public static final int ID_TYPE_STRING_VALUE = 1;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static IDType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static IDType forNumber(int value) {
+      switch (value) {
+        case 0: return ID_TYPE_INT;
+        case 1: return ID_TYPE_STRING;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<IDType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        IDType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<IDType>() {
+            public IDType findValueByNumber(int number) {
+              return IDType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.tcl.gaia.protocol.partner.UserOuterClass.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final IDType[] VALUES = values();
+
+    public static IDType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private IDType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:protocol.common.partner.IDType)
+  }
+
   public interface LoginDetailsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:protocol.common.partner.LoginDetails)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required .protocol.common.partner.AccountSystemId accountSystemId = 1;</code>
+     * <code>required .protocol.common.partner.AccountSystemId account_system_id = 1;</code>
      * @return Whether the accountSystemId field is set.
      */
     boolean hasAccountSystemId();
     /**
-     * <code>required .protocol.common.partner.AccountSystemId accountSystemId = 1;</code>
+     * <code>required .protocol.common.partner.AccountSystemId account_system_id = 1;</code>
      * @return The accountSystemId.
      */
     com.tcl.gaia.protocol.partner.UserOuterClass.AccountSystemId getAccountSystemId();
 
     /**
-     * <code>required string loginAccountId = 2;</code>
+     * <code>required string login_account_id = 2;</code>
      * @return Whether the loginAccountId field is set.
      */
     boolean hasLoginAccountId();
     /**
-     * <code>required string loginAccountId = 2;</code>
+     * <code>required string login_account_id = 2;</code>
      * @return The loginAccountId.
      */
     java.lang.String getLoginAccountId();
     /**
-     * <code>required string loginAccountId = 2;</code>
+     * <code>required string login_account_id = 2;</code>
      * @return The bytes for loginAccountId.
      */
     com.google.protobuf.ByteString
@@ -254,17 +350,17 @@ public final class UserOuterClass {
     }
 
     private int bitField0_;
-    public static final int ACCOUNTSYSTEMID_FIELD_NUMBER = 1;
+    public static final int ACCOUNT_SYSTEM_ID_FIELD_NUMBER = 1;
     private int accountSystemId_;
     /**
-     * <code>required .protocol.common.partner.AccountSystemId accountSystemId = 1;</code>
+     * <code>required .protocol.common.partner.AccountSystemId account_system_id = 1;</code>
      * @return Whether the accountSystemId field is set.
      */
     @java.lang.Override public boolean hasAccountSystemId() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>required .protocol.common.partner.AccountSystemId accountSystemId = 1;</code>
+     * <code>required .protocol.common.partner.AccountSystemId account_system_id = 1;</code>
      * @return The accountSystemId.
      */
     @java.lang.Override public com.tcl.gaia.protocol.partner.UserOuterClass.AccountSystemId getAccountSystemId() {
@@ -273,10 +369,10 @@ public final class UserOuterClass {
       return result == null ? com.tcl.gaia.protocol.partner.UserOuterClass.AccountSystemId.TCL_SSO : result;
     }
 
-    public static final int LOGINACCOUNTID_FIELD_NUMBER = 2;
+    public static final int LOGIN_ACCOUNT_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object loginAccountId_;
     /**
-     * <code>required string loginAccountId = 2;</code>
+     * <code>required string login_account_id = 2;</code>
      * @return Whether the loginAccountId field is set.
      */
     @java.lang.Override
@@ -284,7 +380,7 @@ public final class UserOuterClass {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>required string loginAccountId = 2;</code>
+     * <code>required string login_account_id = 2;</code>
      * @return The loginAccountId.
      */
     @java.lang.Override
@@ -303,7 +399,7 @@ public final class UserOuterClass {
       }
     }
     /**
-     * <code>required string loginAccountId = 2;</code>
+     * <code>required string login_account_id = 2;</code>
      * @return The bytes for loginAccountId.
      */
     @java.lang.Override
@@ -401,11 +497,11 @@ public final class UserOuterClass {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       if (hasAccountSystemId()) {
-        hash = (37 * hash) + ACCOUNTSYSTEMID_FIELD_NUMBER;
+        hash = (37 * hash) + ACCOUNT_SYSTEM_ID_FIELD_NUMBER;
         hash = (53 * hash) + accountSystemId_;
       }
       if (hasLoginAccountId()) {
-        hash = (37 * hash) + LOGINACCOUNTID_FIELD_NUMBER;
+        hash = (37 * hash) + LOGIN_ACCOUNT_ID_FIELD_NUMBER;
         hash = (53 * hash) + getLoginAccountId().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
@@ -676,14 +772,14 @@ public final class UserOuterClass {
 
       private int accountSystemId_ = 0;
       /**
-       * <code>required .protocol.common.partner.AccountSystemId accountSystemId = 1;</code>
+       * <code>required .protocol.common.partner.AccountSystemId account_system_id = 1;</code>
        * @return Whether the accountSystemId field is set.
        */
       @java.lang.Override public boolean hasAccountSystemId() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>required .protocol.common.partner.AccountSystemId accountSystemId = 1;</code>
+       * <code>required .protocol.common.partner.AccountSystemId account_system_id = 1;</code>
        * @return The accountSystemId.
        */
       @java.lang.Override
@@ -693,7 +789,7 @@ public final class UserOuterClass {
         return result == null ? com.tcl.gaia.protocol.partner.UserOuterClass.AccountSystemId.TCL_SSO : result;
       }
       /**
-       * <code>required .protocol.common.partner.AccountSystemId accountSystemId = 1;</code>
+       * <code>required .protocol.common.partner.AccountSystemId account_system_id = 1;</code>
        * @param value The accountSystemId to set.
        * @return This builder for chaining.
        */
@@ -707,7 +803,7 @@ public final class UserOuterClass {
         return this;
       }
       /**
-       * <code>required .protocol.common.partner.AccountSystemId accountSystemId = 1;</code>
+       * <code>required .protocol.common.partner.AccountSystemId account_system_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearAccountSystemId() {
@@ -719,14 +815,14 @@ public final class UserOuterClass {
 
       private java.lang.Object loginAccountId_ = "";
       /**
-       * <code>required string loginAccountId = 2;</code>
+       * <code>required string login_account_id = 2;</code>
        * @return Whether the loginAccountId field is set.
        */
       public boolean hasLoginAccountId() {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>required string loginAccountId = 2;</code>
+       * <code>required string login_account_id = 2;</code>
        * @return The loginAccountId.
        */
       public java.lang.String getLoginAccountId() {
@@ -744,7 +840,7 @@ public final class UserOuterClass {
         }
       }
       /**
-       * <code>required string loginAccountId = 2;</code>
+       * <code>required string login_account_id = 2;</code>
        * @return The bytes for loginAccountId.
        */
       public com.google.protobuf.ByteString
@@ -761,7 +857,7 @@ public final class UserOuterClass {
         }
       }
       /**
-       * <code>required string loginAccountId = 2;</code>
+       * <code>required string login_account_id = 2;</code>
        * @param value The loginAccountId to set.
        * @return This builder for chaining.
        */
@@ -776,7 +872,7 @@ public final class UserOuterClass {
         return this;
       }
       /**
-       * <code>required string loginAccountId = 2;</code>
+       * <code>required string login_account_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearLoginAccountId() {
@@ -786,7 +882,7 @@ public final class UserOuterClass {
         return this;
       }
       /**
-       * <code>required string loginAccountId = 2;</code>
+       * <code>required string login_account_id = 2;</code>
        * @param value The bytes for loginAccountId to set.
        * @return This builder for chaining.
        */
@@ -858,93 +954,87 @@ public final class UserOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required string userId = 1;</code>
+     * <code>required int32 user_id = 1;</code>
      * @return Whether the userId field is set.
      */
     boolean hasUserId();
     /**
-     * <code>required string userId = 1;</code>
+     * <code>required int32 user_id = 1;</code>
      * @return The userId.
      */
-    java.lang.String getUserId();
-    /**
-     * <code>required string userId = 1;</code>
-     * @return The bytes for userId.
-     */
-    com.google.protobuf.ByteString
-        getUserIdBytes();
+    int getUserId();
 
     /**
-     * <code>optional string tenantId = 2;</code>
+     * <code>optional string tenant_id = 2;</code>
      * @return Whether the tenantId field is set.
      */
     boolean hasTenantId();
     /**
-     * <code>optional string tenantId = 2;</code>
+     * <code>optional string tenant_id = 2;</code>
      * @return The tenantId.
      */
     java.lang.String getTenantId();
     /**
-     * <code>optional string tenantId = 2;</code>
+     * <code>optional string tenant_id = 2;</code>
      * @return The bytes for tenantId.
      */
     com.google.protobuf.ByteString
         getTenantIdBytes();
 
     /**
-     * <code>optional string immutableIdentity = 3;</code>
+     * <code>optional string immutable_identity = 3;</code>
      * @return Whether the immutableIdentity field is set.
      */
     boolean hasImmutableIdentity();
     /**
-     * <code>optional string immutableIdentity = 3;</code>
+     * <code>optional string immutable_identity = 3;</code>
      * @return The immutableIdentity.
      */
     java.lang.String getImmutableIdentity();
     /**
-     * <code>optional string immutableIdentity = 3;</code>
+     * <code>optional string immutable_identity = 3;</code>
      * @return The bytes for immutableIdentity.
      */
     com.google.protobuf.ByteString
         getImmutableIdentityBytes();
 
     /**
-     * <code>optional string userName = 4;</code>
+     * <code>optional string user_name = 4;</code>
      * @return Whether the userName field is set.
      */
     boolean hasUserName();
     /**
-     * <code>optional string userName = 4;</code>
+     * <code>optional string user_name = 4;</code>
      * @return The userName.
      */
     java.lang.String getUserName();
     /**
-     * <code>optional string userName = 4;</code>
+     * <code>optional string user_name = 4;</code>
      * @return The bytes for userName.
      */
     com.google.protobuf.ByteString
         getUserNameBytes();
 
     /**
-     * <code>repeated .protocol.common.partner.LoginDetails loginDetails = 5;</code>
+     * <code>repeated .protocol.common.partner.LoginDetails login_details = 5;</code>
      */
     java.util.List<com.tcl.gaia.protocol.partner.UserOuterClass.LoginDetails> 
         getLoginDetailsList();
     /**
-     * <code>repeated .protocol.common.partner.LoginDetails loginDetails = 5;</code>
+     * <code>repeated .protocol.common.partner.LoginDetails login_details = 5;</code>
      */
     com.tcl.gaia.protocol.partner.UserOuterClass.LoginDetails getLoginDetails(int index);
     /**
-     * <code>repeated .protocol.common.partner.LoginDetails loginDetails = 5;</code>
+     * <code>repeated .protocol.common.partner.LoginDetails login_details = 5;</code>
      */
     int getLoginDetailsCount();
     /**
-     * <code>repeated .protocol.common.partner.LoginDetails loginDetails = 5;</code>
+     * <code>repeated .protocol.common.partner.LoginDetails login_details = 5;</code>
      */
     java.util.List<? extends com.tcl.gaia.protocol.partner.UserOuterClass.LoginDetailsOrBuilder> 
         getLoginDetailsOrBuilderList();
     /**
-     * <code>repeated .protocol.common.partner.LoginDetails loginDetails = 5;</code>
+     * <code>repeated .protocol.common.partner.LoginDetails login_details = 5;</code>
      */
     com.tcl.gaia.protocol.partner.UserOuterClass.LoginDetailsOrBuilder getLoginDetailsOrBuilder(
         int index);
@@ -977,7 +1067,6 @@ public final class UserOuterClass {
       super(builder);
     }
     private User() {
-      userId_ = "";
       tenantId_ = "";
       immutableIdentity_ = "";
       userName_ = "";
@@ -1015,10 +1104,9 @@ public final class UserOuterClass {
             case 0:
               done = true;
               break;
-            case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+            case 8: {
               bitField0_ |= 0x00000001;
-              userId_ = bs;
+              userId_ = input.readInt32();
               break;
             }
             case 18: {
@@ -1097,10 +1185,10 @@ public final class UserOuterClass {
     }
 
     private int bitField0_;
-    public static final int USERID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object userId_;
+    public static final int USER_ID_FIELD_NUMBER = 1;
+    private int userId_;
     /**
-     * <code>required string userId = 1;</code>
+     * <code>required int32 user_id = 1;</code>
      * @return Whether the userId field is set.
      */
     @java.lang.Override
@@ -1108,47 +1196,18 @@ public final class UserOuterClass {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>required string userId = 1;</code>
+     * <code>required int32 user_id = 1;</code>
      * @return The userId.
      */
     @java.lang.Override
-    public java.lang.String getUserId() {
-      java.lang.Object ref = userId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          userId_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>required string userId = 1;</code>
-     * @return The bytes for userId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getUserIdBytes() {
-      java.lang.Object ref = userId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        userId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public int getUserId() {
+      return userId_;
     }
 
-    public static final int TENANTID_FIELD_NUMBER = 2;
+    public static final int TENANT_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object tenantId_;
     /**
-     * <code>optional string tenantId = 2;</code>
+     * <code>optional string tenant_id = 2;</code>
      * @return Whether the tenantId field is set.
      */
     @java.lang.Override
@@ -1156,7 +1215,7 @@ public final class UserOuterClass {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>optional string tenantId = 2;</code>
+     * <code>optional string tenant_id = 2;</code>
      * @return The tenantId.
      */
     @java.lang.Override
@@ -1175,7 +1234,7 @@ public final class UserOuterClass {
       }
     }
     /**
-     * <code>optional string tenantId = 2;</code>
+     * <code>optional string tenant_id = 2;</code>
      * @return The bytes for tenantId.
      */
     @java.lang.Override
@@ -1193,10 +1252,10 @@ public final class UserOuterClass {
       }
     }
 
-    public static final int IMMUTABLEIDENTITY_FIELD_NUMBER = 3;
+    public static final int IMMUTABLE_IDENTITY_FIELD_NUMBER = 3;
     private volatile java.lang.Object immutableIdentity_;
     /**
-     * <code>optional string immutableIdentity = 3;</code>
+     * <code>optional string immutable_identity = 3;</code>
      * @return Whether the immutableIdentity field is set.
      */
     @java.lang.Override
@@ -1204,7 +1263,7 @@ public final class UserOuterClass {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>optional string immutableIdentity = 3;</code>
+     * <code>optional string immutable_identity = 3;</code>
      * @return The immutableIdentity.
      */
     @java.lang.Override
@@ -1223,7 +1282,7 @@ public final class UserOuterClass {
       }
     }
     /**
-     * <code>optional string immutableIdentity = 3;</code>
+     * <code>optional string immutable_identity = 3;</code>
      * @return The bytes for immutableIdentity.
      */
     @java.lang.Override
@@ -1241,10 +1300,10 @@ public final class UserOuterClass {
       }
     }
 
-    public static final int USERNAME_FIELD_NUMBER = 4;
+    public static final int USER_NAME_FIELD_NUMBER = 4;
     private volatile java.lang.Object userName_;
     /**
-     * <code>optional string userName = 4;</code>
+     * <code>optional string user_name = 4;</code>
      * @return Whether the userName field is set.
      */
     @java.lang.Override
@@ -1252,7 +1311,7 @@ public final class UserOuterClass {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <code>optional string userName = 4;</code>
+     * <code>optional string user_name = 4;</code>
      * @return The userName.
      */
     @java.lang.Override
@@ -1271,7 +1330,7 @@ public final class UserOuterClass {
       }
     }
     /**
-     * <code>optional string userName = 4;</code>
+     * <code>optional string user_name = 4;</code>
      * @return The bytes for userName.
      */
     @java.lang.Override
@@ -1289,17 +1348,17 @@ public final class UserOuterClass {
       }
     }
 
-    public static final int LOGINDETAILS_FIELD_NUMBER = 5;
+    public static final int LOGIN_DETAILS_FIELD_NUMBER = 5;
     private java.util.List<com.tcl.gaia.protocol.partner.UserOuterClass.LoginDetails> loginDetails_;
     /**
-     * <code>repeated .protocol.common.partner.LoginDetails loginDetails = 5;</code>
+     * <code>repeated .protocol.common.partner.LoginDetails login_details = 5;</code>
      */
     @java.lang.Override
     public java.util.List<com.tcl.gaia.protocol.partner.UserOuterClass.LoginDetails> getLoginDetailsList() {
       return loginDetails_;
     }
     /**
-     * <code>repeated .protocol.common.partner.LoginDetails loginDetails = 5;</code>
+     * <code>repeated .protocol.common.partner.LoginDetails login_details = 5;</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.tcl.gaia.protocol.partner.UserOuterClass.LoginDetailsOrBuilder> 
@@ -1307,21 +1366,21 @@ public final class UserOuterClass {
       return loginDetails_;
     }
     /**
-     * <code>repeated .protocol.common.partner.LoginDetails loginDetails = 5;</code>
+     * <code>repeated .protocol.common.partner.LoginDetails login_details = 5;</code>
      */
     @java.lang.Override
     public int getLoginDetailsCount() {
       return loginDetails_.size();
     }
     /**
-     * <code>repeated .protocol.common.partner.LoginDetails loginDetails = 5;</code>
+     * <code>repeated .protocol.common.partner.LoginDetails login_details = 5;</code>
      */
     @java.lang.Override
     public com.tcl.gaia.protocol.partner.UserOuterClass.LoginDetails getLoginDetails(int index) {
       return loginDetails_.get(index);
     }
     /**
-     * <code>repeated .protocol.common.partner.LoginDetails loginDetails = 5;</code>
+     * <code>repeated .protocol.common.partner.LoginDetails login_details = 5;</code>
      */
     @java.lang.Override
     public com.tcl.gaia.protocol.partner.UserOuterClass.LoginDetailsOrBuilder getLoginDetailsOrBuilder(
@@ -1380,7 +1439,7 @@ public final class UserOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (((bitField0_ & 0x00000001) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userId_);
+        output.writeInt32(1, userId_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tenantId_);
@@ -1407,7 +1466,8 @@ public final class UserOuterClass {
 
       size = 0;
       if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, userId_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, userId_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, tenantId_);
@@ -1443,8 +1503,8 @@ public final class UserOuterClass {
 
       if (hasUserId() != other.hasUserId()) return false;
       if (hasUserId()) {
-        if (!getUserId()
-            .equals(other.getUserId())) return false;
+        if (getUserId()
+            != other.getUserId()) return false;
       }
       if (hasTenantId() != other.hasTenantId()) return false;
       if (hasTenantId()) {
@@ -1480,23 +1540,23 @@ public final class UserOuterClass {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       if (hasUserId()) {
-        hash = (37 * hash) + USERID_FIELD_NUMBER;
-        hash = (53 * hash) + getUserId().hashCode();
+        hash = (37 * hash) + USER_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getUserId();
       }
       if (hasTenantId()) {
-        hash = (37 * hash) + TENANTID_FIELD_NUMBER;
+        hash = (37 * hash) + TENANT_ID_FIELD_NUMBER;
         hash = (53 * hash) + getTenantId().hashCode();
       }
       if (hasImmutableIdentity()) {
-        hash = (37 * hash) + IMMUTABLEIDENTITY_FIELD_NUMBER;
+        hash = (37 * hash) + IMMUTABLE_IDENTITY_FIELD_NUMBER;
         hash = (53 * hash) + getImmutableIdentity().hashCode();
       }
       if (hasUserName()) {
-        hash = (37 * hash) + USERNAME_FIELD_NUMBER;
+        hash = (37 * hash) + USER_NAME_FIELD_NUMBER;
         hash = (53 * hash) + getUserName().hashCode();
       }
       if (getLoginDetailsCount() > 0) {
-        hash = (37 * hash) + LOGINDETAILS_FIELD_NUMBER;
+        hash = (37 * hash) + LOGIN_DETAILS_FIELD_NUMBER;
         hash = (53 * hash) + getLoginDetailsList().hashCode();
       }
       if (hasExtra()) {
@@ -1638,7 +1698,7 @@ public final class UserOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        userId_ = "";
+        userId_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
         tenantId_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -1687,9 +1747,9 @@ public final class UserOuterClass {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.userId_ = userId_;
           to_bitField0_ |= 0x00000001;
         }
-        result.userId_ = userId_;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           to_bitField0_ |= 0x00000002;
         }
@@ -1769,9 +1829,7 @@ public final class UserOuterClass {
       public Builder mergeFrom(com.tcl.gaia.protocol.partner.UserOuterClass.User other) {
         if (other == com.tcl.gaia.protocol.partner.UserOuterClass.User.getDefaultInstance()) return this;
         if (other.hasUserId()) {
-          bitField0_ |= 0x00000001;
-          userId_ = other.userId_;
-          onChanged();
+          setUserId(other.getUserId());
         }
         if (other.hasTenantId()) {
           bitField0_ |= 0x00000002;
@@ -1855,100 +1913,55 @@ public final class UserOuterClass {
       }
       private int bitField0_;
 
-      private java.lang.Object userId_ = "";
+      private int userId_ ;
       /**
-       * <code>required string userId = 1;</code>
+       * <code>required int32 user_id = 1;</code>
        * @return Whether the userId field is set.
        */
+      @java.lang.Override
       public boolean hasUserId() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>required string userId = 1;</code>
+       * <code>required int32 user_id = 1;</code>
        * @return The userId.
        */
-      public java.lang.String getUserId() {
-        java.lang.Object ref = userId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            userId_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      @java.lang.Override
+      public int getUserId() {
+        return userId_;
       }
       /**
-       * <code>required string userId = 1;</code>
-       * @return The bytes for userId.
-       */
-      public com.google.protobuf.ByteString
-          getUserIdBytes() {
-        java.lang.Object ref = userId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          userId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>required string userId = 1;</code>
+       * <code>required int32 user_id = 1;</code>
        * @param value The userId to set.
        * @return This builder for chaining.
        */
-      public Builder setUserId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      public Builder setUserId(int value) {
+        bitField0_ |= 0x00000001;
         userId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required string userId = 1;</code>
+       * <code>required int32 user_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearUserId() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        userId_ = getDefaultInstance().getUserId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required string userId = 1;</code>
-       * @param value The bytes for userId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUserIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        userId_ = value;
+        userId_ = 0;
         onChanged();
         return this;
       }
 
       private java.lang.Object tenantId_ = "";
       /**
-       * <code>optional string tenantId = 2;</code>
+       * <code>optional string tenant_id = 2;</code>
        * @return Whether the tenantId field is set.
        */
       public boolean hasTenantId() {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>optional string tenantId = 2;</code>
+       * <code>optional string tenant_id = 2;</code>
        * @return The tenantId.
        */
       public java.lang.String getTenantId() {
@@ -1966,7 +1979,7 @@ public final class UserOuterClass {
         }
       }
       /**
-       * <code>optional string tenantId = 2;</code>
+       * <code>optional string tenant_id = 2;</code>
        * @return The bytes for tenantId.
        */
       public com.google.protobuf.ByteString
@@ -1983,7 +1996,7 @@ public final class UserOuterClass {
         }
       }
       /**
-       * <code>optional string tenantId = 2;</code>
+       * <code>optional string tenant_id = 2;</code>
        * @param value The tenantId to set.
        * @return This builder for chaining.
        */
@@ -1998,7 +2011,7 @@ public final class UserOuterClass {
         return this;
       }
       /**
-       * <code>optional string tenantId = 2;</code>
+       * <code>optional string tenant_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearTenantId() {
@@ -2008,7 +2021,7 @@ public final class UserOuterClass {
         return this;
       }
       /**
-       * <code>optional string tenantId = 2;</code>
+       * <code>optional string tenant_id = 2;</code>
        * @param value The bytes for tenantId to set.
        * @return This builder for chaining.
        */
@@ -2025,14 +2038,14 @@ public final class UserOuterClass {
 
       private java.lang.Object immutableIdentity_ = "";
       /**
-       * <code>optional string immutableIdentity = 3;</code>
+       * <code>optional string immutable_identity = 3;</code>
        * @return Whether the immutableIdentity field is set.
        */
       public boolean hasImmutableIdentity() {
         return ((bitField0_ & 0x00000004) != 0);
       }
       /**
-       * <code>optional string immutableIdentity = 3;</code>
+       * <code>optional string immutable_identity = 3;</code>
        * @return The immutableIdentity.
        */
       public java.lang.String getImmutableIdentity() {
@@ -2050,7 +2063,7 @@ public final class UserOuterClass {
         }
       }
       /**
-       * <code>optional string immutableIdentity = 3;</code>
+       * <code>optional string immutable_identity = 3;</code>
        * @return The bytes for immutableIdentity.
        */
       public com.google.protobuf.ByteString
@@ -2067,7 +2080,7 @@ public final class UserOuterClass {
         }
       }
       /**
-       * <code>optional string immutableIdentity = 3;</code>
+       * <code>optional string immutable_identity = 3;</code>
        * @param value The immutableIdentity to set.
        * @return This builder for chaining.
        */
@@ -2082,7 +2095,7 @@ public final class UserOuterClass {
         return this;
       }
       /**
-       * <code>optional string immutableIdentity = 3;</code>
+       * <code>optional string immutable_identity = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearImmutableIdentity() {
@@ -2092,7 +2105,7 @@ public final class UserOuterClass {
         return this;
       }
       /**
-       * <code>optional string immutableIdentity = 3;</code>
+       * <code>optional string immutable_identity = 3;</code>
        * @param value The bytes for immutableIdentity to set.
        * @return This builder for chaining.
        */
@@ -2109,14 +2122,14 @@ public final class UserOuterClass {
 
       private java.lang.Object userName_ = "";
       /**
-       * <code>optional string userName = 4;</code>
+       * <code>optional string user_name = 4;</code>
        * @return Whether the userName field is set.
        */
       public boolean hasUserName() {
         return ((bitField0_ & 0x00000008) != 0);
       }
       /**
-       * <code>optional string userName = 4;</code>
+       * <code>optional string user_name = 4;</code>
        * @return The userName.
        */
       public java.lang.String getUserName() {
@@ -2134,7 +2147,7 @@ public final class UserOuterClass {
         }
       }
       /**
-       * <code>optional string userName = 4;</code>
+       * <code>optional string user_name = 4;</code>
        * @return The bytes for userName.
        */
       public com.google.protobuf.ByteString
@@ -2151,7 +2164,7 @@ public final class UserOuterClass {
         }
       }
       /**
-       * <code>optional string userName = 4;</code>
+       * <code>optional string user_name = 4;</code>
        * @param value The userName to set.
        * @return This builder for chaining.
        */
@@ -2166,7 +2179,7 @@ public final class UserOuterClass {
         return this;
       }
       /**
-       * <code>optional string userName = 4;</code>
+       * <code>optional string user_name = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearUserName() {
@@ -2176,7 +2189,7 @@ public final class UserOuterClass {
         return this;
       }
       /**
-       * <code>optional string userName = 4;</code>
+       * <code>optional string user_name = 4;</code>
        * @param value The bytes for userName to set.
        * @return This builder for chaining.
        */
@@ -2204,7 +2217,7 @@ public final class UserOuterClass {
           com.tcl.gaia.protocol.partner.UserOuterClass.LoginDetails, com.tcl.gaia.protocol.partner.UserOuterClass.LoginDetails.Builder, com.tcl.gaia.protocol.partner.UserOuterClass.LoginDetailsOrBuilder> loginDetailsBuilder_;
 
       /**
-       * <code>repeated .protocol.common.partner.LoginDetails loginDetails = 5;</code>
+       * <code>repeated .protocol.common.partner.LoginDetails login_details = 5;</code>
        */
       public java.util.List<com.tcl.gaia.protocol.partner.UserOuterClass.LoginDetails> getLoginDetailsList() {
         if (loginDetailsBuilder_ == null) {
@@ -2214,7 +2227,7 @@ public final class UserOuterClass {
         }
       }
       /**
-       * <code>repeated .protocol.common.partner.LoginDetails loginDetails = 5;</code>
+       * <code>repeated .protocol.common.partner.LoginDetails login_details = 5;</code>
        */
       public int getLoginDetailsCount() {
         if (loginDetailsBuilder_ == null) {
@@ -2224,7 +2237,7 @@ public final class UserOuterClass {
         }
       }
       /**
-       * <code>repeated .protocol.common.partner.LoginDetails loginDetails = 5;</code>
+       * <code>repeated .protocol.common.partner.LoginDetails login_details = 5;</code>
        */
       public com.tcl.gaia.protocol.partner.UserOuterClass.LoginDetails getLoginDetails(int index) {
         if (loginDetailsBuilder_ == null) {
@@ -2234,7 +2247,7 @@ public final class UserOuterClass {
         }
       }
       /**
-       * <code>repeated .protocol.common.partner.LoginDetails loginDetails = 5;</code>
+       * <code>repeated .protocol.common.partner.LoginDetails login_details = 5;</code>
        */
       public Builder setLoginDetails(
           int index, com.tcl.gaia.protocol.partner.UserOuterClass.LoginDetails value) {
@@ -2251,7 +2264,7 @@ public final class UserOuterClass {
         return this;
       }
       /**
-       * <code>repeated .protocol.common.partner.LoginDetails loginDetails = 5;</code>
+       * <code>repeated .protocol.common.partner.LoginDetails login_details = 5;</code>
        */
       public Builder setLoginDetails(
           int index, com.tcl.gaia.protocol.partner.UserOuterClass.LoginDetails.Builder builderForValue) {
@@ -2265,7 +2278,7 @@ public final class UserOuterClass {
         return this;
       }
       /**
-       * <code>repeated .protocol.common.partner.LoginDetails loginDetails = 5;</code>
+       * <code>repeated .protocol.common.partner.LoginDetails login_details = 5;</code>
        */
       public Builder addLoginDetails(com.tcl.gaia.protocol.partner.UserOuterClass.LoginDetails value) {
         if (loginDetailsBuilder_ == null) {
@@ -2281,7 +2294,7 @@ public final class UserOuterClass {
         return this;
       }
       /**
-       * <code>repeated .protocol.common.partner.LoginDetails loginDetails = 5;</code>
+       * <code>repeated .protocol.common.partner.LoginDetails login_details = 5;</code>
        */
       public Builder addLoginDetails(
           int index, com.tcl.gaia.protocol.partner.UserOuterClass.LoginDetails value) {
@@ -2298,7 +2311,7 @@ public final class UserOuterClass {
         return this;
       }
       /**
-       * <code>repeated .protocol.common.partner.LoginDetails loginDetails = 5;</code>
+       * <code>repeated .protocol.common.partner.LoginDetails login_details = 5;</code>
        */
       public Builder addLoginDetails(
           com.tcl.gaia.protocol.partner.UserOuterClass.LoginDetails.Builder builderForValue) {
@@ -2312,7 +2325,7 @@ public final class UserOuterClass {
         return this;
       }
       /**
-       * <code>repeated .protocol.common.partner.LoginDetails loginDetails = 5;</code>
+       * <code>repeated .protocol.common.partner.LoginDetails login_details = 5;</code>
        */
       public Builder addLoginDetails(
           int index, com.tcl.gaia.protocol.partner.UserOuterClass.LoginDetails.Builder builderForValue) {
@@ -2326,7 +2339,7 @@ public final class UserOuterClass {
         return this;
       }
       /**
-       * <code>repeated .protocol.common.partner.LoginDetails loginDetails = 5;</code>
+       * <code>repeated .protocol.common.partner.LoginDetails login_details = 5;</code>
        */
       public Builder addAllLoginDetails(
           java.lang.Iterable<? extends com.tcl.gaia.protocol.partner.UserOuterClass.LoginDetails> values) {
@@ -2341,7 +2354,7 @@ public final class UserOuterClass {
         return this;
       }
       /**
-       * <code>repeated .protocol.common.partner.LoginDetails loginDetails = 5;</code>
+       * <code>repeated .protocol.common.partner.LoginDetails login_details = 5;</code>
        */
       public Builder clearLoginDetails() {
         if (loginDetailsBuilder_ == null) {
@@ -2354,7 +2367,7 @@ public final class UserOuterClass {
         return this;
       }
       /**
-       * <code>repeated .protocol.common.partner.LoginDetails loginDetails = 5;</code>
+       * <code>repeated .protocol.common.partner.LoginDetails login_details = 5;</code>
        */
       public Builder removeLoginDetails(int index) {
         if (loginDetailsBuilder_ == null) {
@@ -2367,14 +2380,14 @@ public final class UserOuterClass {
         return this;
       }
       /**
-       * <code>repeated .protocol.common.partner.LoginDetails loginDetails = 5;</code>
+       * <code>repeated .protocol.common.partner.LoginDetails login_details = 5;</code>
        */
       public com.tcl.gaia.protocol.partner.UserOuterClass.LoginDetails.Builder getLoginDetailsBuilder(
           int index) {
         return getLoginDetailsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .protocol.common.partner.LoginDetails loginDetails = 5;</code>
+       * <code>repeated .protocol.common.partner.LoginDetails login_details = 5;</code>
        */
       public com.tcl.gaia.protocol.partner.UserOuterClass.LoginDetailsOrBuilder getLoginDetailsOrBuilder(
           int index) {
@@ -2384,7 +2397,7 @@ public final class UserOuterClass {
         }
       }
       /**
-       * <code>repeated .protocol.common.partner.LoginDetails loginDetails = 5;</code>
+       * <code>repeated .protocol.common.partner.LoginDetails login_details = 5;</code>
        */
       public java.util.List<? extends com.tcl.gaia.protocol.partner.UserOuterClass.LoginDetailsOrBuilder> 
            getLoginDetailsOrBuilderList() {
@@ -2395,14 +2408,14 @@ public final class UserOuterClass {
         }
       }
       /**
-       * <code>repeated .protocol.common.partner.LoginDetails loginDetails = 5;</code>
+       * <code>repeated .protocol.common.partner.LoginDetails login_details = 5;</code>
        */
       public com.tcl.gaia.protocol.partner.UserOuterClass.LoginDetails.Builder addLoginDetailsBuilder() {
         return getLoginDetailsFieldBuilder().addBuilder(
             com.tcl.gaia.protocol.partner.UserOuterClass.LoginDetails.getDefaultInstance());
       }
       /**
-       * <code>repeated .protocol.common.partner.LoginDetails loginDetails = 5;</code>
+       * <code>repeated .protocol.common.partner.LoginDetails login_details = 5;</code>
        */
       public com.tcl.gaia.protocol.partner.UserOuterClass.LoginDetails.Builder addLoginDetailsBuilder(
           int index) {
@@ -2410,7 +2423,7 @@ public final class UserOuterClass {
             index, com.tcl.gaia.protocol.partner.UserOuterClass.LoginDetails.getDefaultInstance());
       }
       /**
-       * <code>repeated .protocol.common.partner.LoginDetails loginDetails = 5;</code>
+       * <code>repeated .protocol.common.partner.LoginDetails login_details = 5;</code>
        */
       public java.util.List<com.tcl.gaia.protocol.partner.UserOuterClass.LoginDetails.Builder> 
            getLoginDetailsBuilderList() {
@@ -2603,6 +2616,2317 @@ public final class UserOuterClass {
 
   }
 
+  public interface IntDelimitersOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:protocol.common.partner.IntDelimiters)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated int32 delimiters = 1;</code>
+     * @return A list containing the delimiters.
+     */
+    java.util.List<java.lang.Integer> getDelimitersList();
+    /**
+     * <code>repeated int32 delimiters = 1;</code>
+     * @return The count of delimiters.
+     */
+    int getDelimitersCount();
+    /**
+     * <code>repeated int32 delimiters = 1;</code>
+     * @param index The index of the element to return.
+     * @return The delimiters at the given index.
+     */
+    int getDelimiters(int index);
+  }
+  /**
+   * Protobuf type {@code protocol.common.partner.IntDelimiters}
+   */
+  public static final class IntDelimiters extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:protocol.common.partner.IntDelimiters)
+      IntDelimitersOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use IntDelimiters.newBuilder() to construct.
+    private IntDelimiters(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IntDelimiters() {
+      delimiters_ = emptyIntList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new IntDelimiters();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private IntDelimiters(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                delimiters_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              delimiters_.addInt(input.readInt32());
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                delimiters_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                delimiters_.addInt(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          delimiters_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcl.gaia.protocol.partner.UserOuterClass.internal_static_protocol_common_partner_IntDelimiters_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcl.gaia.protocol.partner.UserOuterClass.internal_static_protocol_common_partner_IntDelimiters_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters.class, com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters.Builder.class);
+    }
+
+    public static final int DELIMITERS_FIELD_NUMBER = 1;
+    private com.google.protobuf.Internal.IntList delimiters_;
+    /**
+     * <code>repeated int32 delimiters = 1;</code>
+     * @return A list containing the delimiters.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getDelimitersList() {
+      return delimiters_;
+    }
+    /**
+     * <code>repeated int32 delimiters = 1;</code>
+     * @return The count of delimiters.
+     */
+    public int getDelimitersCount() {
+      return delimiters_.size();
+    }
+    /**
+     * <code>repeated int32 delimiters = 1;</code>
+     * @param index The index of the element to return.
+     * @return The delimiters at the given index.
+     */
+    public int getDelimiters(int index) {
+      return delimiters_.getInt(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < delimiters_.size(); i++) {
+        output.writeInt32(1, delimiters_.getInt(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < delimiters_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(delimiters_.getInt(i));
+        }
+        size += dataSize;
+        size += 1 * getDelimitersList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters)) {
+        return super.equals(obj);
+      }
+      com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters other = (com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters) obj;
+
+      if (!getDelimitersList()
+          .equals(other.getDelimitersList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getDelimitersCount() > 0) {
+        hash = (37 * hash) + DELIMITERS_FIELD_NUMBER;
+        hash = (53 * hash) + getDelimitersList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code protocol.common.partner.IntDelimiters}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:protocol.common.partner.IntDelimiters)
+        com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimitersOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcl.gaia.protocol.partner.UserOuterClass.internal_static_protocol_common_partner_IntDelimiters_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcl.gaia.protocol.partner.UserOuterClass.internal_static_protocol_common_partner_IntDelimiters_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters.class, com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters.Builder.class);
+      }
+
+      // Construct using com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        delimiters_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcl.gaia.protocol.partner.UserOuterClass.internal_static_protocol_common_partner_IntDelimiters_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters getDefaultInstanceForType() {
+        return com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters build() {
+        com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters buildPartial() {
+        com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters result = new com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          delimiters_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.delimiters_ = delimiters_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters) {
+          return mergeFrom((com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters other) {
+        if (other == com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters.getDefaultInstance()) return this;
+        if (!other.delimiters_.isEmpty()) {
+          if (delimiters_.isEmpty()) {
+            delimiters_ = other.delimiters_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureDelimitersIsMutable();
+            delimiters_.addAll(other.delimiters_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Internal.IntList delimiters_ = emptyIntList();
+      private void ensureDelimitersIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          delimiters_ = mutableCopy(delimiters_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated int32 delimiters = 1;</code>
+       * @return A list containing the delimiters.
+       */
+      public java.util.List<java.lang.Integer>
+          getDelimitersList() {
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(delimiters_) : delimiters_;
+      }
+      /**
+       * <code>repeated int32 delimiters = 1;</code>
+       * @return The count of delimiters.
+       */
+      public int getDelimitersCount() {
+        return delimiters_.size();
+      }
+      /**
+       * <code>repeated int32 delimiters = 1;</code>
+       * @param index The index of the element to return.
+       * @return The delimiters at the given index.
+       */
+      public int getDelimiters(int index) {
+        return delimiters_.getInt(index);
+      }
+      /**
+       * <code>repeated int32 delimiters = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The delimiters to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelimiters(
+          int index, int value) {
+        ensureDelimitersIsMutable();
+        delimiters_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 delimiters = 1;</code>
+       * @param value The delimiters to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDelimiters(int value) {
+        ensureDelimitersIsMutable();
+        delimiters_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 delimiters = 1;</code>
+       * @param values The delimiters to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllDelimiters(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureDelimitersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, delimiters_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 delimiters = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDelimiters() {
+        delimiters_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:protocol.common.partner.IntDelimiters)
+    }
+
+    // @@protoc_insertion_point(class_scope:protocol.common.partner.IntDelimiters)
+    private static final com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters();
+    }
+
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<IntDelimiters>
+        PARSER = new com.google.protobuf.AbstractParser<IntDelimiters>() {
+      @java.lang.Override
+      public IntDelimiters parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new IntDelimiters(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<IntDelimiters> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IntDelimiters> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface StringDelimitersOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:protocol.common.partner.StringDelimiters)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string delimiters = 1;</code>
+     * @return A list containing the delimiters.
+     */
+    java.util.List<java.lang.String>
+        getDelimitersList();
+    /**
+     * <code>repeated string delimiters = 1;</code>
+     * @return The count of delimiters.
+     */
+    int getDelimitersCount();
+    /**
+     * <code>repeated string delimiters = 1;</code>
+     * @param index The index of the element to return.
+     * @return The delimiters at the given index.
+     */
+    java.lang.String getDelimiters(int index);
+    /**
+     * <code>repeated string delimiters = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the delimiters at the given index.
+     */
+    com.google.protobuf.ByteString
+        getDelimitersBytes(int index);
+  }
+  /**
+   * Protobuf type {@code protocol.common.partner.StringDelimiters}
+   */
+  public static final class StringDelimiters extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:protocol.common.partner.StringDelimiters)
+      StringDelimitersOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StringDelimiters.newBuilder() to construct.
+    private StringDelimiters(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StringDelimiters() {
+      delimiters_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StringDelimiters();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StringDelimiters(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                delimiters_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              delimiters_.add(bs);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          delimiters_ = delimiters_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcl.gaia.protocol.partner.UserOuterClass.internal_static_protocol_common_partner_StringDelimiters_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcl.gaia.protocol.partner.UserOuterClass.internal_static_protocol_common_partner_StringDelimiters_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters.class, com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters.Builder.class);
+    }
+
+    public static final int DELIMITERS_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList delimiters_;
+    /**
+     * <code>repeated string delimiters = 1;</code>
+     * @return A list containing the delimiters.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getDelimitersList() {
+      return delimiters_;
+    }
+    /**
+     * <code>repeated string delimiters = 1;</code>
+     * @return The count of delimiters.
+     */
+    public int getDelimitersCount() {
+      return delimiters_.size();
+    }
+    /**
+     * <code>repeated string delimiters = 1;</code>
+     * @param index The index of the element to return.
+     * @return The delimiters at the given index.
+     */
+    public java.lang.String getDelimiters(int index) {
+      return delimiters_.get(index);
+    }
+    /**
+     * <code>repeated string delimiters = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the delimiters at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getDelimitersBytes(int index) {
+      return delimiters_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < delimiters_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, delimiters_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < delimiters_.size(); i++) {
+          dataSize += computeStringSizeNoTag(delimiters_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getDelimitersList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters)) {
+        return super.equals(obj);
+      }
+      com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters other = (com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters) obj;
+
+      if (!getDelimitersList()
+          .equals(other.getDelimitersList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getDelimitersCount() > 0) {
+        hash = (37 * hash) + DELIMITERS_FIELD_NUMBER;
+        hash = (53 * hash) + getDelimitersList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code protocol.common.partner.StringDelimiters}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:protocol.common.partner.StringDelimiters)
+        com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimitersOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcl.gaia.protocol.partner.UserOuterClass.internal_static_protocol_common_partner_StringDelimiters_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcl.gaia.protocol.partner.UserOuterClass.internal_static_protocol_common_partner_StringDelimiters_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters.class, com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters.Builder.class);
+      }
+
+      // Construct using com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        delimiters_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcl.gaia.protocol.partner.UserOuterClass.internal_static_protocol_common_partner_StringDelimiters_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters getDefaultInstanceForType() {
+        return com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters build() {
+        com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters buildPartial() {
+        com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters result = new com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          delimiters_ = delimiters_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.delimiters_ = delimiters_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters) {
+          return mergeFrom((com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters other) {
+        if (other == com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters.getDefaultInstance()) return this;
+        if (!other.delimiters_.isEmpty()) {
+          if (delimiters_.isEmpty()) {
+            delimiters_ = other.delimiters_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureDelimitersIsMutable();
+            delimiters_.addAll(other.delimiters_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList delimiters_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureDelimitersIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          delimiters_ = new com.google.protobuf.LazyStringArrayList(delimiters_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated string delimiters = 1;</code>
+       * @return A list containing the delimiters.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getDelimitersList() {
+        return delimiters_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string delimiters = 1;</code>
+       * @return The count of delimiters.
+       */
+      public int getDelimitersCount() {
+        return delimiters_.size();
+      }
+      /**
+       * <code>repeated string delimiters = 1;</code>
+       * @param index The index of the element to return.
+       * @return The delimiters at the given index.
+       */
+      public java.lang.String getDelimiters(int index) {
+        return delimiters_.get(index);
+      }
+      /**
+       * <code>repeated string delimiters = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the delimiters at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getDelimitersBytes(int index) {
+        return delimiters_.getByteString(index);
+      }
+      /**
+       * <code>repeated string delimiters = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The delimiters to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelimiters(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureDelimitersIsMutable();
+        delimiters_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string delimiters = 1;</code>
+       * @param value The delimiters to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDelimiters(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureDelimitersIsMutable();
+        delimiters_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string delimiters = 1;</code>
+       * @param values The delimiters to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllDelimiters(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureDelimitersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, delimiters_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string delimiters = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDelimiters() {
+        delimiters_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string delimiters = 1;</code>
+       * @param value The bytes of the delimiters to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDelimitersBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureDelimitersIsMutable();
+        delimiters_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:protocol.common.partner.StringDelimiters)
+    }
+
+    // @@protoc_insertion_point(class_scope:protocol.common.partner.StringDelimiters)
+    private static final com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters();
+    }
+
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<StringDelimiters>
+        PARSER = new com.google.protobuf.AbstractParser<StringDelimiters>() {
+      @java.lang.Override
+      public StringDelimiters parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StringDelimiters(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StringDelimiters> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StringDelimiters> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UserChunksPayloadOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:protocol.common.partner.UserChunksPayload)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required .protocol.common.partner.IDType id_type = 1;</code>
+     * @return Whether the idType field is set.
+     */
+    boolean hasIdType();
+    /**
+     * <code>required .protocol.common.partner.IDType id_type = 1;</code>
+     * @return The idType.
+     */
+    com.tcl.gaia.protocol.partner.UserOuterClass.IDType getIdType();
+
+    /**
+     * <code>.protocol.common.partner.IntDelimiters int_delimiters = 2;</code>
+     * @return Whether the intDelimiters field is set.
+     */
+    boolean hasIntDelimiters();
+    /**
+     * <code>.protocol.common.partner.IntDelimiters int_delimiters = 2;</code>
+     * @return The intDelimiters.
+     */
+    com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters getIntDelimiters();
+    /**
+     * <code>.protocol.common.partner.IntDelimiters int_delimiters = 2;</code>
+     */
+    com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimitersOrBuilder getIntDelimitersOrBuilder();
+
+    /**
+     * <code>.protocol.common.partner.StringDelimiters string_delimiters = 3;</code>
+     * @return Whether the stringDelimiters field is set.
+     */
+    boolean hasStringDelimiters();
+    /**
+     * <code>.protocol.common.partner.StringDelimiters string_delimiters = 3;</code>
+     * @return The stringDelimiters.
+     */
+    com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters getStringDelimiters();
+    /**
+     * <code>.protocol.common.partner.StringDelimiters string_delimiters = 3;</code>
+     */
+    com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimitersOrBuilder getStringDelimitersOrBuilder();
+
+    public com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload.DelimitersCase getDelimitersCase();
+  }
+  /**
+   * Protobuf type {@code protocol.common.partner.UserChunksPayload}
+   */
+  public static final class UserChunksPayload extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:protocol.common.partner.UserChunksPayload)
+      UserChunksPayloadOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UserChunksPayload.newBuilder() to construct.
+    private UserChunksPayload(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UserChunksPayload() {
+      idType_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UserChunksPayload();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UserChunksPayload(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+                @SuppressWarnings("deprecation")
+              com.tcl.gaia.protocol.partner.UserOuterClass.IDType value = com.tcl.gaia.protocol.partner.UserOuterClass.IDType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                idType_ = rawValue;
+              }
+              break;
+            }
+            case 18: {
+              com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters.Builder subBuilder = null;
+              if (delimitersCase_ == 2) {
+                subBuilder = ((com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters) delimiters_).toBuilder();
+              }
+              delimiters_ =
+                  input.readMessage(com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters) delimiters_);
+                delimiters_ = subBuilder.buildPartial();
+              }
+              delimitersCase_ = 2;
+              break;
+            }
+            case 26: {
+              com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters.Builder subBuilder = null;
+              if (delimitersCase_ == 3) {
+                subBuilder = ((com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters) delimiters_).toBuilder();
+              }
+              delimiters_ =
+                  input.readMessage(com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters) delimiters_);
+                delimiters_ = subBuilder.buildPartial();
+              }
+              delimitersCase_ = 3;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.tcl.gaia.protocol.partner.UserOuterClass.internal_static_protocol_common_partner_UserChunksPayload_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.tcl.gaia.protocol.partner.UserOuterClass.internal_static_protocol_common_partner_UserChunksPayload_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload.class, com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload.Builder.class);
+    }
+
+    private int bitField0_;
+    private int delimitersCase_ = 0;
+    private java.lang.Object delimiters_;
+    public enum DelimitersCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      INT_DELIMITERS(2),
+      STRING_DELIMITERS(3),
+      DELIMITERS_NOT_SET(0);
+      private final int value;
+      private DelimitersCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static DelimitersCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static DelimitersCase forNumber(int value) {
+        switch (value) {
+          case 2: return INT_DELIMITERS;
+          case 3: return STRING_DELIMITERS;
+          case 0: return DELIMITERS_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public DelimitersCase
+    getDelimitersCase() {
+      return DelimitersCase.forNumber(
+          delimitersCase_);
+    }
+
+    public static final int ID_TYPE_FIELD_NUMBER = 1;
+    private int idType_;
+    /**
+     * <code>required .protocol.common.partner.IDType id_type = 1;</code>
+     * @return Whether the idType field is set.
+     */
+    @java.lang.Override public boolean hasIdType() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>required .protocol.common.partner.IDType id_type = 1;</code>
+     * @return The idType.
+     */
+    @java.lang.Override public com.tcl.gaia.protocol.partner.UserOuterClass.IDType getIdType() {
+      @SuppressWarnings("deprecation")
+      com.tcl.gaia.protocol.partner.UserOuterClass.IDType result = com.tcl.gaia.protocol.partner.UserOuterClass.IDType.valueOf(idType_);
+      return result == null ? com.tcl.gaia.protocol.partner.UserOuterClass.IDType.ID_TYPE_INT : result;
+    }
+
+    public static final int INT_DELIMITERS_FIELD_NUMBER = 2;
+    /**
+     * <code>.protocol.common.partner.IntDelimiters int_delimiters = 2;</code>
+     * @return Whether the intDelimiters field is set.
+     */
+    @java.lang.Override
+    public boolean hasIntDelimiters() {
+      return delimitersCase_ == 2;
+    }
+    /**
+     * <code>.protocol.common.partner.IntDelimiters int_delimiters = 2;</code>
+     * @return The intDelimiters.
+     */
+    @java.lang.Override
+    public com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters getIntDelimiters() {
+      if (delimitersCase_ == 2) {
+         return (com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters) delimiters_;
+      }
+      return com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters.getDefaultInstance();
+    }
+    /**
+     * <code>.protocol.common.partner.IntDelimiters int_delimiters = 2;</code>
+     */
+    @java.lang.Override
+    public com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimitersOrBuilder getIntDelimitersOrBuilder() {
+      if (delimitersCase_ == 2) {
+         return (com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters) delimiters_;
+      }
+      return com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters.getDefaultInstance();
+    }
+
+    public static final int STRING_DELIMITERS_FIELD_NUMBER = 3;
+    /**
+     * <code>.protocol.common.partner.StringDelimiters string_delimiters = 3;</code>
+     * @return Whether the stringDelimiters field is set.
+     */
+    @java.lang.Override
+    public boolean hasStringDelimiters() {
+      return delimitersCase_ == 3;
+    }
+    /**
+     * <code>.protocol.common.partner.StringDelimiters string_delimiters = 3;</code>
+     * @return The stringDelimiters.
+     */
+    @java.lang.Override
+    public com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters getStringDelimiters() {
+      if (delimitersCase_ == 3) {
+         return (com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters) delimiters_;
+      }
+      return com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters.getDefaultInstance();
+    }
+    /**
+     * <code>.protocol.common.partner.StringDelimiters string_delimiters = 3;</code>
+     */
+    @java.lang.Override
+    public com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimitersOrBuilder getStringDelimitersOrBuilder() {
+      if (delimitersCase_ == 3) {
+         return (com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters) delimiters_;
+      }
+      return com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasIdType()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeEnum(1, idType_);
+      }
+      if (delimitersCase_ == 2) {
+        output.writeMessage(2, (com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters) delimiters_);
+      }
+      if (delimitersCase_ == 3) {
+        output.writeMessage(3, (com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters) delimiters_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, idType_);
+      }
+      if (delimitersCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters) delimiters_);
+      }
+      if (delimitersCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters) delimiters_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload)) {
+        return super.equals(obj);
+      }
+      com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload other = (com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload) obj;
+
+      if (hasIdType() != other.hasIdType()) return false;
+      if (hasIdType()) {
+        if (idType_ != other.idType_) return false;
+      }
+      if (!getDelimitersCase().equals(other.getDelimitersCase())) return false;
+      switch (delimitersCase_) {
+        case 2:
+          if (!getIntDelimiters()
+              .equals(other.getIntDelimiters())) return false;
+          break;
+        case 3:
+          if (!getStringDelimiters()
+              .equals(other.getStringDelimiters())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasIdType()) {
+        hash = (37 * hash) + ID_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + idType_;
+      }
+      switch (delimitersCase_) {
+        case 2:
+          hash = (37 * hash) + INT_DELIMITERS_FIELD_NUMBER;
+          hash = (53 * hash) + getIntDelimiters().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + STRING_DELIMITERS_FIELD_NUMBER;
+          hash = (53 * hash) + getStringDelimiters().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code protocol.common.partner.UserChunksPayload}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:protocol.common.partner.UserChunksPayload)
+        com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayloadOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.tcl.gaia.protocol.partner.UserOuterClass.internal_static_protocol_common_partner_UserChunksPayload_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.tcl.gaia.protocol.partner.UserOuterClass.internal_static_protocol_common_partner_UserChunksPayload_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload.class, com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload.Builder.class);
+      }
+
+      // Construct using com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        idType_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        delimitersCase_ = 0;
+        delimiters_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.tcl.gaia.protocol.partner.UserOuterClass.internal_static_protocol_common_partner_UserChunksPayload_descriptor;
+      }
+
+      @java.lang.Override
+      public com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload getDefaultInstanceForType() {
+        return com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload build() {
+        com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload buildPartial() {
+        com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload result = new com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.idType_ = idType_;
+        if (delimitersCase_ == 2) {
+          if (intDelimitersBuilder_ == null) {
+            result.delimiters_ = delimiters_;
+          } else {
+            result.delimiters_ = intDelimitersBuilder_.build();
+          }
+        }
+        if (delimitersCase_ == 3) {
+          if (stringDelimitersBuilder_ == null) {
+            result.delimiters_ = delimiters_;
+          } else {
+            result.delimiters_ = stringDelimitersBuilder_.build();
+          }
+        }
+        result.bitField0_ = to_bitField0_;
+        result.delimitersCase_ = delimitersCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload) {
+          return mergeFrom((com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload other) {
+        if (other == com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload.getDefaultInstance()) return this;
+        if (other.hasIdType()) {
+          setIdType(other.getIdType());
+        }
+        switch (other.getDelimitersCase()) {
+          case INT_DELIMITERS: {
+            mergeIntDelimiters(other.getIntDelimiters());
+            break;
+          }
+          case STRING_DELIMITERS: {
+            mergeStringDelimiters(other.getStringDelimiters());
+            break;
+          }
+          case DELIMITERS_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        if (!hasIdType()) {
+          return false;
+        }
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int delimitersCase_ = 0;
+      private java.lang.Object delimiters_;
+      public DelimitersCase
+          getDelimitersCase() {
+        return DelimitersCase.forNumber(
+            delimitersCase_);
+      }
+
+      public Builder clearDelimiters() {
+        delimitersCase_ = 0;
+        delimiters_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private int idType_ = 0;
+      /**
+       * <code>required .protocol.common.partner.IDType id_type = 1;</code>
+       * @return Whether the idType field is set.
+       */
+      @java.lang.Override public boolean hasIdType() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>required .protocol.common.partner.IDType id_type = 1;</code>
+       * @return The idType.
+       */
+      @java.lang.Override
+      public com.tcl.gaia.protocol.partner.UserOuterClass.IDType getIdType() {
+        @SuppressWarnings("deprecation")
+        com.tcl.gaia.protocol.partner.UserOuterClass.IDType result = com.tcl.gaia.protocol.partner.UserOuterClass.IDType.valueOf(idType_);
+        return result == null ? com.tcl.gaia.protocol.partner.UserOuterClass.IDType.ID_TYPE_INT : result;
+      }
+      /**
+       * <code>required .protocol.common.partner.IDType id_type = 1;</code>
+       * @param value The idType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdType(com.tcl.gaia.protocol.partner.UserOuterClass.IDType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        idType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required .protocol.common.partner.IDType id_type = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIdType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        idType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters, com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters.Builder, com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimitersOrBuilder> intDelimitersBuilder_;
+      /**
+       * <code>.protocol.common.partner.IntDelimiters int_delimiters = 2;</code>
+       * @return Whether the intDelimiters field is set.
+       */
+      @java.lang.Override
+      public boolean hasIntDelimiters() {
+        return delimitersCase_ == 2;
+      }
+      /**
+       * <code>.protocol.common.partner.IntDelimiters int_delimiters = 2;</code>
+       * @return The intDelimiters.
+       */
+      @java.lang.Override
+      public com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters getIntDelimiters() {
+        if (intDelimitersBuilder_ == null) {
+          if (delimitersCase_ == 2) {
+            return (com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters) delimiters_;
+          }
+          return com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters.getDefaultInstance();
+        } else {
+          if (delimitersCase_ == 2) {
+            return intDelimitersBuilder_.getMessage();
+          }
+          return com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.protocol.common.partner.IntDelimiters int_delimiters = 2;</code>
+       */
+      public Builder setIntDelimiters(com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters value) {
+        if (intDelimitersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          delimiters_ = value;
+          onChanged();
+        } else {
+          intDelimitersBuilder_.setMessage(value);
+        }
+        delimitersCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.protocol.common.partner.IntDelimiters int_delimiters = 2;</code>
+       */
+      public Builder setIntDelimiters(
+          com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters.Builder builderForValue) {
+        if (intDelimitersBuilder_ == null) {
+          delimiters_ = builderForValue.build();
+          onChanged();
+        } else {
+          intDelimitersBuilder_.setMessage(builderForValue.build());
+        }
+        delimitersCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.protocol.common.partner.IntDelimiters int_delimiters = 2;</code>
+       */
+      public Builder mergeIntDelimiters(com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters value) {
+        if (intDelimitersBuilder_ == null) {
+          if (delimitersCase_ == 2 &&
+              delimiters_ != com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters.getDefaultInstance()) {
+            delimiters_ = com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters.newBuilder((com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters) delimiters_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            delimiters_ = value;
+          }
+          onChanged();
+        } else {
+          if (delimitersCase_ == 2) {
+            intDelimitersBuilder_.mergeFrom(value);
+          }
+          intDelimitersBuilder_.setMessage(value);
+        }
+        delimitersCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.protocol.common.partner.IntDelimiters int_delimiters = 2;</code>
+       */
+      public Builder clearIntDelimiters() {
+        if (intDelimitersBuilder_ == null) {
+          if (delimitersCase_ == 2) {
+            delimitersCase_ = 0;
+            delimiters_ = null;
+            onChanged();
+          }
+        } else {
+          if (delimitersCase_ == 2) {
+            delimitersCase_ = 0;
+            delimiters_ = null;
+          }
+          intDelimitersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.protocol.common.partner.IntDelimiters int_delimiters = 2;</code>
+       */
+      public com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters.Builder getIntDelimitersBuilder() {
+        return getIntDelimitersFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.protocol.common.partner.IntDelimiters int_delimiters = 2;</code>
+       */
+      @java.lang.Override
+      public com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimitersOrBuilder getIntDelimitersOrBuilder() {
+        if ((delimitersCase_ == 2) && (intDelimitersBuilder_ != null)) {
+          return intDelimitersBuilder_.getMessageOrBuilder();
+        } else {
+          if (delimitersCase_ == 2) {
+            return (com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters) delimiters_;
+          }
+          return com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.protocol.common.partner.IntDelimiters int_delimiters = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters, com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters.Builder, com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimitersOrBuilder> 
+          getIntDelimitersFieldBuilder() {
+        if (intDelimitersBuilder_ == null) {
+          if (!(delimitersCase_ == 2)) {
+            delimiters_ = com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters.getDefaultInstance();
+          }
+          intDelimitersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters, com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters.Builder, com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimitersOrBuilder>(
+                  (com.tcl.gaia.protocol.partner.UserOuterClass.IntDelimiters) delimiters_,
+                  getParentForChildren(),
+                  isClean());
+          delimiters_ = null;
+        }
+        delimitersCase_ = 2;
+        onChanged();;
+        return intDelimitersBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters, com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters.Builder, com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimitersOrBuilder> stringDelimitersBuilder_;
+      /**
+       * <code>.protocol.common.partner.StringDelimiters string_delimiters = 3;</code>
+       * @return Whether the stringDelimiters field is set.
+       */
+      @java.lang.Override
+      public boolean hasStringDelimiters() {
+        return delimitersCase_ == 3;
+      }
+      /**
+       * <code>.protocol.common.partner.StringDelimiters string_delimiters = 3;</code>
+       * @return The stringDelimiters.
+       */
+      @java.lang.Override
+      public com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters getStringDelimiters() {
+        if (stringDelimitersBuilder_ == null) {
+          if (delimitersCase_ == 3) {
+            return (com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters) delimiters_;
+          }
+          return com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters.getDefaultInstance();
+        } else {
+          if (delimitersCase_ == 3) {
+            return stringDelimitersBuilder_.getMessage();
+          }
+          return com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.protocol.common.partner.StringDelimiters string_delimiters = 3;</code>
+       */
+      public Builder setStringDelimiters(com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters value) {
+        if (stringDelimitersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          delimiters_ = value;
+          onChanged();
+        } else {
+          stringDelimitersBuilder_.setMessage(value);
+        }
+        delimitersCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.protocol.common.partner.StringDelimiters string_delimiters = 3;</code>
+       */
+      public Builder setStringDelimiters(
+          com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters.Builder builderForValue) {
+        if (stringDelimitersBuilder_ == null) {
+          delimiters_ = builderForValue.build();
+          onChanged();
+        } else {
+          stringDelimitersBuilder_.setMessage(builderForValue.build());
+        }
+        delimitersCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.protocol.common.partner.StringDelimiters string_delimiters = 3;</code>
+       */
+      public Builder mergeStringDelimiters(com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters value) {
+        if (stringDelimitersBuilder_ == null) {
+          if (delimitersCase_ == 3 &&
+              delimiters_ != com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters.getDefaultInstance()) {
+            delimiters_ = com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters.newBuilder((com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters) delimiters_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            delimiters_ = value;
+          }
+          onChanged();
+        } else {
+          if (delimitersCase_ == 3) {
+            stringDelimitersBuilder_.mergeFrom(value);
+          }
+          stringDelimitersBuilder_.setMessage(value);
+        }
+        delimitersCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.protocol.common.partner.StringDelimiters string_delimiters = 3;</code>
+       */
+      public Builder clearStringDelimiters() {
+        if (stringDelimitersBuilder_ == null) {
+          if (delimitersCase_ == 3) {
+            delimitersCase_ = 0;
+            delimiters_ = null;
+            onChanged();
+          }
+        } else {
+          if (delimitersCase_ == 3) {
+            delimitersCase_ = 0;
+            delimiters_ = null;
+          }
+          stringDelimitersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.protocol.common.partner.StringDelimiters string_delimiters = 3;</code>
+       */
+      public com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters.Builder getStringDelimitersBuilder() {
+        return getStringDelimitersFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.protocol.common.partner.StringDelimiters string_delimiters = 3;</code>
+       */
+      @java.lang.Override
+      public com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimitersOrBuilder getStringDelimitersOrBuilder() {
+        if ((delimitersCase_ == 3) && (stringDelimitersBuilder_ != null)) {
+          return stringDelimitersBuilder_.getMessageOrBuilder();
+        } else {
+          if (delimitersCase_ == 3) {
+            return (com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters) delimiters_;
+          }
+          return com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.protocol.common.partner.StringDelimiters string_delimiters = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters, com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters.Builder, com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimitersOrBuilder> 
+          getStringDelimitersFieldBuilder() {
+        if (stringDelimitersBuilder_ == null) {
+          if (!(delimitersCase_ == 3)) {
+            delimiters_ = com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters.getDefaultInstance();
+          }
+          stringDelimitersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters, com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters.Builder, com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimitersOrBuilder>(
+                  (com.tcl.gaia.protocol.partner.UserOuterClass.StringDelimiters) delimiters_,
+                  getParentForChildren(),
+                  isClean());
+          delimiters_ = null;
+        }
+        delimitersCase_ = 3;
+        onChanged();;
+        return stringDelimitersBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:protocol.common.partner.UserChunksPayload)
+    }
+
+    // @@protoc_insertion_point(class_scope:protocol.common.partner.UserChunksPayload)
+    private static final com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload();
+    }
+
+    public static com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<UserChunksPayload>
+        PARSER = new com.google.protobuf.AbstractParser<UserChunksPayload>() {
+      @java.lang.Override
+      public UserChunksPayload parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UserChunksPayload(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UserChunksPayload> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UserChunksPayload> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.tcl.gaia.protocol.partner.UserOuterClass.UserChunksPayload getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_protocol_common_partner_LoginDetails_descriptor;
   private static final 
@@ -2613,6 +4937,21 @@ public final class UserOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_protocol_common_partner_User_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_protocol_common_partner_IntDelimiters_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_protocol_common_partner_IntDelimiters_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_protocol_common_partner_StringDelimiters_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_protocol_common_partner_StringDelimiters_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_protocol_common_partner_UserChunksPayload_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_protocol_common_partner_UserChunksPayload_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2624,17 +4963,26 @@ public final class UserOuterClass {
     java.lang.String[] descriptorData = {
       "\n\"protocol/common/partner/user.proto\022\027pr" +
       "otocol.common.partner\032\031google/protobuf/a" +
-      "ny.proto\"i\n\014LoginDetails\022A\n\017accountSyste" +
-      "mId\030\001 \002(\0162(.protocol.common.partner.Acco" +
-      "untSystemId\022\026\n\016loginAccountId\030\002 \002(\t\"\267\001\n\004" +
-      "User\022\016\n\006userId\030\001 \002(\t\022\020\n\010tenantId\030\002 \001(\t\022\031" +
-      "\n\021immutableIdentity\030\003 \001(\t\022\020\n\010userName\030\004 " +
-      "\001(\t\022;\n\014loginDetails\030\005 \003(\0132%.protocol.com" +
-      "mon.partner.LoginDetails\022#\n\005extra\030\006 \001(\0132" +
-      "\024.google.protobuf.Any*E\n\017AccountSystemId" +
-      "\022\013\n\007TCL_SSO\020\000\022\023\n\017WE_CHAT_OPEN_ID\020\001\022\020\n\014MO" +
-      "BILE_PHONE\020\002B>\n\035com.tcl.gaia.protocol.pa" +
-      "rtnerZ\035tcl.com/gaia/protocol/partner"
+      "ny.proto\"m\n\014LoginDetails\022C\n\021account_syst" +
+      "em_id\030\001 \002(\0162(.protocol.common.partner.Ac" +
+      "countSystemId\022\030\n\020login_account_id\030\002 \002(\t\"" +
+      "\274\001\n\004User\022\017\n\007user_id\030\001 \002(\005\022\021\n\ttenant_id\030\002" +
+      " \001(\t\022\032\n\022immutable_identity\030\003 \001(\t\022\021\n\tuser" +
+      "_name\030\004 \001(\t\022<\n\rlogin_details\030\005 \003(\0132%.pro" +
+      "tocol.common.partner.LoginDetails\022#\n\005ext" +
+      "ra\030\006 \001(\0132\024.google.protobuf.Any\"#\n\rIntDel" +
+      "imiters\022\022\n\ndelimiters\030\001 \003(\005\"&\n\020StringDel" +
+      "imiters\022\022\n\ndelimiters\030\001 \003(\t\"\335\001\n\021UserChun" +
+      "ksPayload\0220\n\007id_type\030\001 \002(\0162\037.protocol.co" +
+      "mmon.partner.IDType\022@\n\016int_delimiters\030\002 " +
+      "\001(\0132&.protocol.common.partner.IntDelimit" +
+      "ersH\000\022F\n\021string_delimiters\030\003 \001(\0132).proto" +
+      "col.common.partner.StringDelimitersH\000B\014\n" +
+      "\ndelimiters*E\n\017AccountSystemId\022\013\n\007TCL_SS" +
+      "O\020\000\022\023\n\017WE_CHAT_OPEN_ID\020\001\022\020\n\014MOBILE_PHONE" +
+      "\020\002*-\n\006IDType\022\017\n\013ID_TYPE_INT\020\000\022\022\n\016ID_TYPE" +
+      "_STRING\020\001B>\n\035com.tcl.gaia.protocol.partn" +
+      "erZ\035tcl.com/gaia/protocol/partner"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2653,6 +5001,24 @@ public final class UserOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protocol_common_partner_User_descriptor,
         new java.lang.String[] { "UserId", "TenantId", "ImmutableIdentity", "UserName", "LoginDetails", "Extra", });
+    internal_static_protocol_common_partner_IntDelimiters_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_protocol_common_partner_IntDelimiters_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_protocol_common_partner_IntDelimiters_descriptor,
+        new java.lang.String[] { "Delimiters", });
+    internal_static_protocol_common_partner_StringDelimiters_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_protocol_common_partner_StringDelimiters_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_protocol_common_partner_StringDelimiters_descriptor,
+        new java.lang.String[] { "Delimiters", });
+    internal_static_protocol_common_partner_UserChunksPayload_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_protocol_common_partner_UserChunksPayload_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_protocol_common_partner_UserChunksPayload_descriptor,
+        new java.lang.String[] { "IdType", "IntDelimiters", "StringDelimiters", "Delimiters", });
     com.google.protobuf.AnyProto.getDescriptor();
   }
 

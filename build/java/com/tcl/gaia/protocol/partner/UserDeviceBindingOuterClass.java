@@ -19,34 +19,34 @@ public final class UserDeviceBindingOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required string deviceId = 1;</code>
+     * <code>required string device_Id = 1;</code>
      * @return Whether the deviceId field is set.
      */
     boolean hasDeviceId();
     /**
-     * <code>required string deviceId = 1;</code>
+     * <code>required string device_Id = 1;</code>
      * @return The deviceId.
      */
     java.lang.String getDeviceId();
     /**
-     * <code>required string deviceId = 1;</code>
+     * <code>required string device_Id = 1;</code>
      * @return The bytes for deviceId.
      */
     com.google.protobuf.ByteString
         getDeviceIdBytes();
 
     /**
-     * <code>optional string deviceNickName = 2;</code>
+     * <code>optional string device_nick_name = 2;</code>
      * @return Whether the deviceNickName field is set.
      */
     boolean hasDeviceNickName();
     /**
-     * <code>optional string deviceNickName = 2;</code>
+     * <code>optional string device_nick_name = 2;</code>
      * @return The deviceNickName.
      */
     java.lang.String getDeviceNickName();
     /**
-     * <code>optional string deviceNickName = 2;</code>
+     * <code>optional string device_nick_name = 2;</code>
      * @return The bytes for deviceNickName.
      */
     com.google.protobuf.ByteString
@@ -68,34 +68,34 @@ public final class UserDeviceBindingOuterClass {
     com.tcl.gaia.protocol.partner.DeviceOuterClass.DeviceOrBuilder getDeviceOrBuilder();
 
     /**
-     * <code>required string userId = 4;</code>
+     * <code>required string user_id = 4;</code>
      * @return Whether the userId field is set.
      */
     boolean hasUserId();
     /**
-     * <code>required string userId = 4;</code>
+     * <code>required string user_id = 4;</code>
      * @return The userId.
      */
     java.lang.String getUserId();
     /**
-     * <code>required string userId = 4;</code>
+     * <code>required string user_id = 4;</code>
      * @return The bytes for userId.
      */
     com.google.protobuf.ByteString
         getUserIdBytes();
 
     /**
-     * <code>required string userRole = 5;</code>
+     * <code>required string user_role = 5;</code>
      * @return Whether the userRole field is set.
      */
     boolean hasUserRole();
     /**
-     * <code>required string userRole = 5;</code>
+     * <code>required string user_role = 5;</code>
      * @return The userRole.
      */
     java.lang.String getUserRole();
     /**
-     * <code>required string userRole = 5;</code>
+     * <code>required string user_role = 5;</code>
      * @return The bytes for userRole.
      */
     com.google.protobuf.ByteString
@@ -253,10 +253,10 @@ public final class UserDeviceBindingOuterClass {
     }
 
     private int bitField0_;
-    public static final int DEVICEID_FIELD_NUMBER = 1;
+    public static final int DEVICE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object deviceId_;
     /**
-     * <code>required string deviceId = 1;</code>
+     * <code>required string device_Id = 1;</code>
      * @return Whether the deviceId field is set.
      */
     @java.lang.Override
@@ -264,7 +264,7 @@ public final class UserDeviceBindingOuterClass {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>required string deviceId = 1;</code>
+     * <code>required string device_Id = 1;</code>
      * @return The deviceId.
      */
     @java.lang.Override
@@ -283,7 +283,7 @@ public final class UserDeviceBindingOuterClass {
       }
     }
     /**
-     * <code>required string deviceId = 1;</code>
+     * <code>required string device_Id = 1;</code>
      * @return The bytes for deviceId.
      */
     @java.lang.Override
@@ -301,10 +301,10 @@ public final class UserDeviceBindingOuterClass {
       }
     }
 
-    public static final int DEVICENICKNAME_FIELD_NUMBER = 2;
+    public static final int DEVICE_NICK_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object deviceNickName_;
     /**
-     * <code>optional string deviceNickName = 2;</code>
+     * <code>optional string device_nick_name = 2;</code>
      * @return Whether the deviceNickName field is set.
      */
     @java.lang.Override
@@ -312,7 +312,7 @@ public final class UserDeviceBindingOuterClass {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>optional string deviceNickName = 2;</code>
+     * <code>optional string device_nick_name = 2;</code>
      * @return The deviceNickName.
      */
     @java.lang.Override
@@ -331,7 +331,7 @@ public final class UserDeviceBindingOuterClass {
       }
     }
     /**
-     * <code>optional string deviceNickName = 2;</code>
+     * <code>optional string device_nick_name = 2;</code>
      * @return The bytes for deviceNickName.
      */
     @java.lang.Override
@@ -375,10 +375,10 @@ public final class UserDeviceBindingOuterClass {
       return device_ == null ? com.tcl.gaia.protocol.partner.DeviceOuterClass.Device.getDefaultInstance() : device_;
     }
 
-    public static final int USERID_FIELD_NUMBER = 4;
+    public static final int USER_ID_FIELD_NUMBER = 4;
     private volatile java.lang.Object userId_;
     /**
-     * <code>required string userId = 4;</code>
+     * <code>required string user_id = 4;</code>
      * @return Whether the userId field is set.
      */
     @java.lang.Override
@@ -386,7 +386,7 @@ public final class UserDeviceBindingOuterClass {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <code>required string userId = 4;</code>
+     * <code>required string user_id = 4;</code>
      * @return The userId.
      */
     @java.lang.Override
@@ -405,7 +405,7 @@ public final class UserDeviceBindingOuterClass {
       }
     }
     /**
-     * <code>required string userId = 4;</code>
+     * <code>required string user_id = 4;</code>
      * @return The bytes for userId.
      */
     @java.lang.Override
@@ -423,10 +423,10 @@ public final class UserDeviceBindingOuterClass {
       }
     }
 
-    public static final int USERROLE_FIELD_NUMBER = 5;
+    public static final int USER_ROLE_FIELD_NUMBER = 5;
     private volatile java.lang.Object userRole_;
     /**
-     * <code>required string userRole = 5;</code>
+     * <code>required string user_role = 5;</code>
      * @return Whether the userRole field is set.
      */
     @java.lang.Override
@@ -434,7 +434,7 @@ public final class UserDeviceBindingOuterClass {
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
-     * <code>required string userRole = 5;</code>
+     * <code>required string user_role = 5;</code>
      * @return The userRole.
      */
     @java.lang.Override
@@ -453,7 +453,7 @@ public final class UserDeviceBindingOuterClass {
       }
     }
     /**
-     * <code>required string userRole = 5;</code>
+     * <code>required string user_role = 5;</code>
      * @return The bytes for userRole.
      */
     @java.lang.Override
@@ -633,11 +633,11 @@ public final class UserDeviceBindingOuterClass {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       if (hasDeviceId()) {
-        hash = (37 * hash) + DEVICEID_FIELD_NUMBER;
+        hash = (37 * hash) + DEVICE_ID_FIELD_NUMBER;
         hash = (53 * hash) + getDeviceId().hashCode();
       }
       if (hasDeviceNickName()) {
-        hash = (37 * hash) + DEVICENICKNAME_FIELD_NUMBER;
+        hash = (37 * hash) + DEVICE_NICK_NAME_FIELD_NUMBER;
         hash = (53 * hash) + getDeviceNickName().hashCode();
       }
       if (hasDevice()) {
@@ -645,11 +645,11 @@ public final class UserDeviceBindingOuterClass {
         hash = (53 * hash) + getDevice().hashCode();
       }
       if (hasUserId()) {
-        hash = (37 * hash) + USERID_FIELD_NUMBER;
+        hash = (37 * hash) + USER_ID_FIELD_NUMBER;
         hash = (53 * hash) + getUserId().hashCode();
       }
       if (hasUserRole()) {
-        hash = (37 * hash) + USERROLE_FIELD_NUMBER;
+        hash = (37 * hash) + USER_ROLE_FIELD_NUMBER;
         hash = (53 * hash) + getUserRole().hashCode();
       }
       if (hasExtra()) {
@@ -996,14 +996,14 @@ public final class UserDeviceBindingOuterClass {
 
       private java.lang.Object deviceId_ = "";
       /**
-       * <code>required string deviceId = 1;</code>
+       * <code>required string device_Id = 1;</code>
        * @return Whether the deviceId field is set.
        */
       public boolean hasDeviceId() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>required string deviceId = 1;</code>
+       * <code>required string device_Id = 1;</code>
        * @return The deviceId.
        */
       public java.lang.String getDeviceId() {
@@ -1021,7 +1021,7 @@ public final class UserDeviceBindingOuterClass {
         }
       }
       /**
-       * <code>required string deviceId = 1;</code>
+       * <code>required string device_Id = 1;</code>
        * @return The bytes for deviceId.
        */
       public com.google.protobuf.ByteString
@@ -1038,7 +1038,7 @@ public final class UserDeviceBindingOuterClass {
         }
       }
       /**
-       * <code>required string deviceId = 1;</code>
+       * <code>required string device_Id = 1;</code>
        * @param value The deviceId to set.
        * @return This builder for chaining.
        */
@@ -1053,7 +1053,7 @@ public final class UserDeviceBindingOuterClass {
         return this;
       }
       /**
-       * <code>required string deviceId = 1;</code>
+       * <code>required string device_Id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearDeviceId() {
@@ -1063,7 +1063,7 @@ public final class UserDeviceBindingOuterClass {
         return this;
       }
       /**
-       * <code>required string deviceId = 1;</code>
+       * <code>required string device_Id = 1;</code>
        * @param value The bytes for deviceId to set.
        * @return This builder for chaining.
        */
@@ -1080,14 +1080,14 @@ public final class UserDeviceBindingOuterClass {
 
       private java.lang.Object deviceNickName_ = "";
       /**
-       * <code>optional string deviceNickName = 2;</code>
+       * <code>optional string device_nick_name = 2;</code>
        * @return Whether the deviceNickName field is set.
        */
       public boolean hasDeviceNickName() {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>optional string deviceNickName = 2;</code>
+       * <code>optional string device_nick_name = 2;</code>
        * @return The deviceNickName.
        */
       public java.lang.String getDeviceNickName() {
@@ -1105,7 +1105,7 @@ public final class UserDeviceBindingOuterClass {
         }
       }
       /**
-       * <code>optional string deviceNickName = 2;</code>
+       * <code>optional string device_nick_name = 2;</code>
        * @return The bytes for deviceNickName.
        */
       public com.google.protobuf.ByteString
@@ -1122,7 +1122,7 @@ public final class UserDeviceBindingOuterClass {
         }
       }
       /**
-       * <code>optional string deviceNickName = 2;</code>
+       * <code>optional string device_nick_name = 2;</code>
        * @param value The deviceNickName to set.
        * @return This builder for chaining.
        */
@@ -1137,7 +1137,7 @@ public final class UserDeviceBindingOuterClass {
         return this;
       }
       /**
-       * <code>optional string deviceNickName = 2;</code>
+       * <code>optional string device_nick_name = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearDeviceNickName() {
@@ -1147,7 +1147,7 @@ public final class UserDeviceBindingOuterClass {
         return this;
       }
       /**
-       * <code>optional string deviceNickName = 2;</code>
+       * <code>optional string device_nick_name = 2;</code>
        * @param value The bytes for deviceNickName to set.
        * @return This builder for chaining.
        */
@@ -1284,14 +1284,14 @@ public final class UserDeviceBindingOuterClass {
 
       private java.lang.Object userId_ = "";
       /**
-       * <code>required string userId = 4;</code>
+       * <code>required string user_id = 4;</code>
        * @return Whether the userId field is set.
        */
       public boolean hasUserId() {
         return ((bitField0_ & 0x00000008) != 0);
       }
       /**
-       * <code>required string userId = 4;</code>
+       * <code>required string user_id = 4;</code>
        * @return The userId.
        */
       public java.lang.String getUserId() {
@@ -1309,7 +1309,7 @@ public final class UserDeviceBindingOuterClass {
         }
       }
       /**
-       * <code>required string userId = 4;</code>
+       * <code>required string user_id = 4;</code>
        * @return The bytes for userId.
        */
       public com.google.protobuf.ByteString
@@ -1326,7 +1326,7 @@ public final class UserDeviceBindingOuterClass {
         }
       }
       /**
-       * <code>required string userId = 4;</code>
+       * <code>required string user_id = 4;</code>
        * @param value The userId to set.
        * @return This builder for chaining.
        */
@@ -1341,7 +1341,7 @@ public final class UserDeviceBindingOuterClass {
         return this;
       }
       /**
-       * <code>required string userId = 4;</code>
+       * <code>required string user_id = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearUserId() {
@@ -1351,7 +1351,7 @@ public final class UserDeviceBindingOuterClass {
         return this;
       }
       /**
-       * <code>required string userId = 4;</code>
+       * <code>required string user_id = 4;</code>
        * @param value The bytes for userId to set.
        * @return This builder for chaining.
        */
@@ -1368,14 +1368,14 @@ public final class UserDeviceBindingOuterClass {
 
       private java.lang.Object userRole_ = "";
       /**
-       * <code>required string userRole = 5;</code>
+       * <code>required string user_role = 5;</code>
        * @return Whether the userRole field is set.
        */
       public boolean hasUserRole() {
         return ((bitField0_ & 0x00000010) != 0);
       }
       /**
-       * <code>required string userRole = 5;</code>
+       * <code>required string user_role = 5;</code>
        * @return The userRole.
        */
       public java.lang.String getUserRole() {
@@ -1393,7 +1393,7 @@ public final class UserDeviceBindingOuterClass {
         }
       }
       /**
-       * <code>required string userRole = 5;</code>
+       * <code>required string user_role = 5;</code>
        * @return The bytes for userRole.
        */
       public com.google.protobuf.ByteString
@@ -1410,7 +1410,7 @@ public final class UserDeviceBindingOuterClass {
         }
       }
       /**
-       * <code>required string userRole = 5;</code>
+       * <code>required string user_role = 5;</code>
        * @param value The userRole to set.
        * @return This builder for chaining.
        */
@@ -1425,7 +1425,7 @@ public final class UserDeviceBindingOuterClass {
         return this;
       }
       /**
-       * <code>required string userRole = 5;</code>
+       * <code>required string user_role = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearUserRole() {
@@ -1435,7 +1435,7 @@ public final class UserDeviceBindingOuterClass {
         return this;
       }
       /**
-       * <code>required string userRole = 5;</code>
+       * <code>required string user_role = 5;</code>
        * @param value The bytes for userRole to set.
        * @return This builder for chaining.
        */
@@ -1639,13 +1639,13 @@ public final class UserDeviceBindingOuterClass {
       "\n1protocol/common/partner/user_device_bi" +
       "nding.proto\022\027protocol.common.partner\032\031go" +
       "ogle/protobuf/any.proto\032$protocol/common" +
-      "/partner/device.proto\"\265\001\n\021UserDeviceBind" +
-      "ing\022\020\n\010deviceId\030\001 \002(\t\022\026\n\016deviceNickName\030" +
-      "\002 \001(\t\022/\n\006device\030\003 \001(\0132\037.protocol.common." +
-      "partner.Device\022\016\n\006userId\030\004 \002(\t\022\020\n\010userRo" +
-      "le\030\005 \002(\t\022#\n\005extra\030\006 \001(\0132\024.google.protobu" +
-      "f.AnyB>\n\035com.tcl.gaia.protocol.partnerZ\035" +
-      "tcl.com/gaia/protocol/partner"
+      "/partner/device.proto\"\272\001\n\021UserDeviceBind" +
+      "ing\022\021\n\tdevice_Id\030\001 \002(\t\022\030\n\020device_nick_na" +
+      "me\030\002 \001(\t\022/\n\006device\030\003 \001(\0132\037.protocol.comm" +
+      "on.partner.Device\022\017\n\007user_id\030\004 \002(\t\022\021\n\tus" +
+      "er_role\030\005 \002(\t\022#\n\005extra\030\006 \001(\0132\024.google.pr" +
+      "otobuf.AnyB>\n\035com.tcl.gaia.protocol.part" +
+      "nerZ\035tcl.com/gaia/protocol/partner"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

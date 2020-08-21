@@ -11,14 +11,31 @@ import "protocol/common/constant/request.proto";
 import "protocol/common/constant/response.proto";
 
 
+message GetResourceChunksRequestHeader {
+}
+
+message GetResourceChunksRequestPayload {
+    required string partner_name = 1;
+    required string resource_type = 2;
+    required int32 chunk_size = 3;
+}
+
 message GetResourceChunksRequest {
-    required string resource_type = 1;
-    required int32 chunk_size = 2;
+    optional GetResourceChunksRequestHeader header = 1;
+    required GetResourceChunksRequestPayload payload = 2;
 }
 
 message GetResourceChunksResponse {
     repeated string delimiters = 1;
 }
+
+
+
+
+
+
+
+
 
 message GetResourcesRequest {
     required string resource_type = 1;

@@ -25,7 +25,7 @@ message TSLReportedProperty {
 }
 
 message TSLProperty {
-    required string propertyId = 1;
+    required string property_id = 1;
     repeated TSLDesiredProperty desired = 2;
     repeated TSLReportedProperty reported = 3;
 }

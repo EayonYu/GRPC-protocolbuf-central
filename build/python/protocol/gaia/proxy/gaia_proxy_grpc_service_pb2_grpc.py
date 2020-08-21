@@ -40,6 +40,11 @@ class GaiaProxyGrpcStub(object):
                 request_serializer=protocol_dot_gaia_dot_proxy_dot_proxy__pb2.ProxyRequest.SerializeToString,
                 response_deserializer=protocol_dot_gaia_dot_proxy_dot_proxy__pb2.ProxyResponse.FromString,
                 )
+        self.GetResourceChunks = channel.unary_unary(
+                '/protocol.gaia.proxy.GaiaProxyGrpc/GetResourceChunks',
+                request_serializer=protocol_dot_gaia_dot_proxy_dot_proxy__pb2.GetResourceChunksRequest.SerializeToString,
+                response_deserializer=protocol_dot_gaia_dot_proxy_dot_proxy__pb2.GetResourceChunksResponse.FromString,
+                )
 
 
 class GaiaProxyGrpcServicer(object):
@@ -77,6 +82,12 @@ class GaiaProxyGrpcServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def GetResourceChunks(self, request, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_GaiaProxyGrpcServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -104,6 +115,11 @@ def add_GaiaProxyGrpcServicer_to_server(servicer, server):
                     servicer.Proxy,
                     request_deserializer=protocol_dot_gaia_dot_proxy_dot_proxy__pb2.ProxyRequest.FromString,
                     response_serializer=protocol_dot_gaia_dot_proxy_dot_proxy__pb2.ProxyResponse.SerializeToString,
+            ),
+            'GetResourceChunks': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetResourceChunks,
+                    request_deserializer=protocol_dot_gaia_dot_proxy_dot_proxy__pb2.GetResourceChunksRequest.FromString,
+                    response_serializer=protocol_dot_gaia_dot_proxy_dot_proxy__pb2.GetResourceChunksResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -192,5 +208,21 @@ class GaiaProxyGrpc(object):
         return grpc.experimental.unary_unary(request, target, '/protocol.gaia.proxy.GaiaProxyGrpc/Proxy',
             protocol_dot_gaia_dot_proxy_dot_proxy__pb2.ProxyRequest.SerializeToString,
             protocol_dot_gaia_dot_proxy_dot_proxy__pb2.ProxyResponse.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def GetResourceChunks(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/protocol.gaia.proxy.GaiaProxyGrpc/GetResourceChunks',
+            protocol_dot_gaia_dot_proxy_dot_proxy__pb2.GetResourceChunksRequest.SerializeToString,
+            protocol_dot_gaia_dot_proxy_dot_proxy__pb2.GetResourceChunksResponse.FromString,
             options, channel_credentials,
             call_credentials, compression, wait_for_ready, timeout, metadata)

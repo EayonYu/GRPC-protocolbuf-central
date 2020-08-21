@@ -1,0 +1,22 @@
+syntax = "proto2";
+
+package protocol.common.partner;
+option go_package = "tcl.com/gaia/protocol/partner";
+option java_package = "com.tcl.gaia.protocol.partner";
+
+import "protocol/common/constant/code.proto";
+
+// https://confluence.tclking.com/display/IoT4/Partner+API++Format
+
+message Header{
+  // protocol version
+  required string protocol_version = 1;
+  // message type
+  required string message_type = 2;
+  // Gaia Partner Id (for logging only)
+  required string partner_id = 3;
+  // message unique ID - UUID4 (for logging)
+  required string message_id = 4;
+  // For asynchronous xxx.Result only
+  optional protocol.common.constant.Code  status_code = 5;
+}

@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=b'\n\031com.tcl.gaia.protocol.tslZ\031tcl.com/gaia/protocol/tsl',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\"protocol/common/tsl/property.proto\x12\x13protocol.common.tsl\x1a\x19google/protobuf/any.proto\"L\n\x12TSLDesiredProperty\x12#\n\x05value\x18\x01 \x02(\x0b\x32\x14.google.protobuf.Any\x12\x11\n\ttimestamp\x18\x02 \x02(\t\"z\n\x13TSLReportedProperty\x12#\n\x05value\x18\x01 \x02(\x0b\x32\x14.google.protobuf.Any\x12>\n\x06status\x18\x02 \x02(\x0e\x32..protocol.common.tsl.TSLReportedPropertyStatus\"\x97\x01\n\x0bTSLProperty\x12\x12\n\npropertyId\x18\x01 \x02(\t\x12\x38\n\x07\x64\x65sired\x18\x02 \x03(\x0b\x32\'.protocol.common.tsl.TSLDesiredProperty\x12:\n\x08reported\x18\x03 \x03(\x0b\x32(.protocol.common.tsl.TSLReportedProperty*;\n\x19TSLReportedPropertyStatus\x12\r\n\tDELIVERED\x10\x00\x12\x0f\n\x0bUNDELIVERED\x10\x01\x42\x36\n\x19\x63om.tcl.gaia.protocol.tslZ\x19tcl.com/gaia/protocol/tsl'
+  serialized_pb=b'\n\"protocol/common/tsl/property.proto\x12\x13protocol.common.tsl\x1a\x19google/protobuf/any.proto\"L\n\x12TSLDesiredProperty\x12#\n\x05value\x18\x01 \x02(\x0b\x32\x14.google.protobuf.Any\x12\x11\n\ttimestamp\x18\x02 \x02(\t\"z\n\x13TSLReportedProperty\x12#\n\x05value\x18\x01 \x02(\x0b\x32\x14.google.protobuf.Any\x12>\n\x06status\x18\x02 \x02(\x0e\x32..protocol.common.tsl.TSLReportedPropertyStatus\"\x98\x01\n\x0bTSLProperty\x12\x13\n\x0bproperty_id\x18\x01 \x02(\t\x12\x38\n\x07\x64\x65sired\x18\x02 \x03(\x0b\x32\'.protocol.common.tsl.TSLDesiredProperty\x12:\n\x08reported\x18\x03 \x03(\x0b\x32(.protocol.common.tsl.TSLReportedProperty*;\n\x19TSLReportedPropertyStatus\x12\r\n\tDELIVERED\x10\x00\x12\x0f\n\x0bUNDELIVERED\x10\x01\x42\x36\n\x19\x63om.tcl.gaia.protocol.tslZ\x19tcl.com/gaia/protocol/tsl'
   ,
   dependencies=[google_dot_protobuf_dot_any__pb2.DESCRIPTOR,])
 
@@ -45,8 +45,8 @@ _TSLREPORTEDPROPERTYSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=442,
-  serialized_end=501,
+  serialized_start=443,
+  serialized_end=502,
 )
 _sym_db.RegisterEnumDescriptor(_TSLREPORTEDPROPERTYSTATUS)
 
@@ -143,7 +143,7 @@ _TSLPROPERTY = _descriptor.Descriptor(
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='propertyId', full_name='protocol.common.tsl.TSLProperty.propertyId', index=0,
+      name='property_id', full_name='protocol.common.tsl.TSLProperty.property_id', index=0,
       number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -176,7 +176,7 @@ _TSLPROPERTY = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=289,
-  serialized_end=440,
+  serialized_end=441,
 )
 
 _TSLDESIREDPROPERTY.fields_by_name['value'].message_type = google_dot_protobuf_dot_any__pb2._ANY

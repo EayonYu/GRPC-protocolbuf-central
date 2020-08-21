@@ -70,6 +70,14 @@ public final class GaiaProxyGrpcService {
           com.tcl.gaia.protocol.proxy.Proxy.ProxyRequest request,
           com.google.protobuf.RpcCallback<com.tcl.gaia.protocol.proxy.Proxy.ProxyResponse> done);
 
+      /**
+       * <code>rpc GetResourceChunks(.protocol.gaia.proxy.GetResourceChunksRequest) returns (.protocol.gaia.proxy.GetResourceChunksResponse) { ... }</code>
+       */
+      public abstract void getResourceChunks(
+          com.google.protobuf.RpcController controller,
+          com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequest request,
+          com.google.protobuf.RpcCallback<com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponse> done);
+
     }
 
     public static com.google.protobuf.Service newReflectiveService(
@@ -115,6 +123,14 @@ public final class GaiaProxyGrpcService {
           impl.proxy(controller, request, done);
         }
 
+        @java.lang.Override
+        public  void getResourceChunks(
+            com.google.protobuf.RpcController controller,
+            com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequest request,
+            com.google.protobuf.RpcCallback<com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponse> done) {
+          impl.getResourceChunks(controller, request, done);
+        }
+
       };
     }
 
@@ -147,6 +163,8 @@ public final class GaiaProxyGrpcService {
               return impl.addPartner(controller, (com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest)request);
             case 4:
               return impl.proxy(controller, (com.tcl.gaia.protocol.proxy.Proxy.ProxyRequest)request);
+            case 5:
+              return impl.getResourceChunks(controller, (com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequest)request);
             default:
               throw new java.lang.AssertionError("Can't get here.");
           }
@@ -171,6 +189,8 @@ public final class GaiaProxyGrpcService {
               return com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest.getDefaultInstance();
             case 4:
               return com.tcl.gaia.protocol.proxy.Proxy.ProxyRequest.getDefaultInstance();
+            case 5:
+              return com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequest.getDefaultInstance();
             default:
               throw new java.lang.AssertionError("Can't get here.");
           }
@@ -195,6 +215,8 @@ public final class GaiaProxyGrpcService {
               return com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerResponse.getDefaultInstance();
             case 4:
               return com.tcl.gaia.protocol.proxy.Proxy.ProxyResponse.getDefaultInstance();
+            case 5:
+              return com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponse.getDefaultInstance();
             default:
               throw new java.lang.AssertionError("Can't get here.");
           }
@@ -251,6 +273,14 @@ public final class GaiaProxyGrpcService {
         com.tcl.gaia.protocol.proxy.Proxy.ProxyRequest request,
         com.google.protobuf.RpcCallback<com.tcl.gaia.protocol.proxy.Proxy.ProxyResponse> done);
 
+    /**
+     * <code>rpc GetResourceChunks(.protocol.gaia.proxy.GetResourceChunksRequest) returns (.protocol.gaia.proxy.GetResourceChunksResponse) { ... }</code>
+     */
+    public abstract void getResourceChunks(
+        com.google.protobuf.RpcController controller,
+        com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequest request,
+        com.google.protobuf.RpcCallback<com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponse> done);
+
     public static final
         com.google.protobuf.Descriptors.ServiceDescriptor
         getDescriptor() {
@@ -298,6 +328,11 @@ public final class GaiaProxyGrpcService {
             com.google.protobuf.RpcUtil.<com.tcl.gaia.protocol.proxy.Proxy.ProxyResponse>specializeCallback(
               done));
           return;
+        case 5:
+          this.getResourceChunks(controller, (com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequest)request,
+            com.google.protobuf.RpcUtil.<com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponse>specializeCallback(
+              done));
+          return;
         default:
           throw new java.lang.AssertionError("Can't get here.");
       }
@@ -322,6 +357,8 @@ public final class GaiaProxyGrpcService {
           return com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerRequest.getDefaultInstance();
         case 4:
           return com.tcl.gaia.protocol.proxy.Proxy.ProxyRequest.getDefaultInstance();
+        case 5:
+          return com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequest.getDefaultInstance();
         default:
           throw new java.lang.AssertionError("Can't get here.");
       }
@@ -346,6 +383,8 @@ public final class GaiaProxyGrpcService {
           return com.tcl.gaia.protocol.proxy.PartnerOuterClass.AddPartnerResponse.getDefaultInstance();
         case 4:
           return com.tcl.gaia.protocol.proxy.Proxy.ProxyResponse.getDefaultInstance();
+        case 5:
+          return com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponse.getDefaultInstance();
         default:
           throw new java.lang.AssertionError("Can't get here.");
       }
@@ -441,6 +480,21 @@ public final class GaiaProxyGrpcService {
             com.tcl.gaia.protocol.proxy.Proxy.ProxyResponse.class,
             com.tcl.gaia.protocol.proxy.Proxy.ProxyResponse.getDefaultInstance()));
       }
+
+      public  void getResourceChunks(
+          com.google.protobuf.RpcController controller,
+          com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequest request,
+          com.google.protobuf.RpcCallback<com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponse> done) {
+        channel.callMethod(
+          getDescriptor().getMethods().get(5),
+          controller,
+          request,
+          com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponse.getDefaultInstance(),
+          com.google.protobuf.RpcUtil.generalizeCallback(
+            done,
+            com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponse.class,
+            com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponse.getDefaultInstance()));
+      }
     }
 
     public static BlockingInterface newBlockingStub(
@@ -472,6 +526,11 @@ public final class GaiaProxyGrpcService {
       public com.tcl.gaia.protocol.proxy.Proxy.ProxyResponse proxy(
           com.google.protobuf.RpcController controller,
           com.tcl.gaia.protocol.proxy.Proxy.ProxyRequest request)
+          throws com.google.protobuf.ServiceException;
+
+      public com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponse getResourceChunks(
+          com.google.protobuf.RpcController controller,
+          com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequest request)
           throws com.google.protobuf.ServiceException;
     }
 
@@ -541,6 +600,18 @@ public final class GaiaProxyGrpcService {
           com.tcl.gaia.protocol.proxy.Proxy.ProxyResponse.getDefaultInstance());
       }
 
+
+      public com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponse getResourceChunks(
+          com.google.protobuf.RpcController controller,
+          com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksRequest request)
+          throws com.google.protobuf.ServiceException {
+        return (com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponse) channel.callBlockingMethod(
+          getDescriptor().getMethods().get(5),
+          controller,
+          request,
+          com.tcl.gaia.protocol.proxy.Proxy.GetResourceChunksResponse.getDefaultInstance());
+      }
+
     }
 
     // @@protoc_insertion_point(class_scope:protocol.gaia.proxy.GaiaProxyGrpc)
@@ -560,7 +631,7 @@ public final class GaiaProxyGrpcService {
       "/api/annotations.proto\032\036protocol/gaia/pr" +
       "oxy/ping.proto\032!protocol/gaia/proxy/part" +
       "ner.proto\032\037protocol/gaia/proxy/proxy.pro" +
-      "to2\314\004\n\rGaiaProxyGrpc\022^\n\004Ping\022 .protocol." +
+      "to2\330\005\n\rGaiaProxyGrpc\022^\n\004Ping\022 .protocol." +
       "gaia.proxy.PingRequest\032!.protocol.gaia.p" +
       "roxy.PingResponse\"\021\202\323\344\223\002\013\022\t/api/ping\022w\n\013" +
       "ListPartner\022\'.protocol.gaia.proxy.ListPa" +
@@ -574,9 +645,12 @@ public final class GaiaProxyGrpcService {
       "proxy.AddPartnerResponse\"\030\202\323\344\223\002\022\"\r/api/p" +
       "artners:\001*\022e\n\005Proxy\022!.protocol.gaia.prox" +
       "y.ProxyRequest\032\".protocol.gaia.proxy.Pro" +
-      "xyResponse\"\025\202\323\344\223\002\017\"\n/api/proxy:\001*B=\n\033com" +
-      ".tcl.gaia.protocol.proxyZ\033tcl.com/gaia/p" +
-      "rotocol/proxy\210\001\001"
+      "xyResponse\"\025\202\323\344\223\002\017\"\n/api/proxy:\001*\022\211\001\n\021Ge" +
+      "tResourceChunks\022-.protocol.gaia.proxy.Ge" +
+      "tResourceChunksRequest\032..protocol.gaia.p" +
+      "roxy.GetResourceChunksResponse\"\025\202\323\344\223\002\017\"\n" +
+      "/api/proxy:\001*B=\n\033com.tcl.gaia.protocol.p" +
+      "roxyZ\033tcl.com/gaia/protocol/proxy\210\001\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

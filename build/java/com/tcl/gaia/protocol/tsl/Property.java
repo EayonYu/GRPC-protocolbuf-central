@@ -1707,17 +1707,17 @@ public final class Property {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required string propertyId = 1;</code>
+     * <code>required string property_id = 1;</code>
      * @return Whether the propertyId field is set.
      */
     boolean hasPropertyId();
     /**
-     * <code>required string propertyId = 1;</code>
+     * <code>required string property_id = 1;</code>
      * @return The propertyId.
      */
     java.lang.String getPropertyId();
     /**
-     * <code>required string propertyId = 1;</code>
+     * <code>required string property_id = 1;</code>
      * @return The bytes for propertyId.
      */
     com.google.protobuf.ByteString
@@ -1883,10 +1883,10 @@ public final class Property {
     }
 
     private int bitField0_;
-    public static final int PROPERTYID_FIELD_NUMBER = 1;
+    public static final int PROPERTY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object propertyId_;
     /**
-     * <code>required string propertyId = 1;</code>
+     * <code>required string property_id = 1;</code>
      * @return Whether the propertyId field is set.
      */
     @java.lang.Override
@@ -1894,7 +1894,7 @@ public final class Property {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>required string propertyId = 1;</code>
+     * <code>required string property_id = 1;</code>
      * @return The propertyId.
      */
     @java.lang.Override
@@ -1913,7 +1913,7 @@ public final class Property {
       }
     }
     /**
-     * <code>required string propertyId = 1;</code>
+     * <code>required string property_id = 1;</code>
      * @return The bytes for propertyId.
      */
     @java.lang.Override
@@ -2106,7 +2106,7 @@ public final class Property {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       if (hasPropertyId()) {
-        hash = (37 * hash) + PROPERTYID_FIELD_NUMBER;
+        hash = (37 * hash) + PROPERTY_ID_FIELD_NUMBER;
         hash = (53 * hash) + getPropertyId().hashCode();
       }
       if (getDesiredCount() > 0) {
@@ -2467,14 +2467,14 @@ public final class Property {
 
       private java.lang.Object propertyId_ = "";
       /**
-       * <code>required string propertyId = 1;</code>
+       * <code>required string property_id = 1;</code>
        * @return Whether the propertyId field is set.
        */
       public boolean hasPropertyId() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>required string propertyId = 1;</code>
+       * <code>required string property_id = 1;</code>
        * @return The propertyId.
        */
       public java.lang.String getPropertyId() {
@@ -2492,7 +2492,7 @@ public final class Property {
         }
       }
       /**
-       * <code>required string propertyId = 1;</code>
+       * <code>required string property_id = 1;</code>
        * @return The bytes for propertyId.
        */
       public com.google.protobuf.ByteString
@@ -2509,7 +2509,7 @@ public final class Property {
         }
       }
       /**
-       * <code>required string propertyId = 1;</code>
+       * <code>required string property_id = 1;</code>
        * @param value The propertyId to set.
        * @return This builder for chaining.
        */
@@ -2524,7 +2524,7 @@ public final class Property {
         return this;
       }
       /**
-       * <code>required string propertyId = 1;</code>
+       * <code>required string property_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearPropertyId() {
@@ -2534,7 +2534,7 @@ public final class Property {
         return this;
       }
       /**
-       * <code>required string propertyId = 1;</code>
+       * <code>required string property_id = 1;</code>
        * @param value The bytes for propertyId to set.
        * @return This builder for chaining.
        */
@@ -3112,13 +3112,13 @@ public final class Property {
       "(\t\"z\n\023TSLReportedProperty\022#\n\005value\030\001 \002(\013" +
       "2\024.google.protobuf.Any\022>\n\006status\030\002 \002(\0162." +
       ".protocol.common.tsl.TSLReportedProperty" +
-      "Status\"\227\001\n\013TSLProperty\022\022\n\npropertyId\030\001 \002" +
-      "(\t\0228\n\007desired\030\002 \003(\0132\'.protocol.common.ts" +
-      "l.TSLDesiredProperty\022:\n\010reported\030\003 \003(\0132(" +
-      ".protocol.common.tsl.TSLReportedProperty" +
-      "*;\n\031TSLReportedPropertyStatus\022\r\n\tDELIVER" +
-      "ED\020\000\022\017\n\013UNDELIVERED\020\001B6\n\031com.tcl.gaia.pr" +
-      "otocol.tslZ\031tcl.com/gaia/protocol/tsl"
+      "Status\"\230\001\n\013TSLProperty\022\023\n\013property_id\030\001 " +
+      "\002(\t\0228\n\007desired\030\002 \003(\0132\'.protocol.common.t" +
+      "sl.TSLDesiredProperty\022:\n\010reported\030\003 \003(\0132" +
+      "(.protocol.common.tsl.TSLReportedPropert" +
+      "y*;\n\031TSLReportedPropertyStatus\022\r\n\tDELIVE" +
+      "RED\020\000\022\017\n\013UNDELIVERED\020\001B6\n\031com.tcl.gaia.p" +
+      "rotocol.tslZ\031tcl.com/gaia/protocol/tsl"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

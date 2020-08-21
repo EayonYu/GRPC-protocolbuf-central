@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=b'\n\035com.tcl.gaia.protocol.partnerZ\035tcl.com/gaia/protocol/partner',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n$protocol/common/partner/device.proto\x12\x17protocol.common.partner\x1a\x19google/protobuf/any.proto\x1a$protocol/common/tsl/capability.proto\"\x13\n\x11\x43onnectionAddress\"\x80\x01\n\nConnection\x12\x35\n\x04type\x18\x01 \x02(\x0e\x32\'.protocol.common.partner.ConnectionType\x12;\n\x07\x61\x64\x64ress\x18\x02 \x01(\x0b\x32*.protocol.common.partner.ConnectionAddress\"2\n\x0bGeolocation\x12\x11\n\tlongitude\x18\x01 \x02(\x02\x12\x10\n\x08latitude\x18\x02 \x02(\x02\"\'\n\x08Location\x12\x0c\n\x04room\x18\x01 \x02(\t\x12\r\n\x05\x66loor\x18\x02 \x02(\x05\"3\n\x10\x46irmwareVersions\x12\x12\n\nwifiModule\x18\x01 \x02(\t\x12\x0b\n\x03mcu\x18\x02 \x02(\x05\")\n\x0b\x44\x65viceIcons\x12\x0c\n\x04\x64p32\x18\x01 \x01(\t\x12\x0c\n\x04\x64p64\x18\x02 \x01(\t\"\xb3\x04\n\nDeviceInfo\x12\x10\n\x08\x64\x65viceId\x18\x01 \x02(\t\x12\x12\n\ndeviceName\x18\x02 \x01(\t\x12\r\n\x05tslId\x18\x03 \x01(\t\x12\x37\n\ndeviceType\x18\x04 \x01(\x0e\x32#.protocol.common.partner.DeviceType\x12\x10\n\x08tenantId\x18\x05 \x01(\t\x12\x16\n\x0emanufacturerId\x18\x06 \x01(\t\x12\r\n\x05model\x18\x07 \x01(\t\x12\x10\n\x08parentId\x18\x08 \x01(\t\x12\x10\n\x08serialNo\x18\t \x01(\t\x12\x0b\n\x03mac\x18\n \x01(\t\x12\x38\n\x0b\x63onnections\x18\x0b \x03(\x0b\x32#.protocol.common.partner.Connection\x12\x39\n\x0bgeolocation\x18\x0c \x01(\x0b\x32$.protocol.common.partner.Geolocation\x12\x33\n\x08location\x18\r \x01(\x0b\x32!.protocol.common.partner.Location\x12\x43\n\x10\x66irmwareVersions\x18\x0e \x01(\x0b\x32).protocol.common.partner.FirmwareVersions\x12\x39\n\x0b\x64\x65viceIcons\x18\x0f \x01(\x0b\x32$.protocol.common.partner.DeviceIcons\x12#\n\x05\x65xtra\x18\x10 \x01(\x0b\x32\x14.google.protobuf.Any\"z\n\x12\x44\x65viceReachAbility\x12\x10\n\x08\x64\x65viceId\x18\x01 \x02(\t\x12?\n\x05value\x18\x02 \x02(\x0e\x32\x30.protocol.common.partner.DeviceReachAbilityValue\x12\x11\n\ttimestamp\x18\x03 \x02(\t\"\xce\x01\n\x06\x44\x65vice\x12\x10\n\x08\x64\x65viceId\x18\x01 \x02(\t\x12\x37\n\ndeviceInfo\x18\x02 \x02(\x0b\x32#.protocol.common.partner.DeviceInfo\x12\x41\n\x0creachAbility\x18\x03 \x01(\x0b\x32+.protocol.common.partner.DeviceReachAbility\x12\x36\n\nproperties\x18\x04 \x03(\x0b\x32\".protocol.common.tsl.TSLCapability*\xf1\x01\n\nDeviceType\x12\x17\n\x13\x44\x45VICE_TYPE_UNKNOWN\x10\x00\x12\x1f\n\x1b\x44\x45VICE_TYPE_AIR_CONDITIONER\x10\x01\x12\x1b\n\x17\x44\x45VICE_TYPE_AIR_CLEANER\x10\x02\x12\x1e\n\x1a\x44\x45VICE_TYPE_WATER_PURIFIER\x10\x03\x12\x1a\n\x16\x44\x45VICE_TYPE_TELEVISION\x10\x04\x12\x15\n\x11\x44\x45VICE_TYPE_PHONE\x10\x05\x12!\n\x1d\x44\x45VICE_TYPE_PERSONAL_COMPUTER\x10\x06\x12\x16\n\x12\x44\x45VICE_TYPE_SOCKET\x10\x07*\xd4\x01\n\x0e\x43onnectionType\x12\x1b\n\x17\x43ONNECTION_TYPE_UNKNOWN\x10\x00\x12\x18\n\x14\x43ONNECTION_TYPE_WIFI\x10\x01\x12\x1c\n\x18\x43ONNECTION_TYPE_CELLULAR\x10\x02\x12\x1b\n\x17\x43ONNECTION_TYPE_ZIG_BEE\x10\x03\x12\x1a\n\x16\x43ONNECTION_TYPE_Z_WAVE\x10\x04\x12\x18\n\x14\x43ONNECTION_TYPE_LORA\x10\x05\x12\x1a\n\x16\x43ONNECTION_TYPE_NB_IOT\x10\x06*\x90\x01\n\x17\x44\x65viceReachAbilityValue\x12&\n\"DEVICE_REACH_ABILITY_VALUE_UNKNOWN\x10\x00\x12%\n!DEVICE_REACH_ABILITY_VALUE_ONLINE\x10\x01\x12&\n\"DEVICE_REACH_ABILITY_VALUE_OFFLINE\x10\x02\x42>\n\x1d\x63om.tcl.gaia.protocol.partnerZ\x1dtcl.com/gaia/protocol/partner'
+  serialized_pb=b'\n$protocol/common/partner/device.proto\x12\x17protocol.common.partner\x1a\x19google/protobuf/any.proto\x1a$protocol/common/tsl/capability.proto\"\x13\n\x11\x43onnectionAddress\"\x80\x01\n\nConnection\x12\x35\n\x04type\x18\x01 \x02(\x0e\x32\'.protocol.common.partner.ConnectionType\x12;\n\x07\x61\x64\x64ress\x18\x02 \x01(\x0b\x32*.protocol.common.partner.ConnectionAddress\"2\n\x0bGeolocation\x12\x11\n\tlongitude\x18\x01 \x02(\x02\x12\x10\n\x08latitude\x18\x02 \x02(\x02\"\'\n\x08Location\x12\x0c\n\x04room\x18\x01 \x02(\t\x12\r\n\x05\x66loor\x18\x02 \x02(\x05\"4\n\x10\x46irmwareVersions\x12\x13\n\x0bwifi_module\x18\x01 \x02(\t\x12\x0b\n\x03mcu\x18\x02 \x02(\x05\")\n\x0b\x44\x65viceIcons\x12\x0c\n\x04\x64p32\x18\x01 \x01(\t\x12\x0c\n\x04\x64p64\x18\x02 \x01(\t\"\xbd\x04\n\nDeviceInfo\x12\x11\n\tdevice_id\x18\x01 \x02(\t\x12\x13\n\x0b\x64\x65vice_name\x18\x02 \x01(\t\x12\x0e\n\x06tsl_id\x18\x03 \x01(\t\x12\x38\n\x0b\x64\x65vice_type\x18\x04 \x01(\x0e\x32#.protocol.common.partner.DeviceType\x12\x11\n\ttenant_id\x18\x05 \x01(\t\x12\x17\n\x0fmanufacturer_id\x18\x06 \x01(\t\x12\r\n\x05model\x18\x07 \x01(\t\x12\x11\n\tparent_id\x18\x08 \x01(\t\x12\x11\n\tserial_no\x18\t \x01(\t\x12\x0b\n\x03mac\x18\n \x01(\t\x12\x38\n\x0b\x63onnections\x18\x0b \x03(\x0b\x32#.protocol.common.partner.Connection\x12\x39\n\x0bgeolocation\x18\x0c \x01(\x0b\x32$.protocol.common.partner.Geolocation\x12\x33\n\x08location\x18\r \x01(\x0b\x32!.protocol.common.partner.Location\x12\x44\n\x11\x66irmware_versions\x18\x0e \x01(\x0b\x32).protocol.common.partner.FirmwareVersions\x12:\n\x0c\x64\x65vice_icons\x18\x0f \x01(\x0b\x32$.protocol.common.partner.DeviceIcons\x12#\n\x05\x65xtra\x18\x10 \x01(\x0b\x32\x14.google.protobuf.Any\"{\n\x12\x44\x65viceReachAbility\x12\x11\n\tdevice_id\x18\x01 \x02(\t\x12?\n\x05value\x18\x02 \x02(\x0e\x32\x30.protocol.common.partner.DeviceReachAbilityValue\x12\x11\n\ttimestamp\x18\x03 \x02(\t\"\xd1\x01\n\x06\x44\x65vice\x12\x11\n\tdevice_id\x18\x01 \x02(\t\x12\x38\n\x0b\x64\x65vice_info\x18\x02 \x02(\x0b\x32#.protocol.common.partner.DeviceInfo\x12\x42\n\rreach_ability\x18\x03 \x01(\x0b\x32+.protocol.common.partner.DeviceReachAbility\x12\x36\n\nproperties\x18\x04 \x03(\x0b\x32\".protocol.common.tsl.TSLCapability*\xf1\x01\n\nDeviceType\x12\x17\n\x13\x44\x45VICE_TYPE_UNKNOWN\x10\x00\x12\x1f\n\x1b\x44\x45VICE_TYPE_AIR_CONDITIONER\x10\x01\x12\x1b\n\x17\x44\x45VICE_TYPE_AIR_CLEANER\x10\x02\x12\x1e\n\x1a\x44\x45VICE_TYPE_WATER_PURIFIER\x10\x03\x12\x1a\n\x16\x44\x45VICE_TYPE_TELEVISION\x10\x04\x12\x15\n\x11\x44\x45VICE_TYPE_PHONE\x10\x05\x12!\n\x1d\x44\x45VICE_TYPE_PERSONAL_COMPUTER\x10\x06\x12\x16\n\x12\x44\x45VICE_TYPE_SOCKET\x10\x07*\xd4\x01\n\x0e\x43onnectionType\x12\x1b\n\x17\x43ONNECTION_TYPE_UNKNOWN\x10\x00\x12\x18\n\x14\x43ONNECTION_TYPE_WIFI\x10\x01\x12\x1c\n\x18\x43ONNECTION_TYPE_CELLULAR\x10\x02\x12\x1b\n\x17\x43ONNECTION_TYPE_ZIG_BEE\x10\x03\x12\x1a\n\x16\x43ONNECTION_TYPE_Z_WAVE\x10\x04\x12\x18\n\x14\x43ONNECTION_TYPE_LORA\x10\x05\x12\x1a\n\x16\x43ONNECTION_TYPE_NB_IOT\x10\x06*\x90\x01\n\x17\x44\x65viceReachAbilityValue\x12&\n\"DEVICE_REACH_ABILITY_VALUE_UNKNOWN\x10\x00\x12%\n!DEVICE_REACH_ABILITY_VALUE_ONLINE\x10\x01\x12&\n\"DEVICE_REACH_ABILITY_VALUE_OFFLINE\x10\x02\x42>\n\x1d\x63om.tcl.gaia.protocol.partnerZ\x1dtcl.com/gaia/protocol/partner'
   ,
   dependencies=[google_dot_protobuf_dot_any__pb2.DESCRIPTOR,protocol_dot_common_dot_tsl_dot_capability__pb2.DESCRIPTOR,])
 
@@ -76,8 +76,8 @@ _DEVICETYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1371,
-  serialized_end=1612,
+  serialized_start=1386,
+  serialized_end=1627,
 )
 _sym_db.RegisterEnumDescriptor(_DEVICETYPE)
 
@@ -127,8 +127,8 @@ _CONNECTIONTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1615,
-  serialized_end=1827,
+  serialized_start=1630,
+  serialized_end=1842,
 )
 _sym_db.RegisterEnumDescriptor(_CONNECTIONTYPE)
 
@@ -158,8 +158,8 @@ _DEVICEREACHABILITYVALUE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1830,
-  serialized_end=1974,
+  serialized_start=1845,
+  serialized_end=1989,
 )
 _sym_db.RegisterEnumDescriptor(_DEVICEREACHABILITYVALUE)
 
@@ -336,7 +336,7 @@ _FIRMWAREVERSIONS = _descriptor.Descriptor(
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='wifiModule', full_name='protocol.common.partner.FirmwareVersions.wifiModule', index=0,
+      name='wifi_module', full_name='protocol.common.partner.FirmwareVersions.wifi_module', index=0,
       number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -362,7 +362,7 @@ _FIRMWAREVERSIONS = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=375,
-  serialized_end=426,
+  serialized_end=427,
 )
 
 
@@ -400,8 +400,8 @@ _DEVICEICONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=428,
-  serialized_end=469,
+  serialized_start=429,
+  serialized_end=470,
 )
 
 
@@ -414,42 +414,42 @@ _DEVICEINFO = _descriptor.Descriptor(
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='deviceId', full_name='protocol.common.partner.DeviceInfo.deviceId', index=0,
+      name='device_id', full_name='protocol.common.partner.DeviceInfo.device_id', index=0,
       number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='deviceName', full_name='protocol.common.partner.DeviceInfo.deviceName', index=1,
+      name='device_name', full_name='protocol.common.partner.DeviceInfo.device_name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='tslId', full_name='protocol.common.partner.DeviceInfo.tslId', index=2,
+      name='tsl_id', full_name='protocol.common.partner.DeviceInfo.tsl_id', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='deviceType', full_name='protocol.common.partner.DeviceInfo.deviceType', index=3,
+      name='device_type', full_name='protocol.common.partner.DeviceInfo.device_type', index=3,
       number=4, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='tenantId', full_name='protocol.common.partner.DeviceInfo.tenantId', index=4,
+      name='tenant_id', full_name='protocol.common.partner.DeviceInfo.tenant_id', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='manufacturerId', full_name='protocol.common.partner.DeviceInfo.manufacturerId', index=5,
+      name='manufacturer_id', full_name='protocol.common.partner.DeviceInfo.manufacturer_id', index=5,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -463,14 +463,14 @@ _DEVICEINFO = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='parentId', full_name='protocol.common.partner.DeviceInfo.parentId', index=7,
+      name='parent_id', full_name='protocol.common.partner.DeviceInfo.parent_id', index=7,
       number=8, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='serialNo', full_name='protocol.common.partner.DeviceInfo.serialNo', index=8,
+      name='serial_no', full_name='protocol.common.partner.DeviceInfo.serial_no', index=8,
       number=9, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -505,14 +505,14 @@ _DEVICEINFO = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='firmwareVersions', full_name='protocol.common.partner.DeviceInfo.firmwareVersions', index=13,
+      name='firmware_versions', full_name='protocol.common.partner.DeviceInfo.firmware_versions', index=13,
       number=14, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='deviceIcons', full_name='protocol.common.partner.DeviceInfo.deviceIcons', index=14,
+      name='device_icons', full_name='protocol.common.partner.DeviceInfo.device_icons', index=14,
       number=15, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -537,8 +537,8 @@ _DEVICEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=472,
-  serialized_end=1035,
+  serialized_start=473,
+  serialized_end=1046,
 )
 
 
@@ -551,7 +551,7 @@ _DEVICEREACHABILITY = _descriptor.Descriptor(
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='deviceId', full_name='protocol.common.partner.DeviceReachAbility.deviceId', index=0,
+      name='device_id', full_name='protocol.common.partner.DeviceReachAbility.device_id', index=0,
       number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -583,8 +583,8 @@ _DEVICEREACHABILITY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1037,
-  serialized_end=1159,
+  serialized_start=1048,
+  serialized_end=1171,
 )
 
 
@@ -597,21 +597,21 @@ _DEVICE = _descriptor.Descriptor(
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='deviceId', full_name='protocol.common.partner.Device.deviceId', index=0,
+      name='device_id', full_name='protocol.common.partner.Device.device_id', index=0,
       number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='deviceInfo', full_name='protocol.common.partner.Device.deviceInfo', index=1,
+      name='device_info', full_name='protocol.common.partner.Device.device_info', index=1,
       number=2, type=11, cpp_type=10, label=2,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='reachAbility', full_name='protocol.common.partner.Device.reachAbility', index=2,
+      name='reach_ability', full_name='protocol.common.partner.Device.reach_ability', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -636,22 +636,22 @@ _DEVICE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1162,
-  serialized_end=1368,
+  serialized_start=1174,
+  serialized_end=1383,
 )
 
 _CONNECTION.fields_by_name['type'].enum_type = _CONNECTIONTYPE
 _CONNECTION.fields_by_name['address'].message_type = _CONNECTIONADDRESS
-_DEVICEINFO.fields_by_name['deviceType'].enum_type = _DEVICETYPE
+_DEVICEINFO.fields_by_name['device_type'].enum_type = _DEVICETYPE
 _DEVICEINFO.fields_by_name['connections'].message_type = _CONNECTION
 _DEVICEINFO.fields_by_name['geolocation'].message_type = _GEOLOCATION
 _DEVICEINFO.fields_by_name['location'].message_type = _LOCATION
-_DEVICEINFO.fields_by_name['firmwareVersions'].message_type = _FIRMWAREVERSIONS
-_DEVICEINFO.fields_by_name['deviceIcons'].message_type = _DEVICEICONS
+_DEVICEINFO.fields_by_name['firmware_versions'].message_type = _FIRMWAREVERSIONS
+_DEVICEINFO.fields_by_name['device_icons'].message_type = _DEVICEICONS
 _DEVICEINFO.fields_by_name['extra'].message_type = google_dot_protobuf_dot_any__pb2._ANY
 _DEVICEREACHABILITY.fields_by_name['value'].enum_type = _DEVICEREACHABILITYVALUE
-_DEVICE.fields_by_name['deviceInfo'].message_type = _DEVICEINFO
-_DEVICE.fields_by_name['reachAbility'].message_type = _DEVICEREACHABILITY
+_DEVICE.fields_by_name['device_info'].message_type = _DEVICEINFO
+_DEVICE.fields_by_name['reach_ability'].message_type = _DEVICEREACHABILITY
 _DEVICE.fields_by_name['properties'].message_type = protocol_dot_common_dot_tsl_dot_capability__pb2._TSLCAPABILITY
 DESCRIPTOR.message_types_by_name['ConnectionAddress'] = _CONNECTIONADDRESS
 DESCRIPTOR.message_types_by_name['Connection'] = _CONNECTION

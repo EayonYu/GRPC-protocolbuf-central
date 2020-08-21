@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=b'\n\031com.tcl.gaia.protocol.tslZ\031tcl.com/gaia/protocol/tsl',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n protocol/common/tsl/method.proto\x12\x13protocol.common.tsl\x1a\x1fprotocol/common/tsl/value.proto\"\xf1\x01\n\tTSLMethod\x12\x10\n\x08\x64\x65viceId\x18\x01 \x02(\t\x12\x14\n\x0cinvocationId\x18\x02 \x02(\t\x12\x34\n\x06status\x18\x03 \x02(\x0e\x32$.protocol.common.tsl.TSLMethodStatus\x12\x38\n\x0binputParams\x18\x04 \x03(\x0b\x32#.protocol.common.tsl.TSLValueObject\x12\x39\n\x0coutputValues\x18\x05 \x03(\x0b\x32#.protocol.common.tsl.TSLValueObject\x12\x11\n\ttimestamp\x18\x06 \x02(\t*\x94\x01\n\x0fTSLMethodStatus\x12\x1d\n\x19TSL_METHOD_STATUS_UNKNOWN\x10\x00\x12\x1f\n\x1bTSL_METHOD_STATUS_DELIVERED\x10\x01\x12!\n\x1dTSL_METHOD_STATUS_UNDELIVERED\x10\x02\x12\x1e\n\x1aTSL_METHOD_STATUS_COMPLETE\x10\x03\x42\x36\n\x19\x63om.tcl.gaia.protocol.tslZ\x19tcl.com/gaia/protocol/tsl'
+  serialized_pb=b'\n protocol/common/tsl/method.proto\x12\x13protocol.common.tsl\x1a\x1fprotocol/common/tsl/value.proto\"\xf5\x01\n\tTSLMethod\x12\x11\n\tdevice_id\x18\x01 \x02(\t\x12\x15\n\rinvocation_id\x18\x02 \x02(\t\x12\x34\n\x06status\x18\x03 \x02(\x0e\x32$.protocol.common.tsl.TSLMethodStatus\x12\x39\n\x0cinput_params\x18\x04 \x03(\x0b\x32#.protocol.common.tsl.TSLValueObject\x12:\n\routput_values\x18\x05 \x03(\x0b\x32#.protocol.common.tsl.TSLValueObject\x12\x11\n\ttimestamp\x18\x06 \x02(\t*\x94\x01\n\x0fTSLMethodStatus\x12\x1d\n\x19TSL_METHOD_STATUS_UNKNOWN\x10\x00\x12\x1f\n\x1bTSL_METHOD_STATUS_DELIVERED\x10\x01\x12!\n\x1dTSL_METHOD_STATUS_UNDELIVERED\x10\x02\x12\x1e\n\x1aTSL_METHOD_STATUS_COMPLETE\x10\x03\x42\x36\n\x19\x63om.tcl.gaia.protocol.tslZ\x19tcl.com/gaia/protocol/tsl'
   ,
   dependencies=[protocol_dot_common_dot_tsl_dot_value__pb2.DESCRIPTOR,])
 
@@ -55,8 +55,8 @@ _TSLMETHODSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=335,
-  serialized_end=483,
+  serialized_start=339,
+  serialized_end=487,
 )
 _sym_db.RegisterEnumDescriptor(_TSLMETHODSTATUS)
 
@@ -77,14 +77,14 @@ _TSLMETHOD = _descriptor.Descriptor(
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='deviceId', full_name='protocol.common.tsl.TSLMethod.deviceId', index=0,
+      name='device_id', full_name='protocol.common.tsl.TSLMethod.device_id', index=0,
       number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='invocationId', full_name='protocol.common.tsl.TSLMethod.invocationId', index=1,
+      name='invocation_id', full_name='protocol.common.tsl.TSLMethod.invocation_id', index=1,
       number=2, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -98,14 +98,14 @@ _TSLMETHOD = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='inputParams', full_name='protocol.common.tsl.TSLMethod.inputParams', index=3,
+      name='input_params', full_name='protocol.common.tsl.TSLMethod.input_params', index=3,
       number=4, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='outputValues', full_name='protocol.common.tsl.TSLMethod.outputValues', index=4,
+      name='output_values', full_name='protocol.common.tsl.TSLMethod.output_values', index=4,
       number=5, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -131,12 +131,12 @@ _TSLMETHOD = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=91,
-  serialized_end=332,
+  serialized_end=336,
 )
 
 _TSLMETHOD.fields_by_name['status'].enum_type = _TSLMETHODSTATUS
-_TSLMETHOD.fields_by_name['inputParams'].message_type = protocol_dot_common_dot_tsl_dot_value__pb2._TSLVALUEOBJECT
-_TSLMETHOD.fields_by_name['outputValues'].message_type = protocol_dot_common_dot_tsl_dot_value__pb2._TSLVALUEOBJECT
+_TSLMETHOD.fields_by_name['input_params'].message_type = protocol_dot_common_dot_tsl_dot_value__pb2._TSLVALUEOBJECT
+_TSLMETHOD.fields_by_name['output_values'].message_type = protocol_dot_common_dot_tsl_dot_value__pb2._TSLVALUEOBJECT
 DESCRIPTOR.message_types_by_name['TSLMethod'] = _TSLMETHOD
 DESCRIPTOR.enum_types_by_name['TSLMethodStatus'] = _TSLMETHODSTATUS
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)

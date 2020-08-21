@@ -52,7 +52,7 @@ message Location {
 }
 
 message FirmwareVersions {
-  required string wifiModule = 1;
+  required string wifi_module = 1;
   required int32 mcu = 2;
 }
 
@@ -63,21 +63,21 @@ message DeviceIcons {
 
 // https://confluence.tclking.com/display/IoT4/Partner+API+Common+Objects#PartnerAPICommonObjects-DeviceInfo
 message DeviceInfo {
-  required string deviceId = 1;
-  optional string deviceName = 2;
-  optional string tslId = 3;
-  optional DeviceType deviceType = 4;
-  optional string tenantId = 5;
-  optional string manufacturerId = 6;
+  required string device_id = 1;
+  optional string device_name = 2;
+  optional string tsl_id = 3;
+  optional DeviceType device_type = 4;
+  optional string tenant_id = 5;
+  optional string manufacturer_id = 6;
   optional string model = 7;
-  optional string parentId = 8;
-  optional string serialNo = 9;
+  optional string parent_id = 8;
+  optional string serial_no = 9;
   optional string mac = 10;
   repeated Connection connections = 11;
   optional Geolocation geolocation = 12;
   optional Location location = 13;
-  optional FirmwareVersions firmwareVersions = 14;
-  optional DeviceIcons deviceIcons = 15;
+  optional FirmwareVersions firmware_versions = 14;
+  optional DeviceIcons device_icons = 15;
   optional google.protobuf.Any extra = 16;
 }
 
@@ -89,14 +89,14 @@ enum DeviceReachAbilityValue {
 }
 
 message DeviceReachAbility {
-  required string deviceId = 1;
+  required string device_id = 1;
   required DeviceReachAbilityValue value = 2;
   required string timestamp = 3;
 }
 // https://confluence.tclking.com/display/IoT4/Partner+API+Common+Objects#PartnerAPICommonObjects-Device
 message Device {
-  required string deviceId = 1;
-  required DeviceInfo deviceInfo = 2;
-  optional DeviceReachAbility reachAbility = 3;
+  required string device_id = 1;
+  required DeviceInfo device_info = 2;
+  optional DeviceReachAbility reach_ability = 3;
   repeated protocol.common.tsl.TSLCapability properties = 4;
 }

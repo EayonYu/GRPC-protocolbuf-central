@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=b'\n\031com.tcl.gaia.protocol.tslZ\031tcl.com/gaia/protocol/tsl',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1fprotocol/common/tsl/event.proto\x12\x13protocol.common.tsl\x1a\x1fprotocol/common/tsl/value.proto\"g\n\x08TSLEvent\x12\x0f\n\x07\x65ventId\x18\x01 \x02(\t\x12\x37\n\nattributes\x18\x02 \x03(\x0b\x32#.protocol.common.tsl.TSLValueObject\x12\x11\n\ttimestamp\x18\x03 \x02(\tB6\n\x19\x63om.tcl.gaia.protocol.tslZ\x19tcl.com/gaia/protocol/tsl'
+  serialized_pb=b'\n\x1fprotocol/common/tsl/event.proto\x12\x13protocol.common.tsl\x1a\x1fprotocol/common/tsl/value.proto\"h\n\x08TSLEvent\x12\x10\n\x08\x65vent_id\x18\x01 \x02(\t\x12\x37\n\nattributes\x18\x02 \x03(\x0b\x32#.protocol.common.tsl.TSLValueObject\x12\x11\n\ttimestamp\x18\x03 \x02(\tB6\n\x19\x63om.tcl.gaia.protocol.tslZ\x19tcl.com/gaia/protocol/tsl'
   ,
   dependencies=[protocol_dot_common_dot_tsl_dot_value__pb2.DESCRIPTOR,])
 
@@ -36,7 +36,7 @@ _TSLEVENT = _descriptor.Descriptor(
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='eventId', full_name='protocol.common.tsl.TSLEvent.eventId', index=0,
+      name='event_id', full_name='protocol.common.tsl.TSLEvent.event_id', index=0,
       number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -69,7 +69,7 @@ _TSLEVENT = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=89,
-  serialized_end=192,
+  serialized_end=193,
 )
 
 _TSLEVENT.fields_by_name['attributes'].message_type = protocol_dot_common_dot_tsl_dot_value__pb2._TSLVALUEOBJECT

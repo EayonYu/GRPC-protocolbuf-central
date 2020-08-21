@@ -7,6 +7,6 @@ option java_package = "com.tcl.gaia.protocol.constant";
 
 
 message ResponseHeader {
-    required int32 statusCode = 1;
+    required int32 status_code = 1;
     optional string msg = 2;
 }

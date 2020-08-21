@@ -19,17 +19,17 @@ public final class Capability {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required string capabilityId = 1;</code>
+     * <code>required string capability_id = 1;</code>
      * @return Whether the capabilityId field is set.
      */
     boolean hasCapabilityId();
     /**
-     * <code>required string capabilityId = 1;</code>
+     * <code>required string capability_id = 1;</code>
      * @return The capabilityId.
      */
     java.lang.String getCapabilityId();
     /**
-     * <code>required string capabilityId = 1;</code>
+     * <code>required string capability_id = 1;</code>
      * @return The bytes for capabilityId.
      */
     com.google.protobuf.ByteString
@@ -236,10 +236,10 @@ public final class Capability {
     }
 
     private int bitField0_;
-    public static final int CAPABILITYID_FIELD_NUMBER = 1;
+    public static final int CAPABILITY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object capabilityId_;
     /**
-     * <code>required string capabilityId = 1;</code>
+     * <code>required string capability_id = 1;</code>
      * @return Whether the capabilityId field is set.
      */
     @java.lang.Override
@@ -247,7 +247,7 @@ public final class Capability {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>required string capabilityId = 1;</code>
+     * <code>required string capability_id = 1;</code>
      * @return The capabilityId.
      */
     @java.lang.Override
@@ -266,7 +266,7 @@ public final class Capability {
       }
     }
     /**
-     * <code>required string capabilityId = 1;</code>
+     * <code>required string capability_id = 1;</code>
      * @return The bytes for capabilityId.
      */
     @java.lang.Override
@@ -514,7 +514,7 @@ public final class Capability {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       if (hasCapabilityId()) {
-        hash = (37 * hash) + CAPABILITYID_FIELD_NUMBER;
+        hash = (37 * hash) + CAPABILITY_ID_FIELD_NUMBER;
         hash = (53 * hash) + getCapabilityId().hashCode();
       }
       if (getPropertiesCount() > 0) {
@@ -930,14 +930,14 @@ public final class Capability {
 
       private java.lang.Object capabilityId_ = "";
       /**
-       * <code>required string capabilityId = 1;</code>
+       * <code>required string capability_id = 1;</code>
        * @return Whether the capabilityId field is set.
        */
       public boolean hasCapabilityId() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>required string capabilityId = 1;</code>
+       * <code>required string capability_id = 1;</code>
        * @return The capabilityId.
        */
       public java.lang.String getCapabilityId() {
@@ -955,7 +955,7 @@ public final class Capability {
         }
       }
       /**
-       * <code>required string capabilityId = 1;</code>
+       * <code>required string capability_id = 1;</code>
        * @return The bytes for capabilityId.
        */
       public com.google.protobuf.ByteString
@@ -972,7 +972,7 @@ public final class Capability {
         }
       }
       /**
-       * <code>required string capabilityId = 1;</code>
+       * <code>required string capability_id = 1;</code>
        * @param value The capabilityId to set.
        * @return This builder for chaining.
        */
@@ -987,7 +987,7 @@ public final class Capability {
         return this;
       }
       /**
-       * <code>required string capabilityId = 1;</code>
+       * <code>required string capability_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearCapabilityId() {
@@ -997,7 +997,7 @@ public final class Capability {
         return this;
       }
       /**
-       * <code>required string capabilityId = 1;</code>
+       * <code>required string capability_id = 1;</code>
        * @param value The bytes for capabilityId to set.
        * @return This builder for chaining.
        */
@@ -1802,13 +1802,13 @@ public final class Capability {
       "protocol.common.tsl\032\"protocol/common/tsl" +
       "/property.proto\032 protocol/common/tsl/met" +
       "hod.proto\032\037protocol/common/tsl/event.pro" +
-      "to\"\273\001\n\rTSLCapability\022\024\n\014capabilityId\030\001 \002" +
-      "(\t\0224\n\nproperties\030\002 \003(\0132 .protocol.common" +
-      ".tsl.TSLProperty\022-\n\006events\030\003 \003(\0132\035.proto" +
-      "col.common.tsl.TSLEvent\022/\n\007methods\030\004 \003(\013" +
-      "2\036.protocol.common.tsl.TSLMethodB6\n\031com." +
-      "tcl.gaia.protocol.tslZ\031tcl.com/gaia/prot" +
-      "ocol/tsl"
+      "to\"\274\001\n\rTSLCapability\022\025\n\rcapability_id\030\001 " +
+      "\002(\t\0224\n\nproperties\030\002 \003(\0132 .protocol.commo" +
+      "n.tsl.TSLProperty\022-\n\006events\030\003 \003(\0132\035.prot" +
+      "ocol.common.tsl.TSLEvent\022/\n\007methods\030\004 \003(" +
+      "\0132\036.protocol.common.tsl.TSLMethodB6\n\031com" +
+      ".tcl.gaia.protocol.tslZ\031tcl.com/gaia/pro" +
+      "tocol/tsl"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

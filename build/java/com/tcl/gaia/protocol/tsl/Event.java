@@ -19,17 +19,17 @@ public final class Event {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required string eventId = 1;</code>
+     * <code>required string event_id = 1;</code>
      * @return Whether the eventId field is set.
      */
     boolean hasEventId();
     /**
-     * <code>required string eventId = 1;</code>
+     * <code>required string event_id = 1;</code>
      * @return The eventId.
      */
     java.lang.String getEventId();
     /**
-     * <code>required string eventId = 1;</code>
+     * <code>required string event_id = 1;</code>
      * @return The bytes for eventId.
      */
     com.google.protobuf.ByteString
@@ -186,10 +186,10 @@ public final class Event {
     }
 
     private int bitField0_;
-    public static final int EVENTID_FIELD_NUMBER = 1;
+    public static final int EVENT_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object eventId_;
     /**
-     * <code>required string eventId = 1;</code>
+     * <code>required string event_id = 1;</code>
      * @return Whether the eventId field is set.
      */
     @java.lang.Override
@@ -197,7 +197,7 @@ public final class Event {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>required string eventId = 1;</code>
+     * <code>required string event_id = 1;</code>
      * @return The eventId.
      */
     @java.lang.Override
@@ -216,7 +216,7 @@ public final class Event {
       }
     }
     /**
-     * <code>required string eventId = 1;</code>
+     * <code>required string event_id = 1;</code>
      * @return The bytes for eventId.
      */
     @java.lang.Override
@@ -417,7 +417,7 @@ public final class Event {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       if (hasEventId()) {
-        hash = (37 * hash) + EVENTID_FIELD_NUMBER;
+        hash = (37 * hash) + EVENT_ID_FIELD_NUMBER;
         hash = (53 * hash) + getEventId().hashCode();
       }
       if (getAttributesCount() > 0) {
@@ -749,14 +749,14 @@ public final class Event {
 
       private java.lang.Object eventId_ = "";
       /**
-       * <code>required string eventId = 1;</code>
+       * <code>required string event_id = 1;</code>
        * @return Whether the eventId field is set.
        */
       public boolean hasEventId() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>required string eventId = 1;</code>
+       * <code>required string event_id = 1;</code>
        * @return The eventId.
        */
       public java.lang.String getEventId() {
@@ -774,7 +774,7 @@ public final class Event {
         }
       }
       /**
-       * <code>required string eventId = 1;</code>
+       * <code>required string event_id = 1;</code>
        * @return The bytes for eventId.
        */
       public com.google.protobuf.ByteString
@@ -791,7 +791,7 @@ public final class Event {
         }
       }
       /**
-       * <code>required string eventId = 1;</code>
+       * <code>required string event_id = 1;</code>
        * @param value The eventId to set.
        * @return This builder for chaining.
        */
@@ -806,7 +806,7 @@ public final class Event {
         return this;
       }
       /**
-       * <code>required string eventId = 1;</code>
+       * <code>required string event_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearEventId() {
@@ -816,7 +816,7 @@ public final class Event {
         return this;
       }
       /**
-       * <code>required string eventId = 1;</code>
+       * <code>required string event_id = 1;</code>
        * @param value The bytes for eventId to set.
        * @return This builder for chaining.
        */
@@ -1223,11 +1223,11 @@ public final class Event {
     java.lang.String[] descriptorData = {
       "\n\037protocol/common/tsl/event.proto\022\023proto" +
       "col.common.tsl\032\037protocol/common/tsl/valu" +
-      "e.proto\"g\n\010TSLEvent\022\017\n\007eventId\030\001 \002(\t\0227\n\n" +
-      "attributes\030\002 \003(\0132#.protocol.common.tsl.T" +
-      "SLValueObject\022\021\n\ttimestamp\030\003 \002(\tB6\n\031com." +
-      "tcl.gaia.protocol.tslZ\031tcl.com/gaia/prot" +
-      "ocol/tsl"
+      "e.proto\"h\n\010TSLEvent\022\020\n\010event_id\030\001 \002(\t\0227\n" +
+      "\nattributes\030\002 \003(\0132#.protocol.common.tsl." +
+      "TSLValueObject\022\021\n\ttimestamp\030\003 \002(\tB6\n\031com" +
+      ".tcl.gaia.protocol.tslZ\031tcl.com/gaia/pro" +
+      "tocol/tsl"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

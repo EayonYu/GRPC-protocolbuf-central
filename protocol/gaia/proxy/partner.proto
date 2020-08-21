@@ -14,24 +14,24 @@ message Partner {
     required string name = 2;
     required string type = 3;
     required string endpoint = 4;
-    required string createTime = 5;
-    required string updateTime = 6;
+    required string create_time = 5;
+    required string update_time = 6;
 }
 
 message PartnerPageData {
     repeated Partner content = 1;
     required bool paged = 2;
     required int32 page = 3;
-    required int32 totalPages = 4;
+    required int32 total_pages = 4;
     required int32 elements = 5;
-    required int32 totalElements = 6;
+    required int32 total_elements = 6;
     required bool first = 7;
     required bool last = 8;
 }
 
 message ListPartnerRequest {
-    repeated string searchBy = 1;
-    repeated string sortBy = 2;
+    repeated string search_by = 1;
+    repeated string sort_by = 2;
     repeated int32 page = 3;
     repeated int32 size = 4;
 }
@@ -56,9 +56,9 @@ message AddPartnerRequestPayload {
     required string name = 1;
     required string endpoint = 2;
     required string type = 3;
-    required string oAuth2Endpoint = 4;
-    required string clientId = 5;
-    required string clientSecret = 6;
+    required string oAuth2_endpoint = 4;
+    required string client_id = 5;
+    required string client_secret = 6;
 }
 
 message AddPartnerRequest {

@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=b'\n\035com.tcl.gaia.protocol.partnerZ\035tcl.com/gaia/protocol/partner',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\"protocol/common/partner/user.proto\x12\x17protocol.common.partner\x1a\x19google/protobuf/any.proto\"i\n\x0cLoginDetails\x12\x41\n\x0f\x61\x63\x63ountSystemId\x18\x01 \x02(\x0e\x32(.protocol.common.partner.AccountSystemId\x12\x16\n\x0eloginAccountId\x18\x02 \x02(\t\"\xb7\x01\n\x04User\x12\x0e\n\x06userId\x18\x01 \x02(\t\x12\x10\n\x08tenantId\x18\x02 \x01(\t\x12\x19\n\x11immutableIdentity\x18\x03 \x01(\t\x12\x10\n\x08userName\x18\x04 \x01(\t\x12;\n\x0cloginDetails\x18\x05 \x03(\x0b\x32%.protocol.common.partner.LoginDetails\x12#\n\x05\x65xtra\x18\x06 \x01(\x0b\x32\x14.google.protobuf.Any*E\n\x0f\x41\x63\x63ountSystemId\x12\x0b\n\x07TCL_SSO\x10\x00\x12\x13\n\x0fWE_CHAT_OPEN_ID\x10\x01\x12\x10\n\x0cMOBILE_PHONE\x10\x02\x42>\n\x1d\x63om.tcl.gaia.protocol.partnerZ\x1dtcl.com/gaia/protocol/partner'
+  serialized_pb=b'\n\"protocol/common/partner/user.proto\x12\x17protocol.common.partner\x1a\x19google/protobuf/any.proto\"m\n\x0cLoginDetails\x12\x43\n\x11\x61\x63\x63ount_system_id\x18\x01 \x02(\x0e\x32(.protocol.common.partner.AccountSystemId\x12\x18\n\x10login_account_id\x18\x02 \x02(\t\"\xbc\x01\n\x04User\x12\x0f\n\x07user_id\x18\x01 \x02(\x05\x12\x11\n\ttenant_id\x18\x02 \x01(\t\x12\x1a\n\x12immutable_identity\x18\x03 \x01(\t\x12\x11\n\tuser_name\x18\x04 \x01(\t\x12<\n\rlogin_details\x18\x05 \x03(\x0b\x32%.protocol.common.partner.LoginDetails\x12#\n\x05\x65xtra\x18\x06 \x01(\x0b\x32\x14.google.protobuf.Any\"#\n\rIntDelimiters\x12\x12\n\ndelimiters\x18\x01 \x03(\x05\"&\n\x10StringDelimiters\x12\x12\n\ndelimiters\x18\x01 \x03(\t\"\xdd\x01\n\x11UserChunksPayload\x12\x30\n\x07id_type\x18\x01 \x02(\x0e\x32\x1f.protocol.common.partner.IDType\x12@\n\x0eint_delimiters\x18\x02 \x01(\x0b\x32&.protocol.common.partner.IntDelimitersH\x00\x12\x46\n\x11string_delimiters\x18\x03 \x01(\x0b\x32).protocol.common.partner.StringDelimitersH\x00\x42\x0c\n\ndelimiters*E\n\x0f\x41\x63\x63ountSystemId\x12\x0b\n\x07TCL_SSO\x10\x00\x12\x13\n\x0fWE_CHAT_OPEN_ID\x10\x01\x12\x10\n\x0cMOBILE_PHONE\x10\x02*-\n\x06IDType\x12\x0f\n\x0bID_TYPE_INT\x10\x00\x12\x12\n\x0eID_TYPE_STRING\x10\x01\x42>\n\x1d\x63om.tcl.gaia.protocol.partnerZ\x1dtcl.com/gaia/protocol/partner'
   ,
   dependencies=[google_dot_protobuf_dot_any__pb2.DESCRIPTOR,])
 
@@ -50,15 +50,43 @@ _ACCOUNTSYSTEMID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=383,
-  serialized_end=452,
+  serialized_start=693,
+  serialized_end=762,
 )
 _sym_db.RegisterEnumDescriptor(_ACCOUNTSYSTEMID)
 
 AccountSystemId = enum_type_wrapper.EnumTypeWrapper(_ACCOUNTSYSTEMID)
+_IDTYPE = _descriptor.EnumDescriptor(
+  name='IDType',
+  full_name='protocol.common.partner.IDType',
+  filename=None,
+  file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='ID_TYPE_INT', index=0, number=0,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='ID_TYPE_STRING', index=1, number=1,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=764,
+  serialized_end=809,
+)
+_sym_db.RegisterEnumDescriptor(_IDTYPE)
+
+IDType = enum_type_wrapper.EnumTypeWrapper(_IDTYPE)
 TCL_SSO = 0
 WE_CHAT_OPEN_ID = 1
 MOBILE_PHONE = 2
+ID_TYPE_INT = 0
+ID_TYPE_STRING = 1
 
 
 
@@ -71,14 +99,14 @@ _LOGINDETAILS = _descriptor.Descriptor(
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='accountSystemId', full_name='protocol.common.partner.LoginDetails.accountSystemId', index=0,
+      name='account_system_id', full_name='protocol.common.partner.LoginDetails.account_system_id', index=0,
       number=1, type=14, cpp_type=8, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='loginAccountId', full_name='protocol.common.partner.LoginDetails.loginAccountId', index=1,
+      name='login_account_id', full_name='protocol.common.partner.LoginDetails.login_account_id', index=1,
       number=2, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -97,7 +125,7 @@ _LOGINDETAILS = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=90,
-  serialized_end=195,
+  serialized_end=199,
 )
 
 
@@ -110,35 +138,35 @@ _USER = _descriptor.Descriptor(
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='userId', full_name='protocol.common.partner.User.userId', index=0,
-      number=1, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=b"".decode('utf-8'),
+      name='user_id', full_name='protocol.common.partner.User.user_id', index=0,
+      number=1, type=5, cpp_type=1, label=2,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='tenantId', full_name='protocol.common.partner.User.tenantId', index=1,
+      name='tenant_id', full_name='protocol.common.partner.User.tenant_id', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='immutableIdentity', full_name='protocol.common.partner.User.immutableIdentity', index=2,
+      name='immutable_identity', full_name='protocol.common.partner.User.immutable_identity', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='userName', full_name='protocol.common.partner.User.userName', index=3,
+      name='user_name', full_name='protocol.common.partner.User.user_name', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='loginDetails', full_name='protocol.common.partner.User.loginDetails', index=4,
+      name='login_details', full_name='protocol.common.partner.User.login_details', index=4,
       number=5, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -163,16 +191,144 @@ _USER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=198,
-  serialized_end=381,
+  serialized_start=202,
+  serialized_end=390,
 )
 
-_LOGINDETAILS.fields_by_name['accountSystemId'].enum_type = _ACCOUNTSYSTEMID
-_USER.fields_by_name['loginDetails'].message_type = _LOGINDETAILS
+
+_INTDELIMITERS = _descriptor.Descriptor(
+  name='IntDelimiters',
+  full_name='protocol.common.partner.IntDelimiters',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='delimiters', full_name='protocol.common.partner.IntDelimiters.delimiters', index=0,
+      number=1, type=5, cpp_type=1, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=392,
+  serialized_end=427,
+)
+
+
+_STRINGDELIMITERS = _descriptor.Descriptor(
+  name='StringDelimiters',
+  full_name='protocol.common.partner.StringDelimiters',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='delimiters', full_name='protocol.common.partner.StringDelimiters.delimiters', index=0,
+      number=1, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=429,
+  serialized_end=467,
+)
+
+
+_USERCHUNKSPAYLOAD = _descriptor.Descriptor(
+  name='UserChunksPayload',
+  full_name='protocol.common.partner.UserChunksPayload',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id_type', full_name='protocol.common.partner.UserChunksPayload.id_type', index=0,
+      number=1, type=14, cpp_type=8, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='int_delimiters', full_name='protocol.common.partner.UserChunksPayload.int_delimiters', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='string_delimiters', full_name='protocol.common.partner.UserChunksPayload.string_delimiters', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+    _descriptor.OneofDescriptor(
+      name='delimiters', full_name='protocol.common.partner.UserChunksPayload.delimiters',
+      index=0, containing_type=None,
+      create_key=_descriptor._internal_create_key,
+    fields=[]),
+  ],
+  serialized_start=470,
+  serialized_end=691,
+)
+
+_LOGINDETAILS.fields_by_name['account_system_id'].enum_type = _ACCOUNTSYSTEMID
+_USER.fields_by_name['login_details'].message_type = _LOGINDETAILS
 _USER.fields_by_name['extra'].message_type = google_dot_protobuf_dot_any__pb2._ANY
+_USERCHUNKSPAYLOAD.fields_by_name['id_type'].enum_type = _IDTYPE
+_USERCHUNKSPAYLOAD.fields_by_name['int_delimiters'].message_type = _INTDELIMITERS
+_USERCHUNKSPAYLOAD.fields_by_name['string_delimiters'].message_type = _STRINGDELIMITERS
+_USERCHUNKSPAYLOAD.oneofs_by_name['delimiters'].fields.append(
+  _USERCHUNKSPAYLOAD.fields_by_name['int_delimiters'])
+_USERCHUNKSPAYLOAD.fields_by_name['int_delimiters'].containing_oneof = _USERCHUNKSPAYLOAD.oneofs_by_name['delimiters']
+_USERCHUNKSPAYLOAD.oneofs_by_name['delimiters'].fields.append(
+  _USERCHUNKSPAYLOAD.fields_by_name['string_delimiters'])
+_USERCHUNKSPAYLOAD.fields_by_name['string_delimiters'].containing_oneof = _USERCHUNKSPAYLOAD.oneofs_by_name['delimiters']
 DESCRIPTOR.message_types_by_name['LoginDetails'] = _LOGINDETAILS
 DESCRIPTOR.message_types_by_name['User'] = _USER
+DESCRIPTOR.message_types_by_name['IntDelimiters'] = _INTDELIMITERS
+DESCRIPTOR.message_types_by_name['StringDelimiters'] = _STRINGDELIMITERS
+DESCRIPTOR.message_types_by_name['UserChunksPayload'] = _USERCHUNKSPAYLOAD
 DESCRIPTOR.enum_types_by_name['AccountSystemId'] = _ACCOUNTSYSTEMID
+DESCRIPTOR.enum_types_by_name['IDType'] = _IDTYPE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 LoginDetails = _reflection.GeneratedProtocolMessageType('LoginDetails', (_message.Message,), {
@@ -188,6 +344,27 @@ User = _reflection.GeneratedProtocolMessageType('User', (_message.Message,), {
   # @@protoc_insertion_point(class_scope:protocol.common.partner.User)
   })
 _sym_db.RegisterMessage(User)
+
+IntDelimiters = _reflection.GeneratedProtocolMessageType('IntDelimiters', (_message.Message,), {
+  'DESCRIPTOR' : _INTDELIMITERS,
+  '__module__' : 'protocol.common.partner.user_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.common.partner.IntDelimiters)
+  })
+_sym_db.RegisterMessage(IntDelimiters)
+
+StringDelimiters = _reflection.GeneratedProtocolMessageType('StringDelimiters', (_message.Message,), {
+  'DESCRIPTOR' : _STRINGDELIMITERS,
+  '__module__' : 'protocol.common.partner.user_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.common.partner.StringDelimiters)
+  })
+_sym_db.RegisterMessage(StringDelimiters)
+
+UserChunksPayload = _reflection.GeneratedProtocolMessageType('UserChunksPayload', (_message.Message,), {
+  'DESCRIPTOR' : _USERCHUNKSPAYLOAD,
+  '__module__' : 'protocol.common.partner.user_pb2'
+  # @@protoc_insertion_point(class_scope:protocol.common.partner.UserChunksPayload)
+  })
+_sym_db.RegisterMessage(UserChunksPayload)
 
 
 DESCRIPTOR._options = None

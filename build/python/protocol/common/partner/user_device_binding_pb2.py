@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=b'\n\035com.tcl.gaia.protocol.partnerZ\035tcl.com/gaia/protocol/partner',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n1protocol/common/partner/user_device_binding.proto\x12\x17protocol.common.partner\x1a\x19google/protobuf/any.proto\x1a$protocol/common/partner/device.proto\"\xb5\x01\n\x11UserDeviceBinding\x12\x10\n\x08\x64\x65viceId\x18\x01 \x02(\t\x12\x16\n\x0e\x64\x65viceNickName\x18\x02 \x01(\t\x12/\n\x06\x64\x65vice\x18\x03 \x01(\x0b\x32\x1f.protocol.common.partner.Device\x12\x0e\n\x06userId\x18\x04 \x02(\t\x12\x10\n\x08userRole\x18\x05 \x02(\t\x12#\n\x05\x65xtra\x18\x06 \x01(\x0b\x32\x14.google.protobuf.AnyB>\n\x1d\x63om.tcl.gaia.protocol.partnerZ\x1dtcl.com/gaia/protocol/partner'
+  serialized_pb=b'\n1protocol/common/partner/user_device_binding.proto\x12\x17protocol.common.partner\x1a\x19google/protobuf/any.proto\x1a$protocol/common/partner/device.proto\"\xba\x01\n\x11UserDeviceBinding\x12\x11\n\tdevice_Id\x18\x01 \x02(\t\x12\x18\n\x10\x64\x65vice_nick_name\x18\x02 \x01(\t\x12/\n\x06\x64\x65vice\x18\x03 \x01(\x0b\x32\x1f.protocol.common.partner.Device\x12\x0f\n\x07user_id\x18\x04 \x02(\t\x12\x11\n\tuser_role\x18\x05 \x02(\t\x12#\n\x05\x65xtra\x18\x06 \x01(\x0b\x32\x14.google.protobuf.AnyB>\n\x1d\x63om.tcl.gaia.protocol.partnerZ\x1dtcl.com/gaia/protocol/partner'
   ,
   dependencies=[google_dot_protobuf_dot_any__pb2.DESCRIPTOR,protocol_dot_common_dot_partner_dot_device__pb2.DESCRIPTOR,])
 
@@ -37,14 +37,14 @@ _USERDEVICEBINDING = _descriptor.Descriptor(
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='deviceId', full_name='protocol.common.partner.UserDeviceBinding.deviceId', index=0,
+      name='device_Id', full_name='protocol.common.partner.UserDeviceBinding.device_Id', index=0,
       number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='deviceNickName', full_name='protocol.common.partner.UserDeviceBinding.deviceNickName', index=1,
+      name='device_nick_name', full_name='protocol.common.partner.UserDeviceBinding.device_nick_name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -58,14 +58,14 @@ _USERDEVICEBINDING = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='userId', full_name='protocol.common.partner.UserDeviceBinding.userId', index=3,
+      name='user_id', full_name='protocol.common.partner.UserDeviceBinding.user_id', index=3,
       number=4, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='userRole', full_name='protocol.common.partner.UserDeviceBinding.userRole', index=4,
+      name='user_role', full_name='protocol.common.partner.UserDeviceBinding.user_role', index=4,
       number=5, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -91,7 +91,7 @@ _USERDEVICEBINDING = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=144,
-  serialized_end=325,
+  serialized_end=330,
 )
 
 _USERDEVICEBINDING.fields_by_name['device'].message_type = protocol_dot_common_dot_partner_dot_device__pb2._DEVICE

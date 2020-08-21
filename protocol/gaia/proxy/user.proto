@@ -1,0 +1,51 @@
+syntax = "proto2";
+
+package protocol.gaia.proxy;
+option go_package = "tcl.com/gaia/protocol/proxy";
+option java_package = "com.tcl.gaia.protocol.proxy";
+
+
+import "google/protobuf/any.proto";
+
+
+// https://confluence.tclking.com/display/IoT4/Partner+API+Common+Objects#PartnerAPICommonObjects-User
+enum AccountSystemId {
+  TCL_SSO = 0;
+  WE_CHAT_OPEN_ID = 1;
+  MOBILE_PHONE = 2;
+}
+
+message LoginDetails {
+  required AccountSystemId account_system_id = 1;
+  required string login_account_id = 2;
+}
+
+message User {
+  required int32 user_id = 1;
+  optional string tenant_id = 2;
+  optional string immutable_identity = 3;
+  optional string user_name = 4;
+  repeated LoginDetails login_details = 5;
+  optional google.protobuf.Any extra = 6;
+}
+
+enum IDType {
+  ID_TYPE_INT = 0;
+  ID_TYPE_STRING = 1;
+}
+
+message IntDelimiters {
+  repeated int32 delimiters = 1;
+}
+
+message StringDelimiters {
+  repeated string delimiters = 1;
+}
+
+message UserChunksPayload {
+  required IDType id_type = 1;
+  oneof delimiters {
+    IntDelimiters int_delimiters = 2;
+    StringDelimiters string_delimiters = 3;
+  }
+}

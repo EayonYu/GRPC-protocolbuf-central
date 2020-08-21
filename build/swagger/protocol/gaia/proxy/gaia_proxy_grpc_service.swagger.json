@@ -31,7 +31,7 @@
         },
         "parameters": [
           {
-            "name": "searchBy",
+            "name": "search_by",
             "in": "query",
             "required": false,
             "type": "array",
@@ -41,7 +41,7 @@
             "collectionFormat": "multi"
           },
           {
-            "name": "sortBy",
+            "name": "sort_by",
             "in": "query",
             "required": false,
             "type": "array",
@@ -162,13 +162,12 @@
     },
     "/api/proxy": {
       "post": {
-        "summary": "proxy",
-        "operationId": "Proxy",
+        "operationId": "GetResourceChunks",
         "responses": {
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/proxyProxyResponse"
+              "$ref": "#/definitions/proxyGetResourceChunksResponse"
             }
           },
           "default": {
@@ -184,7 +183,7 @@
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/proxyProxyRequest"
+              "$ref": "#/definitions/proxyGetResourceChunksRequest"
             }
           }
         ],
@@ -201,7 +200,7 @@
     "constantResponseHeader": {
       "type": "object",
       "properties": {
-        "statusCode": {
+        "status_code": {
           "type": "integer",
           "format": "int32"
         },
@@ -248,13 +247,13 @@
         "type": {
           "type": "string"
         },
-        "oAuth2Endpoint": {
+        "oAuth2_endpoint": {
           "type": "string"
         },
-        "clientId": {
+        "client_id": {
           "type": "string"
         },
-        "clientSecret": {
+        "client_secret": {
           "type": "string"
         }
       }
@@ -288,6 +287,23 @@
     "proxyGetResourceChunksRequest": {
       "type": "object",
       "properties": {
+        "header": {
+          "$ref": "#/definitions/proxyGetResourceChunksRequestHeader"
+        },
+        "payload": {
+          "$ref": "#/definitions/proxyGetResourceChunksRequestPayload"
+        }
+      }
+    },
+    "proxyGetResourceChunksRequestHeader": {
+      "type": "object"
+    },
+    "proxyGetResourceChunksRequestPayload": {
+      "type": "object",
+      "properties": {
+        "partner_name": {
+          "type": "string"
+        },
         "resource_type": {
           "type": "string"
         },
@@ -355,10 +371,10 @@
         "endpoint": {
           "type": "string"
         },
-        "createTime": {
+        "create_time": {
           "type": "string"
         },
-        "updateTime": {
+        "update_time": {
           "type": "string"
         }
       }
@@ -380,7 +396,7 @@
           "type": "integer",
           "format": "int32"
         },
-        "totalPages": {
+        "total_pages": {
           "type": "integer",
           "format": "int32"
         },
@@ -388,7 +404,7 @@
           "type": "integer",
           "format": "int32"
         },
-        "totalElements": {
+        "total_elements": {
           "type": "integer",
           "format": "int32"
         },
