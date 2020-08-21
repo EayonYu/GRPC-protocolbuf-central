@@ -51,7 +51,7 @@ service GaiaProxyGrpc {
 
     rpc GetResourceChunks(GetResourceChunksRequest) returns(GetResourceChunksResponse) {
         option (google.api.http) = {
-            post: "/api/proxy"
+            post: "/api/proxy/chunks"
             body: "*"
         };
     }
