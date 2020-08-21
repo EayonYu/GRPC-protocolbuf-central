@@ -17,9 +17,6 @@ enum ResourceType {
     RESOURCE_TYPE_USER_DEVICE_BINDING = 3;
 }
 
-message GetResourceChunksRequestHeader {
-}
-
 message GetResourceChunksRequestPayload {
     required string partner_name = 1;
     required string resource_type = 2;
@@ -27,12 +24,17 @@ message GetResourceChunksRequestPayload {
 }
 
 message GetResourceChunksRequest {
-    optional GetResourceChunksRequestHeader header = 1;
+    optional protocol.common.constant.RequestHeader header = 1;
     required GetResourceChunksRequestPayload payload = 2;
 }
 
+message GetResourceChunksResponsePayload {
+    required int32 http_status_code = 1;
+}
+
 message GetResourceChunksResponse {
-    repeated string delimiters = 1;
+    required protocol.common.constant.ResponseHeader header = 1;
+    optional GetResourceChunksResponsePayload payload = 2;
 }
 
 
