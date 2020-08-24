@@ -39,7 +39,7 @@ message GetPartnerConfigRequest {
 
 message GetPartnerConfigResponse {
     required protocol.common.constant.ResponseHeader header = 1;
-    required Config payload = 2;
+    optional Config payload = 2;
 }
 
 message CreatePartnerConfigRequestPayload {
@@ -63,5 +63,5 @@ message CreatePartnerConfigRequest {
 
 message CreatePartnerConfigResponse {
     required protocol.common.constant.ResponseHeader header = 1;
-    required Config payload = 2;
+    optional Config payload = 2;
 }
