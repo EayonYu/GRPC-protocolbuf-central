@@ -5,6 +5,10 @@ option go_package = "tcl.com/gaia/protocol/mirror/manager";
 option java_package = "com.tcl.gaia.protocol.mirror.manager";
 
 
+import "protocol/common/constant/request.proto";
+import "protocol/common/constant/response.proto";
+
+
 message Config {
     required int32 id = 1;
 
@@ -35,7 +39,7 @@ message GetPartnerConfigResponse {
 }
 
 
-message CreatePartnerConfigRequest {
+message CreatePartnerConfigRequestPayload {
     required string partner_name = 2;
 
     required int32 check_interval = 3;
@@ -49,8 +53,12 @@ message CreatePartnerConfigRequest {
     required int32 chunk_retry_times = 13;
 }
 
+message CreatePartnerConfigRequest {
+    optional protocol.common.constant.RequestHeader header = 1;
+    required CreatePartnerConfigRequestPayload payload = 2;
+}
+
 message CreatePartnerConfigResponse {
-    required int32 code = 1;
-    required string message = 2;
-    required Config data = 3;
+    required protocol.common.constant.ResponseHeader header = 1;
+    required Config payload = 2;
 }

@@ -20,16 +20,16 @@ service MirrorManager {
         };
     };
 
-    rpc GetPartnerConfig(GetPartnerConfigRequest) returns (GetPartnerConfigResponse) {
-        option (google.api.http) = {
-            get: "/api/configs"
-        };
-    };
-
     rpc CreatePartnerConfig(CreatePartnerConfigRequest) returns (CreatePartnerConfigResponse) {
         option (google.api.http) = {
             post: "/api/configs"
             body: "*"
+        };
+    };
+
+    rpc GetPartnerConfig(GetPartnerConfigRequest) returns (GetPartnerConfigResponse) {
+        option (google.api.http) = {
+            get: "/api/configs"
         };
     };
 
