@@ -26,16 +26,17 @@ protocol:
 	protoc --proto_path=. --python_out=./build/python --plugin=protoc-gen-grpc-java=$(grpc-java-plugin) --java_out=./build/java --grpc-java_out=./build/java --go_out=plugins=grpc:./build/go --swagger_out=logtostderr=true:./build/swagger ./protocol/common/partner/*.proto
 	protoc --proto_path=. --python_out=./build/python --plugin=protoc-gen-grpc-java=$(grpc-java-plugin) --java_out=./build/java --grpc-java_out=./build/java --go_out=plugins=grpc:./build/go --grpc-gateway_out=logtostderr=true:./build/go --swagger_out=logtostderr=true:./build/swagger ./protocol/gaia/proxy/*.proto
 	protoc --proto_path=. --python_out=./build/python --plugin=protoc-gen-grpc-java=$(grpc-java-plugin) --java_out=./build/java --grpc-java_out=./build/java --go_out=plugins=grpc:./build/go --grpc-gateway_out=logtostderr=true:./build/go --swagger_out=logtostderr=true:./build/swagger ./protocol/gaia/mirror/*.proto
+	protoc --proto_path=. --python_out=./build/python --plugin=protoc-gen-grpc-java=$(grpc-java-plugin) --java_out=./build/java --grpc-java_out=./build/java --go_out=plugins=grpc:./build/go --grpc-gateway_out=logtostderr=true:./build/go --swagger_out=logtostderr=true:./build/swagger ./protocol/gaia/mirror/manager/*.proto
 
 	python -m grpc_tools.protoc --proto_path=. --python_out=./build/python --grpc_python_out=./build/python ./protocol/gaia/proxy/gaia_proxy_grpc_service.proto
 	python -m grpc_tools.protoc --proto_path=. --python_out=./build/python --grpc_python_out=./build/python ./protocol/gaia/mirror/gaia_mirror_grpc_service.proto
+	python -m grpc_tools.protoc --proto_path=. --python_out=./build/python --grpc_python_out=./build/python ./protocol/gaia/mirror/manager/gaia_mirror_manager_grpc_service.proto
 
 	cd ./build/go/tcl.com/gaia/protocol && rm -rf go.mod && go mod init tcl.com/gaia/protocol && touch version.$(version)
 	cd ./build/java/com/tcl/gaia/protocol && touch version.$(version)
 	cd ./build/python/protocol && touch version.$(version)
 	cd ./build/swagger/protocol && touch version.$(version)
 
-	#bash ./scripts/add_init_file.sh ./build/python/protocol
 	python ./scripts/add_init_file.py  ./build/python/protocol/
 
 clean:

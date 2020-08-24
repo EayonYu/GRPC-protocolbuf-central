@@ -1,0 +1,56 @@
+syntax = "proto2";
+
+package protocol.gaia.mirror.manager;
+option go_package = "tcl.com/gaia/protocol/mirror/manager";
+option java_package = "com.tcl.gaia.protocol.mirror.manager";
+
+
+message Config {
+    required int32 id = 1;
+
+    required string partner_name = 2;
+
+    required int32 check_interval = 3;
+    required int32 task_interval = 4;
+    required int32 task_timeout = 5;
+    required int32 error_retry_interval = 6;
+    required int32 task_retry_times = 7;
+
+    required int32 chunk_size = 8;
+    required int32 chunk_task_timeout = 9;
+    required int32 chunk_retry_times = 10;
+
+    required string created_at = 11;
+    required string updated_at = 12;
+}
+
+message GetPartnerConfigRequest {
+    required string partner_name = 1;
+}
+
+message GetPartnerConfigResponse {
+    required int32 code = 1;
+    required string message = 2;
+    required Config data = 3;
+}
+
+
+message CreatePartnerConfigRequest {
+    required string partner_name = 2;
+
+    required int32 check_interval = 3;
+    required int32 task_interval = 4;
+    required int32 task_timeout = 5;
+    required int32 error_retry_interval = 6;
+    required int32 task_retry_times = 7;
+
+    required int32 chunk_size = 8;
+    required int32 chunk_task_timeout = 12;
+    required int32 chunk_retry_times = 13;
+}
+
+message CreatePartnerConfigResponse {
+    required int32 code = 1;
+    required string message = 2;
+    required Config data = 3;
+}

@@ -1,0 +1,48 @@
+syntax = "proto2";
+
+package protocol.gaia.mirror.manager;
+option go_package = "tcl.com/gaia/protocol/mirror/manager";
+option java_package = "com.tcl.gaia.protocol.mirror.manager";
+option java_generic_services = true;
+
+import "google/api/annotations.proto";
+
+import "protocol/gaia/mirror/manager/ping.proto";
+import "protocol/gaia/mirror/manager/config.proto";
+import "protocol/gaia/mirror/manager/task.proto";
+
+
+service MirrorManager {
+
+    rpc Ping(PingRequest) returns (PingResponse) {
+        option (google.api.http) = {
+            get: "/api/ping"
+        };
+    };
+
+    rpc GetPartnerConfig(GetPartnerConfigRequest) returns (GetPartnerConfigResponse) {
+        option (google.api.http) = {
+            get: "/api/configs"
+        };
+    };
+
+    rpc CreatePartnerConfig(CreatePartnerConfigRequest) returns (CreatePartnerConfigResponse) {
+        option (google.api.http) = {
+            post: "/api/configs"
+            body: "*"
+        };
+    };
+
+    rpc GetTasksByPartnerName(GetTasksByPartnerNameRequest) returns (GetTasksByPartnerNameResponse) {
+        option (google.api.http) = {
+            get: "/api/tasks"
+        };
+    };
+
+    rpc GetChunkTasksByTaskID(GetChunkTasksByTaskIDRequest) returns (GetChunkTasksByTaskIDResponse) {
+        option (google.api.http) = {
+            get: "/api/tasks/{task_id}/chunk_tasks"
+        };
+    };
+
+}

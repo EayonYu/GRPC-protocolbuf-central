@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+package protocol.gaia.mirror.manager;
+option go_package = "tcl.com/gaia/protocol/mirror/manager";
+option java_package = "com.tcl.gaia.protocol.mirror.manager";
+
+
+message PingRequest {
+
+}
+
+message PingResponse {
+    required bool pong = 1;
+}
