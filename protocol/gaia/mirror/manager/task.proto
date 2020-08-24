@@ -79,5 +79,5 @@ message GetChunkTasksByTaskIDRequest {
 
 message GetChunkTasksByTaskIDResponse {
     required protocol.common.constant.ResponseHeader header = 1;
-    optional ChunkTasksPage data = 2;
+    optional ChunkTasksPage payload = 2;
 }
