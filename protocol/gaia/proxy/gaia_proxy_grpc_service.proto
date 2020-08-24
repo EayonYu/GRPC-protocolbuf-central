@@ -10,7 +10,7 @@ import "google/api/annotations.proto";
 
 import "protocol/gaia/proxy/ping.proto";
 import "protocol/gaia/proxy/partner.proto";
-import "protocol/gaia/proxy/proxy.proto";
+import "protocol/gaia/proxy/user.proto";
 
 
 service GaiaProxyGrpc {
@@ -42,23 +42,16 @@ service GaiaProxyGrpc {
     }
 
     // proxy
-    rpc Proxy(ProxyRequest) returns(ProxyResponse) {
+    rpc GetUserChunks(GetUserChunksRequest) returns(GetUserChunksResponse) {
         option (google.api.http) = {
-            post: "/api/proxy"
+            post: "/api/proxy/chunks/user"
             body: "*"
         };
     }
 
-    rpc GetResourceChunks(GetResourceChunksRequest) returns(GetResourceChunksResponse) {
+    rpc GetUsers(GetUsersRequest) returns(GetUsersResponse) {
         option (google.api.http) = {
-            post: "/api/proxy/chunks"
-            body: "*"
-        };
-    }
-
-    rpc GetResources(GetResourcesRequest) returns(GetResourcesResponse) {
-        option (google.api.http) = {
-            post: "/api/proxy/resources"
+            post: "/api/proxy/users"
             body: "*"
         };
     }

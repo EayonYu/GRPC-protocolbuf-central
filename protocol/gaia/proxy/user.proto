@@ -1,0 +1,71 @@
+syntax = "proto2";
+
+package protocol.gaia.proxy;
+option go_package = "tcl.com/gaia/protocol/proxy";
+option java_package = "com.tcl.gaia.protocol.proxy";
+
+
+import "google/protobuf/any.proto";
+
+import "protocol/common/constant/request.proto";
+import "protocol/common/constant/response.proto";
+
+
+message GetUserChunksRequestPayload {
+    required string partner_name = 1;
+    required int32 chunk_size = 3;
+}
+
+message GetUserChunksResponsePayload {
+    repeated int32 delimiters = 1;
+}
+
+message GetUsersRequestPayload {
+    required string partner_name = 1;
+    optional string next_id = 3;
+    optional string end_id = 4;
+}
+
+enum AccountSystemId {
+  TCL_SSO = 0;
+  WE_CHAT_OPEN_ID = 1;
+  MOBILE_PHONE = 2;
+}
+
+message LoginDetails {
+  required AccountSystemId account_system_id = 1;
+  required string login_account_id = 2;
+}
+
+message User {
+  required int32 user_id = 1;
+  optional string tenant_id = 2;
+  optional string immutable_identity = 3;
+  optional string user_name = 4;
+  repeated LoginDetails login_details = 5;
+  optional google.protobuf.Any extra = 6;
+}
+
+message GetUsersResponsePayload {
+    repeated User users = 1;
+}
+
+message GetUserChunksRequest {
+    optional protocol.common.constant.RequestHeader header = 1;
+    required GetUserChunksRequestPayload payload = 2;
+}
+
+message GetUserChunksResponse {
+    required protocol.common.constant.ResponseHeader header = 1;
+    optional GetUserChunksResponsePayload payload = 2;
+}
+
+message GetUsersRequest {
+    optional protocol.common.constant.RequestHeader header = 1;
+    required GetUsersRequestPayload payload = 2;
+}
+
+message GetUsersResponse {
+    required protocol.common.constant.ResponseHeader header = 1;
+    optional GetUsersResponsePayload payload = 2;
+}

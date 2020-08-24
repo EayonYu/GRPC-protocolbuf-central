@@ -160,15 +160,15 @@
         ]
       }
     },
-    "/api/proxy": {
+    "/api/proxy/chunks/user": {
       "post": {
         "summary": "proxy",
-        "operationId": "Proxy",
+        "operationId": "GetUserChunks",
         "responses": {
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/proxyProxyResponse"
+              "$ref": "#/definitions/proxyGetUserChunksResponse"
             }
           },
           "default": {
@@ -184,7 +184,7 @@
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/proxyProxyRequest"
+              "$ref": "#/definitions/proxyGetUserChunksRequest"
             }
           }
         ],
@@ -193,14 +193,14 @@
         ]
       }
     },
-    "/api/proxy/chunks": {
+    "/api/proxy/users": {
       "post": {
-        "operationId": "GetResourceChunks",
+        "operationId": "GetUsers",
         "responses": {
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/proxyGetResourceChunksResponse"
+              "$ref": "#/definitions/proxyGetUsersResponse"
             }
           },
           "default": {
@@ -216,39 +216,7 @@
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/proxyGetResourceChunksRequest"
-            }
-          }
-        ],
-        "tags": [
-          "GaiaProxyGrpc"
-        ]
-      }
-    },
-    "/api/proxy/resources": {
-      "post": {
-        "operationId": "GetResources",
-        "responses": {
-          "200": {
-            "description": "A successful response.",
-            "schema": {
-              "$ref": "#/definitions/proxyGetResourcesResponse"
-            }
-          },
-          "default": {
-            "description": "An unexpected error response",
-            "schema": {
-              "$ref": "#/definitions/runtimeError"
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/proxyGetResourcesRequest"
+              "$ref": "#/definitions/proxyGetUsersRequest"
             }
           }
         ],
@@ -296,8 +264,7 @@
         "WE_CHAT_OPEN_ID",
         "MOBILE_PHONE"
       ],
-      "default": "TCL_SSO",
-      "title": "https://confluence.tclking.com/display/IoT4/Partner+API+Common+Objects#PartnerAPICommonObjects-User"
+      "default": "TCL_SSO"
     },
     "proxyAddPartnerRequest": {
       "type": "object",
@@ -359,24 +326,21 @@
         }
       }
     },
-    "proxyGetResourceChunksRequest": {
+    "proxyGetUserChunksRequest": {
       "type": "object",
       "properties": {
         "header": {
           "$ref": "#/definitions/constantRequestHeader"
         },
         "payload": {
-          "$ref": "#/definitions/proxyGetResourceChunksRequestPayload"
+          "$ref": "#/definitions/proxyGetUserChunksRequestPayload"
         }
       }
     },
-    "proxyGetResourceChunksRequestPayload": {
+    "proxyGetUserChunksRequestPayload": {
       "type": "object",
       "properties": {
         "partner_name": {
-          "type": "string"
-        },
-        "resource_type": {
           "type": "string"
         },
         "chunk_size": {
@@ -385,49 +349,44 @@
         }
       }
     },
-    "proxyGetResourceChunksResponse": {
+    "proxyGetUserChunksResponse": {
       "type": "object",
       "properties": {
         "header": {
           "$ref": "#/definitions/constantResponseHeader"
         },
         "payload": {
-          "$ref": "#/definitions/proxyGetResourceChunksResponsePayload"
+          "$ref": "#/definitions/proxyGetUserChunksResponsePayload"
         }
       }
     },
-    "proxyGetResourceChunksResponsePayload": {
+    "proxyGetUserChunksResponsePayload": {
       "type": "object",
       "properties": {
-        "id_type": {
-          "$ref": "#/definitions/proxyIDType"
-        },
-        "int_delimiters": {
-          "$ref": "#/definitions/proxyIntDelimiters"
-        },
-        "string_delimiters": {
-          "$ref": "#/definitions/proxyStringDelimiters"
+        "delimiters": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
         }
       }
     },
-    "proxyGetResourcesRequest": {
+    "proxyGetUsersRequest": {
       "type": "object",
       "properties": {
         "header": {
           "$ref": "#/definitions/constantRequestHeader"
         },
         "payload": {
-          "$ref": "#/definitions/proxyGetResourcesRequestPayload"
+          "$ref": "#/definitions/proxyGetUsersRequestPayload"
         }
       }
     },
-    "proxyGetResourcesRequestPayload": {
+    "proxyGetUsersRequestPayload": {
       "type": "object",
       "properties": {
         "partner_name": {
-          "type": "string"
-        },
-        "resource_type": {
           "type": "string"
         },
         "next_id": {
@@ -438,44 +397,24 @@
         }
       }
     },
-    "proxyGetResourcesResponse": {
+    "proxyGetUsersResponse": {
       "type": "object",
       "properties": {
         "header": {
           "$ref": "#/definitions/constantResponseHeader"
         },
         "payload": {
-          "$ref": "#/definitions/proxyGetResourcesResponsePayload"
+          "$ref": "#/definitions/proxyGetUsersResponsePayload"
         }
       }
     },
-    "proxyGetResourcesResponsePayload": {
+    "proxyGetUsersResponsePayload": {
       "type": "object",
       "properties": {
         "users": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/proxyUser"
-          }
-        }
-      }
-    },
-    "proxyIDType": {
-      "type": "string",
-      "enum": [
-        "ID_TYPE_INT",
-        "ID_TYPE_STRING"
-      ],
-      "default": "ID_TYPE_INT"
-    },
-    "proxyIntDelimiters": {
-      "type": "object",
-      "properties": {
-        "delimiters": {
-          "type": "array",
-          "items": {
-            "type": "integer",
-            "format": "int32"
           }
         }
       }
@@ -574,71 +513,6 @@
         "pong": {
           "type": "boolean",
           "format": "boolean"
-        }
-      }
-    },
-    "proxyProxyRequest": {
-      "type": "object",
-      "properties": {
-        "header": {
-          "$ref": "#/definitions/constantRequestHeader"
-        },
-        "payload": {
-          "$ref": "#/definitions/proxyProxyRequestPayload"
-        }
-      }
-    },
-    "proxyProxyRequestPayload": {
-      "type": "object",
-      "properties": {
-        "partner_name": {
-          "type": "string"
-        },
-        "proxy_request_type": {
-          "type": "string"
-        },
-        "get_resource_chunks_request": {
-          "$ref": "#/definitions/proxyGetResourceChunksRequest"
-        },
-        "get_resources_request": {
-          "$ref": "#/definitions/proxyGetResourcesRequest"
-        }
-      }
-    },
-    "proxyProxyResponse": {
-      "type": "object",
-      "properties": {
-        "header": {
-          "$ref": "#/definitions/constantResponseHeader"
-        },
-        "payload": {
-          "$ref": "#/definitions/proxyProxyResponsePayload"
-        }
-      }
-    },
-    "proxyProxyResponsePayload": {
-      "type": "object",
-      "properties": {
-        "http_status_code": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "get_resource_chunks_response": {
-          "$ref": "#/definitions/proxyGetResourceChunksResponse"
-        },
-        "get_resources_response": {
-          "$ref": "#/definitions/proxyGetResourcesResponse"
-        }
-      }
-    },
-    "proxyStringDelimiters": {
-      "type": "object",
-      "properties": {
-        "delimiters": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
         }
       }
     },

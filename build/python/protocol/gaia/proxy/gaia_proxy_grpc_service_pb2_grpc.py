@@ -3,7 +3,7 @@ import grpc
 
 from protocol.gaia.proxy import partner_pb2 as protocol_dot_gaia_dot_proxy_dot_partner__pb2
 from protocol.gaia.proxy import ping_pb2 as protocol_dot_gaia_dot_proxy_dot_ping__pb2
-from protocol.gaia.proxy import proxy_pb2 as protocol_dot_gaia_dot_proxy_dot_proxy__pb2
+from protocol.gaia.proxy import user_pb2 as protocol_dot_gaia_dot_proxy_dot_user__pb2
 
 
 class GaiaProxyGrpcStub(object):
@@ -35,20 +35,15 @@ class GaiaProxyGrpcStub(object):
                 request_serializer=protocol_dot_gaia_dot_proxy_dot_partner__pb2.AddPartnerRequest.SerializeToString,
                 response_deserializer=protocol_dot_gaia_dot_proxy_dot_partner__pb2.AddPartnerResponse.FromString,
                 )
-        self.Proxy = channel.unary_unary(
-                '/protocol.gaia.proxy.GaiaProxyGrpc/Proxy',
-                request_serializer=protocol_dot_gaia_dot_proxy_dot_proxy__pb2.ProxyRequest.SerializeToString,
-                response_deserializer=protocol_dot_gaia_dot_proxy_dot_proxy__pb2.ProxyResponse.FromString,
+        self.GetUserChunks = channel.unary_unary(
+                '/protocol.gaia.proxy.GaiaProxyGrpc/GetUserChunks',
+                request_serializer=protocol_dot_gaia_dot_proxy_dot_user__pb2.GetUserChunksRequest.SerializeToString,
+                response_deserializer=protocol_dot_gaia_dot_proxy_dot_user__pb2.GetUserChunksResponse.FromString,
                 )
-        self.GetResourceChunks = channel.unary_unary(
-                '/protocol.gaia.proxy.GaiaProxyGrpc/GetResourceChunks',
-                request_serializer=protocol_dot_gaia_dot_proxy_dot_proxy__pb2.GetResourceChunksRequest.SerializeToString,
-                response_deserializer=protocol_dot_gaia_dot_proxy_dot_proxy__pb2.GetResourceChunksResponse.FromString,
-                )
-        self.GetResources = channel.unary_unary(
-                '/protocol.gaia.proxy.GaiaProxyGrpc/GetResources',
-                request_serializer=protocol_dot_gaia_dot_proxy_dot_proxy__pb2.GetResourcesRequest.SerializeToString,
-                response_deserializer=protocol_dot_gaia_dot_proxy_dot_proxy__pb2.GetResourcesResponse.FromString,
+        self.GetUsers = channel.unary_unary(
+                '/protocol.gaia.proxy.GaiaProxyGrpc/GetUsers',
+                request_serializer=protocol_dot_gaia_dot_proxy_dot_user__pb2.GetUsersRequest.SerializeToString,
+                response_deserializer=protocol_dot_gaia_dot_proxy_dot_user__pb2.GetUsersResponse.FromString,
                 )
 
 
@@ -80,20 +75,14 @@ class GaiaProxyGrpcServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def Proxy(self, request, context):
+    def GetUserChunks(self, request, context):
         """proxy
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def GetResourceChunks(self, request, context):
-        """Missing associated documentation comment in .proto file"""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def GetResources(self, request, context):
+    def GetUsers(self, request, context):
         """Missing associated documentation comment in .proto file"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -122,20 +111,15 @@ def add_GaiaProxyGrpcServicer_to_server(servicer, server):
                     request_deserializer=protocol_dot_gaia_dot_proxy_dot_partner__pb2.AddPartnerRequest.FromString,
                     response_serializer=protocol_dot_gaia_dot_proxy_dot_partner__pb2.AddPartnerResponse.SerializeToString,
             ),
-            'Proxy': grpc.unary_unary_rpc_method_handler(
-                    servicer.Proxy,
-                    request_deserializer=protocol_dot_gaia_dot_proxy_dot_proxy__pb2.ProxyRequest.FromString,
-                    response_serializer=protocol_dot_gaia_dot_proxy_dot_proxy__pb2.ProxyResponse.SerializeToString,
+            'GetUserChunks': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetUserChunks,
+                    request_deserializer=protocol_dot_gaia_dot_proxy_dot_user__pb2.GetUserChunksRequest.FromString,
+                    response_serializer=protocol_dot_gaia_dot_proxy_dot_user__pb2.GetUserChunksResponse.SerializeToString,
             ),
-            'GetResourceChunks': grpc.unary_unary_rpc_method_handler(
-                    servicer.GetResourceChunks,
-                    request_deserializer=protocol_dot_gaia_dot_proxy_dot_proxy__pb2.GetResourceChunksRequest.FromString,
-                    response_serializer=protocol_dot_gaia_dot_proxy_dot_proxy__pb2.GetResourceChunksResponse.SerializeToString,
-            ),
-            'GetResources': grpc.unary_unary_rpc_method_handler(
-                    servicer.GetResources,
-                    request_deserializer=protocol_dot_gaia_dot_proxy_dot_proxy__pb2.GetResourcesRequest.FromString,
-                    response_serializer=protocol_dot_gaia_dot_proxy_dot_proxy__pb2.GetResourcesResponse.SerializeToString,
+            'GetUsers': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetUsers,
+                    request_deserializer=protocol_dot_gaia_dot_proxy_dot_user__pb2.GetUsersRequest.FromString,
+                    response_serializer=protocol_dot_gaia_dot_proxy_dot_user__pb2.GetUsersResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -212,7 +196,7 @@ class GaiaProxyGrpc(object):
             call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def Proxy(request,
+    def GetUserChunks(request,
             target,
             options=(),
             channel_credentials=None,
@@ -221,14 +205,14 @@ class GaiaProxyGrpc(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/protocol.gaia.proxy.GaiaProxyGrpc/Proxy',
-            protocol_dot_gaia_dot_proxy_dot_proxy__pb2.ProxyRequest.SerializeToString,
-            protocol_dot_gaia_dot_proxy_dot_proxy__pb2.ProxyResponse.FromString,
+        return grpc.experimental.unary_unary(request, target, '/protocol.gaia.proxy.GaiaProxyGrpc/GetUserChunks',
+            protocol_dot_gaia_dot_proxy_dot_user__pb2.GetUserChunksRequest.SerializeToString,
+            protocol_dot_gaia_dot_proxy_dot_user__pb2.GetUserChunksResponse.FromString,
             options, channel_credentials,
             call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def GetResourceChunks(request,
+    def GetUsers(request,
             target,
             options=(),
             channel_credentials=None,
@@ -237,24 +221,8 @@ class GaiaProxyGrpc(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/protocol.gaia.proxy.GaiaProxyGrpc/GetResourceChunks',
-            protocol_dot_gaia_dot_proxy_dot_proxy__pb2.GetResourceChunksRequest.SerializeToString,
-            protocol_dot_gaia_dot_proxy_dot_proxy__pb2.GetResourceChunksResponse.FromString,
-            options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
-
-    @staticmethod
-    def GetResources(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/protocol.gaia.proxy.GaiaProxyGrpc/GetResources',
-            protocol_dot_gaia_dot_proxy_dot_proxy__pb2.GetResourcesRequest.SerializeToString,
-            protocol_dot_gaia_dot_proxy_dot_proxy__pb2.GetResourcesResponse.FromString,
+        return grpc.experimental.unary_unary(request, target, '/protocol.gaia.proxy.GaiaProxyGrpc/GetUsers',
+            protocol_dot_gaia_dot_proxy_dot_user__pb2.GetUsersRequest.SerializeToString,
+            protocol_dot_gaia_dot_proxy_dot_user__pb2.GetUsersResponse.FromString,
             options, channel_credentials,
             call_credentials, compression, wait_for_ready, timeout, metadata)
