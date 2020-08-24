@@ -36,14 +36,15 @@ service MirrorManager {
 
     rpc GetTasksByPartnerName(GetTasksByPartnerNameRequest) returns (GetTasksByPartnerNameResponse) {
         option (google.api.http) = {
-            get: "/api/tasks"
+            post: "/api/tasks/list"
+            body: "*"
         };
     };
 
     rpc GetChunkTasksByTaskID(GetChunkTasksByTaskIDRequest) returns (GetChunkTasksByTaskIDResponse) {
         option (google.api.http) = {
-            get: "/api/tasks/{task_id}/chunk_tasks"
+            post: "/api/chunk_tasks/list"
+            body: "*"
         };
     };
-
 }

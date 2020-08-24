@@ -28,20 +28,20 @@ message TasksPage {
     repeated Task tasks = 4;
 }
 
+message GetTasksByPartnerNameRequestPayload {
+    required string partner_name = 1;
+    required int32 page = 2;
+    required int32 size = 3;
+}
+
 message GetTasksByPartnerNameRequest {
     optional protocol.common.constant.RequestHeader header = 1;
-
-    required string partner_name = 2;
-    required int32 page = 3;
-    required int32 size = 4;
+    required GetTasksByPartnerNameRequestPayload payload = 2;
 }
 
 message GetTasksByPartnerNameResponse {
     required protocol.common.constant.ResponseHeader header = 1;
-
-    required int32 code = 2;
-    required string message = 3;
-    required TasksPage data = 4;
+    optional TasksPage payload = 2;
 }
 
 
@@ -66,16 +66,18 @@ message ChunkTasksPage {
     repeated ChunkTask chunk_tasks = 4;
 }
 
+message GetChunkTasksByTaskIDRequestPayload {
+    required string task_id = 1;
+    required int32 page = 2;
+    required int32 size = 3;
+}
+
 message GetChunkTasksByTaskIDRequest {
     optional protocol.common.constant.RequestHeader header = 1;
-    required string task_id = 2;
-    required int32 page = 3;
-    required int32 size = 4;
+    required GetChunkTasksByTaskIDRequestPayload payload = 2;
 }
 
 message GetChunkTasksByTaskIDResponse {
     required protocol.common.constant.ResponseHeader header = 1;
-    required int32 code = 2;
-    required string message = 3;
-    required ChunkTasksPage data = 4;
+    optional ChunkTasksPage data = 2;
 }
