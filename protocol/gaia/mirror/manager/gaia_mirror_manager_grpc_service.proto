@@ -29,7 +29,8 @@ service MirrorManager {
 
     rpc GetPartnerConfig(GetPartnerConfigRequest) returns (GetPartnerConfigResponse) {
         option (google.api.http) = {
-            get: "/api/configs"
+            post: "/api/configs/get"
+            body: "*"
         };
     };
 
