@@ -28,29 +28,32 @@ message Config {
     required string updated_at = 12;
 }
 
-message GetPartnerConfigRequest {
+message GetPartnerConfigRequestPayload {
     required string partner_name = 1;
 }
 
-message GetPartnerConfigResponse {
-    required int32 code = 1;
-    required string message = 2;
-    required Config data = 3;
+message GetPartnerConfigRequest {
+    optional protocol.common.constant.RequestHeader header = 1;
+    required GetPartnerConfigRequestPayload payload =2;
 }
 
+message GetPartnerConfigResponse {
+    required protocol.common.constant.ResponseHeader header = 1;
+    required Config payload = 2;
+}
 
 message CreatePartnerConfigRequestPayload {
-    required string partner_name = 2;
+    required string partner_name = 1;
 
-    required int32 check_interval = 3;
-    required int32 task_interval = 4;
-    required int32 task_timeout = 5;
-    required int32 error_retry_interval = 6;
-    required int32 task_retry_times = 7;
+    required int32 check_interval = 2;
+    required int32 task_interval = 3;
+    required int32 task_timeout = 4;
+    required int32 error_retry_interval = 5;
+    required int32 task_retry_times = 6;
 
-    required int32 chunk_size = 8;
-    required int32 chunk_task_timeout = 12;
-    required int32 chunk_retry_times = 13;
+    required int32 chunk_size = 7;
+    required int32 chunk_task_timeout = 8;
+    required int32 chunk_retry_times = 9;
 }
 
 message CreatePartnerConfigRequest {
